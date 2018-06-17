@@ -1,7 +1,0 @@
-[
-   //{ "keys": ["ctrl+d"], "command": "find_under_expand", "operand": "^[\n ]*" },
-   { "keys": ["ctrl+w"], "command": "close_file" },
-   { "keys": ["ctrl+alt+q"], "command": "select_lines", "args": {"forward": false} },
-   { "keys": ["ctrl+alt+w"], "command": "select_lines", "args": {"forward": true} },
-   { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
-]
