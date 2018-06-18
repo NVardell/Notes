@@ -1,0 +1,12 @@
+# Spring Scheduler URLs
++ http://www.baeldung.com/spring-scheduled-tasks
++ https://dzone.com/articles/running-on-time-with-springs-scheduled-tasks
+
+
+# Spring Retry URLs
++ http://www.baeldung.com/spring-retry
++ (Testing) https://dzone.com/articles/spring-retry-ways-integrate
+
+
+# Spring Boot - JPA/Hibernate URLs
++ (Testing) https://www.callicoder.com/hibernate-spring-boot-jpa-one-to-one-mapping-example/
