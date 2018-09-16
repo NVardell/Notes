@@ -13,8 +13,8 @@ Color Scheme - Flat Dark - My New
 { "keys": ["ctrl+alt+q"], "command": "select_lines", "args": {"forward": false} },
 { "keys": ["ctrl+alt+w"], "command": "select_lines", "args": {"forward": true} },
 
-// Put Cursor On Selected Lines (Default Binding)
-{ "keys": ["ctrl+shift+l"], "command": "split_selection_into_lines" },
+// Put Cursor On Selected Lines
+{ "keys": ["ctrl+alt+l"], "command": "split_selection_into_lines" },
 
 // Delete Current Line
 { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
@@ -30,3 +30,7 @@ Color Scheme - Flat Dark - My New
 
 // Beautify SQL Code
 { "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },
+
+// Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.)
+// https://packagecontrol.io/packages/HTMLBeautify
+{ "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" }

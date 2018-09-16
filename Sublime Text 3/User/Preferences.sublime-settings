@@ -1,7 +1,7 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	// General
+    // General
     "tab_size": 4,
     "font_size": 8,
     "line_numbers": true,
@@ -23,10 +23,13 @@
     // Add to Dictionary
     "added_words":
     [
-        "Vardell",
+        "config",
+        "internet",
+        "whiteboard",
         "lifecycle",
+        "Mphasis",
         "servlet",
-        "Mphasis"
+        "Vardell",
     ],
 
     // Ignore Specific Packages

@@ -6,7 +6,10 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Compare Side-By-Side",
 		"HTML-CSS-JS Prettify",
+		"HTMLBeautify",
+		"Package Control",
 		"SqlBeautifier",
 		"Theme - Gravity"
 	]
