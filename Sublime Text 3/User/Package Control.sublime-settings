@@ -5,8 +5,9 @@
 	],
 	"installed_packages":
 	[
+		"Alignment",
 		"HTML-CSS-JS Prettify",
-		"Package Control",
-		"SFTP"
+		"SqlBeautifier",
+		"Theme - Gravity"
 	]
 }

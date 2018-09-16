@@ -1,26 +1,36 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
 {
-	"added_words":
-	[
-		"Vardell",
-		"lifecycle",
-		"servlet",
-		"Mphasis"
-	],
-	"color_scheme": "Packages/Color Schemes/Flat Dark - My New.tmTheme",
-	"draw_indent_guides": false,
-	"draw_white_space": "none",
-	"font_size": 8,
-	"gravity_highlight_color_blue": true,
-	"gravity_sidebar_header": true,
-	"ignored_packages":
-	[
-		"ASP",
-		"Vintage"
-	],
-	"line_numbers": true,
-	"spell_check": false,
-	"tab_size": 4,
-	"theme": "Gravity One.sublime-theme",
-	"word_wrap": false,
-	"wrap_width": 90
+	// General
+    "tab_size": 4,
+    "font_size": 8,
+    "line_numbers": true,
+    "spell_check": true,
+
+    // Theme
+    "color_scheme": "Packages/Color Schemes/Flat Dark - My New.tmTheme",
+    "theme": "Gravity One.sublime-theme",
+    "gravity_tab_font_small": true,
+    "gravity_tab_height_short": true,
+    
+    // Formatting
+    "translate_tabs_to_spaces":true,
+    "draw_indent_guides": false,
+    "draw_white_space": "none",
+    "word_wrap": false,
+    "wrap_width": 120,
+    
+    // Add to Dictionary
+    "added_words":
+    [
+        "Vardell",
+        "lifecycle",
+        "servlet",
+        "Mphasis"
+    ],
+
+    // Ignore Specific Packages
+    "ignored_packages":
+    [
+    ],
 }
