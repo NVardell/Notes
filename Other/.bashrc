@@ -7,7 +7,6 @@ alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
 alias mine="a | grep f624966"
 alias bashit="start ~/.bashrc"
-alias jump="ssh boks-jumphost.jpmchase.net"
 
 
 # Navigation
