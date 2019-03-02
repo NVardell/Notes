@@ -65,6 +65,10 @@ shopt -s extglob
 bash -O extglob
 # THEN rm should work (Will only run in current directory.)
 rm -- !(mq-config.xml)
+# Similarly, you can keep two or more particular types of files and remove everything else. 
+# Say for example, the following command will keep the files that contains .doc and .mp3 extensions.
+rm !(*.doc|*.mp3)
+
 
 # The print0 and -0 combination is needed if there are spaces in any of the filenames that should be deleted.
 find . -type f -not -name '*txt' -print0 | xargs -0 rm --
@@ -86,3 +90,7 @@ find . -type f ! -name 'file.txt' -delete
 # If you want to delete all files of a certain type, but only 1 folder "deep" from the current folder:
 # -maxdepth 2 because the current directory "." counts as the first folder.
 find . -maxdepth 2 -name "*.log" -type f -delete
+
+
+# Prints 'Hello 1~30'
+for i in {1..30}; do if [ $i != 10 ]; then echo "hello $i"; fi; done
