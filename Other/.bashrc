@@ -14,15 +14,14 @@ alias ar='cd I:/GIT/; ls'
 alias all="cd I:/GIT/ALL/"
 alias god="cd I:/GIT/GOD/"
 alias pub="cd I:/GIT/PUB/"
-alias mav1="cd I:/GIT/MAV/dbps/"
-alias mav2="cd I:/GIT/MAV2/dbps/"
 alias notes="cd I:/GIT/NOTES/"
-alias spaces='cd I:/Workspaces/'
+alias spaces='cd I:/SPACES/'
 
 
 # GIT  -  Basic Commands
-alias gs="git status"
 alias ga="git add "
+alias gs="git status"
+alias clone="git clone "
 alias stash="git stash"
 alias glb="git branch"
 alias grb="git branch -r"
