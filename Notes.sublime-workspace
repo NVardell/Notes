@@ -8,42 +8,20 @@
 	"buffers":
 	[
 		{
-			"file": "/I/Google Drive/TEMP.txt",
+			"file": "Unix.sh",
 			"settings":
 			{
-				"buffer_size": 318,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "# WINNER"
-			}
-		},
-		{
-			"file": "/I/Google Drive/Unix,sh",
-			"settings":
-			{
-				"buffer_size": 2458,
+				"buffer_size": 2708,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Other/.bashrc",
+			"file": "Notes.txt",
 			"settings":
 			{
-				"buffer_size": 1885,
-				"encoding": "UTF-8",
+				"buffer_size": 2345,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nTheme - Gravity\n---------------\n\n  \n  Thanks for using the Gravity theme!\n  \n  You may need to restart Sublime Text for it to display correctly. Also, if the\n  sidebar icons are missing, disabling installed/inactive themes will typically fix it.\n  \n  Feel free to contact me if you have any questions, or need to report an issues:\n  \n  GitHub Issues\n  https://github.com/frankyonnetti/gravity-sublime-theme/issues\n  \n  or Twitter\n  @dh_Frank\n  \n  \n  *************************************************************************\n  \n  \n  How to enable:\n  \n  To activate the theme for ST3, add or replace your current theme settings with the code below.\n  \n  For Gravity Theme:\n  \n      \"theme\": \"Gravity.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Gravity/Monokai Gravity.tmTheme\"\n  \n  \n  For Reverse Gravity Theme:\n  \n      \"theme\": \"Reverse Gravity.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Gravity/Monokai Gravity.tmTheme\"\n  \n  \n  For Gravity One Theme:\n  \n      \"theme\": \"Gravity One.sublime-theme\"\n  \n  Suggest using the \"One Dark Sublime Text 3 Color Scheme\" or \"One Half Color Schemes\" with Gravity One.\n    - https://github.com/IceTimux/one-dark-sublime-text-3-color-scheme\n    - https://github.com/sonph/onehalf\n  \n  \n  To increase the file tab height use:\n  \n      \"gravity_tab_height_tall\": true\n  \n  \n  To decrease the file tab height use:\n  \n      \"gravity_tab_height_short\": true\n  \n  \n  To decrease the file tab font size use:\n  \n      \"gravity_tab_font_small\": true\n  \n  \n  For the sidebar header option use:\n  \n      \"gravity_sidebar_header\": true\n  \n  \n  For blue highlight color option use:\n  \n      \"gravity_highlight_color_blue\": true\n  \n  To enable the macOS title bar use (dev build 3127 or newer):\n  \n      \"gravity_title_bar\": true\n  \n  ---\n  \n  macOS Mojave \"Dark Mode\" tip: how to enable in Sublime Text 3. https://forum.sublimetext.com/t/dark-mode-in-macos-mojave\n  \n  Load up terminal and run the following command:\n  \n    defaults write com.sublimetext.3 NSRequiresAquaSystemAppearance 0\n",
-			"settings":
-			{
-				"buffer_size": 2089,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
 			}
 		}
 	],
@@ -89,27 +67,34 @@
 	},
 	"expanded_folders":
 	[
-		"/I/GIT",
-		"/I/GIT/BITS",
-		"/I/GIT/BITS/src",
-		"/I/GIT/BITS/src/main",
-		"/I/GIT/BITS/src/main/java",
-		"/I/GIT/BITS/src/main/java/com",
-		"/I/GIT/BITS/src/main/java/com/bits",
-		"/I/GIT/BITS/src/main/java/com/bits/pieces",
-		"/I/GIT/BITS/src/main/java/com/bits/pieces/exceptions",
-		"/I/GIT/BITS/src/main/java/com/bits/pieces/exceptions/api",
-		"/I/GIT/BITS/src/main/java/com/bits/pieces/utilities",
-		"/I/GIT/NOTES",
-		"/I/GIT/NOTES/IntelliJ",
-		"/I/GIT/NOTES/Other",
-		"/I/GIT/NOTES/Other/Images",
-		"/I/GIT/NOTES/Sublime Text 3",
-		"/I/GIT/NOTES/Sublime Text 3/Color Schemes"
+		"/I/Google Drive",
+		"/C/Users/NV/Desktop/TEST",
+		"/C/Users/NV/Desktop/TEST/DELETE",
+		"/C/Users/NV/Desktop/TEST/DELETE/gws",
+		"/C/Users/NV/Downloads"
 	],
 	"file_history":
 	[
+		"/I/GIT/NOTES/README.md",
+		"/I/Google Drive/TEMP.txt",
+		"/I/Google Drive/Unix,sh",
 		"/I/GIT/NOTES/Other/.bashrc",
+		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-bin.ver",
+		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-doc.mft",
+		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-bin.mft",
+		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-doc.ver",
+		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2-src/README",
+		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2-src/Makefile",
+		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2/Makefile",
+		"/C/Program Files (x86)/GnuWin32/src/tree/1.5.2.2/tree-1.5.2.2/patches/tree-1.5.2.2-src.diff",
+		"/C/Program Files (x86)/GnuWin32/src/tree/1.5.2.2/tree-1.5.2.2/resource/tree-res.rc",
+		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-src.ver",
+		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-src.mft",
+		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2/resource/tree-res.rc",
+		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2-src/INSTALL",
+		"/C/Users/NV/Desktop/Temp Sublime Settings.txt",
+		"/I/GIT/NOTES/Sublime Text 3/User/oscrypto-ca-bundle.crt",
+		"/I/GIT/NOTES/Sublime Text 3/User/Default (Windows).sublime-keymap",
 		"/C/Users/NV/.bashrc",
 		"/C/Users/NV/.minttyrc",
 		"/I/GIT/SETTINGS/Other/.bashrc",
@@ -131,6 +116,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"origin",
 			"MINGW64",
 			"<div class=\"replayLayout__footer__timestamp ui__mediumText\">",
 			")\n",
@@ -166,129 +152,85 @@
 	[
 		{
 			"path": "I:\\GIT"
+		},
+		{
+			"path": "I:\\Dropbox"
+		},
+		{
+			"path": "I:\\Google Drive"
+		},
+		{
+			"path": "I:\\SPACES"
+		},
+		{
+			"path": "C:\\Users\\NV\\Desktop\\TEST"
+		},
+		{
+			"path": "C:\\Users\\NV\\Downloads"
 		}
 	],
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/I/Google Drive/TEMP.txt",
+					"file": "Unix.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 318,
+						"buffer_size": 2708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								318,
-								318
+								2639,
+								2639
 							]
 						],
 						"settings":
 						{
-							"auto_name": "# WINNER",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1060.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/I/Google Drive/Unix,sh",
+					"file": "Notes.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2458,
+						"buffer_size": 2345,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								726,
-								726
+								767,
+								767
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Other/.bashrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								391,
-								391
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 119.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2089,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1827,
-								703
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"tab_width": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -371,7 +313,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 346.0,
+	"side_bar_width": 295.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
