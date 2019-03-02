@@ -5,12 +5,15 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Alignment",
 		"Compare Side-By-Side",
 		"HTML-CSS-JS Prettify",
-		"HTMLBeautify",
+		"Material Theme",
+		"Materialize",
+		"One Dark Material - Theme",
 		"Package Control",
-		"SqlBeautifier",
+		"SQLTools",
 		"Theme - Gravity"
 	]
 }
