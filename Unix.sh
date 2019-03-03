@@ -94,3 +94,14 @@ find . -maxdepth 2 -name "*.log" -type f -delete
 
 # Prints 'Hello 1~30'
 for i in {1..30}; do if [ $i != 10 ]; then echo "hello $i"; fi; done
+
+
+# Move all sub-files to parent directory
+# 1. Go to your parent directory and run below
+find . -mindepth 2 -type f -print -exec mv {} . \;
+# Will find all files in parent & children & executes 'mv' with target dir .
+
+# If you want to just copy, you can use a mere:
+# This will copy all files, normal & hidden ones, since /path/subfolder/. expands to "everything in this dir" 
+cp -r /path/subfolder/. /path/
+
