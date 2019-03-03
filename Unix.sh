@@ -105,3 +105,48 @@ find . -mindepth 2 -type f -print -exec mv {} . \;
 # This will copy all files, normal & hidden ones, since /path/subfolder/. expands to "everything in this dir" 
 cp -r /path/subfolder/. /path/
 
+
+
+# comparison operator -ne is an arithmetic operator, i.e. it compares only integers:
+i=7
+if [ "$i" -ne 6 ] && [ "$i" -ne 8 ]; then
+   echo 'i is neither 6 nor 8'
+fi
+
+# To compare strings for inequality, use !=:
+if [ "$filename" != 'even' ] && [ "$filename" != 'odd' ]; then
+    printf '%s\n' "$filename"
+fi
+# Or use case:
+case "$filename" in
+    even|odd) ;;
+           *) printf '%s\n' "$filename"
+esac
+
+# Also note that * will match any name in the current directory, not just names of regular files. 
+# To be sure that you only process regular files in your loop, use
+for name in *; do
+    test -f "$name" || continue
+
+    # other code here using "$name"
+done
+
+# test -f "$name" may be replaced by
+if [ ! -f "$name" ]; then
+    continue
+fi
+# Or just:
+[ ! -f "$name" ] && continue
+# OR
+[ -f "$name" ] || continue
+
+
+
+# MINE
+if [[ "qa01__ws__mq-config.xml" == *"qa"*"ws"* ]]; then echo "They are equal." ; fi
+# OUTPUT | They are equal.
+case "qa01__ws__mq-config.xml" in
+    *"qa"*"ws"*) echo "File is QA & WS" ;;
+    *) echo "NOT QA & WS" ;;
+esac
+# OUTPUT | File is QA & WS
