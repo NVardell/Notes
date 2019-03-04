@@ -150,3 +150,44 @@ case "qa01__ws__mq-config.xml" in
     *) echo "NOT QA & WS" ;;
 esac
 # OUTPUT | File is QA & WS
+
+
+case "qa01__ws__mq-config.xml" in
+    *"qa"*"ws"*) (echo "File is QA & WS"; echo "TEST";) ;;
+    *) echo "NOT QA & WS" ;;
+esac
+# OUTPUT |
+# File is QA & WS
+# TEST
+
+
+
+
+
+# To move a file from the current directory to another location, enter a path as the third word on the command line.
+# This command would remove filename from the current working directory and place it in /dir1/.
+mv filename /dir1/
+
+# Alternatively, a path to the location of the file may be entered as the second word and "." as the thrid word. 
+# This moves the file from the location specified in word two into your current working directory.
+# Moves the file filename from the /tmp/ directory into your current working directory.
+mv /tmp/filename .
+
+# Moves the file filename from a directory two levels up to the /tmp/ directory while renaming the file new_name.
+mv ../../filename /tmp/new_name
+
+
+
+# Mkdir with '-p' causes nothing to happen if directory already exists
+# Precautionary.  If/when the directories I want to move the files to don't exist.
+mkdir -p /target/directory ; mv file /target/directory
+
+
+
+
+for name in *; do
+    case "$name" in
+    "test.txt") (echo "File is the testing file."; mv "$name" ./tester/;) ;;
+    *) echo "NOT the right file. :/" ;;
+esac
+done
