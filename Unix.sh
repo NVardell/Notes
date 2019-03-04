@@ -187,7 +187,7 @@ mkdir -p /target/directory ; mv file /target/directory
 
 for name in *; do
     case "$name" in
-    "test.txt") (echo "File is the testing file."; mv "$name" ./tester/;) ;;
-    *) echo "NOT the right file. :/" ;;
+    "test.txt") (echo "File is the testing file."; mkdir -p tester; mv "$name" ./tester/;) ;;
+    *) echo "NOT the right file. :(" ;;
 esac
 done
