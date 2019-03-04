@@ -54,3 +54,12 @@ alias olord="git reset --hard"
 alias sall="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pall="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
 alias pno="notes; ga --all; gc \"Pushing latest notes.\"; push;"
+
+
+# MISC | User Defined Functions
+# 'hi Nate' outputs Hello, Nate!
+function hi() {
+   echo "Hello, $1!"
+}
+
+export -f hi
