@@ -1,0 +1,43 @@
+{
+	"added_words":
+	[
+		"config",
+		"internet",
+		"whiteboard",
+		"lifecycle",
+		"Mphasis",
+		"servlet",
+		"Vardell"
+	],
+	"color_scheme": "Packages/Theme - Gravity/Monokai Gravity v2.sublime-color-scheme",
+	"draw_indent_guides": false,
+	"draw_white_space": "none",
+	"font_size": 11,
+	"gravity_highlight_color_blue": true,
+	"gravity_sidebar_header": true,
+	"gravity_tab_font_small": true,
+	"gravity_tab_height_short": true,
+	"gravity_title_bar": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_numbers": true,
+	"material_theme_accent_scrollbars": true,
+	"material_theme_accent_titlebar": true,
+	"material_theme_big_fileicons": true,
+	"material_theme_bold_tab": true,
+	"material_theme_bright_scrollbars": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"material_theme_titlebar": true,
+	"spell_check": true,
+	"tab_size": 4,
+	"theme": "Material Spacegray Eighties.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": false,
+	"wrap_width": 150
+}

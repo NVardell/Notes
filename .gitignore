@@ -1,0 +1,29 @@
+#############################    IDE Files
+#    Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+#    IntelliJ
+.idea
+*.iws
+*.iml
+*.ipr
+#    NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+
+#############################    Misc.
+#    Open Excel Docs
+~$*.xlsx
+#    Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
