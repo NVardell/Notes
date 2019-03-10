@@ -5,17 +5,16 @@ alias x="exit"
 alias ag="a | grep "
 alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
-alias mine="a | grep f624966"
+alias mine="a | grep NVardell"
 alias bashit="start ~/.bashrc"
 
 
 # Navigation
-alias ar='cd I:/GIT/; ls'
-alias all="cd I:/GIT/ALL/"
-alias god="cd I:/GIT/GOD/"
-alias pub="cd I:/GIT/PUB/"
-alias notes="cd I:/GIT/NOTES/"
-alias spaces='cd I:/SPACES/'
+alias ar='cd I:/GIT; ll'
+alias all="cd I:/GIT/All"
+alias note="cd I:/GIT/Notes"
+alias piece="cd I:/GIT/Pieces"
+alias spaces='cd I:/Spaces'
 
 
 # GIT  -  Basic Commands
@@ -23,13 +22,13 @@ alias ga="git add "
 alias gs="git status"
 alias clone="git clone "
 alias stash="git stash"
-alias glb="git branch"
-alias grb="git branch -r"
+alias glb="git branch"              # Git List of Local Branches
+alias grb="git branch -r"           # Git List of Remote Branches
 alias pull="git pull"
 alias push="git push"
 alias gc="git commit -m "
 alias gco="git checkout "
-alias gnb="git checkout -b "
+alias gnb="git checkout -b "        # Git New Branch
 alias gm="git checkout master"
 alias set=" --set-upstream origin"
 alias gr="git remote -v"            # Git Remote URL
@@ -37,9 +36,9 @@ alias grv="git remote show origin"  # Git Remote URL- Verbose
 
 
 # GIT  -  Misc Commands
-alias gcf="git clean -f"      # Force delete untracked files
-alias gca="git clean -fx"     # Force delete untracked & ignored files
-alias gcw="git clean -ndx"    # What goes bye-bye? (n=what, d=directories, x=files(ignored))
+alias gcf="git clean -f"         # Force delete untracked files
+alias gca="git clean -fx"        # Force delete untracked & ignored files
+alias gcw="git clean -ndx"       # What goes bye-bye? (n=what, d=directories, x=files(ignored))
 alias rename="git branch -m "    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
 alias adios="git push origin :"  # Delete the old branch (:old_branch)
 alias rename="push set "         # Push new branch, set local branch to track (new_branch)
@@ -53,13 +52,21 @@ alias olord="git reset --hard"
 # GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
 alias sall="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pall="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
-alias pno="notes; ga --all; gc \"Pushing latest notes.\"; push;"
+alias pno="note; ga --all; gc \"Pushing latest notes.\"; push;"
 
 
-# MISC | User Defined Functions
-# 'hi Nate' outputs Hello, Nate!
+# GIT  -  Repositories
+alias bits="clone https://github.com/NVardell/Bits.git"
+alias notes="clone https://github.com/NVardell/Notes.git"
+alias pieces="clone https://github.com/NVardell/Pieces.git"
+alias validate="clone https://github.com/NVardell/Validate.git"
+
+
+# MISC - User Defined Functions
 function hi() {
-   echo "Hello, $1!"
+   echo "Hello, $1!" # 'hi Nate' outputs Hello, Nate!
 }
 
+
+# MISC - Export User Functions
 export -f hi
