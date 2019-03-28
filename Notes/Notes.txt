@@ -13,6 +13,8 @@
     echo $JAVA_HOME
 * Adding to PATH
     export PATH=/opt/apache-maven-3.6.0/bin:$PATH
+* Delete all empty directories
+    find . -type d -empty -delete
 
 
 
