@@ -9,10 +9,10 @@
 		"servlet",
 		"Vardell"
 	],
-	"color_scheme": "Packages/Theme - Gravity/Monokai Gravity v2.sublime-color-scheme",
+	"color_scheme": "Packages/User/Schemes/My Monokai Gravity.sublime-color-scheme",
 	"draw_indent_guides": false,
 	"draw_white_space": "none",
-	"font_size": 11,
+	"font_size": 10,
 	"gravity_highlight_color_blue": true,
 	"gravity_sidebar_header": true,
 	"gravity_tab_font_small": true,
