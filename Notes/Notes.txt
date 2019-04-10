@@ -15,6 +15,9 @@
     export PATH=/opt/apache-maven-3.6.0/bin:$PATH
 * Delete all empty directories
     find . -type d -empty -delete
+* View certificate info in a keystore file
+    keytool -list -v -keystore [keystore name] -storepass [keystore password]
+    keytool -list -v -keystore cacerts -storepass changeit
 
 
 

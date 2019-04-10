@@ -23,6 +23,15 @@
 				"buffer_size": 44537,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "Notes/Notes.txt",
+			"settings":
+			{
+				"buffer_size": 2779,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -36,6 +45,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -67,14 +84,21 @@
 	},
 	"expanded_folders":
 	[
+		"/I/GIT/Notes",
 		"/I/GIT/Notes/Notes",
-		"/I/GIT/Notes/Notes/Java",
-		"/I/GIT/Notes/Notes/Unix",
-		"/I/GIT",
-		"/I/GIT/Pieces"
+		"/I/GIT/Notes/Programs",
+		"/I/GIT/Notes/Programs/Sublime Text 3",
+		"/I/GIT/Notes/Programs/Sublime Text 3/User",
+		"/C/Users/NV/AppData/Roaming/Sublime Text 3"
 	],
 	"file_history":
 	[
+		"/I/GIT/NOTES/.gitignore",
+		"/I/GIT/NOTES/Programs/Sublime Text 3/Color Schemes/Behave.tmTheme",
+		"/I/GIT/Notes/Programs/Sublime Text 3/User/Preferences.sublime-settings",
+		"/C/Users/NV/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414",
+		"/I/GIT/Notes/Programs/Sublime Text 3/Color Schemes/My Monokai Gravity.sublime-color-scheme",
+		"/C/Users/NV/AppData/Roaming/Sublime Text 3/Installed Packages/Materialize.sublime-package",
 		"/C/Users/NV/Desktop/Songs.txt",
 		"/I/GIT/Pieces/README.md",
 		"/I/GIT/Pieces/HELP.md",
@@ -115,13 +139,14 @@
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 158.0,
 		"where_history":
 		[
+			"C:\\Users\\NV\\AppData\\Roaming\\Sublime Text 3"
 		]
 	},
 	"find_state":
@@ -129,6 +154,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Behave.tmTheme",
+			"Material Behave",
+			"Behave",
+			"Gravity",
+			"Monokai",
 			"data-crown",
 			"league__",
 			"playerLevel\">",
@@ -171,22 +201,25 @@
 	"folders":
 	[
 		{
-			"path": "I:\\GIT\\Notes\\Notes"
+			"path": "I:\\GIT\\Notes"
 		},
 		{
 			"path": "I:\\GIT"
 		},
 		{
+			"path": "C:\\Users\\NV\\Downloads"
+		},
+		{
 			"path": "I:\\Google Drive"
 		},
 		{
-			"path": "C:\\Users\\NV\\Downloads"
+			"path": "C:\\Users\\NV\\AppData\\Roaming\\Sublime Text 3"
 		}
 	],
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -208,13 +241,15 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Java/Java.sublime-syntax"
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -431,9 +466,41 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 51.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Notes/Notes.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1276,
+								1276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -449,7 +516,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"layout":
 	{
@@ -520,7 +587,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 180.0,
+	"side_bar_width": 247.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
