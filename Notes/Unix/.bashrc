@@ -62,11 +62,20 @@ alias pieces="clone https://github.com/NVardell/Pieces.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
 
+# MISC - Random Shenanigans
+alias t="tree"
+alias wt="cmd //c tree //a //f"
+
+
 # MISC - User Defined Functions
+function facts() {
+   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/GIT/Notes/Notes/Unix/Temp.html
+}
 function hi() {
-   echo "Hello, $1!" # 'hi Nate' outputs Hello, Nate!
+   echo "Hello, $1!" # $ hi Nate => Hello, Nate!
 }
 
 
 # MISC - Export User Functions
+export -f facts
 export -f hi

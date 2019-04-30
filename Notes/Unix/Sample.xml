@@ -1,0 +1,47 @@
+<INVOICES>
+    <INVOICE>
+        <BILL>
+            <BILL_NO>1234</BILL_NO>
+            <BILL_DATE>01 JAN 2011</BILL_DATE>
+        </BILL>
+        <NAMEINFO>
+            <NAME>ABC</NAME>
+        </NAMEINFO>
+    </INVOICE>
+    <INVOICE>
+        <BILL>
+            <BILL_NO>5678</BILL_NO>
+            <BILL_DATE>01 JAN 2011</BILL_DATE>
+        </BILL>
+        <NAMEINFO>
+            <NAME>BCA</NAME>
+        </NAMEINFO>
+    </INVOICE>
+    <INVOICE>
+        <BILL>
+            <BILL_NO>1256</BILL_NO>
+            <BILL_DATE>01 JAN 2011</BILL_DATE>
+        </BILL>
+        <NAMEINFO>
+            <NAME></NAME>
+        </NAMEINFO>
+    </INVOICE>
+    <INVOICE>
+        <BILL>
+            <BILL_NO>345</BILL_NO>
+            <BILL_DATE>01 JAN 2011</BILL_DATE>
+        </BILL>
+        <NAMEINFO>
+            <NAME />
+        </NAMEINFO>
+    </INVOICE>
+    <INVOICE>
+        <BILL>
+            <BILL_NO>8934</BILL_NO>
+            <BILL_DATE>01 JAN 2011</BILL_DATE>
+        </BILL>
+        <NAMEINFO>
+            <NAME>PKL</NAME>
+        </NAMEINFO>
+    </INVOICE>
+</INVOICES>

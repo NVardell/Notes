@@ -191,3 +191,15 @@ for name in *; do
     *) echo "NOT the right file. :(" ;;
 esac
 done
+
+
+
+# Handles Empty Values and Missing Values (As long as tags are present.)
+$ awk -F'>|<' '/BILL_NO/{printf $3}/NAME\>/{print (NF==3 || $3=="")?",NA":","$3}' Sample.xml
+1234,ABC
+5678,BCA
+1256,NA
+345,NA
+8934,PKL
+
+

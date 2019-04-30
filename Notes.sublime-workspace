@@ -93,15 +93,14 @@
 	},
 	"expanded_folders":
 	[
-		"/I/GIT/Notes",
-		"/I/GIT/Notes/Notes",
-		"/I/GIT/Notes/Programs",
-		"/I/GIT/Notes/Programs/Sublime Text 3",
-		"/I/GIT/Notes/Programs/Sublime Text 3/User",
+		"/I/GIT",
+		"/I/GIT/Pieces",
+		"/C/Users/NV/Downloads",
 		"/C/Users/NV/AppData/Roaming/Sublime Text 3"
 	],
 	"file_history":
 	[
+		"/C/Users/NV/Downloads/Loring Place (370 - 4.6_5).eml",
 		"/I/GIT/NOTES/.gitignore",
 		"/I/GIT/NOTES/Programs/Sublime Text 3/Color Schemes/Behave.tmTheme",
 		"/I/GIT/Notes/Programs/Sublime Text 3/User/Preferences.sublime-settings",
@@ -148,7 +147,7 @@
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -163,6 +162,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<br>",
+			"</div>",
+			"<div>",
+			"</",
+			"<",
 			"lastSeenInner\">",
 			"memberRoleInner\">",
 			"profile/",
@@ -236,7 +240,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -507,8 +511,8 @@
 						"selection":
 						[
 							[
-								1276,
-								1276
+								2779,
+								2779
 							]
 						],
 						"settings":
@@ -521,7 +525,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -549,7 +553,7 @@
 						"translation.y": 4337.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -557,7 +561,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -594,7 +598,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 46.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -632,7 +636,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 169.0,
+	"side_bar_width": 202.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
