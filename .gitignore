@@ -22,8 +22,10 @@
 
 
 #############################    MISC.
-#    Open Excel Docs
+# Open Excel Docs
 ~$*.xlsx
-#    Maven
+# Maven
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+# Workspace files are user-specific
+*.sublime-workspace
