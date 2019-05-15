@@ -2,7 +2,7 @@
 alias a="alias"
 alias c="clear"
 alias x="exit"
-alias ag="a | grep "
+alias ag="cat ~/.bashrc | grep "
 alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
 alias mine="a | grep NVardell"
@@ -11,7 +11,7 @@ alias bashit="start ~/.bashrc"
 
 # Navigation
 alias ar='cd I:/GIT; ll'
-alias all="cd I:/GIT/All"
+alias all="cd I:/GIT/All; ll"
 alias note="cd I:/GIT/Notes"
 alias piece="cd I:/GIT/Pieces"
 alias spaces='cd I:/Spaces'
@@ -68,14 +68,14 @@ alias wt="cmd //c tree //a //f"
 
 
 # MISC - User Defined Functions
-function facts() {
-   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/GIT/Notes/Notes/Unix/Temp.html
-}
 function hi() {
    echo "Hello, $1!" # $ hi Nate => Hello, Nate!
+}
+function facts() {
+   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/GIT/Notes/Notes/Unix/Temp.html
 }
 
 
 # MISC - Export User Functions
-export -f facts
 export -f hi
+export -f facts
