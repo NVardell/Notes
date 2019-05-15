@@ -2,6 +2,7 @@
 alias a="alias"
 alias c="clear"
 alias x="exit"
+alias fact="facts"
 alias ag="a | grep "
 alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
