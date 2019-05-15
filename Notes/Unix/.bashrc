@@ -2,11 +2,12 @@
 alias a="alias"
 alias c="clear"
 alias x="exit"
-alias ag="cat ~/.bashrc | grep "
+alias fact="facts"
 alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
 alias mine="a | grep NVardell"
 alias bashit="start ~/.bashrc"
+alias ag="cat ~/.bashrc | grep "
 
 
 # Navigation
