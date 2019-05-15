@@ -2,7 +2,7 @@
 alias a="alias"
 alias c="clear"
 alias x="exit"
-alias fact="facts"
+alias fact="facts | clip"
 alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
 alias mine="a | grep NVardell"
