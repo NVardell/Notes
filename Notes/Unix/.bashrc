@@ -59,7 +59,7 @@ alias olord="git reset --hard"
 # GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
 alias sall="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pall="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
-alias pno="note; ga --all; gc \"Pushing latest notes.\"; push;"
+alias pno="n; ga --all; gc \"Pushing latest notes.\"; push;"
 
 
 # GIT  -  Repositories
