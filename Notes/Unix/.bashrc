@@ -2,6 +2,7 @@
 alias a="alias"
 alias c="clear"
 alias x="exit"
+alias war="wars | clip"
 alias fact="facts | clip"
 alias ls="ls -lrta --color"
 alias load="source ~/.bashrc"
@@ -65,18 +66,22 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 
 # MISC - Random Shenanigans
 alias t="tree"
-alias wt="cmd //c tree //a //f"
+alias wt="cmd //c tree //a //f"  # Windows built-in tree function
 
 
 # MISC - User Defined Functions
-function hi() {
+function example() {
    echo "Hello, $1!" # $ hi Nate => Hello, Nate!
 }
 function facts() {
    awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/GIT/Notes/Notes/Unix/Temp.html
 }
+function wars() {
+    awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/GIT/Notes/Notes/Unix/War.html
+}
 
 
 # MISC - Export User Functions
-export -f hi
+export -f example
 export -f facts
+export -f wars
