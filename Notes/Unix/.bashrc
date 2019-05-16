@@ -44,9 +44,11 @@ alias grv="git remote show origin"  # Git Remote URL- Verbose
 alias gcf="git clean -f"         # Force delete untracked files
 alias gca="git clean -fx"        # Force delete untracked & ignored files
 alias gcw="git clean -ndx"       # What goes bye-bye? (n=what, d=directories, x=files(ignored))
+alias rename="push set "         # Push new branch, set local branch to track (new_branch)
 alias rename="git branch -m "    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
 alias adios="git push origin :"  # Delete the old branch (:old_branch)
-alias rename="push set "         # Push new branch, set local branch to track (new_branch)
+alias grt="git rm --cached "     # Untrack a file & remove it from repo
+alias gut="git update-index --skip-worktree "  # Untrack a local file & leave in repo
 
 
 # GIT -  Something went VERY wrong
