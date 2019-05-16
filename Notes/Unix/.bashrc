@@ -2,8 +2,6 @@
 alias a="alias"
 alias c="clear"
 alias x="exit"
-alias war="wars | clip"
-alias fact="facts | clip"
 alias ls="ls -lrta --color"
 
 
@@ -72,6 +70,8 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 # MISC - Random Shenanigans
 alias t="tree"
 alias wt="cmd //c tree //a //f"  # Windows built-in tree function
+alias war="wars | clip"    # Runs 'wars' function & adds output to clipboard
+alias fact="facts | clip"  # Runs 'facts' function & adds output to clipboard
 
 
 # MISC - User Defined Functions
