@@ -27,5 +27,5 @@
 # Maven
 /target/
 !.mvn/wrapper/maven-wrapper.jar
-# Workspace files are user-specific
+# Workspace files
 *.sublime-workspace
