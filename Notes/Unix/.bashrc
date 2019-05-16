@@ -5,18 +5,23 @@ alias x="exit"
 alias war="wars | clip"
 alias fact="facts | clip"
 alias ls="ls -lrta --color"
-alias load="source ~/.bashrc"
-alias mine="a | grep NVardell"
-alias bashit="start ~/.bashrc"
-alias ag="cat ~/.bashrc | grep "
+
+
+# Manage Aliases & User Functions
+alias ag="cat ~/.bashrc | grep "  # View current bashrc file
+alias bashit="start ~/.bashrc"    # Open bashrc file for editing
+alias load="source ~/.bashrc"     # Load changes made to bashrc file
+alias mine="a | grep NVardell"    # Display my GIT repo aliases for cloning
 
 
 # Navigation
+alias s='cd I:/Spaces'
 alias ar='cd I:/GIT; ll'
-alias all="cd I:/GIT/All; ll"
-alias note="cd I:/GIT/Notes"
-alias piece="cd I:/GIT/Pieces"
-alias spaces='cd I:/Spaces'
+alias b="cd I:/GIT/Bits; gs"
+alias n="cd I:/GIT/Notes; gs"
+alias o="cd I:/GIT/Other; ll"
+alias p="cd I:/GIT/Pieces; gs"
+alias v="cd I:/GIT/Validate; gs"
 
 
 # GIT  -  Basic Commands
