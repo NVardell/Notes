@@ -1,0 +1,20 @@
+* Summary
+    + Passionate & enthusiastic software engineer experienced in building multi-tiered web applications, building out scalable solutions for high-volume businesses, both producing & consuming dynamic web services handling highly sensitive data, in a Full Stack environment.  Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+* Experience
+    + Chase Responsibilities:
+Developed service-layer web applications as a gateway, across the entirety of the bank, producing & consuming all user data; handling business logic for the 25+ million commercial & personal accounts
+Maintained & contributed to 100’s of web services, spanning multiple applications, such as Chase.com, Chase Pay, & Chase mobile app
+Implemented new RESTful services; collaborating with multiple teams, creating exciting features such as Ultimate Rewards & Refer-A-Friend
+Created a single end-to-end test suite for 5 different applications, spanning hundreds of services, in SOAPui as a part of a larger infrastructure migration project; moving off legacy lpars
+
+
+    + Revature
+Responsibilities:
+
+Collaborated with a team in extensive learning & teaching of full stack java development; enhancing knowledge and skills across all front, middle, & and back-end tiers; working on multiple mini group projects throughout
+Developed multiple internal Spring Boot web applications for scheduling & analytics; generating gorgeous dashboards w/ Angular Material, in addition to DataTables, Highcharts, & D3 JavaScript libraries
+Designed multiple Single Page Application (SPA) UIs, utilizing HTML, CSS, JavaScript, & Angular
+Personally, designed & created a single set of  generic menus & navigation toolbars to be used across all internal applications; combining the best of the best from all of the original implementations
+
+
+
