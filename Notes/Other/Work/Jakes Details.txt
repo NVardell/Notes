@@ -31,7 +31,7 @@
             validated that they work during any possible scenario
         •   Created rollback plans to dynamically kill features if they need to be removed from production environments
 
-* Skills
+* Skills (27)
     + Java
     + Web Services
     + SOAP
