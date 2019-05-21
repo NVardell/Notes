@@ -250,7 +250,7 @@ Responsibilities
 + Responsible for spearheading teams that handled the software development life cycle for 10 client projects, end to end.
 + Built infrastructure to handle millions of client files in proprietary systems.
 + Led the drive to implement the Principle of Least Privilege across 100% of software development staff.
-+ Reduced security breaches by 73% for all customers companywide.
++ Reduced security breaches by 73% for all customers company wide.
 + Built security into new product features to achieve 100% compliance with industry best practices.
 + Composed an app to allow voice control of lights, garage door, and home thermostat, using an Amazon Echo and Raspberry Pi.
 + Built a real time stock picking app that compares current price to Uniform Adjusted Financial Reporting Standards data to identify buy-now opportunities.

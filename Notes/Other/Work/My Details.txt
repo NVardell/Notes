@@ -1,5 +1,7 @@
 * Summary
     + Passionate & enthusiastic software engineer experienced in building multi-tiered web applications, building out scalable solutions for high-volume businesses, both producing & consuming dynamic web services handling highly sensitive data, in a Full Stack environment.  Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+    + Passionate & enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high-volume businesses; consuming & producing dynamic web services that handle highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+    + Passionate & enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high-volume businesses; consuming & producing dynamic web services handling highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
 * Experience
     + Chase Responsibilities
 Developed service-layer web applications as a gateway, across the entirety of the bank, producing & consuming all user data; handling business logic for the 25+ million commercial & personal accounts
@@ -18,3 +20,15 @@ Collaborated with a team in extensive learning & teaching of full stack java dev
 Developed multiple internal Spring Boot web applications for scheduling & analytics; generating gorgeous dashboards w/ Angular Material, in addition to DataTables, Highcharts, & D3 JavaScript libraries
 Designed multiple Single Page Application (SPA) UIs, utilizing HTML, CSS, JavaScript, & Angular
 Personally, designed & created a single set of  generic menus & navigation toolbars to be used across all internal applications; combining the best of the best from all of the original implementations
+
+
+    + Traumasoft Responsibilities
+    Worked with a small team of developers creating new features directly for end-clients; utilizing HTML, CSS, PHP, and JavaScript
+Actively worked on cleaning up 'Issues' board on Jira; fixing defects & UI bugs in order to preserve a healthy maintainable code base
+
+
+
+
+  |  New York, New York
+  |  Reston, Virginia
+  |  Kalamazoo, Michigan

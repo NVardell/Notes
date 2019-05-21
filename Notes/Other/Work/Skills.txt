@@ -1,48 +1,52 @@
 * Front End
-    + HTML
-    + CSS
+    + Ajax
+    + Angular
     + Bootstrap
+    + CSS
     + Freemarker
+    + HTML
     + JavaScript
     + jQuery
-    + Angular
-    + Ajax
-    + Bootstrap
+
 
 
 * Middle Tier
-    + Spring MVC
     + Hibernate
     + REST
     + SOAP
+    + Spring MVC
+
 
 
 * Back End
-    + Spring Cloud
-    + H2
+    + Cassandra
+    + CQL
     + DB2
+    + H2
     + MySQL
     + Oracle
     + S3
-    + Cassandra
-    + Stored Procedures
+    + Spring Cloud
     + SQL
-    + CQL
+    + Stored Procedures
+
 
 
 * Unit Testing
+    + Debugging
+    + Hamcrest
     + jUnit
     + Mockito
     + PowerMock
-    + Hamcrest
-    + Debugging
+
 
 
 * Operating Systems
     + AIX
     + Linux
-    + zOS
     + redhat
+    + zOS
+
 
 
 * Programming Languages
@@ -52,9 +56,11 @@
     + Visual Basic
 
 
+
 * Methodologies
-    + SCRUM (Is an Agile Methodology.)
     + Agile
+    + SCRUM (Is an Agile Methodology.)
+
 
 
 * Other
@@ -66,3 +72,5 @@
     + Splunk
     + Tomcat
     + Web Services
+
+
