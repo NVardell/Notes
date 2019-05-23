@@ -19,15 +19,14 @@
     // Go to File Location in Project Sidebar
     { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
 
-    // Keymap for Alignment Plugin - Auto Align
+    // Auto Align - Alignment Plugin
     { "keys": ["ctrl+alt+a"], "command": "alignment" },
 
     // Beautify SQL Code
     { "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },
 
-    // Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.)
-    // https://packagecontrol.io/packages/HTMLBeautify
-    { "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" },
+    // Beautify HTML
+    { "keys": ["ctrl+alt+h"], "command": "htmlprettify" },
 
     // Expand Selection to current highlighted section/line of code
     { "keys": ["ctrl+alt+shift+s"], "command": "expand_selection", "args": {"to": "scope"} },
@@ -38,6 +37,6 @@
 
     // Reallocating Home & End Shortcuts
     { "keys": ["f1"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-    { "keys": ["f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+    { "keys": ["f2"], "command": "move_to", "args": {"to": "eol", "extend": false} }
     
 ]

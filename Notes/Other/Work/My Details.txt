@@ -1,34 +1,179 @@
+* PDF Parsed on random ATS
++ Cascade = 18
++ Crisp   = 18
++ Cubic   = 18
++ Enfold  = 18
++ Initials= 18
++ Modern  = 18
++ Muse    = 18
++ Primo   = 18
++ Simple  = 18
++ Vibes   = 17
+
+* PDF Parsed on random ATS
++ Cascade = 25
++ Crisp   = 24
++ Cubic   = 25
++ Enfold  = 24
++ Initials= 24
++ Modern  = 25
++ Muse    = 25
++ Primo   = 25
++ Simple  = 25
++ Vibes   = 25
++ LinkedIn= 25
+
+
+
+
+
+2019 Resume PDF  = 36%
+2019 Resume DOCX = 36%
+
+
+
+
+* Test Job Description 
+- Facebook - Rotational Software Engineer
+      Facebook's mission is to give people the power to build community and bring the world closer together. 
+      Through our family of apps and services, we're building a different kind of company that connects billions of people around the world, 
+      gives them ways to share what matters most to them, and helps bring people closer together. Whether we're creating new products or helping a 
+      small business expand its reach, people at Facebook are builders at heart. Our global teams are constantly iterating, solving problems, and 
+      working together to empower people around the world to build community and connect in meaningful ways. Together, we can help people build 
+      stronger communities - we're just getting started.Facebook is seeking talented full-stack Software Engineers who would like an opportunity 
+      to join our one-year Rotational Engineering Program, helping us build applications & systems that will scale the company and make the world 
+      more open and connected. The Program is designed to offer experienced engineers a one-year rotation through different Facebook engineering 
+      departments to develop engineering skills and gain meaningful experience for the rest of their career. At the end of the term, successful 
+      participants will be invited to apply for a full-time position at the company. Facebook is committed to increasing the diversity of 
+      representation among our Computer Scientists and Software Engineers. We build products to connect the world, and this means we need 
+      teams that understand and reflect a broad range of experiences, backgrounds, identities, abilities and many other characteristics. 
+      The rotational engineering program is open to all qualified candidates. We strongly encourage candidates who are members of historically 
+      underrepresented groups and have non-traditional career paths to apply, including, but not limited to candidates from non-tech industries, 
+      candidates without Computer Science degrees who are self-taught, candidates starting second careers, re-entering the workforce, and those 
+      who have attended bootcamp-style programming courses. 
+      Responsibilities: 
+      Full-stack product/systems development with a variety of languages such as C++, Java, PHP, JavaScript, etc.
+      Work closely with product management and UX design teams to define and refine feature specifications.
+      Design and develop front-end interfaces, underlying APIs, and backend systems across a number of programming languages with focus on JavaScript, React and PHP (Hack).
+      Learn, learn and learn.
+      Mininum Qualifications: 
+      2+ years experience building software solutions in a corporate or start up engineering environment, or equivalent, using JavaScript, PHP, Python, Ruby, C++ and/or Java.
+      2+ years experience developing web applications.
+      Preferred Qualifications: 
+      Bachelors degree in Computer Science/Math/Engineering, or equivalent educational experience.
+      Working knowledge of relational and non-relational databases and SQL.
+      Working knowledge of API design and distributed backend systems.
+      2+ years experience developing multi-tiered web apps.
+- JP Morgan Chase - Software Engineer
+As an experienced Software Engineer, your mission is to help lead our team of innovators and technologists toward creating next-level 
+solutions that improve the way our business is run. Your deep knowledge of design, analytics, development, coding, testing and application 
+programming will help your team raise their game, meeting your standards, as well as satisfying both business and functional 
+requirements. Your expertise in various technology domains will be counted on to set strategic direction and solve complex and mission 
+critical problems, internally and externally. Your quest to embracing leading-edge technologies and methodologies inspires your team to follow 
+suit. And best of all, you'll be able to harness massive amounts of brainpower through our global network of technologists from around the world. 
++ This individual will be expected to have a deep understanding and application of enterprise software design for implementation of enterprise middleware. 
++ This person will be part of successful implementations for large data integration initiatives. 
++ The individual will work on technology initiatives and knowledgeable with web based data visualization and integration of Open Source software. 
+Our Consumer & Community Banking Group depends on innovators like you to serve nearly 66 million consumers and over 4 million small businesses, municipalities and non-profits. You'll 
+support the delivery of award winning tools and services that cover everything from personal and small business banking as well as lending, 
+mortgages, credit cards, payments, auto finance and investment advice. This group is also focused on developing and delivering cutting edged 
+mobile applications, digital experiences and next generation banking technology solutions to better serve our clients and customers. 
+When you work at JPMorgan Chase & Co., you're not just working at a global financial institution. You're an integral part of one of the world's biggest 
+tech organizations. In 20 technology centers worldwide, our team of 50,000 technologists design, build and deploy everything from enterprise technology 
+initiatives to big data and mobile solutions, as well as innovations in electronic payments, cyber security, machine learning, and cloud development. 
+Our $10B+ annual investment in technology enables us to hire people to create innovative solutions that will not only transform the financial services 
+industry, but also change the world. At JPMorgan Chase & Co. we value the unique skills of every employee, and 
+we're building a technology organization that thrives on diversity. We encourage professional growth and career development, and offer competitive 
+benefits and compensation. If you're looking to build your career as part of a global technology team tackling big challenges that impact the lives of 
+people and companies all around the world, we want to meet you. 
+This role requires a wide variety of strengths and capabilities, including: 
++ Knowledge of application, data and infrastructure architecture disciplines 
++ Understanding of architecture and design across all systems 
++ Working proficiency in developmental tool sets 
++ Ability to collaborate with high-performing teams and individuals throughout the firm to accomplish common goals 
++ Experience in one or more general purpose programming languages such as: Java/Spring Open Source/SQL, JavaScript frameworks, Angular/JQuery/Bootstrap 
++ Experience with Restful Services /WebServices, Cassandra/ NoSQL and (MQ/Kafka). 
++ Test-infected attitude (strong desire to perform thorough and exhaustive unit, integration and system testing). Ability to translate business requirements into functional requirements documentation or work with light requirements in iterative fashion using JIRA 
++ Understanding of distributed systems, big data concepts, patterns. Exposure to Open Source technologies Maven, Git, Jenkins and working knowledge of Oracle RDBMS 
+
+
+
+
 * Summary
-    + Passionate & enthusiastic software engineer experienced in building multi-tiered web applications, building out scalable solutions for high-volume businesses, both producing & consuming dynamic web services handling highly sensitive data, in a Full Stack environment.  Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
-    + Passionate & enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high-volume businesses; consuming & producing dynamic web services that handle highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
-    + Passionate & enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high-volume businesses; consuming & producing dynamic web services handling highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+  + Passionate & enthusiastic software engineer experienced in building multi-tiered web applications, building out scalable solutions for high-volume businesses, both producing & consuming dynamic web services handling highly sensitive data, in a Full Stack environment.  Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+  + Passionate & enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high-volume businesses; consuming & producing dynamic web services that handle highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+  + Passionate & enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high-volume businesses; consuming & producing dynamic web services handling highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, in order to produce the best products possible.
+  + Enthusiastic software engineer experienced in developing multi-tiered web applications, building out scalable solutions for high- volume businesses; producing & consuming dynamic web services managing highly sensitive data, all within an agile Full Stack environment. Always actively looking for opportunities to collaborate, learn, and grow as an individual and team, to produce the best products possible.
 * Experience
-    + Chase Responsibilities
-Developed service-layer web applications as a gateway, across the entirety of the bank, producing & consuming all user data; handling business logic for the 25+ million commercial & personal accounts
-Maintained & contributed to 100’s of web services, spanning multiple applications, such as Chase.com, Chase Pay, & Chase mobile app
-Implemented new RESTful services; collaborating with multiple teams, creating exciting features such as Ultimate Rewards & Refer-A-Friend
-Interacted with business stakeholders & architect design authorities to problem solve possible solutions for our latest up & coming features
-Took ownership of our applications internal messaging architecture; migrating hundreds of services off legacy AIX servers, onto new RedHat & zOS clusters
-Created a single end-to-end test suite for 5 different applications, spanning hundreds of services, in SOAPui as a part of a larger infrastructure migration project; moving off legacy lpars
-Mentored & trained new developers; responsibly preparing them for a successful future at JP Morgan Chase
-Constructed an 'Onboarding Guide' used by all new hires coming into Chase Digital, as well as establishing & maintaining a vast array of additional documentation & tutorials on Confluence
-(Removed) Organizationally synthesized magnitudes of archaic guides into useful, up-to-date tutorials
+  + Chase Responsibilities
+    • (Removed) Organizationally synthesized magnitudes of archaic guides into useful, up-to-date tutorials
+    • Developed service-layer web applications as a gateway, for the entirety of the bank, producing & consuming all user data; handling business logic for the 25+ million commercial & personal accounts
+    • Maintained & contributed to 100’s of web services, spanning numerous applications such as Chase.com, Chase Pay, & Chase mobile app
+    • Implemented new RESTful services; collaborating with multiple teams, creating exciting features such as Ultimate Rewards & Refer-A-Friend
+    • Interacted with business stakeholders & architect design authorities to problem solve possible solutions for our latest up & coming projects
+    • Took ownership of our applications internal messaging architecture; migrating hundreds of services off legacy AIX servers, onto new RedHat & zOS clusters; impacting over 550 million transactions daily
+    • Created a complete end-to-end test suite for 5 separate applications, spanning hundreds of services, in SOAPui as part of a larger infrastructure migration project; moving off legacy lpars
+    • Mentored & trained new developers; responsibly preparing them for a successful future at JP Morgan Chase
+    • Constructed an 'Onboarding Guide' used by all new hires coming into Chase Digital, as well as establishing & maintaining a vast array of additional documentation & tutorials on Confluence
 
 
-    + Revature Responsibilities
-Collaborated with a team in extensive learning & teaching of full stack java development; enhancing knowledge and skills across all front, middle, & and back-end tiers; working on multiple mini group projects throughout
-Developed multiple internal Spring Boot web applications for scheduling & analytics; generating gorgeous dashboards w/ Angular Material, in addition to DataTables, Highcharts, & D3 JavaScript libraries
-Designed multiple Single Page Application (SPA) UIs, utilizing HTML, CSS, JavaScript, & Angular
-Personally, designed & created a single set of  generic menus & navigation toolbars to be used across all internal applications; combining the best of the best from all of the original implementations
+  + Revature Responsibilities
+    • Collaborated with a team in extensive learning & teaching of full stack java development; enhancing knowledge & skills across all front, middle, & back- end tiers; working on mini group projects throughout
+    • Developed distinct internal Spring Boot web applications for scheduling & analytics; composing of gorgeously creative dashboards, leveraging Angular, in addition to DataTables, HighCharts, & D3 JavaScript libraries
+    • Designed three independent Single Page Application User Interfaces (SPA UI) for internal applications, utilizing HTML, CSS, JavaScript, & Angular
+    • Personally, designed & created a single set of generic menus & navigation toolbars to be used across all internal applications
+    • Worked with Spring modules, such as Spring Boot, Spring Data, Spring MVC, & Spring Security on tight deadline projects; requiring extensive teamwork, communication, time management, & creative problem solving
 
 
-    + Traumasoft Responsibilities
-    Worked with a small team of developers creating new features directly for end-clients; utilizing HTML, CSS, PHP, and JavaScript
-Actively worked on cleaning up 'Issues' board on Jira; fixing defects & UI bugs in order to preserve a healthy maintainable code base
+  + Traumasoft Responsibilities
+    • Contributed to a small team of developers, creating new features directly for end-clients; utilizing HTML, CSS, PHP, and JavaScript
+    • Actively managed, organized, & cleaned 'Issues' board on Jira; fixing defects & UI bugs to preserve a healthy maintainable code base
 
+
++ Skills
+  - Angular
+  - Cassandra
+  - Collaboration
+  - Communication
+  - CSS
+  - DB2
+  - Design Patterns
+  - DevOps
+  - Git
+  - Hibernate
+  - HTML
+  - Java
+  - JavaScript
+  - Jenkins
+  - jUnit
+  - Leadership
+  - Maven
+  - Problem Solving
+  - RESTful Services
+  - Scrum
+  - SOAP Services
+  - SonarQube
+  - Spring Boot
+  - SQL
+  - Statistical Analysis
+  - Stored Procedures
+  - Swagger UI
+  - Tomcat
+  - Unit Testing
+  - Version Control
+
+
++ Additional (Can plug in based on job requirements.)
+  - Relational Databases
+  - Oracle SQL
+  - MySQL
+  - 
 
 
 
   |  New York, New York
   |  Reston, Virginia
   |  Kalamazoo, Michigan
+
+
+

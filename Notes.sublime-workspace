@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "/I/GIT/Notes/Notes/Unix/War.html",
+			"file": "/I/GIT/Notes/Notes/Other/Work/My Details.txt",
 			"settings":
 			{
-				"buffer_size": 16085,
+				"buffer_size": 12839,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -69,26 +69,30 @@
 	[
 		"/I/GIT/Notes",
 		"/I/GIT/Notes/Notes",
+		"/I/GIT/Notes/Notes/Other",
+		"/I/GIT/Notes/Notes/Other/Work",
 		"/I/GIT/Notes/Notes/Unix",
 		"/I/GIT/Notes/Programs",
-		"/I/GIT/Notes/Programs/GnuWin32",
-		"/I/GIT/Notes/Programs/GnuWin32/bin",
-		"/I/GIT/Notes/Programs/GnuWin32/man",
-		"/I/GIT/Notes/Programs/GnuWin32/man/cat1",
+		"/I/GIT/Notes/Programs/Sublime Text 3",
+		"/I/GIT/Notes/Programs/Sublime Text 3/User",
 		"/I/GIT/Notes/Spaces",
 		"/I/Google Drive",
-		"/I/Google Drive/Work",
-		"/I/Google Drive/Work/Resume & Cover Letter",
-		"/I/Google Drive/Work/Resume & Cover Letter/2019"
+		"/I/Google Drive/Notes"
 	],
 	"file_history":
 	[
+		"/I/Google Drive/Work/Resume & Cover Letter/2019/2019 Resume.txt",
+		"/I/Google Drive/Work/Resume & Cover Letter/2019/Zety Resumes/Clean-Vardell-Nate.txt",
+		"/I/GIT/Notes/Notes/Unix/War.html",
+		"/I/GIT/Notes/Programs/Sublime Text 3/User/Default (Windows).sublime-keymap",
+		"/C/Users/NV/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/C/Users/NV/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/I/GIT/Notes/Notes/Unix/Temp.html",
 		"/I/GIT/Notes/Notes/Unix/.bashrc",
-		"/I/GIT/Notes/Notes/Other/Work/Technical Skills.txt",
 		"/C/Users/NV/.bashrc",
+		"/I/GIT/Notes/Notes/Other/Work/Technical Skills.txt",
 		"/C/Program Files (x86)/GnuWin32/contrib/tree/1.5.2.2/tree-1.5.2.2-GnuWin32.README",
 		"/I/GIT/Notes/Notes/LinkedIn/Chat Response.txt",
-		"/I/GIT/Notes/Notes/Unix/Temp.html",
 		"/I/GIT/Notes/Notes/Notes.txt",
 		"/I/GIT/NOTES/Notes/Notes.txt",
 		"/I/GIT/NOTES/Notes/Java/XML.java",
@@ -152,9 +156,19 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"the ",
+			"_",
+			" ",
+			"REST",
+			"Spring",
+			" ",
+			"list",
+			"4d",
+			"2d",
+			",_",
 			",",
 			"__.",
 			"_",
@@ -270,27 +284,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/I/GIT/Notes/Notes/Unix/War.html",
+					"file": "/I/GIT/Notes/Notes/Other/Work/My Details.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 16085,
+						"buffer_size": 12839,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								878,
-								938
+								4041,
+								4041
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 518.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -376,7 +392,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 276.0,
+	"side_bar_width": 365.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
