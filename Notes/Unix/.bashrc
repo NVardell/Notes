@@ -1,15 +1,15 @@
 # Pure Laziness
-alias a="alias"
-alias c="clear"
 alias x="exit"
-alias ls="ls -lrta --color"
+alias c="clear"
+alias ls="ls -lart --color"
+alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
 
 
 # Manage Aliases & User Functions
-alias ag="cat ~/.bashrc | grep "  # View current bashrc file
-alias bashit="start ~/.bashrc"    # Open bashrc file for editing
-alias load="source ~/.bashrc"     # Load changes made to bashrc file
-alias mine="a | grep NVardell"    # Display my GIT repo aliases for cloning
+alias ag="cat ~/.bashrc | grep -i "              # View aliases in bashrc file
+alias bashit="start ~/.bashrc"                   # Open bashrc file for editing
+alias load="source ~/.bashrc"                    # Load changes made to bashrc file
+alias mine="a | grep NVardell"                   # Display my GIT repo aliases for cloning
 
 
 # Navigation
@@ -27,28 +27,28 @@ alias ga="git add "
 alias gs="git status"
 alias clone="git clone "
 alias stash="git stash"
-alias glb="git branch"              # Git List of Local Branches
-alias grb="git branch -r"           # Git List of Remote Branches
+alias glb="git branch"                           # Git List of Local Branches
+alias grb="git branch -r"                        # Git List of Remote Branches
 alias pull="git pull"
 alias push="git push"
 alias gc="git commit -m "
 alias gco="git checkout "
-alias gnb="git checkout -b "        # Git New Branch
+alias gnb="git checkout -b "                     # Git New Branch
 alias gm="git checkout master"
 alias set=" --set-upstream origin"
-alias gr="git remote -v"            # Git Remote URL
-alias grv="git remote show origin"  # Git Remote URL- Verbose
+alias gr="git remote -v"                         # Git Remote URL
+alias grv="git remote show origin"               # Git Remote URL- Verbose
 
 
 # GIT  -  Misc Commands
-alias gcf="git clean -f"         # Force delete untracked files
-alias gca="git clean -fx"        # Force delete untracked & ignored files
-alias gcw="git clean -ndx"       # What goes bye-bye? (n=what, d=directories, x=files(ignored))
-alias rename="push set "         # Push new branch, set local branch to track (new_branch)
-alias rename="git branch -m "    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
-alias adios="git push origin :"  # Delete the old branch (:old_branch)
-alias grt="git rm --cached "     # Untrack a file & remove it from repo
-alias gut="git update-index --skip-worktree "  # Untrack a local file & leave in repo
+alias gcf="git clean -f"                         # Force delete untracked files
+alias gca="git clean -fx"                        # Force delete untracked & ignored files
+alias gcw="git clean -ndx"                       # What goes bye-bye? (n=what, d=directories, x=files(ignored))
+alias rename="push set "                         # Push new branch, set local branch to track (new_branch)
+alias rename="git branch -m "                    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
+alias adios="git push origin :"                  # Delete the old branch (:old_branch)
+alias grt="git rm --cached "                     # Untrack a file & remove it from repo
+alias gut="git update-index --skip-worktree "    # Untrack a local file & leave in repo
 
 
 # GIT -  Something went VERY wrong
@@ -71,9 +71,9 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 
 # MISC - Random Shenanigans
 alias t="tree"
-alias wt="cmd //c tree //a //f"  # Windows built-in tree function
-alias war="wars | clip"    # Runs 'wars' function & adds output to clipboard
-alias fact="facts | clip"  # Runs 'facts' function & adds output to clipboard
+alias wt="cmd //c tree //a //f"                  # Windows built-in tree function
+alias war="wars | clip"                          # Runs 'wars' function & adds output to clipboard
+alias fact="facts | clip"                        # Runs 'facts' function & adds output to clipboard
 
 
 # MISC - User Defined Functions
