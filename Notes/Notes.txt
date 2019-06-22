@@ -6,6 +6,21 @@
 
 
 
+
+/****************************************************************************************************************************************************
+*****************************************************************     INTELLIJ     ******************************************************************
+*****************************************************************************************************************************************************/
+* Auto Imports - Never use wildcard import
+    1. Navigate menus 
+        File -> Settings -> Editor -> Code Style -> Java -> Imports (Tab)
+    2. Set value to 99 for the fields:
+        + "Class count to use import with '*'"
+        + "Names count to use static import with '*'"
+    3. Click 'Apply' & 'OK'
+
+
+
+
 /****************************************************************************************************************************************************
 *************************************************************     UNIX/BASH COMMANDS     ************************************************************
 *****************************************************************************************************************************************************/
@@ -15,9 +30,12 @@
     export PATH=/opt/apache-maven-3.6.0/bin:$PATH
 * Delete all empty directories
     find . -type d -empty -delete
-* View certificate info in a keystore file
-    keytool -list -v -keystore [keystore name] -storepass [keystore password]
-    keytool -list -v -keystore cacerts -storepass changeit
+* Certificates & KetStores & KeyTool Examples
+    + Create a keystore
+        keytool -genkey -alias selfsigned_localhost -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
+    + View certificate info in a keystore file
+        keytool -list -v -keystore [keystore name] -storepass [keystore password]
+        keytool -list -v -keystore cacerts -storepass changeit
 
 
 
