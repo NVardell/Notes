@@ -17,6 +17,9 @@
         + "Class count to use import with '*'"
         + "Names count to use static import with '*'"
     3. Click 'Apply' & 'OK'
+* Remove right wrap margin vertical line on editor
+    1. File -> Settings -> Editor -> General -> Appearance
+    2. Uncheck box next to 'Show hard wrap guide...'
 
 
 
