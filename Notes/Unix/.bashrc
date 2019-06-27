@@ -16,6 +16,7 @@ alias mine="a | grep NVardell"                   # Display my GIT repo aliases f
 alias s='cd I:/Spaces'
 alias ar='cd I:/GIT; ll'
 alias b="cd I:/GIT/Bits; gs"
+alias i="cd I:/GIT/IntelliJ; gs"
 alias n="cd I:/GIT/Notes; gs"
 alias o="cd I:/GIT/Other; ll"
 alias p="cd I:/GIT/Pieces; gs"
@@ -43,6 +44,7 @@ alias grv="git remote show origin"               # Git Remote URL- Verbose
 # GIT  -  Misc Commands
 alias gcf="git clean -f"                         # Force delete untracked files
 alias gca="git clean -fx"                        # Force delete untracked & ignored files
+alias gcd="git clean -fdx"                       # Force delete untracked & ignored files & directories
 alias gcw="git clean -ndx"                       # What goes bye-bye? (n=what, d=directories, x=files(ignored))
 alias rename="push set "                         # Push new branch, set local branch to track (new_branch)
 alias rename="git branch -m "                    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
@@ -60,6 +62,7 @@ alias olord="git reset --hard"
 alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
 alias pn="n; ga --all; gc \"Pushing latest notes.\"; push;"
+alias pi="i; ga --all; gc \"Manually pushing latest settings.\"; push;"
 
 
 # GIT  -  Repositories
