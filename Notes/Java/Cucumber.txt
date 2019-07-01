@@ -4,6 +4,8 @@
 * Cucumber Links
     + Homepage - https://cucumber.io/
     + Overview - https://cucumber.io/docs/guides/overview/
+    + Data Tables API - https://github.com/cucumber/cucumber/tree/master/datatable
+    + Runner Options - https://cucumber.io/docs/cucumber/api/#list-configuration-options
 * Gherkin Links
     + Reference - https://cucumber.io/docs/gherkin/reference/
     + Keywords - https://cucumber.io/docs/gherkin/reference/#keywords
@@ -25,8 +27,29 @@
                     </dependency>
     + Running Cucumber
         - Command Line (Most Common Option - According to Official Docs page......)
-            * 
+            * Run using a CLI Runner (Command Line Interface Runner), that is an executable Java class that can be from from command line.
+                    java cucumber.api.cli.Main
+            * By default, Cucumber will treat anything ending in '.java' under root as a step definition file.
         - JUnit
+            1. Add 'cucumber-junit' dependency to pom file.
+            2. Create an empty test class that uses the Cucumber JUnit Runner.
+               This will execute all scenarios in same package as the runner.
+               By default, 'glue' clode is also assumed to be in the same package.
+                    package com.example;
+
+                    import cucumber.api.CucumberOptions;
+                    import cucumber.api.junit.Cucumber;
+                    import org.junit.runner.RunWith;
+
+                    @RunWith(Cucumber.class)
+                    @CucumberOptions()  // Can be used to provide additional configuration to the runner. (Link at top. Some examples below.)
+                    @CucumberOptions(plugin = {"pretty", "html:target/cucumber"})   // Use the two formatter plugins pretty and html
+                    @CucumberOptions(dryRun=true)   // If you want to check whether all feature file steps have corresponding step definitions
+                    @CucumberOptions(monochrome=true)   // If you want console output from Cucumber in a readable format
+                    @CucumberOptions(strict=false)  // If you want to skip undefined steps from execution
+                    public class RunCucumberTest {
+                    }
+
     + Step Definitions
         - In order for Cucumber to comprehend the Gherkin, Step Definitions are required for mapping the Gherkin steps to actual code.
         - Step definitions hardwire the specification to the implementation.
@@ -36,6 +59,7 @@
                 })
 * Gherkin
     + Gherkin documents are stored in '.feature' files and are typically versioned in source control alongside software
+    + Gherkin is a Domain Specific Language (DSL).
     + Primary Keywords
         - Feature
         - Rule
@@ -146,18 +170,63 @@
                 + When steps are used to describe an event or action.
                 + STRONGLY recommended to only have ONE 'When' step per 'Scenario'.
             * Then
-            * And
-            * But
+                + Then steps used to describe EXPECTED outcome.
+                + Should use an assertion to compare expected an actual results.
+                + Don't do assertions for DATABASE stuff - ONLY observable outcomes that users can witness.
+            * And / But
+                + Can be used to replace multiple 'Given's, 'When's, or 'Then's so make scenarios more legible.
         - Cucumber executes them in order, one at a time, executing a matching step definition every time.
         - Keywords are NOT taken into account when looking for step definitions.  This means you cannot have multiple 
           steps with the same text. Cucumber considers the following steps duplicates. (Example Below)
                 Given there is money in my account
                 Then there is money in my account
-    + And / But
     + Background
-    + Scenario Outline
+        - Allows you to add some context to the scenarios in a feature.
+        - Should be used when test cases are repeating a lot of initial 'given' steps.
+        - Backgrounds are run before each scenario, but AFTER any 'Before Hooks'.
+        - In the Feature file, put the background before the first 'Scenario'.
+    + Scenario Outline (aka - Scenario Template)
+        - Used to run the same Scenario multiple times with different combinations of values.
+        - They allow us to more concisely express scenarios through the use of a template with '< >' delimited parameters.
+        - Allows us to go from this:
+                Scenario: eat 5 out of 12
+                  Given there are 12 cucumbers
+                  When I eat 5 cucumbers
+                  Then I should have 7 cucumbers
+
+                Scenario: eat 5 out of 20
+                  Given there are 20 cucumbers
+                  When I eat 5 cucumbers
+                  Then I should have 15 cucumbers
+        - To this:
+                Scenario Outline: eating
+                  Given there are <start> cucumbers
+                  When I eat <eat> cucumbers
+                  Then I should have <left> cucumbers
+
+                  Examples:
+                    | start | eat | left |
+                    |    12 |   5 |    7 |
+                    |    20 |   5 |   15 |
+        - The 'Scenario' is run once for each row in the template/outline.
     + Step Arguments
-    + Data Tables
+        - When you want to pass more data to a step than fits on a single line.
+        - Gherkin has two ways to accomplish this.
+            * Doc Strings
+                + Will be passed to the step definition as the last argument.
+                + The text should be offset by delimiters consisting of three double-quote marks on lines of their own. (Example Below)
+                        """
+                        Here is the first paragraph of my blog post.
+                        """
+            * Data Tables
+                + Will be passed to the step definition as the last argument.
+                + Cucumber provides an API for manipulating tables from within step definitions. (Link at top.)
+                + Handy for passing a list of values to a step definition (Example Below)
+                        Given the following users exist:
+                          | name   | email              | twitter         |
+                          | Aslak  | aslak@cucumber.io  | @aslak_hellesoy |
+                          | Julien | julien@cucumber.io | @jbpros         |
+                          | Matt   | matt@cucumber.io   | @mattwynne      |
 
 
 
