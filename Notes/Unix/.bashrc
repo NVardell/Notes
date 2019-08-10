@@ -20,6 +20,7 @@ alias i="cd I:/GIT/IntelliJ; gs"
 alias n="cd I:/GIT/Notes; gs"
 alias o="cd I:/GIT/Other; ll"
 alias p="cd I:/GIT/Pieces; gs"
+alias r="cd I:/GIT/Royally; gs"
 alias v="cd I:/GIT/Validate; gs"
 
 
@@ -36,6 +37,7 @@ alias gc="git commit -m "
 alias gco="git checkout "
 alias gnb="git checkout -b "                     # Git New Branch
 alias gm="git checkout master"
+alias gd="git checkout develop"
 alias set=" --set-upstream origin"
 alias gr="git remote -v"                         # Git Remote URL
 alias grv="git remote show origin"               # Git Remote URL- Verbose
