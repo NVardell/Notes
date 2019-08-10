@@ -255,3 +255,48 @@
     - 
 * 
     - 
+
+
+
+
+
+/****************************************************************************************************************************************************
+*************************************************     INTELLIJ AUTO-GEN STEPS FROM FEATURE FILE     *************************************************
+*****************************************************************************************************************************************************/
+/**
+ * JAVA 8 Version
+ * @author Nate Vardell
+ * @since 7/2/2019
+ */
+public class MyStepdefs {
+    public MyStepdefs() {
+        Given("^there are <size> integers in the array$", () -> {
+        });
+        When("^I look for element <k>$", () -> {
+        });
+        Then("^I should see message <msg>$", () -> {
+        });
+    }
+}
+
+
+/**
+ * JAVA Version
+ * @author Nate Vardell
+ * @since 7/2/2019
+ */
+public class MyStepdefs {
+    @cucumber.api.java.en.Given("there are <size> integers in the array")
+    public void thereAreSizeIntegersInTheArray() {
+        
+    }
+
+    @cucumber.api.java.en.When("I look for element <k>")
+    public void iLookForElementK() {
+        
+    }
+
+    @cucumber.api.java.en.Then("I should see message <msg>")
+    public void iShouldSeeMessageMsg() {
+    }
+}
