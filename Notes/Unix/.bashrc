@@ -1,6 +1,7 @@
 # Pure Laziness
-alias x="exit"
+alias a="alias"
 alias c="clear"
+alias x="exit"
 alias ls="ls -lart --color"
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
 
@@ -70,6 +71,7 @@ alias pi="i; ga --all; gc \"Manually pushing latest settings.\"; push;"
 # GIT  -  Repositories
 alias bits="clone https://github.com/NVardell/Bits.git"
 alias notes="clone https://github.com/NVardell/Notes.git"
+alias other="clone https://github.com/NVardell/Other.git"
 alias pieces="clone https://github.com/NVardell/Pieces.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
