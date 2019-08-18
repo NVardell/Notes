@@ -66,7 +66,7 @@ alias olord="git reset --hard"
 alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
 alias pn="n; ga --all; gc \"Pushing latest notes.\"; push;"
-alias pi="i; ga --all; gc \"Manually pushing latest settings.\"; push;"
+alias po="o; ga --all; gc \"Pushing latest changes.\"; push;"
 
 
 # GIT  -  Repositories
