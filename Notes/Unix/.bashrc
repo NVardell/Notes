@@ -1,10 +1,9 @@
 # Pure Laziness
-alias a="alias"
 alias c="clear"
 alias x="exit"
 alias ls="ls -lart --color"
-alias dora="explore ."                           # Open Windows File Explorer at current directory
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
+alias dora="explorer ."                          # Open Windows File Explorer at current directory
 
 
 # Manage Aliases & User Functions
