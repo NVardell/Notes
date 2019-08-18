@@ -1,9 +1,9 @@
 # Pure Laziness
-alias a="alias"
 alias c="clear"
 alias x="exit"
 alias ls="ls -lart --color"
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
+alias dora="explorer ."                          # Open Windows File Explorer at current directory
 
 
 # Manage Aliases & User Functions
@@ -27,6 +27,7 @@ alias v="cd I:/GIT/Validate; gs"
 
 # GIT  -  Basic Commands
 alias ga="git add "
+alias gaa="git add --all"
 alias gs="git status"
 alias clone="git clone "
 alias stash="git stash"
@@ -65,7 +66,7 @@ alias olord="git reset --hard"
 alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
 alias pn="n; ga --all; gc \"Pushing latest notes.\"; push;"
-alias pi="i; ga --all; gc \"Manually pushing latest settings.\"; push;"
+alias po="o; ga --all; gc \"Pushing latest changes.\"; push;"
 
 
 # GIT  -  Repositories
