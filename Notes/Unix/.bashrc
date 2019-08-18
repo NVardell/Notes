@@ -27,6 +27,7 @@ alias v="cd I:/GIT/Validate; gs"
 
 # GIT  -  Basic Commands
 alias ga="git add "
+alias gaa="git add --all"
 alias gs="git status"
 alias clone="git clone "
 alias stash="git stash"
