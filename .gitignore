@@ -29,3 +29,5 @@
 !.mvn/wrapper/maven-wrapper.jar
 # Workspace files
 *.sublime-workspace
+# Apple Files
+*.DS_Store
