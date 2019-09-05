@@ -76,7 +76,7 @@ alias bits="clone https://github.com/NVardell/Bits.git"
 alias notes="clone https://github.com/NVardell/Notes.git"
 alias other="clone https://github.com/NVardell/Other.git"
 alias pieces="clone https://github.com/NVardell/Pieces.git"
-alias royal="clone https://github.com/NVardell/RoyallyStated.git"
+alias royal="clone https://github.com/NVardell/Royally.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
 
