@@ -27,6 +27,21 @@ alias v="cd I:/GIT/Validate; gs"
 
 # GIT  -  Basic Commands
 alias ga="git add "
+alias gs="git status"
+alias pull="git pull"
+alias push="git push"
+alias stash="git stash"
+alias clone="git clone "
+alias gc="git commit -m "
+alias gaa="git add --all"
+alias gr="git remote -v"                                # Git Remote URL
+alias grv="git remote show origin"                      # Git Remote URL- Verbose
+alias difflc="git diff --stat "                         # Add Commit Hash After to get stats on that commit
+alias set="git remote set-url origin "                  # Update repository url to a new uri for pushing changes if/when the repo is renamed/moved/deleted
+alias past="git for-each-ref --sort='-authordate'"      # Display branches with latest commit dates
+alias stats="git log --stat --decorate --author='NV'"   # Display the stats for all of my commits
+alias change="git commit --amend"                       # Git Amend to open Vim & Edit last Commit Message (ctrl+i=insert, esc=stop insert, :wq=save & quit.)
+alias ga="git add "
 alias gaa="git add --all"
 alias gs="git status"
 alias clone="git clone "
@@ -44,8 +59,28 @@ alias set=" --set-upstream origin"
 alias gr="git remote -v"                         # Git Remote URL
 alias grv="git remote show origin"               # Git Remote URL- Verbose
 
+# GIT - Checkout Branches
+alias gd="git checkout develop"                         # Checkout develop
+alias gm="git checkout master"                          # Checkout master
+alias gpt="git checkout feature/prodTests"              # Checkout Prod Automation Testing
+alias glt="git checkout feature/istTests"               # Checkout IST Automation Testing
+alias gm="git checkout master"                          # Checkout master
+alias gco="stash; git checkout "                        # Checkout ....
+alias gnb="stash; git checkout -b "                     # Checkout new branch
+alias dlb="git branch -D "                              # Delete local branch
+alias drb="git push origin --delete "                   # Delete remote branch
+alias glb="git branch"                                  # Git List of Local Branches
+alias grb="git branch -r"                               # Git List of Remote Branches
+
 
 # GIT  -  Misc Commands
+alias gcf="stash; git clean -f"                         # Force delete untracked files
+alias gca="stash; git clean -fdx"                       # Force delete untracked & ignored files & directories
+alias gcans="git clean -fdx"                            # Force delete untracked & ignored files & directories (NS - No Stash.)
+alias gcw="git clean -ndx"                              # What goes bye-bye? (n=what, d=directories, x=files(ignored))
+alias gci=" git clean -fX"                              # Remove ignored files (Like other peoples IntelliJ files.... Gr.)
+alias gciw=" git clean -nX"                             # Remove what ignored files?
+alias rename="git branch -m "                           # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)
 alias gcf="git clean -f"                         # Force delete untracked files
 alias gca="git clean -fx"                        # Force delete untracked & ignored files
 alias gcd="git clean -fdx"                       # Force delete untracked & ignored files & directories
@@ -63,6 +98,12 @@ alias olord="git reset --hard"
 
 
 # GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
+alias pn="n; ga --all; gc \"Pushing latest notes.\"; push;"  
+alias po="o; ga --all; gc \"Pushing latest changes.\"; push;"
+alias pp="p; ga --all; gc \"Pushing latest pieces.\"; push;"
+alias pe="gs; gaa; gc \"Pushing latest changes.\"; push; gs;"                   # Push everything in current repo
+alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"      # Git status for every sub directory in parent that is a Git Repo
+alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"    # Git pull for every sub directory in parent that is a Git Repo
 alias gpe="gs; gaa; gc \"Pushing latest changes.\"; push;"  # Push everything
 alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
 alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
