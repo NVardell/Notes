@@ -98,6 +98,7 @@ alias wt="cmd //c tree //a //f"                  # Windows built-in tree functio
 alias war="wars | clip"                          # Runs 'wars' function & adds output to clipboard
 alias fact="facts | clip"                        # Runs 'facts' function & adds output to clipboard
 alias npms="npm start"
+alias insta="npm install "
 
 
 
