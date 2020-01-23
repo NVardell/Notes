@@ -5,18 +5,22 @@ alias ll=ls
 alias ls="ls -lart --color"
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
 alias dora="explorer ."                          # Open Windows File Explorer at current directory
+alias cl="wc -l *"                               # Count lines for every file in current directory
 
 
 # Manage Aliases & User Functions
 alias ag="cat ~/.bashrc | grep -i "              # View aliases in bashrc file
 alias bashit="start ~/.bashrc"                   # Open bashrc file for editing
+alias npmc="start ~/.npmrc"
 alias load="source ~/.bashrc"                    # Load changes made to bashrc file
 alias mine="a | grep NVardell"                   # Display my GIT repo aliases for cloning
+alias unload="unalias -a"                        # Remove all bash aliases
 
 
 # Navigation
-alias s='cd I:/Spaces'
+alias i='cd I:/; ll'
 alias ar='cd I:/GIT; ll'
+alias s='cd I:/Spaces; ll'
 alias b="cd I:/GIT/Bits; gs"
 alias i="cd I:/GIT/IntelliJ; gs"
 alias n="cd I:/GIT/Notes; gs"
@@ -103,8 +107,13 @@ alias insta="npm install "
 
 
 # MISC - User Defined Functions
-function example() {
-   echo "Hello, $1!" # $ hi Nate => Hello, Nate!
+function p() { # Ping url once and print server ip address
+    echo "Sending ping to ip = " $1;
+    ping -n 1 $1 | grep 'Pinging' | awk -F"[][ .]" '{print $2 " = " $8"."$9"."$10"."$11"}'
+}
+function pc() { # Pretty curl - Prints response in pretty JSON format
+    echo "Sending request to = " $1;
+    curl $1 | json_pp
 }
 function facts() {
    awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/GIT/Notes/Notes/Unix/Temp.html
@@ -115,6 +124,7 @@ function wars() {
 
 
 # MISC - Export User Functions
-export -f example
+export -f p
+export -f pc
 export -f facts
 export -f wars
