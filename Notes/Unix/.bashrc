@@ -1,17 +1,15 @@
 # Pure Laziness
 alias c="clear"
 alias x="exit"
-alias ll=ls
-alias ls="ls -lart --color"
-alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
-alias dora="explorer ."                          # Open Windows File Explorer at current directory
-alias cl="wc -l *"                               # Count lines for every file in current directory
+alias ll="ls -lart --color"
+alias a="cat ~/.bashrc | grep alias | sort"                             # View aliases w/ comments
+alias dora="explorer ."                                                 # Open Windows File Explorer at current directory
 
 
 # Manage Aliases & User Functions
 alias ag="cat ~/.bashrc | grep -i "              # View aliases in bashrc file
+alias npmc="start ~/.npmrc"                      # Open npmrc file for editing (Can also run 'npm config edit')
 alias bashit="start ~/.bashrc"                   # Open bashrc file for editing
-alias npmc="start ~/.npmrc"
 alias load="source ~/.bashrc"                    # Load changes made to bashrc file
 alias mine="a | grep NVardell"                   # Display my GIT repo aliases for cloning
 alias unload="unalias -a"                        # Remove all bash aliases
@@ -28,7 +26,8 @@ alias o="cd I:/GIT/Other; ll"
 alias p="cd I:/GIT/Pieces; gs"
 alias r="cd I:/GIT/Royally; gs"
 alias v="cd I:/GIT/Validate; gs"
-alias sand="cd I:/GIT/Other/React/sandbox"
+alias rw="cd I:/GIT/Royally/royal-web"
+alias orw="cd I:/GIT/Other/React/app"
 
 
 # GIT  -  Basic Commands
@@ -96,14 +95,22 @@ alias royal="clone https://github.com/NVardell/Royally.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
 
+# NPM - Shorthand NPM Commands
+alias npms="npm start"                           # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
+alias npmi="npm install "                        # Install packages listed on command line
+alias npmu="npm update"                          # Local Project - Update all packages
+alias npmo="npm outdated"                        # Local Project - Display outdated packages
+alias npmug="npmu -g"                            # Global - Update all packages
+alias npmog="npmo -g --depth=0"                  # Global - Display outdated packages
+alias unpm="npm install npm@latest -g"           # Update npm to latest version
+
+
 # MISC - Random Shenanigans
 alias t="tree"
 alias wt="cmd //c tree //a //f"                  # Windows built-in tree function
 alias war="wars | clip"                          # Runs 'wars' function & adds output to clipboard
 alias fact="facts | clip"                        # Runs 'facts' function & adds output to clipboard
-alias npms="npm start"
-alias insta="npm install "
-
+alias cl="wc -l *"                               # Count lines for every file in current directory
 
 
 # MISC - User Defined Functions
