@@ -2,8 +2,8 @@
 alias c="clear"
 alias x="exit"
 alias ll="ls -lart --color"
-alias a="cat ~/.bashrc | grep alias | sort"                             # View aliases w/ comments
-alias dora="explorer ."                                                 # Open Windows File Explorer at current directory
+alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
+alias dora="explorer ."                          # Open Windows File Explorer at current directory
 
 
 # Manage Aliases & User Functions
@@ -61,10 +61,10 @@ alias grb="git branch -r"                               # Git List of Remote Bra
 
 # GIT  -  Misc Commands
 alias gcf="git clean -f"                         # Force delete untracked files
-alias gci="git clean -fX"                              # Remove ignored files (Like other peoples IntelliJ files.... Gr.)
-alias gciw="git clean -nX"                             # Remove what ignored files?
+alias gci="git clean -fX"                        # Remove ignored files (Like other peoples IntelliJ files.... Gr.)
+alias gciw="git clean -nX"                       # Remove what ignored files?
 alias gcd="git clean -fdx"                       # Force delete untracked & ignored files & directories
-alias gcw="git clean -ndx"                              # What goes bye-bye? (n=what, d=directories, x=files(ignored))
+alias gcw="git clean -ndx"                       # What goes bye-bye? (n=what, d=directories, x=files(ignored))
 alias grt="git rm --cached "                     # Untrack a file & remove it from repo
 alias rename="git branch -m "                    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
 alias adios="git push origin :"                  # Delete the old branch (:old_branch)
