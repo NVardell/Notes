@@ -60,7 +60,8 @@
 *****************************************************************************************************************************************************/
 * Check environment variable value
     echo %JAVA_HOME%
-
+* Create a redirect between two folders (Used for iTunes backup to store on external drive instead of filling C Drive.)
+    MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "D:\MobileSync\Backup"
 
 
 
