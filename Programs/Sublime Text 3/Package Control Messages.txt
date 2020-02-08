@@ -80,3 +80,16 @@ Theme - Gravity
   Blend title bar with sidebar header:
   
       "gravity_sidebar_header": true
+
+
+
+
+
+
+BracketHighlighter
+------------------
+
+  # BracketHighlighter
+  
+  Welcome to BracketHighlighter!  For a quick start guide, please go to  
+  `Preferences->Package Settings->BracketHighlighter->Quick Start Guide`.
