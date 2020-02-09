@@ -23,6 +23,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/I/Repos/Notes/Notes/Backend/Mongo.txt",
+			"settings":
+			{
+				"buffer_size": 539,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -78,15 +87,8 @@
 	},
 	"expanded_folders":
 	[
-		"/I/GIT/Notes/Notes",
-		"/I/GIT/Notes/Notes/Unix",
-		"/I/Google Drive/Projects/Royally Clashing",
-		"/I/GIT",
-		"/I/GIT/Notes",
-		"/I/GIT/Notes/Programs",
-		"/I/GIT/Notes/Programs/Sublime Text 3",
-		"/I/GIT/Royally",
-		"/I/GIT/Royally/royal-web"
+		"/I/Repos/Notes/Notes",
+		"/I/Repos/Notes/Notes/Backend"
 	],
 	"file_history":
 	[
@@ -390,16 +392,13 @@
 	"folders":
 	[
 		{
-			"path": "I:\\GIT\\Notes\\Notes"
+			"path": "I:\\Repos\\Notes\\Notes"
 		},
 		{
 			"path": "I:\\Google Drive\\Projects\\Royally Clashing"
 		},
 		{
-			"path": "I:\\Google Drive\\Hunting"
-		},
-		{
-			"path": "I:\\GIT"
+			"path": "I:\\Repos"
 		},
 		{
 			"path": "I:\\Google Drive"
@@ -411,8 +410,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/I/Repos/Notes/Notes/Backend/Mongo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								539,
+								539
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 744.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
