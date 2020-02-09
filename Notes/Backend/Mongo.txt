@@ -1,0 +1,6 @@
+You must create a MongoDB user to access your cluster. For security purposes, Atlas requires clients to authenticate as MongoDB users to access clusters.
+
+MongoDB users are separate from Atlas users:
+
+MongoDB users can access databases hosted in Atlas.
+Atlas users can log into Atlas but do not have access to MongoDB databases.
