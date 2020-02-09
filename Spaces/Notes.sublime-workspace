@@ -3,63 +3,26 @@
 	{
 		"selected_items":
 		[
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"index",
+				"indexPair"
+			],
+			[
+				"com",
+				"compliment"
+			],
+			[
+				"compl",
+				"Compliment"
+			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "Unix.sh",
-			"settings":
-			{
-				"buffer_size": 5462,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "if [[ \"mq-config.xml\" == *\"mq\"* ]]; \n    then echo \"They are equal.\" \nfi\n# They are equal.\n\n\nif [[ \"qa01__ws__mq-config.xml\" == *\"qa\"* ]]; \n    then echo \"They are equal.\" \nfi\n\nif [[ \"qa01__ws__mq-config.xml\" == *\"ws\"* ]]; \n    then echo \"They are equal.\" \nfi\n\nif [[ \"qa01__ws__mq-config.xml\" == *\"qa\"*\"ws\"* ]]; \n    then echo \"They are equal.\" \nfi\n\nif [[ \"qa01__ws__mq-config.xml\" == *\"qa\"* && \"qa01__ws__mq-config.xml\" == *\"ws\"* ]]; \n    then echo \"They are equal.\" \nfi",
-			"settings":
-			{
-				"buffer_size": 471,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/NV/Desktop/Songs.txt",
-			"settings":
-			{
-				"buffer_size": 139,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/Google Drive/Work/Resign.txt",
-			"settings":
-			{
-				"buffer_size": 3649,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "From,"
-			}
-		},
-		{
-			"file": "Notes.txt",
-			"settings":
-			{
-				"buffer_size": 4801,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "# Spring Scheduler URLs\n+ http://www.baeldung.com/spring-scheduled-tasks\n+ https://dzone.com/articles/running-on-time-with-springs-scheduled-tasks\n\n\n# Spring Retry URLs\n+ http://www.baeldung.com/spring-retry\n+ (Testing) https://dzone.com/articles/spring-retry-ways-integrate\n\n\n# Spring Boot - JPA/Hibernate URLs\n+ (Testing) https://www.callicoder.com/hibernate-spring-boot-jpa-one-to-one-mapping-example/\n\n\npackage com.other.spring.retry;\n\nimport org.junit.Test;\nimport org.junit.runner.RunWith;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.retry.annotation.EnableRetry;\nimport org.springframework.test.context.ContextConfiguration;\nimport org.springframework.test.context.junit4.SpringJUnit4ClassRunner;\n\nimport static org.hamcrest.MatcherAssert.assertThat;\nimport static org.hamcrest.Matchers.is;\nimport static org.mockito.Mockito.*;\n\n/**\n * TODO - Add Definition\n *\n * @author Nate Vardell\n * @since 6/16/2018\n */\n@RunWith(SpringJUnit4ClassRunner.class)\n@ContextConfiguration\npublic class SpringRetryTests {\n\n    @Autowired\n    private RemoteCallService remoteCallService;\n\n    @Test\n    public void testRetry() throws Exception {\n        String message = this.remoteCallService.call();\n        verify(remoteCallService, times(3)).call();\n        assertThat(message, is(\"Completed\"));\n    }\n\n    @Configuration\n    @EnableRetry\n    public static class SpringConfig {\n\n        @Bean\n        public RemoteCallService remoteCallService() throws Exception {\n            RemoteCallService remoteService = mock(RemoteCallService.class);\n            when(remoteService.call())\n                    .thenThrow(new RuntimeException(\"Remote Exception 1\"))\n                    .thenThrow(new RuntimeException(\"Remote Exception 2\"))\n                    .thenReturn(\"Completed\");\n            return remoteService;\n        }\n    }\n}\n\n\npackage com.other.spring.retry;\n\nimport org.springframework.retry.annotation.Backoff;\nimport org.springframework.retry.annotation.Retryable;\n\n/**\n * TODO - Add Definition\n *\n * @author Nate Vardell\n * @since 6/16/2018\n */\npublic interface RemoteCallService {\n\n    @Retryable(maxAttempts = 3, backoff = @Backoff(delay = 2000))\n    String call() throws Exception;\n\n}",
-			"settings":
-			{
-				"buffer_size": 2345,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -73,6 +36,18 @@
 		"selected_items":
 		[
 			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
 				"inst",
 				"Package Control: Install Package"
 			],
@@ -85,7 +60,7 @@
 	},
 	"console":
 	{
-		"height": 157.0,
+		"height": 254.0,
 		"history":
 		[
 			"defaults write com.sublimetext.3 NSRequiresAquaSystemAppearance 0",
@@ -103,49 +78,166 @@
 	},
 	"expanded_folders":
 	[
+		"/I/GIT/Notes/Notes",
+		"/I/GIT/Notes/Notes/Unix",
+		"/I/Google Drive/Projects/Royally Clashing",
 		"/I/GIT",
-		"/I/Google Drive"
+		"/I/GIT/Notes",
+		"/I/GIT/Notes/Programs",
+		"/I/GIT/Notes/Programs/Sublime Text 3",
+		"/I/GIT/Royally",
+		"/I/GIT/Royally/royal-web"
 	],
 	"file_history":
 	[
-		"/C/Users/NV/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/I/Google Drive/Images/Haha.jpg",
-		"/I/Google Drive/Images/Deal With It.jpg",
-		"/I/Google Drive/Images/Coffee.jpg",
-		"/I/GIT/NOTES/README.md",
-		"/I/Google Drive/TEMP.txt",
-		"/I/Google Drive/Unix,sh",
-		"/I/GIT/NOTES/Other/.bashrc",
-		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-bin.ver",
-		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-doc.mft",
-		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-bin.mft",
-		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-doc.ver",
-		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2-src/README",
-		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2-src/Makefile",
-		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2/Makefile",
-		"/C/Program Files (x86)/GnuWin32/src/tree/1.5.2.2/tree-1.5.2.2/patches/tree-1.5.2.2-src.diff",
-		"/C/Program Files (x86)/GnuWin32/src/tree/1.5.2.2/tree-1.5.2.2/resource/tree-res.rc",
-		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-src.ver",
-		"/C/Program Files (x86)/GnuWin32/manifest/tree-1.5.2.2-src.mft",
-		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2/resource/tree-res.rc",
-		"/C/Users/NV/Downloads/tree-1.5.2.2-src/src/tree/1.5.2.2/tree-1.5.2.2-src/INSTALL",
-		"/C/Users/NV/Desktop/Temp Sublime Settings.txt",
-		"/I/GIT/NOTES/Sublime Text 3/User/oscrypto-ca-bundle.crt",
-		"/I/GIT/NOTES/Sublime Text 3/User/Default (Windows).sublime-keymap",
+		"/I/GIT/Notes/Programs/Sublime Text 3/Package Control Messages.txt",
+		"/I/GIT/Notes/Notes/Unix/Temp.html",
+		"/I/GIT/Notes/Notes/Unix/.bashrc",
 		"/C/Users/NV/.bashrc",
-		"/C/Users/NV/.minttyrc",
-		"/I/GIT/SETTINGS/Other/.bashrc",
-		"/C/Users/NV/Desktop/TEST/DELETE/gws/application.properties"
+		"/C/Users/NV/.npmrc",
+		"/I/GIT/Other/React/app/public/index.html",
+		"/I/GIT/Other/React/app/src/App.css",
+		"/I/GIT/Other/React/app/src/index.css",
+		"/I/GIT/Other/React/app/src/index.js",
+		"/I/GIT/Other/React/app/node_modules/react-dom/cjs/react-dom.development.js",
+		"/I/GIT/Other/React/app/src/App.js",
+		"/I/GIT/Notes/Notes/Web/css/style.css",
+		"/I/GIT/Notes/Notes/Web/js/script.js",
+		"/I/Google Drive/Songs.txt",
+		"/I/GIT/Notes/Notes/Web/index.html",
+		"/C/Users/NV/Downloads/red/red/src/script.babel",
+		"/I/GIT/Notes/Notes/Web/js/main2.js",
+		"/I/GIT/Notes/Notes/Web/js/main.js",
+		"/I/GIT/Notes/Notes/Web/css/main.sass",
+		"/I/GIT/Notes/Notes/Web/css/main.css",
+		"/I/GIT/Notes/Notes/Web/lib/scripts/app.min.js",
+		"/I/GIT/NOTES/Notes/Unix/Temp.html",
+		"/I/Dropbox/temp.txt",
+		"/I/Google Drive/Hunting/Interviews/Facebook/FB Test Questions.txt",
+		"/I/Google Drive/Hunting/Interviews/Cap1/Interview Notes - Senior Engineer.txt",
+		"/I/Google Drive/Hunting/What I Do.txt",
+		"/I/Google Drive/Hunting/LeetCode/Test Cases.txt",
+		"/I/Google Drive/Hunting/LeetCode/Solution - Trees - Min Depth.java",
+		"/I/Google Drive/Hunting/Interviews/Yieldmo.txt",
+		"/I/Google Drive/Hunting/Interviews/WeWork/WeWork - Tech Screen.java",
+		"/I/GIT/NOTES/Notes/Unix/.bashrc",
+		"/I/Google Drive/Hunting/Interviews/WeWork/WeWork - Tech Screen - My Original Solution.java",
+		"/I/Google Drive/Hunting/Interviews/Facebook/Recruiter Call.txt",
+		"/I/Google Drive/Hunting/LeetCode/Subtree of Another Tree.java",
+		"/I/Google Drive/Hunting/Interviews/WeWork/WeWork Mission Statement.txt",
+		"/I/Google Drive/Hunting/LeetCode/Brace Expansion - OK Cupid.java",
+		"/I/Google Drive/Hunting/LeetCode/Generate Parentheses.java",
+		"/I/Google Drive/Hunting/LeetCode/Two Sum.java",
+		"/I/Google Drive/Hunting/LeetCode/Valid Parentheses String.java",
+		"/I/Google Drive/Hunting/LeetCode/Longest Valid Parentheses.java",
+		"/I/Google Drive/Hunting/LeetCode/Shortest Path.java",
+		"/I/Google Drive/Projects/Royally Clashing/cards.json",
+		"/I/Google Drive/Hunting/LeetCode/Generate Parentheses.docx",
+		"/I/Google Drive/Projects/Royally Clashing/Official Swagger.yaml",
+		"/I/Google Drive/Projects/Royally Clashing/Mini - Official Paths.yaml",
+		"/I/GIT/Other/Weather/src/main/java/com/capitalone/weathertracker/measurements/MeasurementsResource.java",
+		"/I/GIT/Other/Weather/src/main/java/com/capitalone/weathertracker/statistics/StatsResource.java",
+		"/I/GIT/Other/Weather/src/main/java/com/capitalone/weathertracker/statistics/AggregateResult.java",
+		"/I/GIT/Pieces/src/test/java/com/bits/pieces/other/interviews/BoA _Clean.java",
+		"/I/GIT/Pieces/src/test/java/com/bits/pieces/other/interviews/BoA.java",
+		"/I/Google Drive/Hunting/LeetCode/ShortestPath.java",
+		"/C/Users/NV/Downloads/BoA - Stock Prices.txt",
+		"/I/Google Drive/Data/marks.txt",
+		"/I/Google Drive/Data/sample2.txt",
+		"/I/Google Drive/Data/sample.txt",
+		"/I/Google Drive/Hunting/LeetCode/ShortestPath_AmazonVersion.java",
+		"/I/Google Drive/Hunting/LeetCode/TwoSum_AmazonVersion.java",
+		"/I/Google Drive/Notes/Notes - Interview Questions.txt",
+		"/I/Google Drive/Notes/Revature - Core Java Test.pdf",
+		"/I/Google Drive/Work/Revature/Revature Test Questions.txt",
+		"/I/GIT/Other/Clash Royale Repos/Royale API Repos/cr-api-docs/docs/endpoints/popular_decks.md",
+		"/I/GIT/Pieces/src/test/java/com/bits/pieces/practice/structures/stacks/StackTests.java",
+		"/I/GIT/Pieces/src/test/java/com/bits/pieces/practice/structures/queues/QueueTests.java",
+		"/I/GIT/Royally/src/main/resources/application.properties",
+		"/I/GIT/Other/Clash Royale Repos/Royale API Repos/cr-api-docs/docs/endpoints/endpoints.md",
+		"/I/GIT/Other/Clash Royale Repos/Royale API Repos/cr-api-docs/docs/v3/json/endpoints.json",
+		"/I/GIT/Other/Clash Royale Repos/Royale API Repos/cr-api-docs/docs/v3/showcase.md",
+		"/I/GIT/Royally/src/test/resources/battleLogs.json",
+		"/I/GIT/Royally/src/test/resources/tournamentInfo.json",
+		"/I/GIT/Royally/src/test/resources/tournamentSearch.json",
+		"/I/GIT/Royally/src/test/resources/player.json",
+		"/I/GIT/Royally/src/test/resources/upcomingChests.json",
+		"/I/GIT/Royally/src/test/resources/locationsSearch.json",
+		"/I/GIT/Royally/src/test/resources/locationRankingClans.json",
+		"/I/GIT/Royally/src/test/resources/locationRankingPlayers.json",
+		"/I/GIT/Royally/src/test/resources/locationRankingWars.json",
+		"/I/GIT/Royally/src/test/resources/cards.json",
+		"/I/GIT/Royally/src/test/resources/clan.json",
+		"/I/GIT/Royally/src/test/resources/clanSearch.json",
+		"/I/GIT/Royally/src/test/resources/members.json",
+		"/I/GIT/Royally/src/test/resources/warLog.json",
+		"/I/GIT/Royally/src/test/resources/currentWar.json",
+		"/I/GIT/Royally/src/test/resources/clanMemberLeague.json",
+		"/I/GIT/Royally/src/test/resources/clanMember.json",
+		"/I/GIT/Royally/src/test/resources/clanLocation.json",
+		"/I/GIT/Other/.gitignore",
+		"/I/GIT/Other/Tutorials/spring-mvc-xml/src/test/resources/GeoLite2-City.mmdb",
+		"/I/Google Drive/TEMP_2/Weather/.c1/features/02-stats/01-get-stats.feature",
+		"/I/Google Drive/TEMP_2/Weather/.c1/languages/java/src/main/java/com/capitalone/weathertracker/DateSerializationConfiguration.java",
+		"/I/Google Drive/TEMP_2/Weather/.c1/languages/java/src/main/java/com/capitalone/weathertracker/measurements/MeasurementsResource.java",
+		"/I/Google Drive/TEMP_2/Weather/.c1/languages/java/src/main/java/com/capitalone/weathertracker/measurements/Measurement.java",
+		"/I/GIT/Notes/Notes/Java/JAX-RS Client with Jersey.java",
+		"/C/Users/NV/AppData/Local/1007C95E-C2BE-4768-AAC4-77EA28797D2C.aplzod/main.db",
+		"/I/Google Drive/Hunting/Interviews/Disney/CodeInterview.java",
+		"/I/Google Drive/Hunting/Apps/Capital One - Software Engineer/Interview Questions.txt",
+		"/I/Google Drive/Hunting/Apps/Goldman/Emails.txt",
+		"/I/Google Drive/Hunting/Interviews/Goldman/Emails.txt",
+		"/I/Google Drive/Hunting/Interviews/Wells Fargo.txt",
+		"/I/Google Drive/Hunting/Apps/Capital One - Software Engineer/Assessment/Weather Tracker.txt",
+		"/I/Google Drive/Hunting/DateTest.java",
+		"/I/Google Drive/TEMP_2/Backup/Weather/.c1/features/02-stats/01-get-stats.feature",
+		"/I/Google Drive/Hunting/Apps/Capital One - Software Engineer/HackerRank.txt",
+		"/I/Google Drive/TEMP_2/Backup/Weather/.c1/features/01-measurements/02-get-measurement.feature",
+		"/I/Google Drive/TEMP_2/Backup/Weather/.c1/features/01-measurements/01-add-measurement.feature",
+		"/I/GIT/Other/tutorials/testing-modules/rest-testing/src/test/java/com/baeldung/rest/wiremock/introduction/ProgrammaticallyManagedLiveTest.java",
+		"/I/GIT/Other/tutorials/spring-cucumber/src/test/java/com/baeldung/StepDefsIntegrationTest.java",
+		"/I/GIT/Other/tutorials/spring-cucumber/src/test/java/com/baeldung/SpringIntegrationTest.java",
+		"/I/GIT/Other/tutorials/spring-cucumber/src/test/java/com/baeldung/CucumberIntegrationTest.java",
+		"/I/GIT/Other/tutorials/testing-modules/rest-testing/src/main/resources/cucumber.json",
+		"/I/GIT/Other/tutorials/testing-modules/rest-testing/src/main/resources/wiremock_intro.json",
+		"/I/GIT/Other/tutorials/testing-modules/rest-testing/src/test/java/com/baeldung/rest/cucumber/CucumberIntegrationTest.java",
+		"/I/GIT/Other/tutorials/testing-modules/rest-testing/src/test/java/com/baeldung/rest/cucumber/StepDefinition.java",
+		"/I/GIT/NOTES/Notes/Notes.txt",
+		"/I/Google Drive/Hunting/Apps/Capital One - Software Engineer/Coding Assessment Details.txt",
+		"/I/Google Drive/Hunting/Apps/Capital One - Software Engineer/Notes.txt",
+		"/I/Google Drive/Hunting/Apps/OKCupid - Payments Software Engineer/Details.txt",
+		"/I/GIT/IntelliJ/ui.lnf.xml",
+		"/I/Google Drive/Work/Applications/2019/LinkedIn/TekSystems/Keith/Anheuser-Busch.txt",
+		"/I/Google Drive/Notes/Notes - Java.java",
+		"/I/Google Drive/Hunting/Nate Vardell - Engineer Resume 2019.txt",
+		"/I/Google Drive/Hunting/My Details.txt",
+		"/I/GIT/Notes/.gitignore",
+		"/C/Users/NV/Downloads/El_Messiri/OFL.txt",
+		"/I/Dropbox/File May 27, 11 11 44 PM",
+		"/I/Dropbox/File Feb 28, 9 19 50 PM",
+		"/I/GIT/Notes/Notes/Other/Work/Skills.txt",
+		"/C/Users/NV/Downloads/NetflixViewingHistory.csv",
+		"/I/GIT/Notes/Notes/Other/Work/Jakes Details.txt"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 379.0,
 		"where_history":
 		[
+			"I:\\Google Drive",
+			"I:\\Google Drive\\Notes",
+			"I:\\GIT\\Other\\Clash Royale Repos",
+			"I:\\GIT\\Royally\\src\\test\\resources",
+			"I:\\GIT\\Other\\Clash Royale Repos",
+			"I:\\Google Drive\\TEMP_2\\Weather\\.c1\\languages\\java\\src\\main\\java\\com\\capitalone",
+			"I:\\Google Drive\\TEMP_2\\Weather\\.c1\\languages\\java\\src\\main\\java\\com\\capitalone\\weathertracker",
+			"I:\\GIT\\Other\\tutorials",
+			"I:\\Google Drive\\Notes",
+			"I:\\Google Drive"
 		]
 	},
 	"find_state":
@@ -153,24 +245,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"origin",
-			"MINGW64",
-			"<div class=\"replayLayout__footer__timestamp ui__mediumText\">",
-			")\n",
-			"<div class=\"clan__table\">\n    <div class=\"clan__headers\">\n        <div class=\"clan__headerCaption\">Rank</div>\n        <div class=\"clan__headerCaption\">Name</div>\n        <div class=\"clan__headerCaption\">Level</div>\n        <div class=\"clan__headerCaption\">League</div>\n        <div class=\"clan__headerCaption\">Trophies</div>\n        <div class=\"clan__headerCaption\">Donations</div>\n        <div class=\"clan__headerCaption\">Role</div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4630\" data-crowns=\"34\" data-donations=\"671\">\n        <div class=\"clan__row\">\n            #1\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8JJRGC0Q\">Whi73Ra6617</a>\n            <div class=\"badges\">\n                <span class=\"badges__userVerify\"></span>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">13</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__3\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4630</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">671</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4519\" data-crowns=\"315\" data-donations=\"528\">\n        <div class=\"clan__row\">\n            #2\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/9YRGYC9VR\">Hulkinson</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__2\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4519</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">528</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4458\" data-crowns=\"17\" data-donations=\"94\">\n        <div class=\"clan__row\">\n            #3\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/PJUYJC2L\">superJ</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__2\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4458</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">94</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4403\" data-crowns=\"49\" data-donations=\"170\">\n        <div class=\"clan__row\">\n            #4\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8J9VU2C\">TheBoy</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__2\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4403</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">170</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Elder</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4332\" data-crowns=\"0\" data-donations=\"399\">\n        <div class=\"clan__row\">\n            #5\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/CPVJPY\">noah minassian</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__2\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4332</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">399</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Elder</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4325\" data-crowns=\"43\" data-donations=\"160\">\n        <div class=\"clan__row\">\n            #6\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2L8R2UJYJ\">VwoLFw</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__2\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4325</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">160</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4298\" data-crowns=\"163\" data-donations=\"827\">\n        <div class=\"clan__row\">\n            #7\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2PQP2QGUC\">steelking</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4298</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">827</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4233\" data-crowns=\"0\" data-donations=\"88\">\n        <div class=\"clan__row\">\n            #8\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/29RYG02UY\">Riley Reid</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4233</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">88</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4211\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #9\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/98908QC2\">Luxray_1</a>\n            <div class=\"badges\">\n                <span class=\"badges__userVerify\"></span>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4211</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4194\" data-crowns=\"12\" data-donations=\"30\">\n        <div class=\"clan__row\">\n            #10\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/UVGVR802\">you loser!</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4194</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">30</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4132\" data-crowns=\"0\" data-donations=\"350\">\n        <div class=\"clan__row\">\n            #11\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/YGVY2CVG\">sebastianrod890</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4132</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">350</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Elder</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4110\" data-crowns=\"46\" data-donations=\"678\">\n        <div class=\"clan__row\">\n            #12\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8RCL8RGU\">justin</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4110</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">678</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Elder</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4077\" data-crowns=\"0\" data-donations=\"437\">\n        <div class=\"clan__row\">\n            #13\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/VR20L02V\">mingo</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4077</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">437</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4061\" data-crowns=\"0\" data-donations=\"341\">\n        <div class=\"clan__row\">\n            #14\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/Q0QJULJ2\">Green Valley</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4061</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">341</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Elder</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4061\" data-crowns=\"29\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #15\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/202GQ8UY\">TheDragon'sEgg</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4061</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4061\" data-crowns=\"0\" data-donations=\"57\">\n        <div class=\"clan__row\">\n            #16\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/C9PCGR20\">jondjam</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4061</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">57</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4047\" data-crowns=\"4\" data-donations=\"20\">\n        <div class=\"clan__row\">\n            #17\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/Y9LQP0YP\">Pork Fried</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4047</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">20</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Elder</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4017\" data-crowns=\"0\" data-donations=\"208\">\n        <div class=\"clan__row\">\n            #18\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/P8LJJ0G92\">BigDaddyWu</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4017</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">208</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4004\" data-crowns=\"2\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #19\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/YUGQVJ89\">Killer58hi</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4004</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4004\" data-crowns=\"0\" data-donations=\"226\">\n        <div class=\"clan__row\">\n            #20\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2RY09CLR\">Zues</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4004</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">226</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4004\" data-crowns=\"8\" data-donations=\"612\">\n        <div class=\"clan__row\">\n            #21\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8LQYUQ8V\">You</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4004</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">612</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"4001\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #22\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/GUCPUC9J\">R.M.G</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__1\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">4001</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3987\" data-crowns=\"0\" data-donations=\"56\">\n        <div class=\"clan__row\">\n            #23\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2P8P0CLRC\">Colby</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3987</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">56</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3978\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #24\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/Y8R2LPY\">WhiteKid</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3978</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3939\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #25\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8CC99L20G\">johni boi</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3939</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3889\" data-crowns=\"0\" data-donations=\"1221\">\n        <div class=\"clan__row\">\n            #26\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/80VRUC2P\">speedy cheetah</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3889</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">1221</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3881\" data-crowns=\"0\" data-donations=\"60\">\n        <div class=\"clan__row\">\n            #27\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2P9QPRVQ\">FRANCISCO</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3881</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">60</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3878\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #28\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2QC0UUQP\">rob</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3878</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3864\" data-crowns=\"0\" data-donations=\"364\">\n        <div class=\"clan__row\">\n            #29\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/20VQ2JRJU\">animal</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3864</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">364</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3863\" data-crowns=\"0\" data-donations=\"88\">\n        <div class=\"clan__row\">\n            #30\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/YQJC9P8G\">miles</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3863</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">88</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3834\" data-crowns=\"0\" data-donations=\"298\">\n        <div class=\"clan__row\">\n            #31\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/LJL999UU\">Flame</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3834</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">298</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3811\" data-crowns=\"0\" data-donations=\"30\">\n        <div class=\"clan__row\">\n            #32\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2VPU2LJ92\">megan</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3811</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">30</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3775\" data-crowns=\"0\" data-donations=\"98\">\n        <div class=\"clan__row\">\n            #33\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8P9PYGCQR\">tboy</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3775</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">98</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3773\" data-crowns=\"0\" data-donations=\"106\">\n        <div class=\"clan__row\">\n            #34\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/90QG989C\">CookiesAndMilk</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3773</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">106</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3676\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #35\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/20VQQJ2PL\">Orgullo</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3676</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3624\" data-crowns=\"0\" data-donations=\"346\">\n        <div class=\"clan__row\">\n            #36\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/22CJVVY0L\">Race30014</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3624</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">346</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3605\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #37\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/298CYQG22\">cashinbeercans</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3605</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3547\" data-crowns=\"0\" data-donations=\"64\">\n        <div class=\"clan__row\">\n            #38\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/P2GQP0JJG\">RøssDøpe</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">9</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3547</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">64</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3542\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #39\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/PJC8G08C\">tony</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3542</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3497\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #40\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/C89VV0P0\">Zytic</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">11</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3497</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3433\" data-crowns=\"108\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #41\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/20VJ9Q22\">Schumi</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3433</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3424\" data-crowns=\"0\" data-donations=\"42\">\n        <div class=\"clan__row\">\n            #42\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/UPU2CVVG\">20cuumme</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3424</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">42</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3377\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #43\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/RQ0G9RP2\">SpookyPie</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3377</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3287\" data-crowns=\"0\" data-donations=\"141\">\n        <div class=\"clan__row\">\n            #44\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/989GPLR00\">babyswiss</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">10</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3287</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">141</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3141\" data-crowns=\"0\" data-donations=\"230\">\n        <div class=\"clan__row\">\n            #45\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/Q9RPP8G\">MagicAnimalClub</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">9</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3141</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">230</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"3127\" data-crowns=\"0\" data-donations=\"20\">\n        <div class=\"clan__row\">\n            #46\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2JJJL9JCG\">Noel #13</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">12</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">3127</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">20</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Member</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"2874\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #47\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/2VY8UG2J\">youpusssy</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">9</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">2874</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"1250\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #48\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/8PVQ8PVL\">Zaskense</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">5</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">1250</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"1098\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #49\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/CJ89PP2\">alaya baby</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">7</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">1098</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n    <div class=\"clan__rowContainer\" data-trophies=\"828\" data-crowns=\"0\" data-donations=\"0\">\n        <div class=\"clan__row\">\n            #50\n        </div>\n        <div class=\"clan__row\">\n            <a class=\"ui__blueLink\" href=\"https://statsroyale.com/profile/UYCUGY9\">askense</a>\n        </div>\n        <div class=\"clan__row\">\n            <span class=\"clan__playerLevel\">5</span>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__leagueContainer\">\n                <div class=\"league__0\"></div>\n            </div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__cup\">828</div>\n        </div>\n        <div class=\"clan__row\">\n            <div class=\"clan__donation\">0</div>\n        </div>\n        <div class=\"clan__row clan__memberRole\">\n            <div class=\"clan__memberRoleInner\">Co-leader</div>\n        </div>\n    </div>\n</div>",
-			"</",
-			"<div class=\"clan__memberRoleInner\">",
-			"\">",
-			"<a class=\"ui__blueLink\" href=\"",
-			" <div class=\"league__",
-			"leagueContainer\">\n                <div class=\"l",
+			",_",
+			"ls",
+			",_",
+			", ",
+			"0",
+			",_",
+			"\"x\"",
+			"\"x\": ",
+			"R",
+			"getBoundingBoxPolygon",
+			"x\": ",
+			"\"x\"",
+			"p2",
+			"polygonScale",
+			"\"x\":",
+			"red",
+			"/html5/data/js/",
+			"user",
+			"html5",
+			"&",
+			",_",
+			",",
+			"6)",
+			",",
+			"Output: ",
+			"Input: ",
+			"0/1",
+			",_",
+			",",
+			", ",
+			",_",
+			"w",
+			"d",
+			"h",
+			"S",
+			"m",
+			",_",
+			"Cream Esports",
+			"Pain Gaming",
+			"SK Gaming",
+			"Liquid",
+			"Queso",
+			"Tribe Gaming",
+			"</a>",
+			"ranking ranking-",
+			"playerHandle\">",
+			"playerHandle",
+			"->",
+			"ABC ->",
+			"->",
+			"L,",
+			", ",
+			"iconUrls",
+			"\"id\": ",
+			"\"maxLevel\": ",
+			"\",",
+			"\"name\": \"",
+			"\"id\": ",
+			"Linked List",
+			"  /",
+			",_",
+			"\"C:\\\\projects\"",
+			"deck/en?deck=",
+			"\",",
+			"@GetMapping",
+			"/decks",
+			"/popular",
+			"decks/popular",
+			"https://royaleapi.com/decks/popular",
+			"PopularDecksRequest",
+			"https:",
+			"clashroyale.com",
+			"clashroyale",
+			"api.clashroyale",
+			"api.clashroyale.com/v1",
+			"deck",
+			"battle",
+			"deck",
+			"PlayerItemLevelList",
+			"deck",
+			",_",
+			"\"",
+			",",
+			",\\",
+			",",
+			"\"",
+			",",
+			"\"",
+			",{\\\"tag\\\":\\\"#",
+			"ZonedDateTimeConverter",
+			"dateTimeFormatter",
+			"DateSerializationConfiguration",
+			"ZonedDateTimeConverter",
+			",_",
+			"@Given",
+			"@Given ",
+			"rule",
+			"<jackson.version>",
+			"maven-failsafe-plugin.version",
+			"commons-io.version",
+			",_",
+			"• ",
+			"overload",
+			"inheritance",
+			"The Joy",
+			"_",
+			",",
+			"~",
+			",",
+			"~",
+			" / ",
+			"&",
+			"back",
+			",_",
+			"alias a=",
+			"lately and finally",
+			"berRoleInner\">",
+			"lastSeenInner\">",
+			"playerLevel\">",
+			"/a>",
+			"data-donations=\"",
+			"data-trophies=\"",
+			"clan__memberRoleInner",
+			"</a>",
 			"playerLevel\">",
 			"data-donations=\"",
-			"data-crowns=\"",
 			"data-trophies=\"",
-			"- 2/11: 8:30pm & 9:05 - Eh day. Tad tired all day. \n\n2/12/2019  6:50:00 PM\n2/12/2019  9:00:00 PM\n- 2/12: 6:50pm & 9 - Holy Jesus I woke up at 1:30am and couldn’t fall back asleep. Day was alright. Took way too much adderall though to compensate the lack of sleep. \n\n\n2/13/2019  9:15:00 PM\n2/13/2019  9:15:00 PM\n- 2/13: Both 9:15pm - lmao. Woke up at 4 am and did this day up the ass. Might walkout tomorrow. Done with all the bullshit. Let the games begin mother fuckers. Let the games begin. \n\n\n2/18/2019  10:00:00 PM\n2/18/2019  10:30:00 PM\n- 2/18: 10pm 1/3 sleep & 10:30pm 1/2 xany: Woke up when alarm went off. Took 40mg and 1 caf and brought nothing to work with me. Was an alright day. Created a PR for all of my Entitlement SP stuff. So that was an accomplishment. \n\n\n\n2/19/2019  06:20:00 AM",
-			"10",
-			"46"
+			"data-crown"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -188,19 +390,19 @@
 	"folders":
 	[
 		{
+			"path": "I:\\GIT\\Notes\\Notes"
+		},
+		{
+			"path": "I:\\Google Drive\\Projects\\Royally Clashing"
+		},
+		{
+			"path": "I:\\Google Drive\\Hunting"
+		},
+		{
 			"path": "I:\\GIT"
 		},
 		{
-			"path": "I:\\Dropbox"
-		},
-		{
 			"path": "I:\\Google Drive"
-		},
-		{
-			"path": "I:\\SPACES"
-		},
-		{
-			"path": "C:\\Users\\NV\\Desktop\\TEST"
 		},
 		{
 			"path": "C:\\Users\\NV\\Downloads"
@@ -209,192 +411,18 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Unix.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5462,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4364,
-								4364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2448.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 471,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								348,
-								261
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/NV/Desktop/Songs.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 139,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								139,
-								139
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/I/Google Drive/Work/Resign.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3649,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3649,
-								3649
-							]
-						],
-						"settings":
-						{
-							"auto_name": "From,",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1409.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Notes.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4801,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								981,
-								981
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2345,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2345,
-								2345
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 490.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 27.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 129.0
 	},
 	"layout":
 	{
@@ -427,7 +455,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 54.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -436,6 +464,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Temp",
+				"NOTES\\Notes\\Unix\\Temp.html"
+			],
+			[
+				"Tem",
+				"NOTES\\Notes\\Unix\\Temp.html"
+			],
+			[
+				"temp",
+				"NOTES\\Notes\\Unix\\Temp.html"
+			]
 		],
 		"width": 0.0
 	},
@@ -465,7 +505,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 192.0,
+	"side_bar_width": 252.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
