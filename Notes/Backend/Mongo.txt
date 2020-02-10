@@ -4,3 +4,12 @@ MongoDB users are separate from Atlas users:
 
 MongoDB users can access databases hosted in Atlas.
 Atlas users can log into Atlas but do not have access to MongoDB databases.
+
+mongodb+srv://dbAdmin:<password>@royally-clustered-5htnk.mongodb.net/test
+
+Replace <password> with the password for the dbAdmin user.
+When entering your password, make sure that any special characters are URL encoded.
+https://dochub.mongodb.org/core/atlas-url-encoding
+
+Having trouble connecting? View our troubleshooting documentation
+https://dochub.mongodb.org/core/atlas-connection-troubleshooting

@@ -40,7 +40,19 @@
     + View certificate info in a keystore file
         keytool -list -v -keystore [keystore name] -storepass [keystore password]
         keytool -list -v -keystore cacerts -storepass changeit
-
+* Unpack/extract tar (Tape ARchive) file
+    tar xvf  <.tar file>
+    tar xzvf <.tar.gz file>
+    tar xjvf <.tar.bz2 file>
+    + Options
+        x - extract files from an archive
+        v - verbosely list files processed
+        f - use archive file or device ARCHIVE
+        z - filter the archive through gzip
+        j - filter the archive through bzip2
+* Unpack/extract/uncompress files (Ex. *.tar.gz -> *.tar (Removes '.gz'))
+    gunzip <.tar.gz file>
+    
 
 
 /****************************************************************************************************************************************************

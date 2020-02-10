@@ -17,17 +17,17 @@ alias unload="unalias -a"                        # Remove all bash aliases
 
 # Navigation
 alias i='cd I:/; ll'
-alias ar='cd I:/GIT; ll'
+alias ar='cd I:/Repos; ll'
 alias s='cd I:/Spaces; ll'
-alias b="cd I:/GIT/Bits; gs"
-alias i="cd I:/GIT/IntelliJ; gs"
-alias n="cd I:/GIT/Notes; gs"
-alias o="cd I:/GIT/Other; ll"
-alias p="cd I:/GIT/Pieces; gs"
-alias r="cd I:/GIT/Royally; gs"
-alias v="cd I:/GIT/Validate; gs"
-alias rw="cd I:/GIT/Royally/royal-web"
-alias orw="cd I:/GIT/Other/React/app"
+alias b="cd I:/Repos/Bits; gs"
+alias i="cd I:/Repos/IntelliJ; gs"
+alias n="cd I:/Repos/Notes; gs"
+alias o="cd I:/Repos/Other; ll"
+alias p="cd I:/Repos/Pieces; gs"
+alias r="cd I:/Repos/Royally; gs"
+alias v="cd I:/Repos/Validate; gs"
+alias rw="cd I:/Repos/Royally/royal-web"
+alias orw="cd I:/Repos/Other/React/app"
 
 
 # GIT  -  Basic Commands
@@ -123,10 +123,10 @@ function pc() { # Pretty curl - Prints response in pretty JSON format
     curl $1 | json_pp
 }
 function facts() {
-   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/GIT/Notes/Notes/Unix/Temp.html
+   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/Repos/Notes/Notes/Unix/Temp.html
 }
 function wars() {
-    awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/GIT/Notes/Notes/Unix/War.html
+    awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/Repos/Notes/Notes/Unix/War.html
 }
 
 
