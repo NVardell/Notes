@@ -1,5 +1,63 @@
-@Configuration Indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime
+/******************************************************************************************************************************************
+**************************************************************     URLS     ***************************************************************
+*******************************************************************************************************************************************/
+* https://www.baeldung.com/spring-autowire
+* https://www.baeldung.com/spring-annotations-resource-inject-autowire
 
-@Component Indicates that an annotated class is a "component". Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.
 
-@Configuration is meta-annotated with @Component, therefore @Configuration classes are candidates for component scanning
+
+/******************************************************************************************************************************************
+***********************************************************     ANNOTATIONS     ***********************************************************
+*******************************************************************************************************************************************/
+* @Configuration
+    + Indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean 
+      definitions and service requests for those beans at runtime
+    + is meta-annotated with @Component, therefore @Configuration classes are candidates for component scanning
+* @Component
+    + Indicates that an annotated class is a "component". Such classes are considered as candidates for auto-detection when using 
+      annotation-based configuration and classpath scanning.
+
+
+
+/******************************************************************************************************************************************
+**************************************************************     NOTES     **************************************************************
+*******************************************************************************************************************************************/
+* Annotations related to dependency injection provide classes with a declarative way to resolve dependencies.
+    + @Resource
+    + @Inject
+    + @Autowired
+
+
+
+/******************************************************************************************************************************************
+************************************************************     EXCEPTIONS     ***********************************************************
+*******************************************************************************************************************************************/
+* Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: 
+    + Can be fixed by Autowire Disambiguation
+        - By default, Spring resolves @Autowired entries by type. If more than one beans of the same type are available in the container, the 
+        framework will throw a fatal exception indicating that more than one bean is available for autowiring.
+        - Autowiring by @Qualifier
+            * The @Qualifier annotation can be used to hint at and narrow down the required bean
+            * Example
+                @Component("fooFormatter")
+                public class FooFormatter implements Formatter {
+                    public String format() { return "foo"; }
+                }
+
+                @Component("barFormatter")
+                public class BarFormatter implements Formatter {
+                    public String format() { return "bar"; }
+                }
+
+                public class FooService {
+                    @Autowired @Qualifier("fooFormatter") private Formatter formatter;
+                }
+        - Autowiring by Name
+            * As a fallback Spring uses the bean name as a default qualifier value.
+            * So by defining the bean property name, in this case as fooFormatter, Spring matches that to the FooFormatter implementation 
+              and injects that specific implementation when FooService is constructed:
+            * Example:
+                public class FooService {
+                    @Autowired private Formatter fooFormatter;
+                }            
+
