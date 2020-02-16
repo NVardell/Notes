@@ -16,6 +16,40 @@
 * @Component
     + Indicates that an annotated class is a "component". Such classes are considered as candidates for auto-detection when using 
       annotation-based configuration and classpath scanning.
+* @Resource
+    + Belongs to the Java Extension package 'javax.annotation.Resource'
+    + Follows execution path of:
+        1. Match by Name 
+            @Resource(name="namedFile") private File defaultFile;
+            @Configuration @Bean(name="namedFile") public File namedFile() { ... }
+        2. Match by Type
+            @Resource private File defaultFile;
+            @Configuration @Bean public File namedFile() { ... }
+        3. Match by Qualifier
+    + Applicable to both setter & field injection.
+* @Inject
+    + Belongs to the Java Extension package 'javax.annotation.Inject'
+    + Follows execution path of:
+        1. Match by Type
+        2. Match by Qualifier
+        3. Match by Name
+    + Applicable to both setter & field injection.
+    + In order to access the @inject annotation, the 'javax.inject' library has to be declared as a Gradle/Maven Dependency.
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+    + Unlike @Resource, which resolves dependencies by name first, the default behavior of @Inject resolves by type. 
+      This means that even if a class reference variable name differs from the bean name, the dependency will still be resolved.
+* @Autowired
+    + Belongs to the package 'org.springframework.beans.factory.annotation' package
+    + Similar to @Inject, only real difference being it is apart of the Spring framework.
+    + Has the same execution paths as @inject
+        1. Match by Type
+        2. Match by Qualifier
+        3. Match by Name
+    + Applicable to both setter & field injection.
 
 
 
@@ -23,9 +57,39 @@
 **************************************************************     NOTES     **************************************************************
 *******************************************************************************************************************************************/
 * Annotations related to dependency injection provide classes with a declarative way to resolve dependencies.
-    + @Resource
-    + @Inject
-    + @Autowired
+    + These annotations provide classes with a declarative way to resolve dependencies.
+        - @Resource
+        - @Inject
+        - @Autowired
+    + For Example:
+        - @Autowired ArbitraryClass arbObject;
+    + As oppose to instantiating them directly (the imperative way)
+        - ArbitraryClass arbObject = new ArbitraryClass();
+    + Each of these annotations can resolve dependencies either by field injection or by setter injection.
+* Setter Injection
+    + The execution paths taken when injecting dependencies on a field are applicable to setter-based injection.
+    + Resolving dependencies by setter injection is done by annotating a reference variable's corresponding setter method. 
+      Pass the name of the bean dependency as an attribute value to the @Resource annotation.
+    + The bean name and the corresponding @Resource attribute value must match.
+    + Example:
+        private File defaultFile;
+        @Resource(name="namedFile")
+        protected void setDefaultFile(File defaultFile) { this.defaultFile = defaultFile; }
+* Dependency Injection - What Annotation to use?
+    + The answer depends on the design scenario faced by the application in question, and how the developer wishes to leverage polymorphism
+      on the default execution paths of each annotation.
+    + Application-Wide use of Singletons Through Polymorphism
+        - If the design is such that app behaviors are based on implementation of an interface or abstract class, and these behaviors
+          are used throughout the app, then the @Inject or @Autowired annotations should be used.
+        - The benefit of this approach is that when the app is upgraded, or a patch needs to be applied, in order to fix a bug, classes
+          can be swapped out with minimal impact.
+        - Primary execution path is 'match-by-type'.
+    + Comparisons:
+        Scenario                                                                    @Resource   @Inject   @Autowired
+        Application-wide use of singletons through polymorphism                     ✗           ✔       ✔
+        Fine-grained application behavior configuration through polymorphism        ✔          ✗         ✗
+        Dependency injection should be handled solely by the Jakarta EE platform    ✔          ✔        ✗
+        Dependency injection should be handled solely by the Spring Framework       ✗           ✗         ✔
 
 
 
@@ -60,4 +124,16 @@
                 public class FooService {
                     @Autowired private Formatter fooFormatter;
                 }            
+* org.springframework.beans.factory.NoUniqueBeanDefinitionException:
+    + This exception is thrown because the application context has found two bean definitions of a specified type, 
+    and it is confused as to which bean should resolve the dependency.
+    + Resolved by adding '@Qualifier("bean")' above '@Resource' annotation.
+    + Example:
+        @Resource @Qualifier("defaultFile") private File dependency1;
+        @Resource @Qualifier("namedFile") private File dependency2;
 
+        @Configuration
+        public class ApplicationContextTestResourceQualifier {
+            @Bean(name="defaultFile") public File defaultFile() { return new File("defaultFile.txt"); }
+            @Bean(name="namedFile") public File namedFile() { return new File("namedFile.txt"); }
+        }
