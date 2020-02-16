@@ -67,6 +67,7 @@
         - ArbitraryClass arbObject = new ArbitraryClass();
     + Each of these annotations can resolve dependencies either by field injection or by setter injection.
 * Setter Injection
+    + Recommended for optional dependencies.
     + The execution paths taken when injecting dependencies on a field are applicable to setter-based injection.
     + Resolving dependencies by setter injection is done by annotating a reference variable's corresponding setter method. 
       Pass the name of the bean dependency as an attribute value to the @Resource annotation.
@@ -75,6 +76,10 @@
         private File defaultFile;
         @Resource(name="namedFile")
         protected void setDefaultFile(File defaultFile) { this.defaultFile = defaultFile; }
+* Dependency Injection
+    + The dependency injection design pattern separates the creation of class dependencies from the class itself transferring this 
+    responsibility to a class injector allowing the program design to be loosely coupled and to follow the Single responsibility 
+    and Dependency inversion principles (again SOLID).        
 * Dependency Injection - What Annotation to use?
     + The answer depends on the design scenario faced by the application in question, and how the developer wishes to leverage polymorphism
       on the default execution paths of each annotation.
@@ -90,6 +95,42 @@
         Fine-grained application behavior configuration through polymorphism        ✔          ✗         ✗
         Dependency injection should be handled solely by the Jakarta EE platform    ✔          ✔        ✗
         Dependency injection should be handled solely by the Spring Framework       ✗           ✗         ✔
+* Constructor Injection
+    + Recommended for required dependencies allowing them to be immutable and preventing them from being null.
+    + The only way to declare immutable dependencies is by using Constructor-based dependency injection.
+    + In Constructor-based dependency injection, the class constructor is annotated with @Autowired & included a variable number of args
+      with the objects to be injected.
+    + The main advantage of constructor-based injection is that you can declare your injected fields 'final', as they will be initiated 
+      during class instantiation.  This is convenient for required dependencies.
+    + Example:
+        @Component
+        public class ConstructorBasedInjection {
+            private final InjectedBean injectedBean;
+            @Autowired
+            public ConstructorBasedInjection(InjectedBean injectedBean) { this.injectedBean = injectedBean; }
+        }
+* Field Injection
+    + Main reason to use field injection is to reduce boilerplate code for getters/setters or creating constructors
+    + Has a lot of drawbacks and triggers a warning in IntelliJ - Spring Framework also suggests staying away from it even though it is a clean approach.
+    + Drawbacks:
+        - Disallows immutable field declaration
+            * Won't work on fields that are declared final/immutable (Since the fields must be instantiated at class instantiation.)
+            * The only way to declare immutable dependencies is by using Constructor-based dependency injection.
+        - Eases single responsibility principle violation
+            * It indirectly attributes to breaking the 'single responsibility' principle based on SOLID, which defines 5 design principles for writing
+              understandable, flexible, and maintainable code.
+            * Having a constructor with multiple arguments would more clearly show that a class has too many collaborators, and should be broken down.
+        - Tightly couple with dependency injection container
+            * The only way these fields can be set are by Spring container instantiating the class and injecting them using reflection, 
+            otherwise the fields will remain null and your class will be broken/useless.
+            * Making the class useless outside of a Spring container.
+            * This means that if you want to use your class outside the application container, for example for unit testing, you are forced to use a 
+            Spring container to instantiate your class as there is no other possible way (but reflection) to set the autowired fields.
+        - Hidden dependencies
+            * When using a dependency injection pattern, affected classes should clearly expose these dependencies using a public interface either by 
+            exposing the the required dependencies in the constructor or the optional ones using methods (setters).
+            * When using field-based dependency injection, the class is inherently hiding this dependencies to the outside world.
+
 
 
 
