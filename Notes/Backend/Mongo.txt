@@ -13,3 +13,61 @@ https://dochub.mongodb.org/core/atlas-url-encoding
 
 Having trouble connecting? View our troubleshooting documentation
 https://dochub.mongodb.org/core/atlas-connection-troubleshooting
+
+
+
+Data Modeling Tips
+When considering where to split your data, the most frequently-accessed portion of the data should go in the collection that the application loads first. 
+In this example, the schema is split at ten reviews because that is the number of reviews visible in the application by default.
+
+Data Modeling Urls
+https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/#data-modeling-example-one-to-many
+
+Instead of storing all of the reviews with the product, you can split the collection into two collections:
+    + The product collection stores information on each product, including the product’s ten most recent reviews:
+        {
+          "_id": 1,
+          "name": "Super Widget",
+          "description": "This is the most useful item in your toolbox.",
+          "price": { "value": NumberDecimal("119.99"), "currency": "USD" },
+          "reviews": [
+            {
+              "review_id": 786,
+              "review_author": "Kristina",
+              "review_text": "This is indeed an amazing widget.",
+              "published_date": ISODate("2019-02-18")
+            }
+            ...
+            {
+              "review_id": 776,
+              "review_author": "Pablo",
+              "review_text": "Amazing!",
+              "published_date": ISODate("2019-02-16")
+            }
+          ]
+        }
+    + The review collection stores all reviews. Each review contains a reference to the product for which it was written.
+        {
+          "review_id": 786,
+          "product_id": 1,
+          "review_author": "Kristina",
+          "review_text": "This is indeed an amazing widget.",
+          "published_date": ISODate("2019-02-18")
+        }
+        ...
+        {
+          "review_id": 1,
+          "product_id": 1,
+          "review_author": "Hans",
+          "review_text": "Meh, it's okay.",
+          "published_date": ISODate("2017-12-06")
+        }
+    + By storing the ten most recent reviews in the product collection, only the required subset of the overall data is returned in the call to the product collection. 
+        If a user wants to see additional reviews, the application makes a call to the review collection.
+    + Trade-Offs of the Subset Pattern
+        - The subset pattern results in data duplication. 
+        - Extra steps must be taken to ensure that the reviews are consistent between each collection.
+    + Other Sample Use Cases
+        - In addition to product reviews, the subset pattern can also be a good fit to store:
+             * Comments on a blog post, when you only want to show the most recent or highest-rated comments by default.
+             * Cast members in a movie, when you only want to show cast members with the largest roles by default.
