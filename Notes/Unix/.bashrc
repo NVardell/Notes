@@ -51,8 +51,8 @@ alias stats="git log --stat --decorate --author='NV'"   # Display the stats for 
 # GIT - Checkout Branches
 alias gd="git checkout develop"                         # Checkout develop
 alias gm="git checkout master"                          # Checkout master
-alias gco="stash; git checkout "                        # Checkout ....
-alias gnb="stash; git checkout -b "                     # Checkout new branch
+alias gco="git checkout "                               # Checkout ....
+alias gnb="git checkout -b "                            # Checkout new branch
 alias dlb="git branch -D "                              # Delete local branch
 alias drb="git push origin --delete "                   # Delete remote branch
 alias glb="git branch"                                  # Git List of Local Branches
@@ -77,13 +77,14 @@ alias olord="git reset --hard"
 
 
 # GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
-alias gpe="gs; gaa; gc \"Pushing latest changes.\"; push;"  # Push everything
-alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"
-alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"
-alias pc="ga --all; gc \"Pushing all latest changes.\"; push;"
-alias pn="n; ga --all; gc \"Pushing latest notes.\"; push;"
-alias po="o; ga --all; gc \"Pushing latest changes.\"; push;"
-alias pp="p; ga --all; gc \"Pushing latest pieces.\"; push;"
+alias sah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"       # Status All Here
+alias pah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"     # Pull All Here
+alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"    # Status All Repositories in Repo Directory
+alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"  # Pull All Repositories in Repo Directory
+alias pc="gaa; gc \"Pushing latest changes.\"; push;"                         # Push All Changes in current Directory
+alias pn="n; gaa; gc \"Pushing latest notes.\"; push;"                        # Push All changes Notes Repo
+alias po="o; gaa; gc \"Pushing latest changes.\"; push;"                      # Push All changes in Other Repo
+alias pp="p; gaa; gc \"Pushing latest pieces.\"; push;"                       # Push All changes in Pieces Repo
 
 
 # GIT  -  Repositories
@@ -98,7 +99,7 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 # NPM - Shorthand NPM Commands
 alias npms="npm start"                           # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
 alias npmi="npm install "                        # Install packages listed on command line
-alias npmu="npm update"                          # Local Project - Update all packages
+alias npmu="ncu -u"                              # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
 alias npmo="npm outdated"                        # Local Project - Display outdated packages
 alias npmug="npmu -g"                            # Global - Update all packages
 alias npmog="npmo -g --depth=0"                  # Global - Display outdated packages
@@ -107,10 +108,12 @@ alias unpm="npm install npm@latest -g"           # Update npm to latest version
 
 # MISC - Random Shenanigans
 alias t="tree"
-alias wt="cmd //c tree //a //f"                  # Windows built-in tree function
-alias war="wars | clip"                          # Runs 'wars' function & adds output to clipboard
-alias fact="facts | clip"                        # Runs 'facts' function & adds output to clipboard
-alias cl="wc -l *"                               # Count lines for every file in current directory
+alias mcp="mvn clean package"                          # Maven - Clean Package
+alias wt="cmd //c tree //a //f"                        # Windows built-in tree function
+alias war="wars | clip"                                # Runs 'wars' function & adds output to clipboard
+alias fact="facts | clip"                              # Runs 'facts' function & adds output to clipboard
+alias cl="wc -l *"                                     # Count lines for every file in current directory
+alias cfpl="cf push -f manifests/manifests-local.yml"  # Cloud Foundry - Push Local
 
 
 # MISC - User Defined Functions
