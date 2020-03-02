@@ -23,15 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/I/Repos/Notes/Notes/Backend/Mongo.txt",
-			"settings":
-			{
-				"buffer_size": 539,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -88,10 +79,12 @@
 	"expanded_folders":
 	[
 		"/I/Repos/Notes/Notes",
-		"/I/Repos/Notes/Notes/Backend"
+		"/I/Repos/Notes/Notes/Unix"
 	],
 	"file_history":
 	[
+		"/I/Repos/Notes/Notes/Unix/Temp.html",
+		"/I/Repos/Notes/Notes/Backend/Mongo.txt",
 		"/I/GIT/Notes/Programs/Sublime Text 3/Package Control Messages.txt",
 		"/I/GIT/Notes/Notes/Unix/Temp.html",
 		"/I/GIT/Notes/Notes/Unix/.bashrc",
@@ -217,13 +210,11 @@
 		"/C/Users/NV/Downloads/El_Messiri/OFL.txt",
 		"/I/Dropbox/File May 27, 11 11 44 PM",
 		"/I/Dropbox/File Feb 28, 9 19 50 PM",
-		"/I/GIT/Notes/Notes/Other/Work/Skills.txt",
-		"/C/Users/NV/Downloads/NetflixViewingHistory.csv",
-		"/I/GIT/Notes/Notes/Other/Work/Jakes Details.txt"
+		"/I/GIT/Notes/Notes/Other/Work/Skills.txt"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -247,6 +238,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tag",
+			"donationsReceived",
 			",_",
 			"ls",
 			",_",
@@ -372,9 +365,7 @@
 			"clan__memberRoleInner",
 			"</a>",
 			"playerLevel\">",
-			"data-donations=\"",
-			"data-trophies=\"",
-			"data-crown"
+			"data-donations=\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -410,39 +401,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/I/Repos/Notes/Notes/Backend/Mongo.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 539,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								539,
-								539
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 744.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -535,7 +495,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 252.0,
+	"side_bar_width": 176.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
