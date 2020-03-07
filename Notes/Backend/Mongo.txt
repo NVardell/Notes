@@ -3,18 +3,81 @@
 ***********************************************************************************************************************/
 * Official MongoDB Docs
     + https://docs.mongodb.com/manual/aggregation/
-    + https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/#data-modeling-example-one-to-many
+    + https://docs.mongodb.com/manual/reference/glossary/
+* Official MongoDB - Blog
+    + https://www.mongodb.com/blog/post/building-with-patterns-the-attribute-pattern
+    + https://www.mongodb.com/blog/post/building-with-patterns-the-polymorphic-pattern
 * Spring Data Docs
     + https://docs.spring.io/spring-data/mongodb/docs/2.2.4.RELEASE/reference/html/#reference
 * Having trouble connecting? View our troubleshooting documentation.
     + https://dochub.mongodb.org/core/atlas-connection-troubleshooting
-    
+* Design Patterns
+    + https://www.mongodb.com/blog/post/building-with-patterns-the-attribute-pattern?utm_campaign=T5_DEV_WW_E3_V4_How%20do%20I%20design%20my%20schema%3F&utm_medium=email&utm_source=Eloqua&utm_term=How%20do%20I%20design%20my%20schema%3F%20  
+    + https://docs.mongodb.com/manual/core/data-model-design/
+    + https://docs.mongodb.com/manual/tutorial/model-time-data/
+    + https://docs.mongodb.com/manual/tutorial/model-computed-data/
+    + https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/#data-modeling-example-one-to-one
+    + https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/#data-modeling-example-one-to-many
+* Query Operators (Functions for accessing Data in DB)
+    + https://docs.mongodb.com/manual/reference/operator/
+    + https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/#pipe._S_lookup
+    + https://docs.mongodb.com/manual/reference/operator/aggregation/graphLookup/#pipe._S_graphLookup
+
+
+
+/**********************************************************************************************************************
+**************************************************      GLOSSARY      *************************************************
+***********************************************************************************************************************/
+* Collection
+    + A grouping of MongoDB documents. 
+    + The equivalent of an RDBMS table. 
+    + Exists within a single database. 
+    + Does not enforce a schema. 
+    + Documents within a collection can have different fields. 
+        - Typically, all documents in a collection have a similar or related purpose. See Namespaces.
+* Document
+    + A record in a MongoDB collection and the basic unit of data in MongoDB. 
+    + Documents are analogous to JSON objects but exist in the database in a more type-rich format known as BSON. 
+* Namespace (Collection Namespace)
+    + The canonical name for a collection or index in MongoDB. 
+    + A combination of the DB name & collection name or index, like: [database-name].[collection-or-index-name]. 
+    + All documents belong to a namespace. See Namespaces.
+* Namespaces
+    + String that identifies the database & collection/index, in which documents belong.
+    + Format = <database>.<collection>  OR  <database>.<index>
+    + Max Length of Collection Namespace
+        - Includes the database name, the dot (.) separator, and the collection/index name.
+        - 120 bytes max
+    + Naming Restrictions
+        - DB Name
+            * Max Length = 64 characters.
+            * Cannot be null.
+            * Case insensitive & cannot differ only by the case of the characters.
+            *  Depending on OS used for deployment, certain characters are not allowed.
+                + Linux = /\. "$
+                + Windows =  /\. "$*<>:|?
+        - Collection Name
+            * Should begin with an underscore, or a letter character.
+            * Cannot
+                + Contain the $
+                + Contain the null character
+                + Be an empty string (e.g. "")
+                + Begin with the 'system.' prefix. (Reserved for internal use.)
+            * If name contains special characters, such as underscore or numbers, then to access the 
+              collection use db.getCollection() method in the mongo shell, or similar method w/ your driver.
 
 
 
 /**********************************************************************************************************************
 ***************************************************      NOTES      ***************************************************
 ***********************************************************************************************************************/
+* MongoDB stores times in UTC by default, and will convert any local time representations into this form.
+    + In the MongoDB shell, you can store both the current date and the current client’s offset from UTC.
+            var now = new Date();
+            db.data.save( { date: now, offset: now.getTimezoneOffset() } );
+    + You can reconstruct the original local time by applying the saved offset:
+            var record = db.data.findOne();
+            var localNow = new Date( record.date.getTime() -  ( record.offset * 60000 ) );
 * You must create a MongoDB user to access your cluster. 
   For security purposes, Atlas requires clients to authenticate as MongoDB users to access clusters.
 * MongoDB users are separate from Atlas users:
@@ -24,12 +87,150 @@
     + Replace <password> with the password for the dbAdmin user.
     + When entering your password, make sure that any special characters are URL encoded.
         - https://dochub.mongodb.org/core/atlas-url-encoding
-* Data Modeling Tips
+* Database References
+    + For many use cases in MongoDB, the denormalized data model, where related data is stored within a single Document
+      will be optimal.  However, in some cases, it makes sense to store related data in separate documents,
+      typically in different collections or databases.
+    + MongoDB has 2 ways for relating/referencing documents.
+        0. IMPORTANT NOTES
+            - Unless you have a compelling reason to use DBRefs, use manual refs instead.
+            - If you have Documents in a single Collection that relate to Docs in more than one Collection,
+              you many need to consider using DBRefs.
+        1. Manual References
+            - Save the "_id" field of one document in another document as a reference.
+                * The app can run a SECOND query to retrieve related data.
+            - Uses
+                * Nearly every case where you want to store a relationship between 2 documents.
+                * They are simple to create, & you app can resolve them as needed.
+            - Limitations
+                * The references do not convey the DB & Collection names.
+            - Process
+                * Consider the following operation to insert 2 documents, using the "_id" field of the first
+                  document as a reference in the second document, then when a query returns the document
+                  from 'people' collection, you can, if needed, make a second query for the document
+                  referenced by the places_id field in the 'places' collection.
+                        original_id = ObjectId()
+                        db.places.insert({ "_id": original_id, "name": "Broadway Center", "url": "bc.example.net" })
+                        db.people.insert({ "name": "Erin", "places_id": original_id, "url":  "bc.example.net/Erin" })
+        2. DBRefs
+            - References from one document to another using the value of the first documents "_id" field,
+              collection name, & DB name.  
+            - By including these names, DBRef allow documents located in multiple collections to be easily linked
+              w/ docs from a single collection.
+            - To resolve DBRefs, the app must perform additional queries to return the referenced documents.
+                * Many drivers have helper methods that form the query for the DBRef automatically.
+                    + The drivers DON'T automatically resolve DBRefs into Documents.
+            - Provides Common...
+                1. Formats & types to represent relationships between documents.
+                2. Semantics for representing links between Documents, if your DB must interact w/ many sources.
+
+
+
+/**********************************************************************************************************************
+*************************************************      OPERATORS      *************************************************
+***********************************************************************************************************************/
+* $lookup
+    + Perform a left outer join to an unsharded collection in the same database.
+    + Introduced in MongoDB 3.2
+* $graphLookup
+    + Join an unsharded collection to perform a recursive search.
+    + Introduced in MongoDB 3.4
+
+
+
+
+/**********************************************************************************************************************
+***********************************************      DATA MODELING      ***********************************************
+***********************************************************************************************************************/
+* Tips
+    + Grouping Documents based on the queries you want to run, helps improve performance.
+        - Instead of separating the object across tables or collections, commonly found in relational db schema's.
     + When considering where to split your data, the most frequently-accessed portion of the data should go in the 
       collection that the application loads first. 
     + In this example, the schema is split at ten reviews because that is the number of reviews visible in the
       application by default.
-* Data Modeling - Subset Pattern
+* Document Data Model
+    + The data does NOT need to be the same, in order for Documents to be in the same Collection.
+    + The key consideration for the structure of your documents is the decision to embed or use references.
+        - Embed (More details below.)
+            * Embed related data in a single document, and generally known as 'de-normalized' models.
+        - Reference (More details below.)
+            * Normalized Data Models describe relationships using references between documents.
+* Embedding Models
+    + Allow applications to store related pieces of information in the same database record.
+      as a result, applications may need to issue fewer queries & updates to complete common tasks.
+    + Use cases: (In general...)
+        1. You have 'contains' relationships between entities. (See One-to-One Relationships w/ Embedded Docs.)
+        2. You have One-to-Many relationships between entities.  In these relationships, the 'many' or child docs,
+           always appear with or are viewed win the context of the 'one' or parent docs. 
+           (See One-to-Many Relationships w/ Embedded Docs.)
+    + Provides (In general...)
+        - Better performance for read operations, as well as the ability to request and retrieve data in a single db operation.
+        - Make it possible to update related data in a single atomic write operation.
+    + Example: { _id:       <ObjectId1>,  
+                 username:  "123xyz",
+                 contact:   { phone: "123-456-7890", email: "xyz@example.com" },   // EMBEDDED SUB-DOCUMENT
+                 access:    { level: 5,              group: "dev" }                // EMBEDDED SUB-DOCUMENT
+               }
+* Normalized Models
+    + Use cases: (In general...)
+        1. When embedding would result in duplication of data but would not provide sufficient read performance
+           advantages to outweigh the implications of the duplication.
+        2. To represent more complex Many-to-Many relationships. 
+        3. To model large hierarchical data sets.
+    + To join collections, MongoDB provides the aggregation stages $lookup & $graphLookup.
+    + Example:                                 { _id: <ObjectId2>,         ######  CONTACT DOCUMENT
+                USER DOCUMENT      /---------<   user_id: <ObjectId1>,
+                {   _id: <ObjectId1>,            phone: "123-456-7890",
+                    username: "123xyz" }         email: "xyz@example.com" }
+                                   \           { _id: <ObjectId3>,         ######  ACCESS DOCUMENT
+                                    \--------<   user_id: <ObjectId1>,
+                                                 level: 5, group: "dev" }
+
+
+
+
+/**********************************************************************************************************************
+**********************************************      DESIGN PATTERNS      **********************************************
+***********************************************************************************************************************/
+* Polymorphic Pattern
+    + When all documents in a collection are of similar structure.
+    + Useful:
+        - When we want to access info from a single collection.
+        - Can easily flow into embedded sub-documents. (Ex. List of Events (Event would be a sub-document.))
+        - When you want to merge many data sources into one. (Ex. Merger combining data from business's they acquire.)
+        - For Single View Applications.
+        - Product catalogs (Where each product might have different attributes.)
+        - Content Management.
+    + Example Concepts / Breakdowns / Application Requirements
+        - Athlete App 
+            * Goal: Track professional athletes across all sports.
+            * Requirements
+                1. Access all of the athletes in our app
+                    + Each Athlete might have very different attributes. (This is where Polymorphic Pattern shines!)
+                        - Pretend we store data for all athletes in the same collection.
+                            * The data does not need to be the same even though the documents are in the same collection.
+                            * With the Polymorphic Pattern we are easily able to accommodate the differences.
+                            * Athlete #1
+                                + (Common) Sport
+                                + (Common) Athlete Name
+                                + (Common) Career Earnings
+                                + Career Titles
+                                + Other Sports
+                            * Athlete #2
+                                + (Common) Sport
+                                + (Common) Athlete Name
+                                + (Common) Career Earnings
+                                + Event -----------------------< Can then easily create a sub-document for Events
+                                    - Type
+                                    - Total Tournaments
+                                    - Total Titles
+
+
+* Attribute Pattern - https://www.mongodb.com/blog/post/building-with-patterns-the-attribute-pattern
+
+
+* Subset Pattern
     + Instead of storing all of the reviews with the product, you can split the collection into two collections:
     + The product collection stores information on each product, including the product’s ten most recent reviews:
         {
@@ -63,6 +264,57 @@
         - In addition to product reviews, the subset pattern can also be a good fit to store:
              * Comments on a blog post, when you only want to show the most recent or highest-rated comments by default.
              * Cast members in a movie, when you only want to show cast members with the largest roles by default.
+* Pre-Compute Pattern (Model Computed Data)
+    + Eliminates the need to calculate values every time the data is requested.
+    + Instead of querying the data, and then running calculations, such as totals, to return/display on the UI,
+      we can add a calculated value to the document object outside of the array of data, and update the calculated
+      value anytime we add new data into the array.
+    + The pre-aggregated sum/count calculated values, then enable us to make further computations such as min, max, average, etc.
+* Bucket Pattern 
+    + Use Cases
+        1. Time Series Data
+        2. Aggregating Multiple Data Sources
+        3. Financial Applications (Group Transactions by Type, Date, Customer, etc.)
+    + Common method to organize time-series data is to group the data into buckets where each bucket represents a
+      uniform unit of time such as a day or year. 
+    + Bucketing organizes specific groups of data to help:
+        - Discover historical trends
+        - Forecast future trends
+        - Optimize Storage Usage
+    + Example: 
+        - This approach does not scale well in terms of data and index size.
+        - If the app requires indexes on the "sensor_id" & "timestamp" fields, 
+          every incoming read from the sensor would need to be indexed to improve performance.
+              // temperatures collection
+                {
+                  "_id": 1, "sensor_id": 12345,
+                  "timestamp": ISODate("2019-01-31T10:00:00.000Z"), "temperature": 40
+                },
+                ...,
+                {
+                  "_id": 100, "sensor_id": 12345,
+                  "timestamp": ISODate("2019-01-31T10:01:00.000Z"), "temperature": 40
+                }
+        - Leveraging the Document Model, to Bucket the data into Documents that hold the measurements 
+          for a set timespan, we can update the original schema to create Documents that represent data
+          measurements taken every minute, into hour long buckets.
+        - This updated schema improves scalability & mirrors how the app actually uses the data.
+          A user likely wouldn't query a specific temperature reading.  Instead, a user would generally query for
+          temperature behavior over time.
+        - The Bucket Pattern helps facilitate those queries by grouping the data into uniform time periods.
+        - The below pattern is a Mixed Pattern, incorporating Bucket & Compute Patterns
+              // Updated Schema - Temperature Sensor Buckets
+                {
+                    "_id": 1, "sensor_id": 12345,
+                    "transaction_count": 60, "sum_temperature": 1783, --------------------------- // COMPUTE PATTERN
+                    "start_date": ISODate("2019-01-31T10:00:00.000Z"),
+                    "end_date": ISODate("2019-01-31T10:59:59.000Z"),
+                    "measurements": [ ----------------------------------------------------------- // BUCKET PATTERN
+                        { "timestamp": ISODate("2019-01-31T10:00:00.000Z"), "temperature": 40 },
+                        ...,
+                        { "timestamp": ISODate("2019-01-31T10:59:00.000Z"), "temperature": 38 }
+                    ]
+                }
 
 
 
