@@ -13,14 +13,14 @@ Color Scheme - Flat Dark - My New
 { "keys": ["ctrl+alt+q"], "command": "select_lines", "args": {"forward": false} },
 { "keys": ["ctrl+alt+w"], "command": "select_lines", "args": {"forward": true} },
 
-// Put Cursor On Selected Lines
+// Put Cursor On Selected Lines (Default Binding)
 { "keys": ["ctrl+alt+l"], "command": "split_selection_into_lines" },
 
 // Delete Current Line
 { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
 // Remove Duplicates
-{ "keys": ["ctrl+u"], "command": "permute_lines", "args": {"operation": "unique"} },
+{ "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} },
 
 // Go to File Location in Project Sidebar
 { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
@@ -34,3 +34,17 @@ Color Scheme - Flat Dark - My New
 // Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.)
 // https://packagecontrol.io/packages/HTMLBeautify
 { "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" }
+
+// Fold / Unfold All blocks of code in file (Main Use: Removing Random Files(& Contents) from Find Results)
+{ "keys": ["alt+f"], "command": "fold_by_level", "args": {"level": 1} },
+{ "keys": ["alt+u"], "command": "unfold_all" },
+
+// Reallocating Home & End Shortcuts
+{ "keys": ["f1"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+{ "keys": ["f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+
+// Plugin: Expand Selection to Single or Double Quotes
+{"keys": ["ctrl+'"], "command": "expand_selection_to_quotes"}
+
+// Expand Selection to current highlighted section/line of code
+{ "keys": ["ctrl+alt+shift+s"], "command": "expand_selection", "args": {"to": "scope"} },
