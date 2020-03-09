@@ -7,6 +7,7 @@
 * Official MongoDB - Blog
     + https://www.mongodb.com/blog/post/building-with-patterns-the-attribute-pattern
     + https://www.mongodb.com/blog/post/building-with-patterns-the-polymorphic-pattern
+    + https://www.mongodb.com/blog/post/building-with-patterns-the-bucket-pattern
 * Spring Data Docs
     + https://docs.spring.io/spring-data/mongodb/docs/2.2.4.RELEASE/reference/html/#reference
 * Having trouble connecting? View our troubleshooting documentation.
@@ -194,7 +195,7 @@
 **********************************************      DESIGN PATTERNS      **********************************************
 ***********************************************************************************************************************/
 * Polymorphic Pattern
-    + When all documents in a collection are of similar structure.
+    + When all documents in a collection are of similar structure, but not identical.
     + Useful:
         - When we want to access info from a single collection.
         - Can easily flow into embedded sub-documents. (Ex. List of Events (Event would be a sub-document.))
@@ -202,7 +203,7 @@
         - For Single View Applications.
         - Product catalogs (Where each product might have different attributes.)
         - Content Management.
-    + Example Concepts / Breakdowns / Application Requirements
+    + Example Use Cases, Concepts, Breakdowns, & Explanations
         - Athlete App 
             * Goal: Track professional athletes across all sports.
             * Requirements
@@ -211,13 +212,13 @@
                         - Pretend we store data for all athletes in the same collection.
                             * The data does not need to be the same even though the documents are in the same collection.
                             * With the Polymorphic Pattern we are easily able to accommodate the differences.
-                            * Athlete #1
+                            * Athlete Document #1
                                 + (Common) Sport
                                 + (Common) Athlete Name
                                 + (Common) Career Earnings
                                 + Career Titles
                                 + Other Sports
-                            * Athlete #2
+                            * Athlete Document #2
                                 + (Common) Sport
                                 + (Common) Athlete Name
                                 + (Common) Career Earnings
@@ -225,11 +226,62 @@
                                     - Type
                                     - Total Tournaments
                                     - Total Titles
-
-
-* Attribute Pattern - https://www.mongodb.com/blog/post/building-with-patterns-the-attribute-pattern
-
-
+* Attribute Pattern
+    + General Uses
+        - If you need to search through many fields at the same time.
+        - Well suited for schemas that have sets of fields that have the same value type.
+        - Also works well when working with the characteristics of products.
+        - Large documents with many similar fields, but there is a subset of fields that share common
+           characteristics & we want to sort or query on that subset of fields.
+        - The fields needed for sorting are only found in a small subset of documents.
+        - Both of the above; large documents w/ sorting fields in a small subset.
+    + Sample Use Cases
+        - Lists of Dates (Like the Movie Release Dates example listed below.)
+        - Listing Products (Such as clothing(Multiple sizes/colors/etc.))
+    + Pros & Performance
+        - Provides easier indexing, targeting many similar fields per document.
+            * Beforehand; to optimize searches, we'd likely need many indexes to account for 
+              all of the subsets.  However; creating all of these indexes could reduce performance.
+        - By moving the subset of data into a key/value sub-document, we can use non-deterministic field names,
+          add additional qualifiers to the info, & more clearly state relationship of original field & value.
+        - Reduces # of indexes, making queries easier to write, and resulting in faster execution time.
+    + Notes
+        - By using the Attribute Pattern, we can add organization to our documents for common characteristics,
+          and account for rare/unpredictable fields.
+        - The key/value convention, used to create the subset array, allows for the use of non-deterministic
+          naming & the addition of qualifiers.
+            * For example, if our data collection was on bottles of water, our attribute subset might look like:
+                + Specs [ 
+                    { K:"volume", V:"500", U:"ml" }, 
+                    { K:"height", V:"10", U:"in" } 
+                ]
+                    - Here we break the info into keys, values, and with a third field 'U', which allows
+                      for the units of measure to be stored separately.
+                        * {  "specks.k": 1,  "specs.v": 1,  "specs.u": 1  }
+    + Example Use Cases, Concepts, Breakdowns, & Explanations
+        - Collection of Movies
+            * The Documents will likely have similar fields across all of the movies: title, director, producer, etc.
+            * Requirement: Want to search by Release Date.
+                + Challenges: 
+                    - Which release date? (Movies are often released on different days in different countries.)
+                        * A search for a 'Release Date' would require looking across many fields at once.  In order
+                          to search quickly, we'd need several indexes on our 'Movies Collection'
+                            + Movie Document #1 (BEFORE ATTRIBUTE PATTERN)
+                                - Title
+                                - Director
+                                - Release_US
+                                - Release_France
+                                - Release_Italy
+                                - Release_UK
+                        * By using the Attribute Pattern, we can move this subset of info into an array & reduce
+                          the required indexing.  
+                        * Indexing becomes much more manageable by creating one index on the elements of the array.
+                            + { "releases.location": 1, "releases.date": 1 } (Not positive what this means.  Assumable, indexes using mongo shell. :/)
+                        * We turn the info into an array of key-value pairs:
+                            + Movie Document #1 (AFTER ATTRIBUTE PATTERN)
+                                - Title
+                                - Director
+                                - Releases [  { location, date }  ]     (USE OF ATTRIBUTE PATTERN.)
 * Subset Pattern
     + Instead of storing all of the reviews with the product, you can split the collection into two collections:
     + The product collection stores information on each product, including the product’s ten most recent reviews:
@@ -270,7 +322,19 @@
       we can add a calculated value to the document object outside of the array of data, and update the calculated
       value anytime we add new data into the array.
     + The pre-aggregated sum/count calculated values, then enable us to make further computations such as min, max, average, etc.
-* Bucket Pattern 
+
+
+
+
+
+
+https://www.mongodb.com/blog/post/building-with-patterns-the-bucket-pattern
+* Bucket Pattern
+
+
+
+
+
     + Use Cases
         1. Time Series Data
         2. Aggregating Multiple Data Sources
