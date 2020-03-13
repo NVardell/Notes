@@ -1,0 +1,39 @@
+/**********************************************************************************************************************
+**************************************************      URLS      *****************************************************
+***********************************************************************************************************************/
+* Research
+    + https://www.tomshardware.com/reviews/monitor-buying-guide,5699.html
+
+
+
+
+/**********************************************************************************************************************
+**************************************************      NOTES      ****************************************************
+***********************************************************************************************************************/
+* Monitors
+    + Resolution (1080p < QHD < 4K)
+        - Length x Width Format.
+            * 1920 x 1080  (All the same thing.)
+                - 1080p
+                - Full HD
+                - FHD
+                - HD
+    + Size
+        - 109 ppi is the supposed 'sweet spot'.
+    + Refresh Rates
+        - # of times it updates per second.
+        - Measured in hertz (Hz).
+        - Higher it is, the smoother & less choppy it'll be.
+        - Gamer minimum is 75Hz, but is expected to be around 144Hz.
+    + Response Times
+        - # of micro seconds to change a single pixel from black to white. (Or GTG. Gray-to-Gray.)
+        - Gaming max = 5ms.  Should be around 0.5ms though.
+    + Panel Technologies (TN < IPS < VA)
+        - For Image Quality. TN = Fastest.  VA = Best Clarity.
+    + Curved?
+        - 1800R curvature has a curved radius of 1800mm
+            * Suggested best max viewing distance of 1.8 meters
+        - Lower the curvature, the more curved the display is.
+            * As low as 1000R, as of this year.
+
+

@@ -330,15 +330,15 @@
 
 https://www.mongodb.com/blog/post/building-with-patterns-the-bucket-pattern
 * Bucket Pattern
-
-
-
-
-
     + Use Cases
-        1. Time Series Data
-        2. Aggregating Multiple Data Sources
-        3. Financial Applications (Group Transactions by Type, Date, Customer, etc.)
+        - 
+        - Time Series Data
+        - Aggregating Multiple Data Sources
+        - Financial Applications (Group Transactions by Type, Date, Customer, etc.)
+
+
+
+
     + Common method to organize time-series data is to group the data into buckets where each bucket represents a
       uniform unit of time such as a day or year. 
     + Bucketing organizes specific groups of data to help:
