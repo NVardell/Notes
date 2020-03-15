@@ -1,7 +1,14 @@
 /**********************************************************************************************************************
 **************************************************      URLS      *****************************************************
 ***********************************************************************************************************************/
-* Research
+* Monitor Research
+    + https://bestreviews.com/best-gaming-monitors
+    + https://www.bestproducts.com/tech/electronics/a26796938/top-rated-gaming-monitors
+    + https://www.pcgamer.com/best-gaming-monitor/
+    + https://www.rtings.com/monitor/reviews/best/by-usage/gaming
+    + https://www.techradar.com/news/best-gaming-monitor
+    + https://www.tomsguide.com/us/best-curved-monitors,review-6473.html
+    + https://www.tomsguide.com/us/best-gaming-monitors,review-3114.html
     + https://www.tomshardware.com/reviews/monitor-buying-guide,5699.html
 
 
@@ -18,6 +25,22 @@
                 - Full HD
                 - FHD
                 - HD
+            * 3440 x 1440
+                - 2K
+            * 3840 x 2160
+                - 4K
+                - Ultra HD
+                - UHD
+                - 2160p
+        - Others
+            * UFHD - UltraGear Full HD
+        - LCD screens have a fixed quantity & size of display pixels.  Different size screens have different resolutions.
+        - Recommended Resolution per Size
+            * 17-19in = 1280*1024
+            * 20-21in = 1600*1200
+            * 22in Wide = 1680*1050
+            * 23-28 Wide = 1920*1200
+            * 30in Wide = 2560*1600 
     + Size
         - 109 ppi is the supposed 'sweet spot'.
     + Refresh Rates
@@ -28,12 +51,82 @@
     + Response Times
         - # of micro seconds to change a single pixel from black to white. (Or GTG. Gray-to-Gray.)
         - Gaming max = 5ms.  Should be around 0.5ms though.
-    + Panel Technologies (TN < IPS < VA)
+    + Pixel Pitch (Pitch / Dot Pitch)
+        - Describes the density of the pixels (LED clusters) on an LED display & correlates with resolution.
+        - The distance in millimeters from the center of a pixel to the center of the adjacent pixel.
+        - Reducing the distance between pixels (pixel pitch) without changing the screen size of the LCD increases the ppi, 
+          and the higher this number, the higher the definition of the display. 
+        - General guidelines
+            * 0.28 - Entry Level (Pretty Bad)
+            * 0.27-0.26 - Medium Range (Pretty Standard)
+            * 0.25 - Lower = Pretty Great!
+            * Goal is around .21 Horizontal & .24 Diagonal.
+    + Panel Technologies
         - For Image Quality. TN = Fastest.  VA = Best Clarity.
+        - Different types of screens use different types of panels.
+            * OLED
+                + Promise speeds, contrast, & color beyond anything currently!
+                + Primary benefit is that each pixel can be individually controlled.
+                    - This means true blacks instead of approximations, and makes everything more vibrant.
+            * LCD
+                + The LCD monitors primarily use five different panel types: 
+                    1. TN (Twisted Nematic)
+                        * Most common technology & also the oldest. 
+                        * TN panel provides the shortest response times, making them good for gaming. 
+                        * In combination with LED back-lighting, TN monitor offers high brightness & draw less 
+                          power than competing technologies. However, its drawback is the color shifts that 
+                          occur at wider viewing angles.
+                    2. IPS (In-Plane Switching)
+                        * Marks a breakthrough of LCD display. 
+                        * IPS panel offers noticeably better color reproduction & keeps image colors 
+                          consistent at virtually any angle, resulting in better viewing experience. 
+                        * It has its own downside, such as slower response times & higher power consumption.
+                    3. VA (Vertical Alignment)
+                        * Combines the advantages of TN panel and IPS panel, offering good viewing angles
+                          and generally better blacks and contrast than either TN or IPS panels. 
+                        * Its weakness is the relatively low level of responsiveness, leading to more pronounced 
+                          blurring during fast motion.
+                    4. PVA (Patterned Vertical Alignment)
+                        * Developed by Samsung as an alternative to MVA in the late 1990's. 
+                        * It has many similar characteristics to VA panel, but has even better blacks and great contrast. 
+                        * This panel type also offers large viewing angles and good color reproduction, 
+                          though not as good as IPS panels. 
+                        * It also has relatively low response time.
+                    5. PLS (Plane to Line Switching)
+                        * An "IPS-type" panel technology introduced by Samsung at the end of 2010.
+                        * Designed to provide an alternative to the LG’s popular IPS technology. 
+                        * PLS panels sport viewing angles as wide as IPS, while offering higher brightness at a 
+                          lower cost in power consumption.
+                    6. TFT
+    + Adaptive Sync Technology
+        - Primarily aimed at eliminating screen tearing.
+            * Screen tearing is when the video feed to the device is not in sync with the displays refresh rate.
+                + Aka - The screen isn't able to keep up with the rate at witch it is receiving data.
+        - Types
+            * G-Sync (Nvidia)
+            * FreeSync (AMD)
     + Curved?
         - 1800R curvature has a curved radius of 1800mm
             * Suggested best max viewing distance of 1.8 meters
         - Lower the curvature, the more curved the display is.
             * As low as 1000R, as of this year.
-
-
+        - There are curved displays, whose curve is part of a circumference (arc). 
+        - The smaller the radius, the larger the screen curve.
+    + Display Colors
+        - Describes how many colors can be displayed on a monitor's screen.
+    + Brightness
+        - Measured in candelas per square meter. (cd/m2)
+        - The Luminance of the monitor, or how much light it projects.
+        - Greater brightness often is associated with greateer percieved picture & clarity.
+        - General ranges
+            * 300 cd/m2 = Movies/Gaming 
+            * 200+ cd/m2 = Everyday use
+    + Contrast Ratio
+        - Describes the difference between the brightest white and the darkest black that an LCD monitor can generate.
+        - Two types (Can't compare the 2.)
+            1. Dynamic - Measures bright white compared to darkest black.  Not necessarily at the same time or in the same scene.
+            2. Static - Measures dark & light in a static shot, aka the highest contrast ratio achievable at the same time.
+        - Higher the better. (Generally)
+            * Will be able to distinguish between more colors.
+    + Frame Rate Control (FRC)
+        - Method which allows the pixels to show more color tones.
