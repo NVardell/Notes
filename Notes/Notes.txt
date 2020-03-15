@@ -62,6 +62,20 @@
     git update-index --assume-unchanged <file> (Older Version - Also works.)
 * Stop tracking a file (File will be removed from repo on next push.)
     git rm --cached <file>
+* Applying an updated .gitignore & removing all previously tracked files that we now want ignored
+    1. Commit everything - including gitignore
+    2. Remove everything from the repo
+        git rm -r --cached .
+            + rm        = Remove Command
+            + -r        = Recursive Removal
+            + --cached  = Only remove files from the index. (Files will still exist.)
+            + .         = Indicates that ALL files will be untracked.
+            + -n        = Add to test remove changes, just in case.
+            + --dry-run = Add to test remove changes, just in case.
+    3. Re-add Everything back to the repo
+        git add .
+    4. Commit & Push
+        git commit -m ".gitignore fix"
 
 
 
