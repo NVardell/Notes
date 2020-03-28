@@ -14,9 +14,43 @@
 
 
 
-/**********************************************************************************************************************
-**************************************************      NOTES      ****************************************************
-***********************************************************************************************************************/
+/****************************************************************************************************************************************************
+******************************************************************      NOTES      ******************************************************************
+*****************************************************************************************************************************************************/
+* RAM
+    + Most prevalent value generally is the first one - CL.  CAS Latency.
+        - This is becoming less prevalent, as most modern CL values are higher than older versions.
+            * New RAM can have higher latency times but much faster True Latency (Real Speed). Due to Clock Cycle Time.
+    + Generations
+        - DDR2: 5-5-5-15
+        - DDR3: 9-9-9-24
+        - DDR4: 16-16-16-X (MISSING tRAS - Because this value has merged into another number w/ the new mem tech, so it's no longer relevant.)
+    + Timing Values Explained
+        - CL (CAS Latency) - Time it takes for a memory module to have data ready upon request of the memory controller.
+        - tRCD (Row Column Delay) - Time it takes to READ
+        - tRP (Row Precharge Time) - Time it takes for memory to have a new row ready for using data.
+        - tRAS (Row Active Time) - Minimum time required for a row to be active to ensure data accesibility.
+    + Memory Timings
+        - Topic of memory performance, people usually think of a memory modules speed.
+        - Module speed is a measure of the ability to transfer data.
+            * If we think of memory as a race car, the module speed (MH/z) would be like the RAW horse power of the 
+            engine, and the timings would be the driver of the car.  
+                + Driver: As they get better at handling their racecar, the car will perform faster.
+                + Car performance can increase so much so that you can have a car with lower horsepower outperform one
+                  with more horsepower.
+                + If the driver (TIMINGS) are faster in the lower horsepower car than the car with more horsepower.
+        - When we look at timings, they are typically displayed in a numerical format '#-#-#-#'
+    + High Level Speed Calculations
+                  Mod. Speed  Clock Cycle  CAS   True Latency
+            Gen.    (MT/s)        (ns)     (CL)      (ns)
+            DDR2     667          3.00      5       15.00
+            DDR2     800          2.50      6       15.00
+            DDR3     1333         1.50      9       13.5
+            DDR3     160B         1.25      11      13.75
+            DDR4     1866         1.07      13      13.93
+            DDR4     2133         0.94      15      14.06
+            DDR4     2400         0.83      17      14.17
+            DDR4     2666         0.75      18      13.50
 * Monitors
     + Resolution (1080p < QHD < 4K)
         - Length x Width Format.
