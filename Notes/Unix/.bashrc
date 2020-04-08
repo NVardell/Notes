@@ -1,7 +1,12 @@
+# Extend PATH
+PATH=/c/Python27:$PATH
+
 # Pure Laziness
 alias c="clear"
 alias x="exit"
 alias ll="ls -lart --color"
+alias ns="nslookup "
+alias nsa="nslookup -type=any "
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
 alias dora="explorer ."                          # Open Windows File Explorer at current directory
 
@@ -11,8 +16,9 @@ alias ag="cat ~/.bashrc | grep -i "              # View aliases in bashrc file
 alias npmc="start ~/.npmrc"                      # Open npmrc file for editing (Can also run 'npm config edit')
 alias bashit="start ~/.bashrc"                   # Open bashrc file for editing
 alias load="source ~/.bashrc"                    # Load changes made to bashrc file
-alias mine="a | grep NVardell"                   # Display my GIT repo aliases for cloning
 alias unload="unalias -a"                        # Remove all bash aliases
+alias reload="unload; load;"                     # Remove all bash aliases
+alias mine="a | grep -n NVardell"                # Display my GIT repo aliases for cloning
 
 
 # Navigation
@@ -114,6 +120,7 @@ alias war="wars | clip"                                # Runs 'wars' function & 
 alias fact="facts | clip"                              # Runs 'facts' function & adds output to clipboard
 alias cl="wc -l *"                                     # Count lines for every file in current directory
 alias cfpl="cf push -f manifests/manifests-local.yml"  # Cloud Foundry - Push Local
+alias car="find . -type d -name 'target' -prune -exec rm -r {} +"  # Find and remove all directories named 'target'
 
 
 # MISC - User Defined Functions
@@ -132,9 +139,37 @@ function wars() {
     awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/Repos/Notes/Notes/Unix/War.html
 }
 
+alias currentEncryptedPass="haventSetItYet :/"
+alias decryptPass="dp $1 $2"
+function ep() {
+    echo "Encrypting String =" $1 "& Secret =" $2;
+    echo $1 | openssl enc -a -aes256 -nosalt -k $2; # -a=-base64, -k=Secret, -aes256=Encryption Cypher
+}
+# Decrypts a string
+#   @input: String to Decrypt
+#   @input: Secret to Decrypt with
+function dp() {
+    echo $1 | openssl enc -d -a -aes128 -nosalt -k $2;
+}
+
+# Cloud Foundry Login
+#   @input: Secret
+function cfl() {
+    #  Couldn't get this to assign to a variable any other way. :/
+    MINE=$(decryptPass currentEncryptedPass $1);
+    login f624966 $MINE;
+}
+function login() {
+    echo "Logging into Cloud Foundry";
+    cf login -a https://api.apps.dev.na-4a.gaia.jpmchase.net -u $1 -p $2;
+}
+
 
 # MISC - Export User Functions
 export -f p
 export -f pc
+export -f ep
+export -f dp
+export -f cfl
 export -f facts
 export -f wars
