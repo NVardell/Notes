@@ -26,12 +26,16 @@
 /**********************************************************************************************************************
 ********************************************      UNIX/BASH COMMANDS      *********************************************
 ***********************************************************************************************************************/
+* See all PATH & Environment Details/Functions
+    env
 * Check environment variable value
     echo $JAVA_HOME
 * Adding to PATH
     export PATH=/opt/apache-maven-3.6.0/bin:$PATH
 * Delete all empty directories
     find . -type d -empty -delete
+* Find specific string in directory
+    find . -type f -exec grep -H 'SEARCH STRING' {} +
 * Certificates & KetStores & KeyTool Examples
     + Create a keystore
         keytool -genkey -alias selfsigned_localhost -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
@@ -50,7 +54,13 @@
         j - filter the archive through bzip2
 * Unpack/extract/uncompress files (Ex. *.tar.gz -> *.tar (Removes '.gz'))
     gunzip <.tar.gz file>
-    
+* Send email
+    + Insert file contents into body of email
+        mail -s "EMAIL SUBJECT" email@address.com < myAwesomeFile.txt
+    + Insert Grep results into the body of an email
+        grep 
+* Misc.
+    + netstat -a | more    
 
 
 
