@@ -405,3 +405,626 @@ Theme - Gravity
 
 
 
+Package Control Messages
+========================
+
+Agila Theme
+-----------
+
+  # Agila Theme
+  ##### A Sublime Text 3 UI Theme
+  Couldn't find a theme I really dig, so I tried to make my own theme based on all the things/elements I like from wonderful themes I've used before. :)
+  
+  ***
+  
+  ## Screenshots
+  *Current font settings in screenshots:
+  Font face: [__Inconsolata__](https://www.google.com/fonts/specimen/Inconsolata) | Font size: 22*
+  
+  #### Agila Theme
+  ![Screenshot](https://www.dropbox.com/s/jt3choxq6b583t7/Agila%20Theme.png?raw=1)
+  
+  #### Agila Classic Theme
+  ![Screenshot](https://www.dropbox.com/s/xlg43vr2ikxogch/Agila%20Classic%20Theme.png?raw=1)
+  
+  #### Agila Light Theme
+  ![Screenshot](https://www.dropbox.com/s/tmjpeas5iuvotbd/Agila%20Light%20Theme.png?raw=1)
+  
+  ---
+  
+  ### How to Install
+  
+  ##### *Chill* way
+  via [Package Control](https://packagecontrol.io/), where Agila is listed as *`Agila Theme`*.
+  
+  1. Open Command Palette using menu item *`Tools -> Command Palette...`*
+  2. Choose `Package Control: Install Package`
+  3. Find *`Agila Theme`* and hit *`Enter`*
+  
+  ##### *Woooo* way
+  via installing the theme manually.
+  
+  1. [Download the latest release .zip](https://github.com/arvi/Agila-Theme/releases)
+  2. Unzip and rename folder to *`Agila Theme`*.
+  3. Move *`Agila Theme`* folder inside the Packages directory (*`Preferences > Browse packages...`*)
+  
+  ---
+  
+  ### How to Activate Theme
+  via User Preferences file (*`Sublime Text -> Preferences -> Settings - User`*). After setting up,
+  don't forget to **restart Sublime Text Editor** for changes to take effect.
+  
+  ##### Default theme
+  #
+  ```json
+  "theme": "Agila.sublime-theme",
+  "color_scheme": "Packages/Agila Theme/Agila Oceanic Next.tmTheme",
+  ```
+  
+  ##### Classic theme
+  #
+  ```json
+  "theme": "Agila Classic.sublime-theme",
+  "color_scheme": "Packages/Agila Theme/Agila Classic Oceanic Next.tmTheme",
+  ```
+  
+  ##### Light theme
+  #
+  ```json
+  "theme": "Agila Light.sublime-theme",
+  "color_scheme": "Packages/Agila Theme/Agila Light Solarized.tmTheme",
+  ```
+  #
+  
+  ---
+  
+  ### Settings
+  I've made some UI parts customizable e.g icon colors, sidebar items, etc.. :)
+  ###### SIDEBAR SIZE (default: medium)
+  #
+  ```json
+  "theme_agila_sidebar_small": true,
+  "theme_agila_sidebar_medium": true,
+  "theme_agila_sidebar_large": true,
+  ```
+  
+  ###### SIDEBAR ENTRY/ITEM FONT SIZE (if not set, will default to font size: 13)
+  #
+  ```json
+  "theme_agila_sidebar_font_xsmall": true, //font-size: 11
+  "theme_agila_sidebar_font_small": true, //font-size: 12
+  "theme_agila_sidebar_font_big": true, //font-size: 14
+  ```
+  
+  ###### SIDEBAR SELECTED ENTRY/ITEM (default: pink)
+  #
+  ```json
+  "theme_agila_sidebar_selected_entry_white": true,
+  "theme_agila_sidebar_selected_entry_gray": true,
+  "theme_agila_sidebar_selected_entry_lightblue": true,
+  "theme_agila_sidebar_selected_entry_yellow": true,
+  "theme_agila_sidebar_selected_entry_pink": true,
+  ```
+  
+  ###### MODIFIED TAB - ICON MARKER COLOR (default: light blue)
+  #
+  ```json
+  "theme_agila_modified_tab_marker_white": true,
+  "theme_agila_modified_tab_marker_gray": true,
+  "theme_agila_modified_tab_marker_lightblue": true,
+  "theme_agila_modified_tab_marker_yellow": true,
+  "theme_agila_modified_tab_marker_pink": true,
+  ```
+  
+  ###### SCROLLBAR COLORS
+  #
+  ```json
+  "theme_agila_vertical_scrollbar_white": true,
+  "theme_agila_horizontal_scrollbar_white": true,
+  
+  "theme_agila_vertical_scrollbar_gray": true,
+  "theme_agila_horizontal_scrollbar_gray": true,
+  
+  "theme_agila_vertical_scrollbar_lightblue": true,
+  "theme_agila_horizontal_scrollbar_lightblue": true,
+  
+  "theme_agila_vertical_scrollbar_yellow": true,
+  "theme_agila_horizontal_scrollbar_yellow": true,
+  
+  "theme_agila_vertical_scrollbar_pink": true,
+  "theme_agila_horizontal_scrollbar_pink": true,
+  ```
+  
+  ###### SCROLLBAR THINNESS (if not set, will default to thin:3)
+  #
+  ```json
+  "theme_agila_vertical_scrollbar_thinner": true,    //thin:2
+  "theme_agila_horizontal_scrollbar_thinner": true,
+  
+  "theme_agila_vertical_scrollbar_thinnest": true,   //thin:1
+  "theme_agila_horizontal_scrollbar_thinnest": true,
+  
+  "theme_agila_vertical_scrollbar_invisible": true,  //thin: 0
+  "theme_agila_horizontal_scrollbar_invisible": true,
+  ```
+  #
+  ---
+  ### Thanks to
+  - [Preap Theme](https://packagecontrol.io/packages/Preap) - UI inspiration and .sublime-theme source code :)
+  - [Spacegray Theme](http://kkga.github.io/spacegray) - UI inspiration and .sublime-theme source code :)
+  - [amCoder Theme](https://packagecontrol.io/packages/Theme%20-%20amCoder) - UI inspiration and .sublime-theme source code :)
+  - [Neka Theme](https://packagecontrol.io/packages/Neka%20Theme) - Icons
+  - [Oceanic Next Color Scheme](https://packagecontrol.io/packages/Oceanic%20Next%20Color%20Scheme) - where Default and Classic theme color scheme are based
+  - [Solarized Color Scheme](https://packagecontrol.io/packages/Solarized%20Color%20Scheme) - where Light theme color scheme is based
+  - [Colorhexa](http://www.colorhexa.com/) - color combinations
+  - `meteor create --sample todos` - screenshot code snippet :p
+  
+  ---
+  ### Fun Experiments :p
+  Have a color combination in mind or perhaps you also want to try and create your own? Check the *`Agila.sublime-theme`* source code... I made it super easy for anyone to customize a sublime UI theme through my extensive comments. :p Enjoy! :)
+
+
+Seti_UI
+-------
+
+  # Install
+  ---------------
+  Activate the 'Theme' by modifying your user preferences file, which you can find using the menu item
+  `Preferences -> Settings - User` in Sublime Text
+  or use
+  `Schemr` & `Themr` by [Ben Weier](https://github.com/benweier).
+  
+  
+  ## Example
+  ---------------
+  ```
+  {
+    "theme": "Seti.sublime-theme",
+  
+    "caret_extra_width": 2,                 //  to have a wider/thicker caret
+    "caret_extra_bottom": 3,                //  to make the caret = to the line height (the theme currently support 0,3,5)
+    "caret_extra_top": 3,
+  
+    "overlay_scroll_bars": "enabled",       //  to show scrollbars only when scrolling
+    "highlight_line": true,                 //  to highlight the current line
+  }
+  ```
+  
+  ### notes
+  ---------------
+  - please check the readme for more theme options.
+  
+  - copy the (Resource/fold.png) "or edit it if you want" to (Packages/Theme - Default) to override the _focken default yellow code_folding icon.
+  
+  - for better recognition of file types, its recommended to install [Apply​Syntax](https://sublime.wbond.net/packages/ApplySyntax) by facelessuser.
+  
+  
+  ## Fonts
+  ----------------------
+  https://www.fontsquirrel.com/fonts/fira-mono
+  https://www.fontsquirrel.com/fonts/source-code-pro
+  https://www.fontsquirrel.com/fonts/ubuntu-mono
+  http://sourcefoundry.org/hack/
+
+
+Package Control Messages
+========================
+
+Agila Theme
+-----------
+
+  # Agila Theme
+  ##### A Sublime Text 3 UI Theme
+  Couldn't find a theme I really dig, so I tried to make my own theme based on all the things/elements I like from wonderful themes I've used before. :)
+  
+  ***
+  
+  ## Screenshots
+  *Current font settings in screenshots:
+  Font face: [__Inconsolata__](https://www.google.com/fonts/specimen/Inconsolata) | Font size: 22*
+  
+  #### Agila Theme
+  ![Screenshot](https://www.dropbox.com/s/jt3choxq6b583t7/Agila%20Theme.png?raw=1)
+  
+  #### Agila Classic Theme
+  ![Screenshot](https://www.dropbox.com/s/xlg43vr2ikxogch/Agila%20Classic%20Theme.png?raw=1)
+  
+  #### Agila Light Theme
+  ![Screenshot](https://www.dropbox.com/s/tmjpeas5iuvotbd/Agila%20Light%20Theme.png?raw=1)
+  
+  ---
+  
+  ### How to Install
+  
+  ##### *Chill* way
+  via [Package Control](https://packagecontrol.io/), where Agila is listed as *`Agila Theme`*.
+  
+  1. Open Command Palette using menu item *`Tools -> Command Palette...`*
+  2. Choose `Package Control: Install Package`
+  3. Find *`Agila Theme`* and hit *`Enter`*
+  
+  ##### *Woooo* way
+  via installing the theme manually.
+  
+  1. [Download the latest release .zip](https://github.com/arvi/Agila-Theme/releases)
+  2. Unzip and rename folder to *`Agila Theme`*.
+  3. Move *`Agila Theme`* folder inside the Packages directory (*`Preferences > Browse packages...`*)
+  
+  ---
+  
+  ### How to Activate Theme
+  via User Preferences file (*`Sublime Text -> Preferences -> Settings - User`*). After setting up,
+  don't forget to **restart Sublime Text Editor** for changes to take effect.
+  
+  ##### Default theme
+  #
+  ```json
+  "theme": "Agila.sublime-theme",
+  "color_scheme": "Packages/Agila Theme/Agila Oceanic Next.tmTheme",
+  ```
+  
+  ##### Classic theme
+  #
+  ```json
+  "theme": "Agila Classic.sublime-theme",
+  "color_scheme": "Packages/Agila Theme/Agila Classic Oceanic Next.tmTheme",
+  ```
+  
+  ##### Light theme
+  #
+  ```json
+  "theme": "Agila Light.sublime-theme",
+  "color_scheme": "Packages/Agila Theme/Agila Light Solarized.tmTheme",
+  ```
+  #
+  
+  ---
+  
+  ### Settings
+  I've made some UI parts customizable e.g icon colors, sidebar items, etc.. :)
+  ###### SIDEBAR SIZE (default: medium)
+  #
+  ```json
+  "theme_agila_sidebar_small": true,
+  "theme_agila_sidebar_medium": true,
+  "theme_agila_sidebar_large": true,
+  ```
+  
+  ###### SIDEBAR ENTRY/ITEM FONT SIZE (if not set, will default to font size: 13)
+  #
+  ```json
+  "theme_agila_sidebar_font_xsmall": true, //font-size: 11
+  "theme_agila_sidebar_font_small": true, //font-size: 12
+  "theme_agila_sidebar_font_big": true, //font-size: 14
+  ```
+  
+  ###### SIDEBAR SELECTED ENTRY/ITEM (default: pink)
+  #
+  ```json
+  "theme_agila_sidebar_selected_entry_white": true,
+  "theme_agila_sidebar_selected_entry_gray": true,
+  "theme_agila_sidebar_selected_entry_lightblue": true,
+  "theme_agila_sidebar_selected_entry_yellow": true,
+  "theme_agila_sidebar_selected_entry_pink": true,
+  ```
+  
+  ###### MODIFIED TAB - ICON MARKER COLOR (default: light blue)
+  #
+  ```json
+  "theme_agila_modified_tab_marker_white": true,
+  "theme_agila_modified_tab_marker_gray": true,
+  "theme_agila_modified_tab_marker_lightblue": true,
+  "theme_agila_modified_tab_marker_yellow": true,
+  "theme_agila_modified_tab_marker_pink": true,
+  ```
+  
+  ###### SCROLLBAR COLORS
+  #
+  ```json
+  "theme_agila_vertical_scrollbar_white": true,
+  "theme_agila_horizontal_scrollbar_white": true,
+  
+  "theme_agila_vertical_scrollbar_gray": true,
+  "theme_agila_horizontal_scrollbar_gray": true,
+  
+  "theme_agila_vertical_scrollbar_lightblue": true,
+  "theme_agila_horizontal_scrollbar_lightblue": true,
+  
+  "theme_agila_vertical_scrollbar_yellow": true,
+  "theme_agila_horizontal_scrollbar_yellow": true,
+  
+  "theme_agila_vertical_scrollbar_pink": true,
+  "theme_agila_horizontal_scrollbar_pink": true,
+  ```
+  
+  ###### SCROLLBAR THINNESS (if not set, will default to thin:3)
+  #
+  ```json
+  "theme_agila_vertical_scrollbar_thinner": true,    //thin:2
+  "theme_agila_horizontal_scrollbar_thinner": true,
+  
+  "theme_agila_vertical_scrollbar_thinnest": true,   //thin:1
+  "theme_agila_horizontal_scrollbar_thinnest": true,
+  
+  "theme_agila_vertical_scrollbar_invisible": true,  //thin: 0
+  "theme_agila_horizontal_scrollbar_invisible": true,
+  ```
+  #
+  ---
+  ### Thanks to
+  - [Preap Theme](https://packagecontrol.io/packages/Preap) - UI inspiration and .sublime-theme source code :)
+  - [Spacegray Theme](http://kkga.github.io/spacegray) - UI inspiration and .sublime-theme source code :)
+  - [amCoder Theme](https://packagecontrol.io/packages/Theme%20-%20amCoder) - UI inspiration and .sublime-theme source code :)
+  - [Neka Theme](https://packagecontrol.io/packages/Neka%20Theme) - Icons
+  - [Oceanic Next Color Scheme](https://packagecontrol.io/packages/Oceanic%20Next%20Color%20Scheme) - where Default and Classic theme color scheme are based
+  - [Solarized Color Scheme](https://packagecontrol.io/packages/Solarized%20Color%20Scheme) - where Light theme color scheme is based
+  - [Colorhexa](http://www.colorhexa.com/) - color combinations
+  - `meteor create --sample todos` - screenshot code snippet :p
+  
+  ---
+  ### Fun Experiments :p
+  Have a color combination in mind or perhaps you also want to try and create your own? Check the *`Agila.sublime-theme`* source code... I made it super easy for anyone to customize a sublime UI theme through my extensive comments. :p Enjoy! :)
+
+
+Seti_UI
+-------
+
+  # Install
+  ---------------
+  Activate the 'Theme' by modifying your user preferences file, which you can find using the menu item
+  `Preferences -> Settings - User` in Sublime Text
+  or use
+  `Schemr` & `Themr` by [Ben Weier](https://github.com/benweier).
+  
+  
+  ## Example
+  ---------------
+  ```
+  {
+    "theme": "Seti.sublime-theme",
+  
+    "caret_extra_width": 2,                 //  to have a wider/thicker caret
+    "caret_extra_bottom": 3,                //  to make the caret = to the line height (the theme currently support 0,3,5)
+    "caret_extra_top": 3,
+  
+    "overlay_scroll_bars": "enabled",       //  to show scrollbars only when scrolling
+    "highlight_line": true,                 //  to highlight the current line
+  }
+  ```
+  
+  ### notes
+  ---------------
+  - please check the readme for more theme options.
+  
+  - copy the (Resource/fold.png) "or edit it if you want" to (Packages/Theme - Default) to override the _focken default yellow code_folding icon.
+  
+  - for better recognition of file types, its recommended to install [Apply​Syntax](https://sublime.wbond.net/packages/ApplySyntax) by facelessuser.
+  
+  
+  ## Fonts
+  ----------------------
+  https://www.fontsquirrel.com/fonts/fira-mono
+  https://www.fontsquirrel.com/fonts/source-code-pro
+  https://www.fontsquirrel.com/fonts/ubuntu-mono
+  http://sourcefoundry.org/hack/
+
+
+BracketHighlighter
+------------------
+
+  # BracketHighlighter
+  
+  Welcome to BracketHighlighter!  For a quick start guide, please go to  
+  `Preferences->Package Settings->BracketHighlighter->Quick Start Guide`.
+
+
+Materialize
+-----------
+
+   __  __       _            _       _   _
+  |  \/  |     | |          (_)     | | (_)
+  | \  / | __ _| |_ ___ _ __ _  __ _| |  _ _______
+  | |\/| |/ _` | __/ _ \ '__| |/ _` | | | |_  / _ \
+  | |  | | (_| | ||  __/ |  | | (_| | | | |/ /  __/
+  \_|  |_/\__,_|\__\___|_|  |_|\__,_|_| |_/___\___|
+  
+  Materialize
+  https://github.com/saadq/Materialize
+  
+  Thanks for installing Materialize!
+  
+  Check out https://github.com/saadq/Materialize/screenshots.md for more visuals.
+  
+  ******************************************************************************
+  
+  Activation
+  -----------
+  Based on the theme you want to use, update your user preferences at  **(Preferences > Setting - User)** with the following:
+  
+  For example:
+  
+  Material Brogrammer
+  {
+      "color_scheme": "Packages/Materialize/schemes/Material Brogrammer.tmTheme",
+      "theme": "Material Brogrammer.sublime-theme"
+  }
+  
+  Contrast Mode
+  --------------
+  You can activate contrast mode by adding the following to your preferences:
+  {
+      "material_theme_contrast_mode": true
+  }
+  
+  MAKE SURE TO RESTART SUBLIME AFTER ACTIVATING THE THEME
+  ******************************************************************************
+  
+  Recommended UI and font settings:
+  I suggest that you use the following custom settings for a better experience with the theme:
+  
+  {
+      "overlay_scroll_bars": "enabled",
+      "line_padding_top": 3,
+      "line_padding_bottom": 3,
+      // On retina Mac
+      "font_options": [ "gray_antialias" ],
+      "always_show_minimap_viewport": true,
+      "bold_folder_labels": true,
+      // Highlight active indent
+      "indent_guide_options": [ "draw_normal", "draw_active" ]
+  }
+  
+  ******************************************************************************
+
+
+Materialize-Appbar
+------------------
+
+  ___  ___      _            _       _  _
+  |  \/  |     | |          (_)     | |(_)
+  | .  . | __ _| |_ ___ _ __ _  __ _| | _  _____  ___
+  | |\/| |/ _` | __/ _ \ '__| |/ _` | || ||/ / / / _ \
+  | |  | | (_| | ||  __/ |  | | (_| | || |  / / |  __/
+  \_|  |_/\__,_|\__\___|_|  |_|\__,_|_||_| //_|/ \___|
+  
+  Materialize - Appbar Addon
+  https://github.com/saadq/Materialize-appbar
+  
+  ******************************************************************************
+  
+  With this addon you can add a tinted app bar to your Materialize themes.
+  This addon auto fits with all Materialize theme accent colors!
+  
+  ## Addon options
+  
+  ```json
+  "material_theme_tree_headings": true , // Show siderbar headings
+  ```
+
+
+Material Theme
+--------------
+
+  ## Material Theme for Sublime Text 3
+  
+  For more information on the Material Theme: https://github.com/equinusocio/material-theme
+  
+  **********************************************************************************************
+  
+  # Activate the theme
+  
+  You can activate this theme from:
+  - Command palette `Tools > Command Palette` (⌘/Ctrl + ⇧ + P) by typing `Material Theme: Activate theme`.
+  - Context menu (Right click on the editor) and choose `Material Theme > Activate`
+  - `Preferences > Packages Settings` and choose `Material Theme > Activate`
+  
+  You can also manually activate this theme by adding these lines to your user settings (**Preferences > Settings - User**):
+  
+  ```json
+  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "theme": "Material-Theme.sublime-theme",
+  ```
+  
+  **NOTE:** Restart Sublime Text after activating the theme.
+  
+  ## File icons
+  From release 4.0.0 this theme use [A File Icon](https://github.com/ihodev/a-file-icon) package to display file icons. Please install the package and restart Sublime Text.
+  
+  **********************************************************************************************
+  
+  # Theme options
+  
+  ```json
+  // Accent
+  "material_theme_accent_acid-lime"         : true, // Set acid-lime accent color
+  "material_theme_accent_blue"              : true, // Set blue accent color
+  "material_theme_accent_brba"              : true, // Set Breaking Bad green accent color
+  "material_theme_accent_bright-teal"       : true, // Set bright-teal accent color
+  "material_theme_accent_cyan"              : true, // Set cyan accent color
+  "material_theme_accent_graphite"          : true, // Set graphite accent color
+  "material_theme_accent_indigo"            : true, // Set indigo accent color
+  "material_theme_accent_lime"              : true, // Set lime green accent color
+  "material_theme_accent_orange"            : true, // Set orange accent color
+  "material_theme_accent_pink"              : true, // Set pink accent color
+  "material_theme_accent_purple"            : true, // Set purple accent color
+  "material_theme_accent_red"               : true, // Set pale red accent color
+  "material_theme_accent_sky"               : true, // Set bright-cyan accent color
+  "material_theme_accent_tomato"            : true, // Set tomato red accent color
+  "material_theme_accent_yellow"            : true, // Set yellow accent color
+  
+  // Panels
+  "material_theme_accent_scrollbars"        : true, // Enable accent color for scrollbars
+  "material_theme_accent_titlebar"          : true, // Enable accent color for titlebar
+  "material_theme_bright_scrollbars"        : true, // Bright scrollbars puck color
+  "material_theme_compact_panel"            : true, // Set minimal padding for the search panel
+  "material_theme_contrast_mode"            : true, // Enable sidebar and panels contrast mode
+  "material_theme_panel_separator"          : true, // Show bottom panel separator
+  "material_theme_small_statusbar"          : true, // Set small status bar
+  "material_theme_titlebar"                 : true, // Enable title bar (OS X 10.10+)
+  
+  // Sidebar
+  "material_theme_arrow_folders"            : true, // Replace folder icons with arrows
+  "material_theme_big_fileicons"            : true, // Show bigger file type icons
+  "material_theme_bullet_tree_indicator"    : true, // Set a bullet as active tree indicator
+  "material_theme_compact_sidebar"          : true, // Set compact side bar
+  "material_theme_disable_fileicons"        : true, // Hide sidebar file type icons
+  "material_theme_disable_folder_animation" : true, // Disable folder animation
+  "material_theme_disable_tree_indicator"   : true, // Disable sidebar file indicator
+  
+  // Tabs
+  "material_theme_bold_tab"                 : true, // Make the tab labels bolder
+  "material_theme_small_tab"                : true, // Set small tabs
+  "material_theme_tabs_autowidth"           : true, // Enable autowidth for tabs
+  "material_theme_tabs_separator"           : true, // Show tabs separator, this disables tab hover animation
+  
+  // If you use Material Theme - Appbar addon you can use additional settings:
+  "material_theme_tree_headings"            : true, // Show sidebar headings
+  ```
+  
+  **********************************************************************************************
+  
+  # Recommended settings for a better experience:
+  
+  ```json
+  "always_show_minimap_viewport" : true,
+  "bold_folder_labels"           : true,
+  "font_options"                 : ["gray_antialias", "subpixel_antialias"], // On retina Mac & Windows
+  "indent_guide_options"         : ["draw_normal", "draw_active"], // Highlight active indent
+  "line_padding_bottom"          : 3,
+  "line_padding_top"             : 3,
+  "overlay_scroll_bars"          : "enabled",
+  ```
+
+
+Material Theme - Appbar
+-----------------------
+
+  ___  ___      _            _       _       _____ _
+  |  \/  |     | |          (_)     | |     |_   _| |
+  | .  . | __ _| |_ ___ _ __ _  __ _| |       | | | |__   ___ _ __ ___   ___
+  | |\/| |/ _` | __/ _ \ '__| |/ _` | |       | | | '_ \ / _ \ '_ ` _ \ / _ \
+  | |  | | (_| | ||  __/ |  | | (_| | |       | | | | | |  __/ | | | | |  __/
+  \_|  |_/\__,_|\__\___|_|  |_|\__,_|_|       \_/ |_| |_|\___|_| |_| |_|\___|
+  
+  Material Theme - White Panels Addon
+  https://github.com/equinusocio/material-theme-appbar
+  
+  ******************************************************************************
+  
+  With this addon you can add a tinted app bar to your Material Theme installation.
+  This addon auto fits with material theme accent colors!
+  
+  NOTE: If you've intalled 1.0.0 through Package Control please unistall and reinstall
+  
+  ## Addon options
+  "material_theme_tree_headings": true, // Show sidebar headings
+  "material_theme_appbar_blue": true,
+  "material_theme_appbar_charcoal": true,
+  "material_theme_appbar_cyan": true,
+  "material_theme_appbar_indigo": true,
+  "material_theme_appbar_lime": true,
+  "material_theme_appbar_orange": true,
+  "material_theme_appbar_pink": true,
+  "material_theme_appbar_purple": true,
+  "material_theme_appbar_red": true,
+  "material_theme_appbar_yellow": true,
