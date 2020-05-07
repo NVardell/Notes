@@ -104,12 +104,12 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 # NPM - Shorthand NPM Commands
 alias npms="npm start"                           # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
 alias npmi="npm install "                        # Install packages listed on command line
-alias npmu="ncu -u"                              # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
+alias npmu="ncu -u  --packageFile package.json"  # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
 alias npmo="npm outdated"                        # Local Project - Display outdated packages
 alias npmug="npmu -g"                            # Global - Update all packages
 alias npmog="npmo -g --depth=0"                  # Global - Display outdated packages
 alias unpm="npm install npm@latest -g"           # Update npm to latest version
-
+alias npmdc="npx depcheck"                       # Check for unused/missing dependencies in package.json
 
 
 # MISC - Random Shenanigans

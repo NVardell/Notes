@@ -1,6 +1,6 @@
 /**
  * TODO - Add Class Definition
  *
- * @author Nate Vardell
+ * @author N.V.
  * @since ${DATE}
  */
