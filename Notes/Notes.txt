@@ -5,6 +5,8 @@
     + • 
     + ≠
     + ∞
+    + →
+    + ⇒
 
 
 
@@ -14,14 +16,21 @@
 ***********************************************************************************************************************/
 * Auto Imports - Never use wildcard import
     1. Navigate menus 
-        File -> Settings -> Editor -> Code Style -> Java -> Imports (Tab)
+        File → Settings → Editor → Code Style → Java → Imports (Tab)
     2. Set value to 99 for the fields:
         + "Class count to use import with '*'"
         + "Names count to use static import with '*'"
     3. Click 'Apply' & 'OK'
 * Remove right wrap margin vertical line on editor
-    1. File -> Settings -> Editor -> General -> Appearance
+    1. File → Settings → Editor → General → Appearance
     2. Uncheck box next to 'Show hard wrap guide...'
+* Change Editor background color
+    1. File → Settings → Editor → Color Scheme → General
+    2. Click 'Text' Dropbown in main panel 
+    3. Select 'Default Text' & update value for 'Background'
+        ---   WILL ALSO NEED TO UPDATE GUTTER BACKGROUND COLOR TO MATCH   ---
+    1. Click 'Editor' Dropbown in same main panel 
+    2. Select 'Gutter background' & update value for 'Background'
 
 
 
@@ -51,7 +60,7 @@
         f - use archive file or device ARCHIVE
         z - filter the archive through gzip
         j - filter the archive through bzip2
-* Unpack/extract/uncompress files (Ex. *.tar.gz -> *.tar (Removes '.gz'))
+* Unpack/extract/uncompress files (Ex. *.tar.gz → *.tar (Removes '.gz'))
     gunzip <.tar.gz file>
 * Send email
     + Insert file contents into body of email
