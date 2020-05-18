@@ -125,6 +125,13 @@
         git add .
     4. Commit & Push
         git commit -m ".gitignore fix"
+* Tell Git who you are
+    git config --global user.name "Sam Smith"
+    git config --global user.email sam@example.com
+* Create a new local repo
+    git init
+* Push all branches to remote repo
+    git push --all origin
 
 
 
