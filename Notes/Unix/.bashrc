@@ -88,7 +88,7 @@ alias pc="gaa; gc \"Pushing latest changes.\"; push;"                         # 
 alias pn="n; gaa; gc \"Pushing latest notes.\"; push;"                        # Push All changes Notes Repo
 alias po="o; gaa; gc \"Pushing latest changes.\"; push;"                      # Push All changes in Other Repo
 alias pp="p; gaa; gc \"Pushing latest pieces.\"; push;"                       # Push All changes in Pieces Repo
-
+alias gpe="pc"                                                                # Git Push Everything
 
 
 # GIT  -  Repositories
