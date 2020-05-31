@@ -142,11 +142,15 @@ function wars() {
     awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/Repos/Notes/Notes/Unix/War.html
 }
 function snap() {
-    TEMP_DIR=~/Desktop/TempPics;
+    DESKTOP_DIR=Desktop/TempPics;
+    ACTIVE_DIR=~/$DESKTOP_DIR;
     SPOTLIGHT_DIR=~/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets/*;
-    echo "Creating Temp Directory on Desktop for new images."; mkdir $TEMP_DIR;
-    echo "Copying files from Windows 10 Snapshot folder to Temp directory on Desktop."; cp $SPOTLIGHT_DIR $TEMP_DIR;
-    echo "Moving to new Temp directory."; cd $TEMP_DIR;
+
+    [ -d ~/OneDrive ] && ACTIVE_DIR=~/OneDrive/$DESKTOP_DIR;
+
+    echo "Creating Temp Directory on Desktop for new images."; mkdir $ACTIVE_DIR;
+    echo "Copying files from Windows 10 Snapshot folder to Temp directory on Desktop."; cp $SPOTLIGHT_DIR $ACTIVE_DIR;
+    echo "Moving to new Temp directory."; cd $ACTIVE_DIR;
     echo "Renaming all files in new Temp directory."; renameFiles;
     echo "Opening new TempPics directory in File Explorer."; dora;
 }
