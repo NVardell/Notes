@@ -144,12 +144,12 @@ function wars() {
 function snap() {
     DESKTOP_DIR=Desktop/TempPics;
     ACTIVE_DIR=~/$DESKTOP_DIR;
-    SPOTLIGHT_DIR=~/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets/*;
+    SPOTLIGHT_DIR=~/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets;
 
     [ -d ~/OneDrive ] && ACTIVE_DIR=~/OneDrive/$DESKTOP_DIR;
 
     echo "Creating Temp Directory on Desktop for new images."; mkdir $ACTIVE_DIR;
-    echo "Copying files from Windows 10 Snapshot folder to Temp directory on Desktop."; cp $SPOTLIGHT_DIR $ACTIVE_DIR;
+    echo "Copying files from Windows 10 Snapshot folder to Temp directory on Desktop."; find $SPOTLIGHT_DIR -size +400k -exec cp -nv {} $ACTIVE_DIR \;
     echo "Moving to new Temp directory."; cd $ACTIVE_DIR;
     echo "Renaming all files in new Temp directory."; renameFiles;
     echo "Opening new TempPics directory in File Explorer."; dora;
