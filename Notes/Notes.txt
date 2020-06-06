@@ -7,6 +7,34 @@
     + ∞
     + →
     + ⇒
+* Extensions
+    + .pub = Public Key File (SSH)
+* Topics
+    + SSH Keys
+        - Used to establish a secure connection with a server.
+        - Add key to SSH Agent, which manages SSH Keys & remembers passphrases. (Won't require password every time.)
+
+
+
+
+/**********************************************************************************************************************
+***************************************************      HOW-TO      **************************************************
+***********************************************************************************************************************/
+* Generate SSH Key
+    1. Run Key Generation Command (Adding Email Makes it easier to identify keys when there are multiple.)
+        ssh-keygen -t rsa -b 4096 -C "nvardell@gmail.com"
+    2. Hit 'Enter' Key 3 times to use default file name, location, & no password.
+* Copy Public SSH Key to Clipboard
+    1. Run command below
+        clip < ~/.ssh/id_rsa.pub
+* Add SSH Private Key to SSH Agent
+    1. Start SSH Agent in the background (Should print ProcessID after execution.)
+        eval $(ssh-agent -s)
+    2. Run SSH Add Command below. (Requires SSH Agent to be Running. Else error message appears.)
+        ssh-add ~/.ssh/id_rsa
+* Add SSH Key to SourceTree
+    1. Open SourceTree ⇒ Tools ⇒ Create or Import SSH Keys
+    2. Conversions ⇒ Import Key ⇒ Select 'id_rsa' file
 
 
 
@@ -14,7 +42,7 @@
 /**********************************************************************************************************************
 *************************************************      INTELLIJ      **************************************************
 ***********************************************************************************************************************/
-* Auto Imports - Never use wildcard import
+* Auto Imports Settings - Never use wildcard import
     1. Navigate menus 
         File → Settings → Editor → Code Style → Java → Imports (Tab)
     2. Set value to 99 for the fields:
@@ -26,11 +54,12 @@
     2. Uncheck box next to 'Show hard wrap guide...'
 * Change Editor background color
     1. File → Settings → Editor → Color Scheme → General
-    2. Click 'Text' Dropbown in main panel 
+    2. Click 'Text' dropdown in main panel 
     3. Select 'Default Text' & update value for 'Background'
         ---   WILL ALSO NEED TO UPDATE GUTTER BACKGROUND COLOR TO MATCH   ---
-    1. Click 'Editor' Dropbown in same main panel 
+    1. Click 'Editor' dropdown in same main panel 
     2. Select 'Gutter background' & update value for 'Background'
+
 
 
 
@@ -103,6 +132,7 @@
 
 
 
+
 /**********************************************************************************************************************
 ***********************************************      GIT COMMANDS      ************************************************
 ***********************************************************************************************************************/
@@ -150,6 +180,7 @@
 
 
 
+
 /**********************************************************************************************************************
 **************************************************      COLORS      ***************************************************
 ***********************************************************************************************************************/
@@ -164,4 +195,6 @@
 ***************************************************      OTHER      ***************************************************
 ***********************************************************************************************************************/
 * 
+
+
 
