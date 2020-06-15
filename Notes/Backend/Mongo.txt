@@ -125,6 +125,8 @@
             - Provides Common...
                 1. Formats & types to represent relationships between documents.
                 2. Semantics for representing links between Documents, if your DB must interact w/ many sources.
+* Avoid Duplicate Entries
+    + 
 
 
 

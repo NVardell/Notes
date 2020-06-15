@@ -35,7 +35,9 @@
 * Add SSH Key to SourceTree
     1. Open SourceTree ⇒ Tools ⇒ Create or Import SSH Keys
     2. Conversions ⇒ Import Key ⇒ Select 'id_rsa' file
-
+    3. Click 'Save Private Key'
+    4. Right click Putty icon in Windows bottom toolbar & click 'Add Key'
+    5. Select new ppk file from Step #3
 
 
 
