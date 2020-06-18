@@ -54,8 +54,8 @@ alias stats="git log --stat --decorate --author='NV'"   # Display the stats for 
 # GIT - Checkout Branches
 alias gd="git checkout develop"                         # Checkout develop
 alias gm="git checkout master"                          # Checkout master
-alias gco="git checkout "                        # Checkout ....
-alias gnb="git checkout -b "                     # Checkout new branch
+alias gco="git checkout "                               # Checkout ....
+alias gnb="git checkout -b "                            # Checkout new branch
 alias dlb="git branch -D "                              # Delete local branch
 alias drb="git push origin --delete "                   # Delete remote branch
 alias glb="git branch"                                  # Git List of Local Branches
