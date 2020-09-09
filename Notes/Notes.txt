@@ -184,7 +184,7 @@
 * Add to PATH
     set PATH=%PATH%;c/path/to/exe
 * Create a redirect between two folders (Used for iTunes backup to store on external drive instead of filling C Drive.)
-    MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "D:\MobileSync\Backup"
+    MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
 * Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
 * Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
@@ -199,6 +199,19 @@
 * Personal Default Putty Colors
     + FG = 181, 230, 29
     + BG = 50, 54, 57
+
+
+
+
+
+/**********************************************************************************************************************
+***************************************************      COMPUTER      ***************************************************
+***********************************************************************************************************************/
+* 2020 Build
+    + BIOS
+        - Intel PXE Option ROM
+            * Pre-boot EXecution Environment - Allows setting Onboard LAN as a Boot Device.
+        -  
 
 
 
