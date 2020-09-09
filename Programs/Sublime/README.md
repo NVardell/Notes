@@ -33,7 +33,7 @@ Color Scheme - Flat Dark - My New
 
 // Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.)
 // https://packagecontrol.io/packages/HTMLBeautify
-{ "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" }
+{ "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" },
 
 // Fold / Unfold All blocks of code in file (Main Use: Removing Random Files(& Contents) from Find Results)
 { "keys": ["alt+f"], "command": "fold_by_level", "args": {"level": 1} },
@@ -44,7 +44,7 @@ Color Scheme - Flat Dark - My New
 { "keys": ["f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 
 // Plugin: Expand Selection to Single or Double Quotes
-{"keys": ["ctrl+'"], "command": "expand_selection_to_quotes"}
+{"keys": ["ctrl+'"], "command": "expand_selection_to_quotes"},
 
 // Expand Selection to current highlighted section/line of code
 { "keys": ["ctrl+alt+shift+s"], "command": "expand_selection", "args": {"to": "scope"} },

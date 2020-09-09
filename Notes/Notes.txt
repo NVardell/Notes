@@ -187,6 +187,8 @@
     MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "D:\MobileSync\Backup"
 * Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
+* Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
+    certutil -hashfile MEUpdateTool.exe MD5
 
 
 
