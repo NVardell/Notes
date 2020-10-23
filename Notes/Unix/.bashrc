@@ -82,8 +82,8 @@ alias olord="git reset --hard"
 # GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
 alias sah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"       # Status All Here
 alias pah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"     # Pull All Here
-alias sa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"    # Status All Repositories in Repo Directory
-alias pa="ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"  # Pull All Repositories in Repo Directory
+alias sa="c; ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"    # Status All Repositories in Repo Directory
+alias pa="c; ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"  # Pull All Repositories in Repo Directory
 alias pc="gaa; gc \"Pushing latest changes.\"; push;"                         # Push All Changes in current Directory
 alias pn="n; gaa; gc \"Pushing latest notes.\"; push;"                        # Push All changes Notes Repo
 alias po="o; gaa; gc \"Pushing latest changes.\"; push;"                      # Push All changes in Other Repo
@@ -121,7 +121,10 @@ alias war="wars | clip"                                            # Runs 'wars'
 alias fact="facts | clip"                                          # Runs 'facts' function & adds output to clipboard
 alias cl="wc -l *"                                                 # Count lines for every file in current directory
 alias cfpl="cf push -f manifests/manifests-local.yml"              # Cloud Foundry - Push Local
-alias car="find . -type d -name 'target' -prune -exec rm -r {} +"  # Find and remove all directories named 'target'
+alias car="find . -type d -name 'target' -print -prune -exec rm -r {} +"  # Find and remove all directories named 'target' (Clean & Remove? Don't remember, lol.)
+alias clean="c; cpd; cpf;"
+alias cpd="find . -type d \( -name "*.idea" -o -name "build" -o -name "*node_mod*" -o -name "target" \) -print -prune -exec rm -r {} +"
+alias cpf="find . -type f -name '*.iml' -print -prune -exec rm -r {} +"
 alias currentEncryptedPass="haventSetItYet :/"
 alias decryptPass="dp $1 $2"
 
