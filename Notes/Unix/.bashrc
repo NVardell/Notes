@@ -123,8 +123,11 @@ alias cl="wc -l *"                                                 # Count lines
 alias cfpl="cf push -f manifests/manifests-local.yml"              # Cloud Foundry - Push Local
 alias car="find . -type d -name 'target' -print -prune -exec rm -r {} +"  # Find and remove all directories named 'target' (Clean & Remove? Don't remember, lol.)
 alias clean="c; cpd; cpf;"
+alias cw="c; cwpd; cwpf;" # Clean What Project Files & Directories?!?
 alias cpd="find . -type d \( -name "*.idea" -o -name "build" -o -name "*node_mod*" -o -name "target" \) -print -prune -exec rm -r {} +"
+alias cwpd="find . -type d \( -name "*.idea" -o -name "build" -o -name "*node_mod*" -o -name "target" \) -print"
 alias cpf="find . -type f -name '*.iml' -print -prune -exec rm -r {} +"
+alias cwpf="find . -type f -name '*.iml' -print"
 alias currentEncryptedPass="haventSetItYet :/"
 alias decryptPass="dp $1 $2"
 
