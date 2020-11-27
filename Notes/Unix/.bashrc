@@ -130,6 +130,7 @@ alias cpf="find . -type f -name '*.iml' -print -prune -exec rm -r {} +"
 alias cwpf="find . -type f -name '*.iml' -print"
 alias currentEncryptedPass="haventSetItYet :/"
 alias decryptPass="dp $1 $2"
+alias cb="diff ...."    # TODO - Compare repo bash to local bash.
 
 
 # MISC - User Defined Functions
