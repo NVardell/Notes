@@ -1,3 +1,89 @@
+12/3/20,7316,18315,1004,18650,3211,17627,Short
+12/6/20,8159,19075,1242,19190,3295,17642,Medium
+12/7/20,8482,19174,1353,18895,3333,17748,3xVLong
+12/7/20,9190,20472,1344,19314,4286,17877,3xVLong
+12/8/20,8776,20023,1232,19313,4259,17507,1xVLong
+12/8/20,9174,20181,1351,19344,4270,17893,3xVLong
+10/9/20,8902,20087,1297,19390,4248,17889,3xVLong
+10/9/20,8920,20124,1271,19396,4255,17901,3xVLong
+10/10/20,8714,20177,1222,19886,4131,17790,3xShort
+10/10/20,9024,20704,1283,19863,4271,17700,3xLong
+10/11/20,8863,20432,1253,19091,4233,17450,VLong
+12/12/20,9108,19973,1360,19112,4151,17876,3xVLong
+12/15/20,9186,20329,1374,19031,4160,17805,3xVLong
+12/15/20,9146,19974,1387,19446,4074,17857,3xVLong
+12/16/20,9398,20473,1419,19862,4262,17820,3xVLong
+
+
+CPU - 19966, 19966, 20474, 
+2D - 1385, 1396, 
+    - 1419,24,100,421,82,626,2861,67,85
+    - 
+3D - 20168, 20196
+    - 20685,262,331,385,66,8770
+    - 20690,262,331,385,66,8770
+    - 20697,262,331.385,66,8784
+    - 20706,262,333,385,66,8784
+    - 20711,262,333,385,66,8784
+    - 
+Disk 
+    - 17822,3303,1079,597,35
+    - 17824,3303,1079,598,35
+    - 17825,3303,1079,598,35
+    - 17830,3304,1079,598,35
+
+
+
+===========================================================================
+
+InstallLocation: C:\Program Files\WindowsApps\microsoft.windowsstore_12010.1001.3.0_x64__8wekyb3d8bbwe
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
+
+Microsoft.WindowsStore_12011.1001.1.0_neutral_split.scale-100_8wekyb3d8bbwe
+Microsoft.WindowsStore_12011.1001.1.0_x64__8wekyb3d8bbwe
+Microsoft.WindowsStore_12011.1001.113.0_neutral_~_8wekyb3d8bbwe
+
+
+
+takeown /F "%ProgramFiles%\WindowsApps"
+takeown /F "%ProgramFiles%\WindowsApps" /r /d y
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
+
+
+cmd.exe /c takeown /f "%1" && icacls "%1" /grant *S-1-3-4:F /c /l & pause
+takeown /F "%ProgramFiles%\WindowsApps" && takeown /F "%ProgramFiles%\WindowsApps" /r /d y && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t & pause
+
+
+
+C:\Users\NV\OneDrive\Desktop
+
+L - 1dc5ff
+M - 00ff00
+R - ff0015
+
+
+
+
+commands before and after changing permissions to completely restore the original permissions :
+icacls "%ProgramFiles%\WindowsApps" /save WindowsApps.acl
+icacls "%ProgramFiles%" /restore WindowsApps.acl
+
+
+Like this on all Microsoft OSes since 2000, and still good today:
+dir & echo foo
+If you want the second command to execute only if the first exited successfully:
+dir && echo foo
+
+
+
+
+
+
+
+
+
 /**********************************************************************************************************************
 **************************************************      PASSMARK      *************************************************
 ***********************************************************************************************************************/
@@ -16,13 +102,35 @@
 /**********************************************************************************************************************
 ***************************************************      NOTES      ***************************************************
 ***********************************************************************************************************************/
+<<<<<<< HEAD
 • Symbols
     + • 
     + ≠
     + ∞
+=======
+* Symbols
+    + °
+    + ²
+    + •
     + →
+>>>>>>> b63956a1fff08e753450258d4250872e48a62497
+    + →
+    + ↯
     + ⇒
+<<<<<<< HEAD
 • Extensions
+=======
+    + ⇑
+    + ⇓
+    + ∞
+    + ∞
+    + ≠
+    + ≠
+    + ≤
+    + ≥
+    + ✓
+* Extensions
+>>>>>>> b63956a1fff08e753450258d4250872e48a62497
     + .pub = Public Key File (SSH)
 • Environment Variables
     + NTS
@@ -36,6 +144,7 @@
     + SSH Keys
         - Used to establish a secure connection with a server.
         - Add key to SSH Agent, which manages SSH Keys & remembers passphrases. (Won't require password every time.)
+
 
 
 
@@ -64,9 +173,12 @@
 
 
 
+
+
 /**********************************************************************************************************************
-*************************************************      INTELLIJ      **************************************************
+*************************************************      COMPUTERS      *************************************************
 ***********************************************************************************************************************/
+<<<<<<< HEAD
 • Auto Imports Settings - Never use wildcard import
     1. Navigate menus 
         File → Settings → Editor → Code Style → Java → Imports (Tab)
@@ -84,6 +196,40 @@
         ---   WILL ALSO NEED TO UPDATE GUTTER BACKGROUND COLOR TO MATCH   ---
     1. Click 'Editor' dropdown in same main panel 
     2. Select 'Gutter background' & update value for 'Background'
+=======
+* SOFTWARE
+    + iTunes
+        - Error Code 42110/45054
+            1. 
+            2. 
+            3. 
+    + InteliJ
+        - Auto Imports Settings - Never use wildcard import
+            1. Navigate menus 
+                File → Settings → Editor → Code Style → Java → Imports (Tab)
+            2. Set value to 99 for the fields:
+                + "Class count to use import with '*'"
+                + "Names count to use static import with '*'"
+            3. Click 'Apply' & 'OK'
+        - Remove right wrap margin vertical line on editor
+            1. File → Settings → Editor → General → Appearance
+            2. Uncheck box next to 'Show hard wrap guide...'
+        - Change Editor background color
+            1. File → Settings → Editor → Color Scheme → General
+            2. Click 'Text' dropdown in main panel 
+            3. Select 'Default Text' & update value for 'Background'
+                ---   WILL ALSO NEED TO UPDATE GUTTER BACKGROUND COLOR TO MATCH   ---
+            1. Click 'Editor' dropdown in same main panel 
+            2. Select 'Gutter background' & update value for 'Background'
+* BUILDS
+    + 2020
+        - BIOS
+            * Intel PXE Option ROM
+                * Pre-boot EXecution Environment - Allows setting Onboard LAN as a Boot Device.
+            *  
+
+
+>>>>>>> b63956a1fff08e753450258d4250872e48a62497
 
 
 
@@ -202,6 +348,7 @@
     MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
 • Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
+<<<<<<< HEAD
 
 
 
@@ -212,12 +359,21 @@
 • Personal Default Putty Colors
     + FG = 181, 230, 29
     + BG = 50, 54, 57
+=======
+* Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
+    certutil -hashfile MEUpdateTool.exe MD5
+* Clear Console
+    cls
+* Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
+    shell:AppsFolder
+>>>>>>> b63956a1fff08e753450258d4250872e48a62497
 
 
 
 
 
 /**********************************************************************************************************************
+<<<<<<< HEAD
 **************************************************      COMPUTER      *************************************************
 ***********************************************************************************************************************/
 • 2020 Build
@@ -234,5 +390,13 @@
 ***********************************************************************************************************************/
 • 
 
+=======
+***************************************************      OTHER      ***************************************************
+***********************************************************************************************************************/
+* COLORS
+    + Personal Default Putty Colors
+        - FG = 181, 230, 29
+        - BG = 50, 54, 57
+>>>>>>> b63956a1fff08e753450258d4250872e48a62497
 
 
