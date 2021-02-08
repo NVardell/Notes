@@ -1,3 +1,6 @@
+Check Song - Justin Stone - What's It Like
+
+
 12/3/20,7316,18315,1004,18650,3211,17627,Short
 12/6/20,8159,19075,1242,19190,3295,17642,Medium
 12/7/20,8482,19174,1353,18895,3333,17748,3xVLong
@@ -107,18 +110,16 @@ dir && echo foo
     + ²
     + •
     + →
-    + →
     + ↯
     + ⇒
     + ⇑
     + ⇓
     + ∞
-    + ∞
-    + ≠
     + ≠
     + ≤
     + ≥
     + ✓
+    + Ω
 * Extensions
     + .pub = Public Key File (SSH)
 * Environment Variables
@@ -323,7 +324,10 @@ dir && echo foo
     cls
 * Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
     shell:AppsFolder
-
+* Search File Explorer for Specific Type
+    kind:Directory 2021
+    kind:Image
+    kind:Video
 
 
 
