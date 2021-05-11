@@ -8,4 +8,7 @@
 * Material Theme
 * Babel
 * HTML/CSS/JS Prettify
-* Gravity Theme
+* Theme - Gravity
+* Expand Selection to Quotes
+* A File Icon
+* 
