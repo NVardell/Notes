@@ -121,6 +121,14 @@ dir && echo foo
     + ≤
     + ≥
     + ✓
+    + • ○
+    + ■ □
+    + ▲ △
+    + ▴ ▵
+    + ▶ ▷
+    + ◆ ◇
+    + ★ ☆
+    + ☐ ☑ ☒
 • Extensions
     + .pub = Public Key File (SSH)
 • Environment Variables
@@ -171,7 +179,6 @@ dir && echo foo
 /**********************************************************************************************************************
 *************************************************      COMPUTERS      *************************************************
 ***********************************************************************************************************************/
-<<<<<<< HEAD
 • Auto Imports Settings - Never use wildcard import
     1. Navigate menus 
         File → Settings → Editor → Code Style → Java → Imports (Tab)
@@ -189,8 +196,7 @@ dir && echo foo
         ---   WILL ALSO NEED TO UPDATE GUTTER BACKGROUND COLOR TO MATCH   ---
     1. Click 'Editor' dropdown in same main panel 
     2. Select 'Gutter background' & update value for 'Background'
-=======
-* SOFTWARE
+• SOFTWARE
     + iTunes
         - Error Code 42110/45054
             1. 
@@ -214,15 +220,13 @@ dir && echo foo
                 ---   WILL ALSO NEED TO UPDATE GUTTER BACKGROUND COLOR TO MATCH   ---
             1. Click 'Editor' dropdown in same main panel 
             2. Select 'Gutter background' & update value for 'Background'
-* BUILDS
+• BUILDS
     + 2020
         - BIOS
             * Intel PXE Option ROM
                 * Pre-boot EXecution Environment - Allows setting Onboard LAN as a Boot Device.
             *  
 
-
->>>>>>> b63956a1fff08e753450258d4250872e48a62497
 
 
 
@@ -236,7 +240,6 @@ dir && echo foo
     echo $JAVA_HOME
 • Adding to PATH
     export PATH=/opt/apache-maven-3.6.0/bin:$PATH
-
 • Certificates & KetStores & KeyTool Examples
     + Create a keystore
         keytool -genkey -alias selfsigned_localhost -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
@@ -341,7 +344,6 @@ dir && echo foo
     MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
 • Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
-<<<<<<< HEAD
 
 
 
@@ -352,35 +354,18 @@ dir && echo foo
 • Personal Default Putty Colors
     + FG = 181, 230, 29
     + BG = 50, 54, 57
-=======
-* Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
+• Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
     certutil -hashfile MEUpdateTool.exe MD5
-* Clear Console
+• Clear Console
     cls
-* Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
+• Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
     shell:AppsFolder
-<<<<<<< HEAD
-* Search File Explorer for Specific Type
+• Search File Explorer for Specific Type
     kind:Directory 2021
     kind:Image
     kind:Video
-=======
->>>>>>> b63956a1fff08e753450258d4250872e48a62497
-
->>>>>>> f3a5feca8f12417cac19108904dde288f58a2e23
 
 
-
-
-/**********************************************************************************************************************
-<<<<<<< HEAD
-**************************************************      COMPUTER      *************************************************
-***********************************************************************************************************************/
-• 2020 Build
-    + BIOS
-        - Intel PXE Option ROM
-            • Pre-boot EXecution Environment - Allows setting Onboard LAN as a Boot Device.
-        -  
 
 
 
@@ -388,15 +373,9 @@ dir && echo foo
 /**********************************************************************************************************************
 ***************************************************      OTHER      ***************************************************
 ***********************************************************************************************************************/
-• 
-
-=======
-***************************************************      OTHER      ***************************************************
-***********************************************************************************************************************/
-* COLORS
+• COLORS
     + Personal Default Putty Colors
         - FG = 181, 230, 29
         - BG = 50, 54, 57
->>>>>>> b63956a1fff08e753450258d4250872e48a62497
 
 

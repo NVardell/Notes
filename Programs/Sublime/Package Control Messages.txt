@@ -138,7 +138,17 @@ Materialize-Appbar
   This addon auto fits with all Materialize theme accent colors!
   
   ## Addon options
-  "material_theme_tree_headings": true , // Show siderbar headings
+  "material_theme_tree_headings": true, // Show sidebar headings
+  "material_theme_appbar_lime": true,
+  "material_theme_appbar_orange": true,
+  "material_theme_appbar_purple": true,
+  "material_theme_appbar_red": true,
+  "material_theme_appbar_yellow": true,
+  "material_theme_appbar_indigo": true,
+  "material_theme_appbar_pink": true,
+  "material_theme_appbar_blue": true,
+  "material_theme_appbar_cyan": true,
+  "material_theme_appbar_charcoal": true
 
 
 Material Color Scheme

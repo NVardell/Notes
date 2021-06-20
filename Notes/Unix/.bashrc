@@ -1,7 +1,7 @@
 # Pure Laziness
 alias c="clear"
 alias x="exit"
-alias ll="ls -lart --color"
+alias ll="ls -lrt --color --time=birth --time-style='+%m/%d/%y %H:%M'"
 alias ns="nslookup "
 alias nsa="nslookup -type=any "
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
@@ -20,21 +20,21 @@ alias mine="a | grep -n NVardell"                # Display my GIT repo aliases f
 
 # Navigation
 alias i='cd I:/; ll'
-alias ar='cd I:/Repos; ll'
-alias s='cd I:/Spaces; ll'
-alias b="cd I:/Repos/Bits; gs"
-alias i="cd I:/Repos/IntelliJ; gs"
-alias n="cd I:/Repos/Notes; gs"
-alias o="cd I:/Repos/Other; ll"
-alias p="cd I:/Repos/Pieces; gs"
-alias r="cd I:/Repos/Royally; gs"
-alias v="cd I:/Repos/Validate; gs"
-alias rw="cd I:/Repos/Royally/royal-web"
-alias orw="cd I:/Repos/Other/React/app"
+alias ar='cd I:/Repo; ll'
+alias s='cd I:/Space; ll'
+alias i="cd I:/Repo/IntelliJ; gs"
+alias n="cd I:/Repo/Note; gs"
+alias o="cd I:/Repo/Other; ll"
+alias p="cd I:/Repo/Pieces; gs"
+alias r="cd I:/Repo/Royal; gs"
+alias v="cd I:/Repo/Validate; gs"
+alias rw="cd I:/Repo/Royal/royal-web"
+alias orw="cd I:/Repo/Other/React/app"
 
 
 # GIT  -  Basic Commands
 alias ga="git add "
+alias ga="git diff "
 alias gs="git status"
 alias pull="git pull"
 alias push="git push"
@@ -45,15 +45,15 @@ alias gaa="git add --all"
 alias gr="git remote -v"                                # Git Remote URL
 alias grv="git remote show origin"                      # Git Remote URL- Verbose
 alias set="git remote set-url origin "                  # Update repository url to a new uri for pushing changes if/when the repo is renamed/moved/deleted
-alias difflc="git diff --stat "                         # Add Commit Hash After to get stats on that commit
+alias gds="git diff --stat "                            # Add Commit Hash After to get stats on that commit
 alias change="git commit --amend"                       # Git Amend to open Vim & Edit last Commit Message (ctrl+i=insert, esc=stop insert, :wq=save & quit.)
 alias past="git for-each-ref --sort='-authordate'"      # Display branches with latest commit dates
 alias stats="git log --stat --decorate --author='NV'"   # Display the stats for all of my commits
 
 
 # GIT - Checkout Branches
-alias gd="git checkout develop"                         # Checkout develop
-alias gm="git checkout master"                          # Checkout master
+alias gcod="git checkout develop"                       # Checkout develop
+alias gcom="git checkout master"                        # Checkout master
 alias gco="git checkout "                               # Checkout ....
 alias gnb="git checkout -b "                            # Checkout new branch
 alias dlb="git branch -D "                              # Delete local branch
@@ -92,11 +92,10 @@ alias gpe="pc"                                                                # 
 
 
 # GIT  -  Repositories
-alias bits="clone https://github.com/NVardell/Bits.git"
 alias notes="clone https://github.com/NVardell/Notes.git"
 alias other="clone https://github.com/NVardell/Other.git"
 alias pieces="clone https://github.com/NVardell/Pieces.git"
-alias royal="clone https://github.com/NVardell/Royally.git"
+alias royal="clone https://github.com/NVardell/Royal.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
 
@@ -113,13 +112,23 @@ alias npmdc="npx depcheck"                       # Check for unused/missing depe
 
 
 
+# MISC - Project / Code Cleanup
+alias mcp="mvn clean package"                                      # Maven - Clean Package
+
+
+
 # MISC - Random Shenanigans
 alias t="tree"
-alias mcp="mvn clean package"                                      # Maven - Clean Package
 alias wt="cmd //c tree //a //f"                                    # Windows built-in tree function
+alias cl="wc -l *"                                                 # Count lines for every file in current directory
+
+
+
+# MISC - Function Wrappers
 alias war="wars | clip"                                            # Runs 'wars' function & adds output to clipboard
 alias fact="facts | clip"                                          # Runs 'facts' function & adds output to clipboard
-alias cl="wc -l *"                                                 # Count lines for every file in current directory
+
+
 alias cfpl="cf push -f manifests/manifests-local.yml"              # Cloud Foundry - Push Local
 alias car="find . -type d -name 'target' -print -prune -exec rm -r {} +"  # Find and remove all directories named 'target' (Clean & Remove? Don't remember, lol.)
 alias clean="c; cpd; cpf;"
@@ -143,10 +152,10 @@ function pc() { # Pretty curl - Prints response in pretty JSON format
     curl $1 | json_pp
 }
 function facts() {
-   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/Repos/Notes/Notes/Unix/Temp.html
+   awk -F '>|<|/|"' '/profile/{printf $9 "," $11} /playerLevel/{printf ",_"$5} /cup/{printf ","$5} /_donation/{printf ","$5} /memberRoleInner/{printf ","$5} /lastSeenInner/{print ","$5}'  /i/Repo/Note/Notes/Unix/Temp.html
 }
 function wars() {
-    awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/Repos/Notes/Notes/Unix/War.html
+    awk -F '>|<|/| |"' '/profile/{printf$23} /battleI/{printf","$NF} /winI/{printf ","$NF} /cardsI/{print ","$NF}'  /i/Repo/Note/Notes/Unix/War.html
 }
 function snap() {
     DESKTOP_DIR=Desktop/TempPics;
@@ -164,7 +173,9 @@ function snap() {
 function renameFiles() {
     ls -v | cat -n | while read n f; do mv -n "$f" "Spotlight-$n.png"; done;
 }
-
+function rsf() {
+    ls -v | cat -n | while read n f; do mv -n "$f" "Span-$n.png"; done;
+}
 function ep() {
     echo "Encrypting String =" $1 "& Secret =" $2;
     echo $1 | openssl enc -a -aes256 -nosalt -k $2; # -a=-base64, -k=Secret, -aes256=Encryption Cypher
@@ -198,3 +209,4 @@ export -f cfl
 export -f facts
 export -f wars
 export -f snap
+export -f rsf
