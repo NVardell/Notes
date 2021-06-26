@@ -1,103 +1,38 @@
 VIDEO
         BitDepth                   8
-        BitDepth/String            8 bits
-        BitRate                    2293441
-        BitRate/String             2 293 kb/s
-        BitRate_Maximum            50254736
         BitRate_Maximum/String     50.3 Mb/s
         ChromaSubsampling          4:2:0
-        ChromaSubsampling/String   4:2:0
         CodecID                    avc1
-        CodecID/Info               Advanced Video Coding
         ColorSpace                 YUV
         Count                      378
         DisplayAspectRatio         1.778
         DisplayAspectRatio/String  16:9
-        Duration                   73200
-        Duration/String            1 min 13 s
-        Duration/String1           1 min 13 s 200 ms
-        Duration/String2           1 min 13 s
-        Duration/String3           00:01:13.200
         Duration/String4           00:01:13:06
-        Duration/String5           00:01:13.200 (00:01:13:06)
-        Encoded_Library            x264 - core 155
-        Encoded_Library/String     x264 core 155
-        Encoded_Library_Name       x264
-        Encoded_Library_Settings   cabac=1 / ref=3 / deblock=1:0:0 / analyse=0x3:0x113 / me=hex / subme=7 / psy=1 / psy_rd=1.00:0.00 / mixed_ref=1 / me_range=16 / chroma_me=1 / trellis=1 / 8x8dct=1 / cqm=0 / deadzone=21
-        Encoded_Library_Version    11 / fast_pskip=1 / chroma_qp_offset=-2 / threads=12 / lookahead_threads=2 / sliced_threads=0 / nr=0 / decimate=1 / interlaced=0 / bluray_compat=0 / constrained_intra=0 / bframes=3 / b_pyramid=2 / b_adapt=1 / b_bias=0 / direct=1 / weightb=1 / open_gop=0 / weightp=2 / keyint=90 / keyint_min=46 / scenecut=0 / intra_refresh=0 / rc_lookahead=40 / rc=crf / mbtree=1 / crf=23.0 / qcomp=0.60 / qpmin=0 / qpmax=69 / qpstep=4 / vbv_maxrate=4000 / vbv_bufsize=133 / crf_max=27.0 / nal_hrd=none / filler=0 / ip_ratio=1.40 / aq=1:1.00
-        Encoded_OperatingSystem    core 155
-        Format                     AVC
-        Format/Info                AVC
-        Format/String              Advanced Video Codec
-        Format/Url                 AVC
-        Format_AdditionalFeatures  http://developers.videolan.org/x264.html
-        Format_Commercial          AVC
-        Format_Commercial_IfAny    AVC
-        Format_Profile             High@L5.2
-        Format_Settings            High@L4
-        Format_Settings_BVOP       CABAC / 4 Ref Frames
-        Format_Settings_CABAC      Yes
-        Format_Settings_CABAC/Str  Yes
-        Format_Settings_GOP        M=1
-        Format_Settings_Matrix     M=4
-        Format_Settings_Matrix/St  N=90
-        Format_Settings_RefFrames  4
-        Format_Settings_Wrapping   4
-        Format_Tier                5
-        FrameRate                  2196
         FrameRate/String           30
-        FrameRate_Den              30.000 FPS
-        FrameRate_Maximum          30.000 FPS
-        FrameRate_Minimum          30
-        FrameRate_Minimum/String   30.000 FPS
-        FrameRate_Mode             29.703
-        FrameRate_Mode/String      CFR
-        FrameRate_Mode_Original    Constant
-        FrameRate_Mode_Original/S  VFR
-        FrameRate_Original         24000
         Height/String              1080
-        Height_CleanAperture       1 080 pixels
-        Height_CleanAperture/Stri  1 080 pixels
-        ID/String                  1
-        InternetMediaType          1
-        Language                   video/H264
-        Language/String            video/H264
-        PixelAspectRatio/String    1
-        PixelAspectRatio_CleanApe  0.999
-        Rotation/String            0
-        Sampled_Height             0
-        Sampled_Width              1080
         ScanOrder                  1920
-        ScanOrder/String           608
-        ScanType/String            Progressive
-        ScanType_Original          Progressive
-        ScanType_Original/String   Progressive
-        Stored_Width               1088
-        StreamCount                1088
-        StreamKind                 1
-        StreamKind/String          Video
-        StreamKindID               Video
-        StreamKindPos              0
-        StreamOrder                0
-        StreamSize                 0
-        StreamSize/String          20984981
-        StreamSize/String1         20.0 MiB (92%)
-        StreamSize/String2         20 MiB
-        StreamSize/String3         20 MiB
         StreamSize/String4         20.0 MiB
-        StreamSize/String5         20.01 MiB
-        StreamSize_Demuxed         20.0 MiB (92%)
-        StreamSize_Demuxed/String  11.6 MiB (94%)
-        Tagged_Date                0.91825
         TimeCode_FirstFrame        UTC 2021-03-11 10:34:51
         Width/String               1920
-        Width_CleanAperture        1 920 pixels
-        Width_CleanAperture/Strin  608 pixels
 
 
 
 mediainfo --Inform="Video;\
+  %BitDepth%,\
+  %BitRate_Maximum/String%,\
   %ChromaSubsampling%,\
+  %CodecID%,\
+  %ColorSpace%,\
+  %Count%,\
+  %DisplayAspectRatio%,\
+  %DisplayAspectRatio/String%,\
+  %Duration/String4%,\
+  %FrameRate/String%,\
+  %Height/String%,\
+  %ScanOrder%,\
+  %StreamSize/String4%,\
+  %TimeCode_FirstFrame%,\
+  %Width/String%,\
   \r\n" *
 
 
@@ -105,67 +40,12 @@ mediainfo --Inform="Video;\
 ##################################################################################################################################################
 ##################################################################################################################################################"
 GENERAL
-        Actor_Character            331
-        Archival_Location          22774541
-        CodecID_Version            73259
-        CoDirector                 1 min 13 s
-        Collection                 1 min 13 s 259 ms
-        Comic                      1 min 13 s
         Comic/Position_Total       00:01:13.259
-        Comic_More                 00:01:13:06
-        Comment                    00:01:13.259 (00:01:13:06)
-        CompleteName               Lavf58.48.100
-        Description                UTC 2021-06-11 18:25:47.857
-        Director                   2021-06-11 14:25:47.857
-        DirectorOfPhotography      UTC 2020-11-23 17:04:28.000
-        DistributedBy              2020-11-23 13:04:28.000
-        Domain                     mp4
-        Duration/String            TEST-2
-        Duration/String2           TEST-2.mp4
-        Duration/String4           22853233
-        Duration/String5           21.8 MiB
-        EditedBy                   22 MiB
-        Encoded_Application        22 MiB
-        Encoded_Application/Strin  21.8 MiB
         Encoded_Application_Compa  21.79 MiB
         Encoded_Date               78652
         Encoded_Library            MPEG-4
-        Encoded_Library/String     braw mov mp4 m4v m4a m4b m4p m4r 3ga 3gpa 3gpp 3gp 3gpp2 3g2 k3g jpm jpx mqv ismv isma ismt f4a f4b f4v
-        Encoded_Library_Date       MPEG-4
-        Encoded_Library_Version    MPEG-4
-        EPG_Positions_End          AAC LC
-        File_Created_Date          Base Media
-        File_Modified_Date_Local   2196
-        FileExtension              30
         FileExtension_Last         30.000 FPS
-        FileSize/String2           40
-        Format/String              video/mp4
-        Format_Commercial          No
-        HeaderSize                 English
-        IsStreamable               1
-        MusicBy                    2495610
-        Original/Album             2 496 kb/s
-        Original/Released_Date     VBR
-        Publisher                  1
-        Publisher/URL              General
-        Rating                     General
-        Recorded_Date              0
-        RemixedBy                  78700
-        ScreenplayBy               76.9 KiB (0%)
-        Season                     77 KiB
-        Season_Position            77 KiB
-        Season_Position_Total      76.9 KiB
-        ServiceName                isom
-        ServiceType                isom (isom/iso2/avc1/mp41)
-        SoundEngineer              76.86 KiB
-        Status                     76.9 KiB (0%)
-        StreamSize/String          http://www.apple.com/quicktime/download/standalone.html
-        StreamSize/String1         isom/iso2/avc1/mp41
-        StreamSize/String5         0.00344
         SubTrack                   UTC 2021-03-11 10:34:46
-        Tagged_Date                TEST-2.mp4
-        Video_Format_List          AVC
-        VideoCount                 1
 
 mediainfo --Inform="General;\
   %XXXXXXXXX%,\
@@ -395,44 +275,360 @@ Examples:
 #######################################################################################################################
 #######################################################################################################################
 #######################################################################################################################
-SED
+VIDEO
 
-Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
-  -n, --quiet, --silent
-                 suppress automatic printing of pattern space
-      --debug
-                 annotate program execution
-  -e script, --expression=script
-                 add the script to the commands to be executed
-  -f script-file, --file=script-file
-                 add the contents of script-file to the commands to be executed
-  --follow-symlinks
-                 follow symlinks when processing in place
-  -i[SUFFIX], --in-place[=SUFFIX]
-                 edit files in place (makes backup if SUFFIX supplied)
-  -b, --binary
-                 open files in binary mode (CR+LFs are not processed specially)
-  -l N, --line-length=N
-                 specify the desired line-wrap length for the 'l' command
-  --posix
-                 disable all GNU extensions.
-  -E, -r, --regexp-extended
-                 use extended regular expressions in the script
-                 (for portability use POSIX -E).
-  -s, --separate
-                 consider files as separate rather than as a single,
-                 continuous long stream.
-      --sandbox
-                 operate in sandbox mode (disable e/r/w commands).
-  -u, --unbuffered
-                 load minimal amounts of data from the input files and flush
-                 the output buffers more often
-  -z, --null-data
-                 separate lines by NUL characters
-      --help     display this help and exit
-      --version  output version information and exit
-
-            If no -e, --expression, -f, or --file option is given, then the first
-            non-option argument is taken as the sed script to interpret.  All
-            remaining arguments are names of input files; if no input files are
-            specified, then the standard input is read.
+mediainfo --Inform="Video;\
+  %ActiveFormatDescription%,\
+  %ActiveFormatDescription/S%,\
+  %ActiveFormatDescription_M%,\
+  %Alignment%,\
+  %Alignment/String%,\
+  %AlternateGroup%,\
+  %AlternateGroup/String%,\
+  %BitDepth%,\
+  %BitDepth/String%,\
+  %BitRate%,\
+  %BitRate/String%,\
+  %BitRate_Encoded%,\
+  %BitRate_Encoded/String%,\
+  %BitRate_Maximum%,\
+  %BitRate_Maximum/String%,\
+  %BitRate_Minimum%,\
+  %BitRate_Minimum/String%,\
+  %BitRate_Mode%,\
+  %BitRate_Mode/String%,\
+  %BitRate_Nominal%,\
+  %BitRate_Nominal/String%,\
+  %Bits-(Pixel*Frame%,\
+  %BufferSize%,\
+  %ChromaSubsampling%,\
+  %ChromaSubsampling/String%,\
+  %ChromaSubsampling_Position%,\
+  %CodecID%,\
+  %CodecID/Hint%,\
+  %CodecID/Info%,\
+  %CodecID/String%,\
+  %CodecID/Url%,\
+  %CodecID_Description%,\
+  %ColorSpace%,\
+  %colour_description_presen%,\
+  %colour_description_presen%,\
+  %colour_description_presen%,\
+  %colour_description_presen%,\
+  %colour_primaries%,\
+  %colour_primaries_Original%,\
+  %colour_primaries_Original%,\
+  %colour_primaries_Source%,\
+  %colour_range%,\
+  %colour_range_Original%,\
+  %colour_range_Original_Sou%,\
+  %colour_range_Source%,\
+  %Compression_Mode%,\
+  %Compression_Mode/String%,\
+  %Compression_Ratio%,\
+  %Count%,\
+  %Default%,\
+  %Default/String%,\
+  %Delay%,\
+  %Delay/String%,\
+  %Delay/String1%,\
+  %Delay/String2%,\
+  %Delay/String3%,\
+  %Delay/String4%,\
+  %Delay/String5%,\
+  %Delay_DropFrame%,\
+  %Delay_Original%,\
+  %Delay_Original/String%,\
+  %Delay_Original/String1%,\
+  %Delay_Original/String2%,\
+  %Delay_Original/String3%,\
+  %Delay_Original/String4%,\
+  %Delay_Original/String5%,\
+  %Delay_Original_DropFrame%,\
+  %Delay_Original_Settings%,\
+  %Delay_Original_Source%,\
+  %Delay_Settings%,\
+  %Delay_Source%,\
+  %Delay_Source/String%,\
+  %Disabled%,\
+  %Disabled/String%,\
+  %DisplayAspectRatio%,\
+  %DisplayAspectRatio/String%,\
+  %DisplayAspectRatio_CleanA%,\
+  %DisplayAspectRatio_CleanA%,\
+  %DisplayAspectRatio_Origin%,\
+  %DisplayAspectRatio_Origin%,\
+  %Duration%,\
+  %Duration/String%,\
+  %Duration/String1%,\
+  %Duration/String2%,\
+  %Duration/String3%,\
+  %Duration/String4%,\
+  %Duration/String5%,\
+  %Duration_FirstFrame%,\
+  %Duration_FirstFrame/Strin%,\
+  %Duration_FirstFrame/Strin%,\
+  %Duration_FirstFrame/Strin%,\
+  %Duration_FirstFrame/Strin%,\
+  %Duration_FirstFrame/Strin%,\
+  %Duration_FirstFrame/Strin%,\
+  %Duration_LastFrame%,\
+  %Duration_LastFrame/String%,\
+  %Duration_LastFrame/String%,\
+  %Duration_LastFrame/String%,\
+  %Duration_LastFrame/String%,\
+  %Duration_LastFrame/String%,\
+  %Duration_LastFrame/String%,\
+  %Encoded_Application%,\
+  %Encoded_Application/Strin%,\
+  %Encoded_Application_Compa%,\
+  %Encoded_Application_Name%,\
+  %Encoded_Application_Url%,\
+  %Encoded_Application_Versi%,\
+  %Encoded_Date%,\
+  %Encoded_Library%,\
+  %Encoded_Library/String%,\
+  %Encoded_Library_CompanyNa%,\
+  %Encoded_Library_Date%,\
+  %Encoded_Library_Name%,\
+  %Encoded_Library_Settings%,\
+  %Encoded_Library_Version%,\
+  %Encoded_OperatingSystem%,\
+  %Encryption%,\
+  %FirstPacketOrder%,\
+  %Forced%,\
+  %Forced/String%,\
+  %Format%,\
+  %Format/Info%,\
+  %Format/String%,\
+  %Format/Url%,\
+  %Format_AdditionalFeatures%,\
+  %Format_Commercial%,\
+  %Format_Commercial_IfAny%,\
+  %Format_Compression%,\
+  %Format_Level%,\
+  %Format_Profile%,\
+  %Format_Settings%,\
+  %Format_Settings_BVOP%,\
+  %Format_Settings_BVOP/Stri%,\
+  %Format_Settings_CABAC%,\
+  %Format_Settings_CABAC/Str%,\
+  %Format_Settings_Endianness%,\
+  %Format_Settings_FrameMode%,\
+  %Format_Settings_GMC%,\
+  %Format_Settings_GMC/String%,\
+  %Format_Settings_GOP%,\
+  %Format_Settings_Matrix%,\
+  %Format_Settings_Matrix/St%,\
+  %Format_Settings_Matrix_Da%,\
+  %Format_Settings_Packing%,\
+  %Format_Settings_PictureSt%,\
+  %Format_Settings_Pulldown%,\
+  %Format_Settings_QPel%,\
+  %Format_Settings_QPel/Stri%,\
+  %Format_Settings_RefFrames%,\
+  %Format_Settings_RefFrames%,\
+  %Format_Settings_Wrapping%,\
+  %Format_Tier%,\
+  %Format_Version%,\
+  %FrameCount%,\
+  %FrameRate%,\
+  %FrameRate/String%,\
+  %FrameRate_Den%,\
+  %FrameRate_Maximum%,\
+  %FrameRate_Maximum/String%,\
+  %FrameRate_Minimum%,\
+  %FrameRate_Minimum/String%,\
+  %FrameRate_Mode%,\
+  %FrameRate_Mode/String%,\
+  %FrameRate_Mode_Original%,\
+  %FrameRate_Mode_Original/S%,\
+  %FrameRate_Nominal%,\
+  %FrameRate_Nominal/String%,\
+  %FrameRate_Num%,\
+  %FrameRate_Original%,\
+  %FrameRate_Original/String%,\
+  %FrameRate_Original_Den%,\
+  %FrameRate_Original_Num%,\
+  %Gop_OpenClosed%,\
+  %Gop_OpenClosed/String%,\
+  %Gop_OpenClosed_FirstFrame%,\
+  %Gop_OpenClosed_FirstFrame%,\
+  %HDR_Format%,\
+  %HDR_Format/String%,\
+  %HDR_Format_Commercial%,\
+  %HDR_Format_Compatibility%,\
+  %HDR_Format_Level%,\
+  %HDR_Format_Profile%,\
+  %HDR_Format_Settings%,\
+  %HDR_Format_Version%,\
+  %Height%,\
+  %Height/String%,\
+  %Height_CleanAperture%,\
+  %Height_CleanAperture/Stri%,\
+  %Height_Offset%,\
+  %Height_Offset/String%,\
+  %Height_Original%,\
+  %Height_Original/String%,\
+  %ID%,\
+  %ID/String%,\
+  %InternetMediaType%,\
+  %Language%,\
+  %Language/String%,\
+  %Language/String1%,\
+  %Language/String2%,\
+  %Language/String3%,\
+  %Language/String4%,\
+  %Language_More%,\
+  %MasteringDisplay_ColorPri%,\
+  %MasteringDisplay_ColorPri%,\
+  %MasteringDisplay_ColorPri%,\
+  %MasteringDisplay_ColorPri%,\
+  %MasteringDisplay_Luminanc%,\
+  %MasteringDisplay_Luminanc%,\
+  %MasteringDisplay_Luminanc%,\
+  %MasteringDisplay_Luminanc%,\
+  %matrix_coefficients%,\
+  %matrix_coefficients_Origi%,\
+  %matrix_coefficients_Origi%,\
+  %matrix_coefficients_Sourc%,\
+  %MaxCLL%,\
+  %MaxCLL_Original%,\
+  %MaxCLL_Original_Source%,\
+  %MaxCLL_Source%,\
+  %MaxFALL%,\
+  %MaxFALL_Original%,\
+  %MaxFALL_Original_Source%,\
+  %MaxFALL_Source%,\
+  %MenuID%,\
+  %MenuID/String%,\
+  %MultiView_BaseProfile%,\
+  %MultiView_Count%,\
+  %MultiView_Layout%,\
+  %MuxingMode%,\
+  %OriginalSourceMedium_ID%,\
+  %OriginalSourceMedium_ID/S%,\
+  %PixelAspectRatio%,\
+  %PixelAspectRatio/String%,\
+  %PixelAspectRatio_CleanApe%,\
+  %PixelAspectRatio_CleanApe%,\
+  %PixelAspectRatio_Original%,\
+  %PixelAspectRatio_Original%,\
+  %Rotation%,\
+  %Rotation/String%,\
+  %Sampled_Height%,\
+  %Sampled_Width%,\
+  %ScanOrder%,\
+  %ScanOrder/String%,\
+  %ScanOrder_Original%,\
+  %ScanOrder_Original/String%,\
+  %ScanOrder_Stored%,\
+  %ScanOrder_Stored/String%,\
+  %ScanOrder_StoredDisplayedInverted%,\
+  %ScanType%,\
+  %ScanType/String%,\
+  %ScanType_Original%,\
+  %ScanType_Original/String%,\
+  %ScanType_StoreMethod%,\
+  %ScanType_StoreMethod/String%,\
+  %ScanType_StoreMethod_FieldsPerBlock%,\
+  %ServiceKind%,\
+  %ServiceKind/String%,\
+  %Source_Duration%,\
+  %Source_Duration/String%,\
+  %Source_Duration/String1%,\
+  %Source_Duration/String2%,\
+  %Source_Duration/String3%,\
+  %Source_Duration/String4%,\
+  %Source_Duration/String5%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_FirstFram%,\
+  %Source_Duration_LastFrame%,\
+  %Source_Duration_LastFrame%,\
+  %Source_Duration_LastFrame%,\
+  %Source_Duration_LastFrame%,\
+  %Source_Duration_LastFrame%,\
+  %Source_Duration_LastFrame%,\
+  %Source_Duration_LastFrame%,\
+  %Source_FrameCount%,\
+  %Source_StreamSize%,\
+  %Source_StreamSize/String%,\
+  %Source_StreamSize/String1%,\
+  %Source_StreamSize/String2%,\
+  %Source_StreamSize/String3%,\
+  %Source_StreamSize/String4%,\
+  %Source_StreamSize/String5%,\
+  %Source_StreamSize_Encoded%,\
+  %Source_StreamSize_Encoded%,\
+  %Source_StreamSize_Encoded%,\
+  %Source_StreamSize_Encoded%,\
+  %Source_StreamSize_Encoded/String1%,\
+  %Source_StreamSize_Encoded/String2%,\
+  %Source_StreamSize_Encoded/String3%,\
+  %Source_StreamSize_Encoded/String4%,\
+  %Source_StreamSize_Proport%,\
+  %Standard%,\
+  %Status%,\
+  %Stored_Height%,\
+  %Stored_Width%,\
+  %StreamCount%,\
+  %StreamKind%,\
+  %StreamKind/String%,\
+  %StreamKindID%,\
+  %StreamKindPos%,\
+  %StreamOrder%,\
+  %StreamSize%,\
+  %StreamSize/String%,\
+  %StreamSize/String1%,\
+  %StreamSize/String2%,\
+  %StreamSize/String3%,\
+  %StreamSize/String4%,\
+  %StreamSize/String5%,\
+  %StreamSize_Demuxed%,\
+  %StreamSize_Demuxed/String%,\
+  %StreamSize_Demuxed/String%,\
+  %StreamSize_Demuxed/String1%,\
+  %StreamSize_Demuxed/String2%,\
+  %StreamSize_Demuxed/String3%,\
+  %StreamSize_Demuxed/String4%,\
+  %StreamSize_Encoded%,\
+  %StreamSize_Encoded/String%,\
+  %StreamSize_Encoded/String%,\
+  %StreamSize_Encoded/String1%,\
+  %StreamSize_Encoded/String2%,\
+  %StreamSize_Encoded/String3%,\
+  %StreamSize_Encoded/String4%,\
+  %StreamSize_Encoded_Propor%,\
+  %StreamSize_Proportion%,\
+  %Tagged_Date%,\
+  %TimeCode_FirstFrame%,\
+  %TimeCode_Settings%,\
+  %TimeCode_Source%,\
+  %TimeStamp_FirstFrame%,\
+  %TimeStamp_FirstFrame/Stri%,\
+  %TimeStamp_FirstFrame/Stri%,\
+  %TimeStamp_FirstFrame/Stri%,\
+  %TimeStamp_FirstFrame/Stri%,\
+  %TimeStamp_FirstFrame/Stri%,\
+  %TimeStamp_FirstFrame/Stri%,\
+  %Title%,\
+  %transfer_characteristics%,\
+  %transfer_characteristics_%,\
+  %transfer_characteristics_%,\
+  %transfer_characteristics_%,\
+  %UniqueID%,\
+  %UniqueID/String%,\
+  %Width%,\
+  %Width/String%,\
+  %Width_CleanAperture%,\
+  %Width_CleanAperture/Strin%,\
+  %Width_Offset%,\
+  %Width_Offset/String%,\
+  %Width_Original%,\
+  %Width_Original/String%\
+  \r\n" * | clip
