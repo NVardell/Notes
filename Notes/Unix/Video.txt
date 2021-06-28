@@ -1,61 +1,35 @@
-VIDEO
-        BitDepth                   8
-        BitRate_Maximum/String     50.3 Mb/s
-        ChromaSubsampling          4:2:0
-        CodecID                    avc1
-        ColorSpace                 YUV
-        Count                      378
-        DisplayAspectRatio         1.778
-        DisplayAspectRatio/String  16:9
-        Duration/String4           00:01:13:06
-        FrameRate/String           30
-        Height/String              1080
-        ScanOrder                  1920
-        StreamSize/String4         20.0 MiB
-        TimeCode_FirstFrame        UTC 2021-03-11 10:34:51
-        Width/String               1920
+280 @ 132.21 ---- POTENTIALLY KODE TOTAL COUNT MATCHES IPHONE STORAGE VIEW TO ACTUAL KODE APP
+    276 @ 49.84 ---- MANUALLY COUNTED ON IPHONE STORAGE VIEW IN SETTINGS (Thought I counted 277, but with the Random 4 Tushys - 276, makes more sense.)
+                ---- Files app says 277 @ 49.84 GB - Moved them to iDrive To see what computer says for size...
+    4   ---- RANDOM TUSHIES
+280 ---- KODE APP
+    273 ---- KODE APP - SHOWING
+    7   ---- KODE APP - SHOW FAILURE
 
 
-
-mediainfo --Inform="Video;\
-  %BitDepth%,\
-  %BitRate_Maximum/String%,\
-  %ChromaSubsampling%,\
-  %CodecID%,\
-  %ColorSpace%,\
-  %Count%,\
-  %DisplayAspectRatio%,\
-  %DisplayAspectRatio/String%,\
-  %Duration/String4%,\
-  %FrameRate/String%,\
-  %Height/String%,\
-  %ScanOrder%,\
-  %StreamSize/String4%,\
-  %TimeCode_FirstFrame%,\
-  %Width/String%,\
-  \r\n" *
-
-
+283 ---- ALL FOLDER
+262 ---- COMBINED
+    4   ---- RANDOM TUSHIES
+    7   ---- ROUND #3
+    34  ---- FAVORITES
+    217 ---- ROUND #4
+-21 ---- DIFFERENCE
 ##################################################################################################################################################
 ##################################################################################################################################################
-##################################################################################################################################################"
-GENERAL
-        Comic/Position_Total       00:01:13.259
-        Encoded_Application_Compa  21.79 MiB
-        Encoded_Date               78652
-        Encoded_Library            MPEG-4
-        FileExtension_Last         30.000 FPS
-        SubTrack                   UTC 2021-03-11 10:34:46
-
-mediainfo --Inform="General;\
-  %XXXXXXXXX%,\
-  %XXXXXXXXX/String4%\
-  \r\n" *
+##################################################################################################################################################
 
 
+mediainfo --output"General;" * | grep -i "Name\|Duration"
+
+NV@NV MINGW64 /i/TEST
+$ mediainfo --Output="General;File Name_=_%FileName%, Duration_=_%Duration/String3%, Size_=_%FileSize/String%\r\n" *
+File Name_=_TEST-2, Duration_=_00:01:13.259, Size_=_21.8 MiB
+File Name_=_TEST-3, Duration_=_00:01:01.324, Size_=_12.3 MiB
+File Name_=_TEST, Duration_=_00:07:10.615, Size_=_51.0 MiB
+File Name_=_TUSHY_102575_2160P, Duration_=_00:35:48.010, Size_=_6.29 GiB
 ##################################################################################################################################################
 ##################################################################################################################################################
-##################################################################################################################################################"
+##################################################################################################################################################
 alias sah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"  # Status All Here
 alias cpfd="find . -type f -name '*.iml' -exec rm -r {} +"               # Clean Project Files & Directories
 function pf() { # Print list of functions defined in this file
@@ -196,25 +170,6 @@ Audio
 
 
 
-mediainfo --Inform="General;%FileName%, " *
-
-
-
-VIDEO
-        BitDepth
-        BitRate
-        CodecID
-        ColorSpace
-        DisplayAspectRatio
-        Duration
-        Encoded_Application
-        Encoded_Date
-        FrameCount
-        FrameRate
-        HDR_Format
-        Resolution
-        Tagged_Date
-        UniqueID
 
 
 
@@ -224,53 +179,11 @@ VIDEO
 #######################################################################################################################
 #######################################################################################################################
 #######################################################################################################################
-AWK
+GENERAL
 
-Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
-Usage: awk [POSIX or GNU style options] [--] 'program' file ...
-POSIX options:      GNU long options: (standard)
-    -f progfile     --file=progfile
-    -F fs           --field-separator=fs
-    -v var=val      --assign=var=val
-Short options:      GNU long options: (extensions)
-    -b          --characters-as-bytes
-    -c          --traditional
-    -C          --copyright
-    -d[file]        --dump-variables[=file]
-    -D[file]        --debug[=file]
-    -e 'program-text'   --source='program-text'
-    -E file         --exec=file
-    -g          --gen-pot
-    -h          --help
-    -i includefile      --include=includefile
-    -l library      --load=library
-    -L[fatal|invalid]   --lint[=fatal|invalid]
-    -M          --bignum
-    -N          --use-lc-numeric
-    -n          --non-decimal-data
-    -o[file]        --pretty-print[=file]
-    -O          --optimize
-    -p[file]        --profile[=file]
-    -P          --posix
-    -r          --re-interval
-    -s          --no-optimize
-    -S          --sandbox
-    -t          --lint-old
-    -V          --version
+mediainfo --Inform="General;%Accompaniment%,_ %Actor%,_ %Actor_Character%,_ %Added_Date%,_ %Album%,_ %Album/Performer%,_ %Album/Performer/Sort %,_ %Album/Performer/Url%,_ %Album/Sort %,_ %Album_More%,_ %Album_ReplayGain_Gain%,_ %Album_ReplayGain_Gain/String %,_ %Album_ReplayGain_Peak%,_ %Archival_Location%,_ %Arranger%,_ %ArtDirector%,_ %AssistantDirector%,_ %Audio_Format_List%,_ %Audio_Format_WithHint_List%,_ %Audio_Language_List%,_ %AudioCount%,_ %BarCode%,_ %BPM%,_ %CatalogNumber%,_ %Chapter%,_ %Choreographer%,_ %CodecID%,_ %CodecID/Hint%,_ %CodecID/Info%,_ %CodecID/String%,_ %CodecID/Url%,_ %CodecID_Compatible%,_ %CodecID_Description%,_ %CodecID_Version%,_ %CoDirector%,_ %Collection%,_ %Comic%,_ %Comic/Position_Total%,_ %Comic_More%,_ %Comment%,_ %CommissionedBy%,_ %Compilation%,_ %Compilation/String%,_ %CompleteName%,_ %CompleteName_Last%,_ %Composer%,_ %Composer/Nationality%,_ %Composer/Sort %,_ %Conductor%,_ %ContentType%,_ %CoProducer%,_ %Copyright%,_ %Copyright/Url%,_ %CostumeDesigner%,_ %Count%,_ %Country %,_ %Cover%,_ %Cover_Data%,_ %Cover_Description%,_ %Cover_Mime%,_ %Cover_Type %,_ %Cropped%,_ %DataSize %,_ %Delay%,_ %Delay/String%,_ %Delay/String1%,_ %Delay/String2%,_ %Delay/String3%,_ %Delay/String4%,_ %Delay/String5%,_ %Delay_DropFrame%,_ %Delay_Settings%,_ %Delay_Source%,_ %Delay_Source/String%,_ %Description%,_ %Dimensions%,_ %Director%,_ %DirectorOfPhotography%,_ %DistributedBy%,_ %Domain%,_ %DotsPerInch%,_ %Duration%,_ %Duration/String%,_ %Duration/String1%,_ %Duration/String2%,_ %Duration/String3%,_ %Duration/String4%,_ %Duration/String5%,_ %Duration_End %,_ %Duration_Start %,_ %EditedBy%,_ %Encoded_Application%,_ %Encoded_Application/String%,_ %Encoded_Application_Compa%,_ %Encoded_Application_Name%,_ %Encoded_Application_Url%,_ %Encoded_Application_Versi%,_ %Encoded_Date%,_ %Encoded_Library%,_ %Encoded_Library/String%,_ %Encoded_Library_CompanyNa%,_ %Encoded_Library_Date%,_ %Encoded_Library_Name%,_ %Encoded_Library_Settings%,_ %Encoded_Library_Version%,_ %Encoded_OperatingSystem%,_ %EncodedBy%,_ %Encryption %,_ %Encryption_Format %,_ %Encryption_InitializationVector %,_ %Encryption_Length %,_ %Encryption_Method %,_ %Encryption_Mode %,_ %Encryption_Padding %,_ %EPG_Positions_Begin %,_ %EPG_Positions_End %,_ %ExecutiveProducer%,_ %File_Created_Date%,_ %File_Created_Date_Local%,_ %File_Modified_Date%,_ %File_Modified_Date_Local%,_ %FileExtension%,_ %FileExtension_Last%,_ %FileName%,_ %FileName_Last%,_ %FileNameExtension%,_ %FileNameExtension_Last%,_ %FileSize%,_ %FileSize/String%,_ %FileSize/String1%,_ %FileSize/String2%,_ %FileSize/String3%,_ %FileSize/String4%,_ %FirstPacketOrder%,_ %FolderName%,_ %FolderName_Last%,_ %FooterSize %,_ %Format%,_ %Format/Extensions%,_ %Format/Info%,_ %Format/String%,_ %Format/Url%,_ %Format_AdditionalFeatures%,_ %Format_Commercial%,_ %Format_Commercial_IfAny%,_ %Format_Compression%,_ %Format_Level%,_ %Format_Profile%,_ %Format_Settings%,_ %Format_Version%,_ %FrameCount%,_ %FrameRate%,_ %FrameRate/String%,_ %FrameRate_Den%,_ %FrameRate_Num%,_ %GeneralCount%,_ %Genre%,_ %Grouping%,_ %HeaderSize %,_ %ICRA%,_ %ID%,_ %ID/String%,_ %Image_Format_List%,_ %Image_Format_WithHint_List%,_ %Image_Language_List%,_ %ImageCount%,_ %Interleaved%,_ %InternetMediaType%,_ %ISBN%,_ %ISRC%,_ %IsStreamable %,_ %Keywords%,_ %Label%,_ %LabelCode%,_ %LawRating%,_ %LawRating_Reason%,_ %LCCN%,_ %Lightness%,_ %Lyricist%,_ %Lyrics%,_ %Mastered_Date%,_ %MasteredBy%,_ %Menu_Format_List%,_ %Menu_Format_WithHint_List%,_ %Menu_Language_List%,_ %MenuCount%,_ %MenuID%,_ %MenuID/String%,_ %Mood%,_ %Movie%,_ %Movie/Country%,_ %Movie/Url%,_ %Movie_More%,_ %MusicBy%,_ %NetworkName %,_ %Original/Album%,_ %Original/Lyricist%,_ %Original/Movie%,_ %Original/Part%,_ %Original/Performer%,_ %Original/Released_Date%,_ %Original/Track%,_ %OriginalNetworkName %,_ %OriginalSourceForm%,_ %OriginalSourceForm/Cropped%,_ %OriginalSourceForm/DistributedBy%,_ %OriginalSourceForm/Name%,_ %OriginalSourceForm/NumCol%,_ %OriginalSourceForm/Sharpn%,_ %OriginalSourceMedium%,_ %OriginalSourceMedium_ID%,_ %OriginalSourceMedium_ID/String%,_ %Other_Format_List%,_ %Other_Format_WithHint_List%,_ %Other_Language_List%,_ %OtherCount%,_ %OverallBitRate%,_ %OverallBitRate/String%,_ %OverallBitRate_Maximum%,_ %OverallBitRate_Maximum/String%,_ %OverallBitRate_Minimum%,_ %OverallBitRate_Minimum/String%,_ %OverallBitRate_Mode%,_ %OverallBitRate_Mode/String%,_ %OverallBitRate_Nominal%,_ %OverallBitRate_Nominal/String%,_ %Owner%,_ %PackageName%,_ %Part%,_ %Part/Position%,_ %Part/Position_Total%,_ %Performer%,_ %Performer/Sort %,_ %Performer/Url%,_ %Period%,_ %Played_Count%,_ %Played_First_Date%,_ %Played_Last_Date%,_ %PodcastCategory%,_ %Producer%,_ %Producer_Copyright%,_ %ProductionDesigner%,_ %ProductionStudio%,_ %Publisher%,_ %Publisher/URL%,_ %Rating%,_ %Recorded_Date%,_ %Recorded_Location%,_ %Released_Date%,_ %RemixedBy%,_ %ScreenplayBy%,_ %Season%,_ %Season_Position%,_ %Season_Position_Total%,_ %Service/Url %,_ %ServiceChannel %,_ %ServiceName %,_ %ServiceProvider %,_ %ServiceProvider/Url %,_ %ServiceType %,_ %SoundEngineer%,_ %Status%,_ %StreamCount%,_ %StreamKind%,_ %StreamKind/String%,_ %StreamKindID%,_ %StreamKindPos%,_ %StreamOrder%,_ %StreamSize%,_ %StreamSize/String %,_ %StreamSize/String1 %,_ %StreamSize/String2 %,_ %StreamSize/String3 %,_ %StreamSize/String4 %,_ %StreamSize/String5%,_ %StreamSize_Demuxed%,_ %StreamSize_Demuxed/String%,_ %StreamSize_Demuxed/String1 %,_ %StreamSize_Demuxed/String2 %,_ %StreamSize_Demuxed/String3 %,_ %StreamSize_Demuxed/String4 %,_ %StreamSize_Proportion%,_ %Subject%,_ %SubTrack%,_ %Summary%,_ %Synopsis%,_ %Tagged_Application%,_ %Tagged_Date%,_ %TermsOfUse%,_ %Text_Format_List%,_ %Text_Format_WithHint_List%,_ %Text_Language_List%,_ %TextCount%,_ %ThanksTo%,_ %TimeZone %,_ %Title%,_ %Title/Url%,_ %Title_More%,_ %Track%,_ %Track/Position%,_ %Track/Position_Total%,_ %Track/Sort%,_ %Track/Url%,_ %Track_More%,_ %UniqueID%,_ %UniqueID/String%,_ %UniversalAdID/String%,_ %UniversalAdID_Registry%,_ %UniversalAdID_Value%,_ %Video_Format_List%,_ %Video_Format_WithHint_List%,_ %Video_Language_List%,_ %VideoCount%,_ %Written_Date%,_ %Written_Location%,_ %WrittenBy%\r\n" * | clip
+mediainfo --Output="General;%Accompaniment%,_ %Actor%,_ %Actor_Character%,_ %Added_Date%,_ %Album%,_ %Album/Performer%,_ %Album/Performer/Sort %,_ %Album/Performer/Url%,_ %Album/Sort %,_ %Album_More%,_ %Album_ReplayGain_Gain%,_ %Album_ReplayGain_Gain/String %,_ %Album_ReplayGain_Peak%,_ %Archival_Location%,_ %Arranger%,_ %ArtDirector%,_ %AssistantDirector%,_ %Audio_Format_List%,_ %Audio_Format_WithHint_List%,_ %Audio_Language_List%,_ %AudioCount%,_ %BarCode%,_ %BPM%,_ %CatalogNumber%,_ %Chapter%,_ %Choreographer%,_ %CodecID%,_ %CodecID/Hint%,_ %CodecID/Info%,_ %CodecID/String%,_ %CodecID/Url%,_ %CodecID_Compatible%,_ %CodecID_Description%,_ %CodecID_Version%,_ %CoDirector%,_ %Collection%,_ %Comic%,_ %Comic/Position_Total%,_ %Comic_More%,_ %Comment%,_ %CommissionedBy%,_ %Compilation%,_ %Compilation/String%,_ %CompleteName%,_ %CompleteName_Last%,_ %Composer%,_ %Composer/Nationality%,_ %Composer/Sort %,_ %Conductor%,_ %ContentType%,_ %CoProducer%,_ %Copyright%,_ %Copyright/Url%,_ %CostumeDesigner%,_ %Count%,_ %Country %,_ %Cover%,_ %Cover_Data%,_ %Cover_Description%,_ %Cover_Mime%,_ %Cover_Type %,_ %Cropped%,_ %DataSize %,_ %Delay%,_ %Delay/String%,_ %Delay/String1%,_ %Delay/String2%,_ %Delay/String3%,_ %Delay/String4%,_ %Delay/String5%,_ %Delay_DropFrame%,_ %Delay_Settings%,_ %Delay_Source%,_ %Delay_Source/String%,_ %Description%,_ %Dimensions%,_ %Director%,_ %DirectorOfPhotography%,_ %DistributedBy%,_ %Domain%,_ %DotsPerInch%,_ %Duration%,_ %Duration/String%,_ %Duration/String1%,_ %Duration/String2%,_ %Duration/String3%,_ %Duration/String4%,_ %Duration/String5%,_ %Duration_End %,_ %Duration_Start %,_ %EditedBy%,_ %Encoded_Application%,_ %Encoded_Application/String%,_ %Encoded_Application_Compa%,_ %Encoded_Application_Name%,_ %Encoded_Application_Url%,_ %Encoded_Application_Versi%,_ %Encoded_Date%,_ %Encoded_Library%,_ %Encoded_Library/String%,_ %Encoded_Library_CompanyNa%,_ %Encoded_Library_Date%,_ %Encoded_Library_Name%,_ %Encoded_Library_Settings%,_ %Encoded_Library_Version%,_ %Encoded_OperatingSystem%,_ %EncodedBy%,_ %Encryption %,_ %Encryption_Format %,_ %Encryption_InitializationVector %,_ %Encryption_Length %,_ %Encryption_Method %,_ %Encryption_Mode %,_ %Encryption_Padding %,_ %EPG_Positions_Begin %,_ %EPG_Positions_End %,_ %ExecutiveProducer%,_ %File_Created_Date%,_ %File_Created_Date_Local%,_ %File_Modified_Date%,_ %File_Modified_Date_Local%,_ %FileExtension%,_ %FileExtension_Last%,_ %FileName%,_ %FileName_Last%,_ %FileNameExtension%,_ %FileNameExtension_Last%,_ %FileSize%,_ %FileSize/String%,_ %FileSize/String1%,_ %FileSize/String2%,_ %FileSize/String3%,_ %FileSize/String4%,_ %FirstPacketOrder%,_ %FolderName%,_ %FolderName_Last%,_ %FooterSize %,_ %Format%,_ %Format/Extensions%,_ %Format/Info%,_ %Format/String%,_ %Format/Url%,_ %Format_AdditionalFeatures%,_ %Format_Commercial%,_ %Format_Commercial_IfAny%,_ %Format_Compression%,_ %Format_Level%,_ %Format_Profile%,_ %Format_Settings%,_ %Format_Version%,_ %FrameCount%,_ %FrameRate%,_ %FrameRate/String%,_ %FrameRate_Den%,_ %FrameRate_Num%,_ %GeneralCount%,_ %Genre%,_ %Grouping%,_ %HeaderSize %,_ %ICRA%,_ %ID%,_ %ID/String%,_ %Image_Format_List%,_ %Image_Format_WithHint_List%,_ %Image_Language_List%,_ %ImageCount%,_ %Interleaved%,_ %InternetMediaType%,_ %ISBN%,_ %ISRC%,_ %IsStreamable %,_ %Keywords%,_ %Label%,_ %LabelCode%,_ %LawRating%,_ %LawRating_Reason%,_ %LCCN%,_ %Lightness%,_ %Lyricist%,_ %Lyrics%,_ %Mastered_Date%,_ %MasteredBy%,_ %Menu_Format_List%,_ %Menu_Format_WithHint_List%,_ %Menu_Language_List%,_ %MenuCount%,_ %MenuID%,_ %MenuID/String%,_ %Mood%,_ %Movie%,_ %Movie/Country%,_ %Movie/Url%,_ %Movie_More%,_ %MusicBy%,_ %NetworkName %,_ %Original/Album%,_ %Original/Lyricist%,_ %Original/Movie%,_ %Original/Part%,_ %Original/Performer%,_ %Original/Released_Date%,_ %Original/Track%,_ %OriginalNetworkName %,_ %OriginalSourceForm%,_ %OriginalSourceForm/Cropped%,_ %OriginalSourceForm/DistributedBy%,_ %OriginalSourceForm/Name%,_ %OriginalSourceForm/NumCol%,_ %OriginalSourceForm/Sharpn%,_ %OriginalSourceMedium%,_ %OriginalSourceMedium_ID%,_ %OriginalSourceMedium_ID/String%,_ %Other_Format_List%,_ %Other_Format_WithHint_List%,_ %Other_Language_List%,_ %OtherCount%,_ %OverallBitRate%,_ %OverallBitRate/String%,_ %OverallBitRate_Maximum%,_ %OverallBitRate_Maximum/String%,_ %OverallBitRate_Minimum%,_ %OverallBitRate_Minimum/String%,_ %OverallBitRate_Mode%,_ %OverallBitRate_Mode/String%,_ %OverallBitRate_Nominal%,_ %OverallBitRate_Nominal/String%,_ %Owner%,_ %PackageName%,_ %Part%,_ %Part/Position%,_ %Part/Position_Total%,_ %Performer%,_ %Performer/Sort %,_ %Performer/Url%,_ %Period%,_ %Played_Count%,_ %Played_First_Date%,_ %Played_Last_Date%,_ %PodcastCategory%,_ %Producer%,_ %Producer_Copyright%,_ %ProductionDesigner%,_ %ProductionStudio%,_ %Publisher%,_ %Publisher/URL%,_ %Rating%,_ %Recorded_Date%,_ %Recorded_Location%,_ %Released_Date%,_ %RemixedBy%,_ %ScreenplayBy%,_ %Season%,_ %Season_Position%,_ %Season_Position_Total%,_ %Service/Url %,_ %ServiceChannel %,_ %ServiceName %,_ %ServiceProvider %,_ %ServiceProvider/Url %,_ %ServiceType %,_ %SoundEngineer%,_ %Status%,_ %StreamCount%,_ %StreamKind%,_ %StreamKind/String%,_ %StreamKindID%,_ %StreamKindPos%,_ %StreamOrder%,_ %StreamSize%,_ %StreamSize/String %,_ %StreamSize/String1 %,_ %StreamSize/String2 %,_ %StreamSize/String3 %,_ %StreamSize/String4 %,_ %StreamSize/String5%,_ %StreamSize_Demuxed%,_ %StreamSize_Demuxed/String%,_ %StreamSize_Demuxed/String1 %,_ %StreamSize_Demuxed/String2 %,_ %StreamSize_Demuxed/String3 %,_ %StreamSize_Demuxed/String4 %,_ %StreamSize_Proportion%,_ %Subject%,_ %SubTrack%,_ %Summary%,_ %Synopsis%,_ %Tagged_Application%,_ %Tagged_Date%,_ %TermsOfUse%,_ %Text_Format_List%,_ %Text_Format_WithHint_List%,_ %Text_Language_List%,_ %TextCount%,_ %ThanksTo%,_ %TimeZone %,_ %Title%,_ %Title/Url%,_ %Title_More%,_ %Track%,_ %Track/Position%,_ %Track/Position_Total%,_ %Track/Sort%,_ %Track/Url%,_ %Track_More%,_ %UniqueID%,_ %UniqueID/String%,_ %UniversalAdID/String%,_ %UniversalAdID_Registry%,_ %UniversalAdID_Value%,_ %Video_Format_List%,_ %Video_Format_WithHint_List%,_ %Video_Language_List%,_ %VideoCount%,_ %Written_Date%,_ %Written_Location%,_ %WrittenBy%\r\n" * | clip
 
-                To report bugs, see node 'Bugs' in 'gawk.info'
-                which is section 'Reporting Problems and Bugs' in the
-                printed version.  This same information may be found at
-                https://www.gnu.org/software/gawk/manual/html_node/Bugs.html.
-                PLEASE do NOT try to report bugs by posting in comp.lang.awk,
-                or by using a web forum such as Stack Overflow.
-
-                gawk is a pattern scanning and processing language.
-                By default it reads standard input and writes standard output.
-
-Examples:
-    gawk '{ sum += $1 }; END { print sum }' file
-    gawk -F: '{ print $1 }' /etc/passwd
 
 #######################################################################################################################
 #######################################################################################################################
@@ -278,6 +191,7 @@ Examples:
 VIDEO
 
 mediainfo --Inform="Video;\
+mediainfo --Output="Video;\
   %ActiveFormatDescription%,\
   %ActiveFormatDescription/S%,\
   %ActiveFormatDescription_M%,\
