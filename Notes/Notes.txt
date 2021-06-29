@@ -361,5 +361,6 @@ dir && echo foo
     + Personal Default Putty Colors
         - FG = 181, 230, 29
         - BG = 50, 54, 57
-
+    + Other
+        - Poke Table Header Green - 80, 192, 120
 
