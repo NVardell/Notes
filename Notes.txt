@@ -1,5 +1,16 @@
 Check Song - Justin Stone - What's It Like
 
+JEN VIDS
+C:\Users\NV\Google Drive\Existing files\Linux (0x83)\home\nv\Dropbox\Random C Programs\Blah\J
+C:\Users\NV\Google Drive\Personal\Other\Temp
+C:\Users\NV\iCloudPhotos\Photos
+C:\Users\NV\iPhone\DCIM\2014__01
+C:\Users\NV\iPhone\DCIM\2014__02
+C:\Users\NV\OneDrive\Desktop\Hunting\Vids
+C:\Users\NV\OneDrive\Pictures\iCloud Photos\Photos
+
+
+
 NODE INSTALL FILE PATHS
 • C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.9
@@ -69,52 +80,36 @@ dir && echo foo
 
 
 
-
-
-
-
-/**********************************************************************************************************************
-**************************************************      PASSMARK      *************************************************
-***********************************************************************************************************************/
-• Device
-    + Date
-        - Total, CPU, 2D, 3D, RAM, SSD
-• Laptop
-    + 02/10/19
-        - 4286,8735,686,8296,2470,4249
-    + 12/16/20
-        - 2789,7212,304,9010,2778,3724
-        - 2947,7250,324,9066,2787,4635
-        - 
-
-
 /**********************************************************************************************************************
 ***************************************************      NOTES      ***************************************************
 ***********************************************************************************************************************/
+• Emojis
+      - 😂
+      - 🤷🏼‍♂️
 • Symbols
-    + °
-    + ²
-    + Ω
-    + •
-    + →
-    + ↓
-    + ↯
-    + ⇑
-    + ⇒
-    + ⇓
-    + ∞
-    + ≠
-    + ≤
-    + ≥
-    + ✓
-    + • ○
-    + ■ □
-    + ▲ △
-    + ▴ ▵
-    + ▶ ▷
-    + ◆ ◇
-    + ★ ☆
-    + ☐ ☑ ☒
+      + °
+      + ²
+      + Ω
+      + •
+      + →
+      + ↓
+      + ↯
+      + ⇑
+      + ⇒
+      + ⇓
+      + ∞
+      + ≠
+      + ≤
+      + ≥
+      + ✓
+      + • ○
+      + ■ □
+      + ▲ △
+      + ▴ ▵
+      + ▶ ▷
+      + ◆ ◇
+      + ★ ☆
+      + ☐ ☑ ☒
 • Extensions
     + .pub = Public Key File (SSH)
 • Environment Variables
@@ -124,7 +119,7 @@ dir && echo foo
         - Could store variables as encrypted strings in bashrc & then decrypt them in new function. (Can pass in secret.)
     + JAVA = C:\Program Files\Java\jdk1.8.0_291
     + MAVEN = C:\Program Files\Apache\3.8.1
-    + NODE = 
+    + NODE = C:\Program Files\nodejs\node.exe
     + MONGO_PASS = 4gMAFmo0f2L1bxmc
     + MONGO_USER = dbAdmin
     + ROYAL_TOKEN = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjUzYjhkNmE2LTZjMGItNDNiOS05OGE3LTk0YTBhNjlhNGExOSIsImlhdCI6MTU5NDYwMDExOSwic3ViIjoiZGV2ZWxvcGVyL2I2NWJjZmE3LTFmM2UtM2Y3OC0zNzU1LTVhNjE5NDY0MDllYSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyI3My4xOC4xNDMuMTUyIiwiNzMuMTYxLjU4LjE4MiIsIjcxLjE3Mi4xNDEuMTA4Il0sInR5cGUiOiJjbGllbnQifV19.s5cXpeIGzM_XFB__t0xuhpjOXpSBJyF1rJTo-m5yTV2YsjVV3J0AnRqnZaxvNT4TQFchN-hXozU3p_aO3R1vTQ
