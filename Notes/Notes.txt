@@ -176,9 +176,11 @@ dir && echo foo
 • SOFTWARE
     + iTunes
         - Error Code 42110/45054
-            1. 
-            2. 
-            3. 
+            1. File Explorer: C:\ProgramData\AppleComputer\iTunes
+            2. Delete:
+                + Folder: adi
+                + Folder: SC Info
+            3. Restart Computer
     + InteliJ
         - Auto Imports Settings - Never use wildcard import
             1. Navigate menus 
