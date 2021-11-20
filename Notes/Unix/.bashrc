@@ -1,7 +1,7 @@
 # Pure Laziness
 alias c="clear"
 alias x="exit"
-alias ll="ls -lrt --color --time=birth --time-style='+%m/%d/%y %H:%M'"
+alias ll="ls -lrta --color --time=birth --time-style='+%m/%d/%y %H:%M'"
 alias ns="nslookup "
 alias nsa="nslookup -type=any "
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
@@ -51,6 +51,7 @@ alias gds="git diff --stat "                            # Add Commit Hash After 
 alias change="git commit --amend"                       # Git Amend to open Vim & Edit last Commit Message (ctrl+i=insert, esc=stop insert, :wq=save & quit.)
 alias past="git for-each-ref --sort='-authordate'"      # Display branches with latest commit dates
 alias stats="git log --stat --decorate --author='NV'"   # Display the stats for all of my commits
+alias gtf="git ls-tree --name-only --full-tree -r HEAD" # Git Tracked Files - List all files being tracked by Git
 
 
 
@@ -194,15 +195,17 @@ function ep() {
     echo "Encrypting String =" $1 "& Secret =" $2;
     echo $1 | openssl enc -a -aes256 -nosalt -k $2; # -a=-base64, -k=Secret, -aes256=Encryption Cypher
 }
+#######################################
 # Decrypts a string
 #   @input: String to Decrypt
 #   @input: Secret to Decrypt with
 function dp() {
     echo $1 | openssl enc -d -a -aes128 -nosalt -k $2;
 }
+#######################################
 # Cloud Foundry Login
 #   @input: Secret
-# Note - Couldn't get this to assign to a variable any other way. :/
+#   @Note: Couldn't get this to assign to a variable any other way. :/
 function cfl() {
     DECRYPTED=$(decryptPass currentEncryptedPass $1);
     login CfServer UeserID $DECRYPTED;
