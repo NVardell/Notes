@@ -110,46 +110,65 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 
 
 # NPM - Shorthand NPM Commands
-alias npms="npm start"                                                                                    # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
-alias npmi="npm install "                                                                                 # Install packages listed on command line
-alias npmu="ncu -u  --packageFile package.json"                                                           # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
-alias npmo="npm outdated"                                                                                 # Local Project - Display outdated packages
-alias npmug="npmu -g"                                                                                     # Global - Update all packages
-alias npmog="npmo -g --depth=0"                                                                           # Global - Display outdated packages
-alias unpm="npm install npm@latest -g"                                                                    # Update npm to latest version
-alias npmdc="npx depcheck"                                                                                # Check for unused/missing dependencies in package.json
+alias npms="npm start"                                                                                  # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
+alias npmi="npm install "                                                                               # Install packages listed on command line
+alias npmu="ncu -u  --packageFile package.json"                                                         # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
+alias npmo="npm outdated"                                                                               # Local Project - Display outdated packages
+alias npmug="npmu -g"                                                                                   # Global - Update all packages
+alias npmog="npmo -g --depth=0"                                                                         # Global - Display outdated packages
+alias unpm="npm install npm@latest -g"                                                                  # Update npm to latest version
+alias npmdc="npx depcheck"                                                                              # Check for unused/missing dependencies in package.json
 
 
 
 # MISC - Project / Code Cleanup
-alias mcp="mvn clean package"                                                                             # Maven - Clean Package
-alias cw="cwf -print; cwd -print;"                                                                        # Clean What?!
-alias cwf="find . -type f -name '*.iml' "                                                                 # Clean What Files
-alias cwd="find . -maxdepth 5 -type d \( -name "*.idea" -o -name "node_mod*" -o -name "target" \) "       # Clean What Directories
-alias cpfd="cwf -prune -exec rm -rv {} \; cwd -prune -exec rm -rv {} \;"                                     # Clean Project Files & Directories
-alias cdd="cwd -prune -exec rm -rv {} \;"
-alias clean="cpfd;"                                                                                       # Clean Project - Call above functions to find files & then delete them
-alias ded="find . -empty -type d -delete"                                                                 # Delete Empty Directories
+alias mcp="mvn clean package"                                                                           # Maven - Clean Package
+alias cw="cwf -print; cwd -print;"                                                                      # Clean What?!
+alias cwf="find . -type f -name '*.iml' "                                                               # Clean What Files
+alias cwd="find . -maxdepth 5 -type d \( -name "*.idea" -o -name "node_mod*" -o -name "target" \) "     # Clean What Directories
+alias cpfd="cwf -prune -exec rm -rv {} \; cwd -prune -exec rm -rv {} \;"                                # Clean Project Files & Directories
+alias clean="cpfd;"                                                                                     # Clean Project - Call above functions to find files & then delete them
+
+
+
+# MISC - Fancy Shenanigans 😎
+alias fcad="face; fade; face;"      # Find, Count, & Delete Everything
+alias face="cmf; cef; ced;"         # Count ~ Find & Count Everything
+alias fape="pmf; pef; ped;"         # Print ~ Find & Print Everything
+alias fade="dmf; def; ded;"         # Delete ~ Find & Delete Everything
+
+
+
+# MISC - Aliased Aliases
+alias cmf="echo -n 'Mac Files = '; find . -type f -name '._*'  | wc -l"                                 # Count ~ Mac Files
+alias cef="echo -n 'Empty Files = '; find . -empty -type f | wc -l"                                     # Count ~ Empty Files
+alias ced="echo -n 'Empty Directories = '; find . -empty -type d | wc -l"                               # Count ~ Empty Directories
+alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Empty Files
+alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Mac Files
+alias ped="echo -e '\nEmpty Directories = '; find . -empty -type d -print"                              # Print ~ Empty Directories
+alias dmf="find . -type f -name '._*' -delete"                                                          # Delete ~ Mac Files
+alias def="find . -empty -type f -delete"                                                               # Delete ~ Empty Files
+alias ded="find . -empty -type d -delete"                                                               # Delete ~ Empty Directories
 
 
 
 # MISC - Random Shenanigans
 alias t="tree"
-alias wt="cmd //c tree //f"                                                                               # Windows built-in tree function (c: Command to run.  f: Display Files.)
-alias cl="wc -l *"                                                                                        # Count lines for every file in current directory
-alias sl="df -h ."                                                                                        # Space Left? (Show free space on current drive.)
-alias ld="sl; du -c -Sk -d1 -t2M ./* | sort -hr"                                                          # List Directories & Sort by Size ()
-alias ldc="(ld) | clip"                                                                                   # Clip List Directories (ld) Output
-alias llc="ll | clip"                                                                                     # Clip Output from List Files Command (ll)
-alias cfpl="cf push -f manifests/manifests-local.yml"                                                     # Cloud Foundry - Push Local
+alias wt="cmd //c tree //f"                                                                             # Windows built-in tree function (c: Command to run.  f: Display Files.)
+alias cl="wc -l *"                                                                                      # Count lines for every file in current directory
+alias sl="df -h ."                                                                                      # Space Left? (Show free space on current drive.)
+alias ld="sl; du -c -Sk -d1 -t2M ./* | sort -hr"                                                        # List Directories & Sort by Size ()
+alias ldc="(ld) | clip"                                                                                 # Clip List Directories (ld) Output
+alias llc="ll | clip"                                                                                   # Clip Output from List Files Command (ll)
+alias cfpl="cf push -f manifests/manifests-local.yml"                                                   # Cloud Foundry - Push Local
 alias currentEncryptedPass="haventSetItYet :/"
 
 
 
 # MISC - Function Wrappers
-alias war="wars | clip"                                                                                   # Runs 'wars' function & adds output to clipboard
-alias fact="facts | clip"                                                                                 # Runs 'facts' function & adds output to clipboard
-alias CfServer="https://CloudController.net"                                                              # CF - Server to login to for deploying latest app changes  
+alias war="wars | clip"                                                                                 # Runs 'wars' function & adds output to clipboard
+alias fact="facts | clip"                                                                               # Runs 'facts' function & adds output to clipboard
+alias CfServer="https://CloudController.net"                                                            # CF - Server to login to for deploying latest app changes  
 alias decryptPass="dp $1 $2"
 
 
@@ -163,7 +182,7 @@ function pc() { # Pretty curl - Prints response in pretty JSON format
     echo "Sending request to = " $1;
     curl $1 | json_pp
 }
-function pf() {                                                                                           # Print list of functions defined in this file
+function pf() { # Print list of functions defined in this file
     sed -n /\(\)/p ~/.bashrc | awk '{print $2}'
 }
 function facts() {
