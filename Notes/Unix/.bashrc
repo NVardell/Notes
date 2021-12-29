@@ -6,7 +6,11 @@ alias ns="nslookup "
 alias nsa="nslookup -type=any "
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
 alias dora="explorer ."                          # Open Windows File Explorer at current directory
+alias w11t="w11Themes; dora"                     # Open Windows File Explorer for Windows Themes
 
+
+# Static File Paths & Values
+alias w11Themes="cd ~/AppData/Local/Microsoft/Windows/Themes"
 
 
 # Manage Aliases & User Functions
@@ -140,11 +144,13 @@ alias fade="dmf; def; ded;"         # Delete ~ Find & Delete Everything
 
 
 # MISC - Aliased Aliases
+alias czf="echo -en '\tZip Files = '; find . -type f -name '*.zip'  | wc -l"                            # Count ~ Zip Files
 alias cmf="echo -n 'Mac Files = '; find . -type f -name '._*'  | wc -l"                                 # Count ~ Mac Files
 alias cef="echo -n 'Empty Files = '; find . -empty -type f | wc -l"                                     # Count ~ Empty Files
 alias ced="echo -n 'Empty Directories = '; find . -empty -type d | wc -l"                               # Count ~ Empty Directories
-alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Empty Files
-alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Mac Files
+alias pzf="echo -e '\nZip Files = '; find . -type f -name '*.zip' -print"                               # Print ~ Zip Files
+alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Mac Files
+alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Empty Files
 alias ped="echo -e '\nEmpty Directories = '; find . -empty -type d -print"                              # Print ~ Empty Directories
 alias dmf="find . -type f -name '._*' -delete"                                                          # Delete ~ Mac Files
 alias def="find . -empty -type f -delete"                                                               # Delete ~ Empty Files
