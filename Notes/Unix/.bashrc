@@ -104,7 +104,7 @@ alias gpe="pc"                                                                  
 
 
 # GIT  -  Repositories
-alias ios="git clone https://github.com/NVardell/iOS.git"
+alias ios="clone https://github.com/NVardell/iOS.git"
 alias notes="clone https://github.com/NVardell/Notes.git"
 alias other="clone https://github.com/NVardell/Other.git"
 alias pieces="clone https://github.com/NVardell/Pieces.git"
