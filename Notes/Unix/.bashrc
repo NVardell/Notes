@@ -81,7 +81,8 @@ alias grt="git rm --cached "                     # Untrack a file & remove it fr
 alias rename="git branch -m "                    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
 alias adios="git push origin :"                  # Delete the old branch (:old_branch)
 alias gut="git update-index --skip-worktree "    # Untrack a local file & leave in repo
-
+alias grau="git remote add upstream "            # Set remote upstream for git to pull changes from (Forking - Original owners repo, not yours.)
+                                                 # Ex. $ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 
 
 # GIT -  Something went VERY wrong
