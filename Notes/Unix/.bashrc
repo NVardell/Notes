@@ -10,6 +10,7 @@ alias w11t="w11Themes; dora"                     # Open Windows File Explorer fo
 
 
 # Static File Paths & Values
+alias pathToTree="/i/Repo/Note/Programs/GitBash/bin/tree"
 alias w11Themes="cd ~/AppData/Local/Microsoft/Windows/Themes"
 
 
@@ -91,7 +92,7 @@ alias olord="git reset --hard"
 
 
 
-# GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
+# GIT  -  FAR From Basic Commands (Runs git command on every sub-directory in current directory)
 alias sah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"          # Status All Here
 alias pah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"        # Pull All Here
 alias sa="c; ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"    # Status All Repositories in Repo Directory
@@ -137,7 +138,10 @@ alias clean="cpfd;"                                                             
 
 
 
-# MISC - Fancy Shenanigans 😎
+# MISC - Aliased Aliases
+alias ref="def;"                    # Additional Shorthand
+alias red="ded;"                    # Additional Shorthand
+alias ca="cmf; czf; cef; ced;"      # All Find Counters
 alias fcad="face; fade; face;"      # Find, Count, & Delete Everything
 alias face="cmf; cef; ced;"         # Count ~ Find & Count Everything
 alias fape="pmf; pef; ped;"         # Print ~ Find & Print Everything
@@ -145,13 +149,13 @@ alias fade="dmf; def; ded;"         # Delete ~ Find & Delete Everything
 
 
 
-# MISC - Aliased Aliases
+# MISC - Fancy Shenanigans 😎
+alias cmf="echo -en '\tMac Files = '; find . -type f -name '._*'  | wc -l"                              # Count ~ Mac Files
 alias czf="echo -en '\tZip Files = '; find . -type f -name '*.zip'  | wc -l"                            # Count ~ Zip Files
-alias cmf="echo -n 'Mac Files = '; find . -type f -name '._*'  | wc -l"                                 # Count ~ Mac Files
-alias cef="echo -n 'Empty Files = '; find . -empty -type f | wc -l"                                     # Count ~ Empty Files
-alias ced="echo -n 'Empty Directories = '; find . -empty -type d | wc -l"                               # Count ~ Empty Directories
-alias pzf="echo -e '\nZip Files = '; find . -type f -name '*.zip' -print"                               # Print ~ Zip Files
+alias cef="echo -en '\tEmpty Files = '; find . -empty -type f | wc -l"                                  # Count ~ Empty Files
+alias ced="echo -en '\tEmpty Directories = '; find . -empty -type d | wc -l"                            # Count ~ Empty Directories
 alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Mac Files
+alias pzf="echo -e '\nZip Files = '; find . -type f -name '*.zip' -print"                               # Print ~ Zip Files
 alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Empty Files
 alias ped="echo -e '\nEmpty Directories = '; find . -empty -type d -print"                              # Print ~ Empty Directories
 alias dmf="find . -type f -name '._*' -delete"                                                          # Delete ~ Mac Files
@@ -161,7 +165,7 @@ alias ded="find . -empty -type d -delete"                                       
 
 
 # MISC - Random Shenanigans
-alias t="tree"
+alias t="pathToTree"                                                                                    # GnuWin32 Tree Cmd
 alias wt="cmd //c tree //f"                                                                             # Windows built-in tree function (c: Command to run.  f: Display Files.)
 alias cl="wc -l *"                                                                                      # Count lines for every file in current directory
 alias sl="df -h ."                                                                                      # Space Left? (Show free space on current drive.)
