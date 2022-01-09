@@ -1,0 +1,32 @@
+=IFERROR(VLOOKUP([@[Account '#]],CHOOSE({1,2},Table1[[#All],[Account '#]],Table1[[#All],[ID]]),2,FALSE), "DNE")
+IFERROR(
+    VLOOKUP(
+        [@[Account '#]],
+        CHOOSE( {1,2}, Table1[Account '#], Table1[ID] ),
+        2,
+        FALSE ),
+    "DNE"
+)
+
+
+
+
+IFERROR(SUMIF(Table2[Lookup ID],1000, Table2[Amount]), 0)
+
+IFERROR(
+    SUMIF(
+        Table2[Lookup ID],
+        VLOOKUP(
+            [@[Account '#]],
+            CHOOSE( {1,2}, Table1[Account '#], Table1[ID] ),
+            2,
+            FALSE ),
+        Table2[Amount]
+    ),
+0)
+
+
+
+
+
+=UNIQUE(Table2[Lookup ID],FALSE,FALSE)
