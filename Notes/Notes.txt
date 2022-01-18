@@ -1,72 +1,9 @@
-
-
-
-NODE INSTALL FILE PATHS
-• C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.9
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools
-C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio Installer
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Windows App Certification Kit
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Windows Software Development Kit
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools\VC
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Application Verifier (X64)
-
-
-
-
-####################################################################
-####    VALIDATING CHECKSUM FOR DOWNLOADED FILE
-NV2@NV2 MINGW64 ~/Downloads
-$ certutil -hashfile ideaIU-2021.1.2.exe SHA256 | grep 185c5fed030e875d04c8c3608fba8152827a81a61c5060fac33063108888c10b
-185c5fed030e875d04c8c3608fba8152827a81a61c5060fac33063108888c10b
-
-
-
-
-===========================================================================
-
-InstallLocation: C:\Program Files\WindowsApps\microsoft.windowsstore_12010.1001.3.0_x64__8wekyb3d8bbwe
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
-
-Microsoft.WindowsStore_12011.1001.1.0_neutral_split.scale-100_8wekyb3d8bbwe
-Microsoft.WindowsStore_12011.1001.1.0_x64__8wekyb3d8bbwe
-Microsoft.WindowsStore_12011.1001.113.0_neutral_~_8wekyb3d8bbwe
-
-
-
-takeown /F "%ProgramFiles%\WindowsApps"
-takeown /F "%ProgramFiles%\WindowsApps" /r /d y
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
-
-
-cmd.exe /c takeown /f "%1" && icacls "%1" /grant *S-1-3-4:F /c /l & pause
-takeown /F "%ProgramFiles%\WindowsApps" && takeown /F "%ProgramFiles%\WindowsApps" /r /d y && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t & pause
-
-
-
-C:\Users\NV\OneDrive\Desktop
-
-L - 1dc5ff
-M - 00ff00
-R - ff0015
-
-
-
-
-commands before and after changing permissions to completely restore the original permissions :
-icacls "%ProgramFiles%\WindowsApps" /save WindowsApps.acl
-icacls "%ProgramFiles%" /restore WindowsApps.acl
-
-
-Like this on all Microsoft OSes since 2000, and still good today:
-dir & echo foo
-If you want the second command to execute only if the first exited successfully:
-dir && echo foo
-
-
+/**********************************************************************************************************************
+***************************************************      TERMS      ***************************************************
+***********************************************************************************************************************/
+• TTF: TrueType Font
+• WOFF: Web Open Font Format
+• 
 
 
 
