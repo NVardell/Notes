@@ -79,7 +79,19 @@
     + Force results to be a specific size
         - Append 'imagesize:WIDTHxHEIGHT' to end of search
         - Mainly for when I search for new Desktop Backgrounds
+• Add VBA Macro to Excel (Example: Get URL hyperlink from a cell.)
+    1. Open VB Editor: Alt+F11
+    2. Open Macro Editor: Insert->Module
+    3. Write/Paste VB Code & Save
+        Ex.
+            Function URL(rng As Range) As String
+            On Error Resume Next
+            URL = rng.Hyperlinks(1).Address
+            End Function
 
+    4. Use new Macro like any function
+        Ex.
+            =URL(A2)
 
 
 
