@@ -272,13 +272,31 @@
     MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
 • Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
-• Windows 10 Registry Startup Programs Location
+• Windows 10 Registry Startup Programs Location`
     - Open Registry = Windows+R & regedit
     - Location in Registry Editor
         HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
     - Above auto navigated to location below
         Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
-
+• DISM: Scan Windows Image for file corruptions
+    - CheckHealth option with the Deployment Image Servicing and Management command tool allows you quickly determine 
+    if there are any corruptions inside the local Windows 10 image.
+        DISM /Online /Cleanup-Image /CheckHealth
+    - ScanHealth option performs a more advanced scan to determine if the OS image has any problems.
+        DISM /Online /Cleanup-Image /ScanHealth
+    - RestoreHealth option to scan and repair common issues automatically.
+        DISM /Online /Cleanup-Image /RestoreHealth
+• SFC (System File Checker) tool for repairing common Windows files and system structures.
+    - SFC will scan the integrity of all protected operating system files, including those that are not on your hard drive. 
+    It should be used before running DISM.
+    - Scan all protected system files, and replace corrupted files with a cached copy that is located in a compressed 
+    folder at %WinDir%\System32\dllcache.
+        sfc /scannow
+    - Copy SFC log to txt doc on Desktop
+        findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\sfcdetails.txt" 
+• Disk Check
+    - Repair Hard Drive Errors. Repairs will automatically start on hard drive, then asked to restart your device.
+        chkdsk/f C:
 
 
 
