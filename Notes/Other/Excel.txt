@@ -1,3 +1,6 @@
+Manually detect Circular References in Excel
+1. Go to tab 'Formulas', choose 'Error-checking' and 'Circular References'. Excel will show you exactly in which cell(s) circular references are detected.
+
 =IFERROR(VLOOKUP([@[Account '#]],CHOOSE({1,2},Table1[[#All],[Account '#]],Table1[[#All],[ID]]),2,FALSE), "DNE")
 IFERROR(
     VLOOKUP(
