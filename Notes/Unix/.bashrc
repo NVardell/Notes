@@ -139,26 +139,30 @@ alias clean="cpfd;"                                                             
 
 
 # MISC - Aliased Aliases
-alias ref="def;"                    # Additional Shorthand
-alias red="ded;"                    # Additional Shorthand
-alias ca="cmf; czf; cef; ced;"      # All Find Counters
+alias ca="cmf; ctf; czf; cef; ced;" # All Find Counters
+alias ce="cef; ced;"                # Count Empty
 alias fcad="face; fade; face;"      # Find, Count, & Delete Everything
 alias face="cmf; cef; ced;"         # Count ~ Find & Count Everything
 alias fape="pmf; pef; ped;"         # Print ~ Find & Print Everything
 alias fade="dmf; def; ded;"         # Delete ~ Find & Delete Everything
+alias red="ded;"                    # Additional Shorthand
+alias ref="def;"                    # Additional Shorthand
 
 
 
 # MISC - Fancy Shenanigans 😎
 alias cmf="echo -en '\tMac Files = '; find . -type f -name '._*'  | wc -l"                              # Count ~ Mac Files
+alias ctf="echo -en '\tTemp Files = '; find . -type f -name '~\$*'  | wc -l"                            # Count ~ Windows Temp Files
 alias czf="echo -en '\tZip Files = '; find . -type f -name '*.zip'  | wc -l"                            # Count ~ Zip Files
 alias cef="echo -en '\tEmpty Files = '; find . -empty -type f | wc -l"                                  # Count ~ Empty Files
 alias ced="echo -en '\tEmpty Directories = '; find . -empty -type d | wc -l"                            # Count ~ Empty Directories
 alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Mac Files
+alias ptf="echo -e '\nTemp Files = '; find . -type f -name '~\$*' -print"                               # Print ~ Windows Temp Files
 alias pzf="echo -e '\nZip Files = '; find . -type f -name '*.zip' -print"                               # Print ~ Zip Files
 alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Empty Files
 alias ped="echo -e '\nEmpty Directories = '; find . -empty -type d -print"                              # Print ~ Empty Directories
 alias dmf="find . -type f -name '._*' -delete"                                                          # Delete ~ Mac Files
+alias dtf="find . -type f -name '~\$*' -delete"                                                         # Delete ~ Windows Temp Files
 alias def="find . -empty -type f -delete"                                                               # Delete ~ Empty Files
 alias ded="find . -empty -type d -delete"                                                               # Delete ~ Empty Directories
 
