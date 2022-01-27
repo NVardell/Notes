@@ -1,3 +1,9 @@
+Date/Time Formats
++ Tue, Jan.25 - 12:00 AM
+    ddd, mmm.dd - [$-en-US]h:mm AM/PM;@
+
+
+
 Manually detect Circular References in Excel
 1. Go to tab 'Formulas', choose 'Error-checking' and 'Circular References'. Excel will show you exactly in which cell(s) circular references are detected.
 
