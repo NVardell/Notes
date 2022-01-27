@@ -26,9 +26,9 @@ alias mine="a | grep -n NVardell"                # Display my GIT repo aliases f
 
 
 # Navigation
-alias i='cd I:/; ll'
-alias ar='cd I:/Repo; ll'
-alias io='cd I:/Repo/iOS; ll'
+alias i="cd I:/; ll"
+alias ar="cd I:/Repo; ll"
+alias io="cd I:/Repo/iOS; ll"
 alias n="cd I:/Repo/Note; gs"
 alias p="cd I:/Repo/Pieces; gs"
 alias o="cd I:/Repo/Other; ll"
