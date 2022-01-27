@@ -133,8 +133,9 @@ alias mcp="mvn clean package"                                                   
 alias cw="cwf -print; cwd -print;"                                                                      # Clean What?!
 alias cwf="find . -type f -name '*.iml' "                                                               # Clean What Files
 alias cwd="find . -maxdepth 5 -type d \( -name "*.idea" -o -name "node_mod*" -o -name "target" \) "     # Clean What Directories
-alias cpfd="cwf -prune -exec rm -rv {} \; cwd -prune -exec rm -rv {} \;"                                # Clean Project Files & Directories
-alias clean="cpfd;"                                                                                     # Clean Project - Call above functions to find files & then delete them
+alias cpf="cwf -delete"                                                                                 # Clean Project Files & Directories
+alias cpd="cwd -prune -exec rm -r {} \;"                                                                # Clean Project Files & Directories
+alias clean="cpf; cpd;"                                                                                 # Clean Project - Call above functions to find files & then delete them
 
 
 
