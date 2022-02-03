@@ -45,24 +45,25 @@
     "wrap_width": 160,
     // BOOLEAN VALUES
     "always_show_minimap_viewport": false,
-    "bold_folder_labels": true,
-    "draw_indent_guides": false,
-    "line_numbers": true,
-    "spell_check": true,
-    "translate_tabs_to_spaces": true,
-    "word_wrap": false,
+    "bold_folder_labels":           true,
+    "draw_indent_guides":           false,
+    "line_numbers":                 true,
+    "spell_check":                  true,
+    "translate_tabs_to_spaces":     true,
+    "update_check":                 true,
+    "word_wrap":                    false,
     // MATERIAL VALUES
     "material_theme_accent_scrollbars": true, // Enable accent color for scrollbars
     "material_theme_accent_sky":        true, // Set accent color
     "material_theme_accent_titlebar":   true, // Enable accent color for title bar
-    "material_theme_bold_tab":          true,
+    "material_theme_bold_tab":          true, // Bold Current Tab Title
     "material_theme_bright_scrollbars": true, // Bright scrollbars puck color
     "material_theme_compact_panel":     true, // Set minimal padding for the search panel
-    "material_theme_compact_sidebar":   true,
+    "material_theme_compact_sidebar":   true, // Reduce Space Between Files/Directories in Project Panel
     "material_theme_contrast_mode":     true, // Enable sidebar and panels contrast mode
     "material_theme_panel_separator":   true, // Show bottom panel separator
     "material_theme_small_statusbar":   true, // Set small status bar
-    "material_theme_small_tab":         true,
-    "material_theme_tabs_autowidth":    true,
-    "material_theme_tabs_separator":    true,
+    "material_theme_small_tab":         true, // Reduce Tab Height
+    "material_theme_tabs_autowidth":    true, // Auto Tab Width To Filename Length
+    "material_theme_tabs_separator":    true, // Show tabs separator, this disables tab hover animation
 }
