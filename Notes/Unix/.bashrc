@@ -117,15 +117,30 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 
 
 # NPM - Shorthand NPM Commands
-alias npms="npm start"                                                                                  # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
-alias npmi="npm install "                                                                               # Install packages listed on command line
-alias npmu="ncu -u  --packageFile package.json"                                                         # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
-alias npmo="npm outdated"                                                                               # Local Project - Display outdated packages
-alias npmug="npmu -g"                                                                                   # Global - Update all packages
-alias npmog="npmo -g --depth=0"                                                                         # Global - Display outdated packages
-alias unpm="npm install npm@latest -g"                                                                  # Update npm to latest version
-alias npmdc="npx depcheck"                                                                              # Check for unused/missing dependencies in package.json
+alias no="npm "
 
+# Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
+alias nos="no start"
+
+# Install packages listed on command line
+alias noi="no install "
+alias noig="no install -g "
+alias noid="noig npm-check-updates create-react-app"    # Install Default Packages
+
+# LOCAL PROJECT
+#   Display outdated packages
+alias noo="no outdated"
+#   Check for unused/missing dependencies in package.json
+alias nodc="npx depcheck"
+#   Update package.json with new package versions (Requires npm-check-updates.)
+alias nou="ncu -u --packageFile package.json"
+
+# GLOBAL
+#   Update npm to latest version
+alias uno="noi npm@latest -g"
+#   Update all packages
+#   Display outdated packages
+alias noog="noo -g --depth=0"
 
 
 # MISC - Project / Code Cleanup
