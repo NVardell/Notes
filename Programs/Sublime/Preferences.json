@@ -52,17 +52,17 @@
     "translate_tabs_to_spaces": true,
     "word_wrap": false,
     // MATERIAL VALUES
-    "material_theme_accent_scrollbars"        : true, // Enable accent color for scrollbars
-    "material_theme_accent_sky"               : true, // Set accent color
-    "material_theme_accent_titlebar"          : true, // Enable accent color for titlebar
-    "material_theme_bold_tab": true,
-    "material_theme_bright_scrollbars"        : true, // Bright scrollbars puck color
-    "material_theme_compact_panel"            : true, // Set minimal padding for the search panel
-    "material_theme_compact_sidebar": true,
-    "material_theme_contrast_mode"            : true, // Enable sidebar and panels contrast mode
-    "material_theme_panel_separator"          : true, // Show bottom panel separator
-    "material_theme_small_statusbar"          : true, // Set small status bar
-    "material_theme_small_tab": true,
-    "material_theme_tabs_autowidth": true,
-    "material_theme_tabs_separator": true,
+    "material_theme_accent_scrollbars": true, // Enable accent color for scrollbars
+    "material_theme_accent_sky":        true, // Set accent color
+    "material_theme_accent_titlebar":   true, // Enable accent color for title bar
+    "material_theme_bold_tab":          true,
+    "material_theme_bright_scrollbars": true, // Bright scrollbars puck color
+    "material_theme_compact_panel":     true, // Set minimal padding for the search panel
+    "material_theme_compact_sidebar":   true,
+    "material_theme_contrast_mode":     true, // Enable sidebar and panels contrast mode
+    "material_theme_panel_separator":   true, // Show bottom panel separator
+    "material_theme_small_statusbar":   true, // Set small status bar
+    "material_theme_small_tab":         true,
+    "material_theme_tabs_autowidth":    true,
+    "material_theme_tabs_separator":    true,
 }
