@@ -21,7 +21,7 @@
     // Go to File Location in Project Sidebar 
     { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
 
-    // Keymap for Alignment Plugin - Auto Align 
+    // Alignment Plugin - Auto Align 
     { "keys": ["ctrl+alt+a"], "command": "alignment" },
 
     // Beautify SQL Code 
