@@ -277,7 +277,7 @@
     3. Re-add Everything back to the repo
         git add .
     4. Commit & Push
-        git commit -m ".gitignore fix"
+        git commit -m "Reapplying .gitignore with latest changes"
 • Tell Git who you are
     git config --global user.name "Sam Smith"
     git config --global user.email sam@example.com
