@@ -31,6 +31,11 @@
         "Zuul",
         "Ω",
     ],
+    // OBJECT VALUES
+    // STRING VALUES
+    // NUMBER VALUES
+    // BOOLEAN VALUES
+    // MATERIAL VALUES
     "always_show_minimap_viewport": false,
     "bold_folder_labels": true,
     "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
