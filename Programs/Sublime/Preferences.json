@@ -31,18 +31,10 @@
         "Whitespaces",
         "Ω",
     ],
-    // OBJECT VALUES
-    "font_options": [ "gray_antialias", "subpixel_antialias" ], // On retina Mac & Windows
-    "ignored_packages": [ "Vintage" ],
-    "indent_guide_options": [ "draw_normal", "draw_active" ], // Highlight active indent
     // NUMBER VALUES
     "font_size": 10.5,
     "tab_size": 4,
     "wrap_width": 160,
-    // STRING VALUES
-    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
-    "overlay_scroll_bars": "enabled",
-    "theme": "Material-Theme-Palenight.sublime-theme",
     // BOOLEAN VALUES
     "always_show_minimap_viewport": false,
     "bold_folder_labels":           true,
@@ -66,4 +58,12 @@
     "material_theme_small_tab":         true, // Reduce Tab Height
     "material_theme_tabs_autowidth":    true, // Auto Tab Width To Filename Length
     "material_theme_tabs_separator":    true, // Show tabs separator, this disables tab hover animation
+    // STRING VALUES
+    "overlay_scroll_bars": "enabled",
+    "theme": "Material-Theme-Palenight.sublime-theme",
+    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+    // OBJECT VALUES
+    "ignored_packages": [ "Vintage" ],
+    "font_options": [ "gray_antialias", "subpixel_antialias" ], // On retina Mac & Windows
+    "indent_guide_options": [ "draw_normal", "draw_active" ],   // Highlight active indent
 }
