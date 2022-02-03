@@ -24,9 +24,6 @@
     // Alignment Plugin - Auto Align 
     { "keys": ["ctrl+alt+a"], "command": "alignment" },
 
-    // Beautify SQL Code 
-    { "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },
-
     // Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.) // https://packagecontrol.io/packages/HTMLBeautify 
     { "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" },
 
