@@ -25,23 +25,9 @@
     //                                     SUBLIME MAPPINGS
     // SETTINGS
     //      Open Sublime Settings File
-    {
-        "keys": ["ctrl+alt+k"],
-        "command": "edit_settings", 
-        "args": {
-            "base_file": "${packages}/Default/Default ($platform).sublime-keymap", 
-            "default": "[\n\t$0\n]\n"
-        }
-    },
+    { "keys": ["ctrl+alt+k"], "command": "edit_settings", "args": { "base_file": "${packages}/Default/Default ($platform).sublime-keymap", "default": "[\n\t$0\n]\n" } },
     //      Open Sublime Key Mappings File
-    {
-        "keys": ["ctrl+alt+s"],
-        "command": "edit_settings", 
-        "args": {
-            "base_file": "${packages}/Default/Preferences.sublime-settings", 
-            "default": "[\n\t$0\n]\n"
-        }
-    },
+    { "keys": ["ctrl+alt+s"], "command": "edit_settings", "args": { "base_file": "${packages}/Default/Preferences.sublime-settings", "default": "[\n\t$0\n]\n" } },
 
     // PANEL VIEWS
     //      Default View
