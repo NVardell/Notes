@@ -14,6 +14,7 @@ alias pathToTree="/i/Repo/Note/Programs/GitBash/bin/tree"
 alias w11Themes="cd ~/AppData/Local/Microsoft/Windows/Themes"
 
 
+
 # Manage Aliases & User Functions
 alias ag="cat ~/.bashrc | grep -i "              # View aliases in bashrc file
 alias npmc="start ~/.npmrc"                      # Open npmrc file for editing (Can also run 'npm config edit')
@@ -35,7 +36,7 @@ alias o="cd I:/Repo/Other; ll"
 alias v="cd I:/Repo/Validate; gs"
 alias r="cd I:/Repo/Royal; gs"
 alias rw="cd I:/Repo/Royal/royal-web"
-alias s='cd I:/Space; ll'
+alias s="cd I:/Space; ll"
 
 
 
