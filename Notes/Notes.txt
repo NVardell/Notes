@@ -229,6 +229,12 @@
         find . -type f -exec grep -H 'SEARCH STRING' {} +
     + Use Find to execute a command in all subdirectories (Exa)
         find . -mindepth 1 -maxdepth 1 -type d -print -exec ls -lrt {} +
+    + Examples
+        1. Find & Move
+            find path_A -name '*AAA*' -exec mv -t path_B {} +
+                -exec = Replaces the {} for every result in turn, running the command you give it.
+                exec+ = So that we run as few 'mv' (move) operations as possible. (Note in flags.)
+                    (In reference to the '+' at the end of the '-exec'.) 
 • Grep
     + Search a *.gz file
         zgrep SearchString /path/to/file.gz
