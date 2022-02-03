@@ -24,10 +24,7 @@
     ],
     "font_options"                 : ["gray_antialias", "subpixel_antialias"], // On retina Mac & Windows
     "indent_guide_options"         : ["draw_normal", "draw_active"], // Highlight active indent
-    "ignored_packages":
-    [
-        "Vintage",
-    ],
+    "ignored_packages": [ "Vintage" ],
     "always_show_minimap_viewport": false,
     "bold_folder_labels": true,
     "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
