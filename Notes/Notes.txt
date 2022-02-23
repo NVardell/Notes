@@ -297,7 +297,15 @@
 • Add to PATH
     set PATH=%PATH%;c/path/to/exe
 • Create a redirect between two folders (Used for iTunes backup to store on external drive instead of filling C Drive.)
-    MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
+    - General Command
+        MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
+    - Steps
+        1. Create new destination directory where Backups will reside
+        2. Cut the existing Backup directory & paste in newly created directory
+        3a. Force iTunes to look for Backups in the new directory, run:
+            MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "D:\MobileSync\Backup"
+        3b. If iTunes is from Windows Store, run:
+            MkLink /J "%UserProfile%\Apple\MobileSync\Backup" "D:\MobileSync\Backup"
 • Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
 • Windows 10 Registry Startup Programs Location`
