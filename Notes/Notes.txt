@@ -135,6 +135,26 @@
                 + Folder: adi
                 + Folder: SC Info
             3. Restart Computer
+        - Backup Common Files
+            + Contacts
+                - AddressBook.sqlitedb Contains Major Contact Info
+                    31bb7ba8914766d4ba40d6dfb6113c8b614be442
+                - AddressBookImages.slitedb Contains Contact Image Data
+                    cd6702cea29fe89cf280a76794405adb17f9a0ee
+            + Messages
+                - iMessages & SMS Messages (SQLite)
+                    3d0d7e5fb2ce288813306e4d4636395e047a3d28
+            + Call History
+                - iPhone call History (SQLite)
+                    5a4935c78a5255723f707230a451d79c540d2741
+            + Photos
+                - Contains Photos Info
+                    12b144c0bd44f2b3dffd9186d3f9c05b917cee25
+            + Home Screen & Lock Screen Wallpaper
+                - Home Screen Wallpaper
+                    b97b0c3bc8a6bb221d0849b450fbd92b5d06a301
+                - Lock Screen Wallpaper
+                    86736007d0166a18c646c567279b75093fc066fe
     + InteliJ
         - Auto Imports Settings - Never use wildcard import
             1. Navigate menus 
