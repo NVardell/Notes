@@ -10,9 +10,9 @@ alias w11t="w11Themes; dora"                     # Open Windows File Explorer fo
 
 
 # Static File Paths & Values
-alias pathToTree="/i/Repo/Note/Programs/GitBash/bin/tree"
+export pathToTree="/i/Repo/Note/Programs/GitBash/bin/tree"
+export pathToExifTool="/i/Repo/Note/Programs/GitBash/bin/exiftool"
 alias w11Themes="cd ~/AppData/Local/Microsoft/Windows/Themes"
-
 
 
 # Manage Aliases & User Functions
@@ -101,7 +101,6 @@ alias pa="c; ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done" 
 alias pc="gaa; gc \"Pushing latest changes.\"; push;"                            # Push All Changes in current Directory
 alias pn="n; gaa; gc \"Pushing latest notes.\"; push;"                           # Push All changes Notes Repo
 alias po="o; gaa; gc \"Pushing latest changes.\"; push;"                         # Push All changes in Other Repo
-alias pp="p; gaa; gc \"Pushing latest pieces.\"; push;"                          # Push All changes in Pieces Repo
 alias gpe="pc"                                                                   # Git Push Everything
 
 
@@ -112,7 +111,6 @@ alias notes="clone https://github.com/NVardell/Notes.git"
 alias other="clone https://github.com/NVardell/Other.git"
 alias pieces="clone https://github.com/NVardell/Pieces.git"
 alias royal="clone https://github.com/NVardell/Royal.git"
-alias tut="clone https://github.com/NVardell/Tutorials.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
 
