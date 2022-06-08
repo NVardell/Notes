@@ -361,8 +361,52 @@
         taskkill /PID <yourID> /F
     - V2 ~ Kill Process Listening on Port 53
         kill $(lsof -t -i:53)
+• Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
+    certutil -hashfile MEUpdateTool.exe MD5
+• Clear Console
+    cls
+• Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
+    shell:AppsFolder
+• Search File Explorer for Specific Type
+    kind:Directory 2021
+    kind:Image
+    kind:Video
+• Script Execution PolicIES
+    - Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+    - Policies
+        EXECUTION POLICY    GROUP POLICY
+        -----------------------------------------------------------------
+        Unrestricted        Allow all scripts
+        RemoteSigned        Allow local scripts and remote signed scripts
+        AllSigned           Allow only signed scripts
+        -----------------------------------------------------------------
+    Managing the execution policy with PowerShell
+    The following command gets the effective execution policy:
+            Get-ExecutionPolicy
+    To get all of the execution policies that affect the current session and display them in precedence order:
+            Get-ExecutionPolicy -List
+    The result looks similar to the following sample output:
+            Scope ExecutionPolicy
+            ----- ---------------
+            MachinePolicy       Undefined
+               UserPolicy       Undefined
+                  Process       Undefined
+              CurrentUser    RemoteSigned
+             LocalMachine       AllSigned
+        - In this case, the effective execution policy is RemoteSigned because the execution policy for the current user takes precedence over the execution policy set for the local computer.
 
+    To get the execution policy set for a particular scope, use the Scope parameter of Get-ExecutionPolicy.
+    For example, the following command gets the execution policy for the CurrentUser scope:
+            Get-ExecutionPolicy -Scope CurrentUser
 
+    - To change your execution policy
+            Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
+    - Update Execution Policy to allow running scripts from Windows PowerShell
+            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    - remove the execution policy for all the users of the local computer
+            Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope LocalMachine
+    - To remove the execution policy for a Scope
+            Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
 
 
 
@@ -377,36 +421,23 @@
 
 
 /**********************************************************************************************************************
-***************************************************      NOT COLORS      **************************************************
-***********************************************************************************************************************/
-• Personal Default Putty Colors
-    + FG = 181, 230, 29
-    + BG = 50, 54, 57
-• Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
-    certutil -hashfile MEUpdateTool.exe MD5
-• Clear Console
-    cls
-• Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
-    shell:AppsFolder
-• Search File Explorer for Specific Type
-    kind:Directory 2021
-    kind:Image
-    kind:Video
-
-
-/**********************************************************************************************************************
 ***************************************************      COLORS      **************************************************
 ***********************************************************************************************************************/
 • Decal
-    - Navy Background - #183C66
+    - Navy Background  - #183C66
     - Orange Triangles - #FAA619
-    - Accent - #C4494F
+    - Accent           - #C4494F
+• Personal Default Putty Colors
+    - FG = 181, 230, 29
+    - BG = 50, 54, 57
+• Other
+    - Poke Table Header Green - 80, 192, 120
 • IntelliJ
     - Material Moonlight
-        + Caret/Cursor - #4FD6BE
+        + Caret/Cursor     - #4FD6BE
         + Caret/Cursor Row - #2F334D
-        + Whitespaces - #828BB8
-        + Text Highlight - #444A73
+        + White-spaces     - #828BB8
+        + Text Highlight   - #444A73
             - Generated Color Palette Scheme
                 1. #895B8C
                 2. #CD6C8C
@@ -428,17 +459,16 @@
                 18. #008A64
                 19. #708AF4
                 20. #454655
+                21. #C25450
+                22. #2A324B
 
-#C25450
-#2A324B
+
+
+
+
 /**********************************************************************************************************************
 ***************************************************      OTHER      ***************************************************
 ***********************************************************************************************************************/
-• COLORS
-    + Personal Default Putty Colors
-        - FG = 181, 230, 29
-        - BG = 50, 54, 57
-    + Other
-        - Poke Table Header Green - 80, 192, 120
+• 
 
-What makes a place or object eligible to be a Wayspot?
+
