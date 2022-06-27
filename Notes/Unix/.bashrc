@@ -40,7 +40,27 @@ alias s="cd I:/Space; ll"
 
 
 
-# GIT  -  Basic Commands
+##
+##  Maven ~ Shenanigans
+##
+alias mc="mvn clean"
+alias mci="mvn clean install"
+
+
+
+##
+##  Yarn ~ Shenanigans
+##
+alias ygl="yarn global list"
+alias ygu="yarn global upgrade"
+alias yga="yarn global add"
+alias yui="ncu -i -u --color --packageFile package.json"  # Yarn Upgrade Interactive
+
+
+
+##
+##  GIT  -  Basic Commands
+##
 alias ga="git add "
 alias gd="git diff "
 alias gs="git status"
