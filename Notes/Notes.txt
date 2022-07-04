@@ -337,7 +337,7 @@
         Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 • DISM: Scan Windows Image for file corruptions
     - CheckHealth option with the Deployment Image Servicing and Management command tool allows you quickly determine 
-    if there are any corruptions inside the local Windows 10 image.
+      if there are any corruptions inside the local Windows 10 image.
         DISM /Online /Cleanup-Image /CheckHealth
     - ScanHealth option performs a more advanced scan to determine if the OS image has any problems.
         DISM /Online /Cleanup-Image /ScanHealth
@@ -350,7 +350,8 @@
     folder at %WinDir%\System32\dllcache.
         sfc /scannow
     - Copy SFC log to txt doc on Desktop
-        findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\sfcdetails.txt" 
+        findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\cbs_sfc_scan.log"
+        findstr /c:"[SR]" C:\Windows\Logs\CBS\CBS.log > ~\OneDrive\Desktop\cbs_sfc_scan.log
 • Disk Check
     - Repair Hard Drive Errors. Repairs will automatically start on hard drive, then asked to restart your device.
         chkdsk/f C:
@@ -423,6 +424,9 @@
 /**********************************************************************************************************************
 ***************************************************      COLORS      **************************************************
 ***********************************************************************************************************************/
+• Fun
+    - #BAFFA7
+
 • Decal
     - Navy Background  - #183C66
     - Orange Triangles - #FAA619
