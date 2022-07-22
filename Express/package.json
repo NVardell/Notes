@@ -1,0 +1,22 @@
+{
+  "name": "csv-gen",
+  "version": "1.0.0",
+  "description": "Express App for CSV UUID Generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/NVardell/Notes.git",
+  "author": "NV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NVardell/Notes/issues"
+  },
+  "homepage": "https://github.com/NVardell/Notes#readme",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  }
+}
