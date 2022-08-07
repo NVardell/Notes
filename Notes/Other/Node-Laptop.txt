@@ -1,0 +1,42 @@
+LAPTOP PATHS
+/c/Program Files/nodejs
+/c/Program Files/nodejs/node_modules/npm/bin
+/c/ProgramData/chocolatey/bin
+/c/Python39
+/c/Python39/Scripts
+/c/Users/NV/AppData/Roaming/npm
+/c/WINDOWS/System32/OpenSSH
+/mingw64/bin
+/usr/bin
+/usr/bin/core_perl
+/usr/bin/vendor_perl
+/usr/local/bin
+
+
++ PowerShell Script Error ~ Open Admin PS & Run Below
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+        PS C:\WINDOWS\system32> yarn -v
+            1.22.17
+        PS C:\WINDOWS\system32> yarn global bin
+            C:\Users\NV\AppData\Local\Yarn\bin
+        PS C:\WINDOWS\system32> yarn global dir
+            C:\Users\NV\AppData\Local\Yarn\Data\global
+        PS C:\WINDOWS\system32> which yarn
+            which : The term 'which' is not recognized as the name of a cmdlet, function, script file, or operable program.
+            Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+            At line:1 char:1
+            + which yarn
+            + ~~~~~
+                + CategoryInfo          : ObjectNotFound: (which:String) [], CommandNotFoundException
+                + FullyQualifiedErrorId : CommandNotFoundException
+        
+
+NV@NV2 MINGW64 ~
+$ yarn -v
+    1.22.17
+$ yarn global bin
+    C:\Users\NV\AppData\Local\Yarn\bin
+$ yarn global dir
+    C:\Users\NV\AppData\Local\Yarn\Data\global
+$ which yarn
+    /c/Users/NV/AppData/Roaming/npm/yarn

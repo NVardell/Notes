@@ -1,57 +1,76 @@
 [
-    // Bookmark Navigation 
-    { "keys": ["ctrl+alt+b"], "command": "toggle_bookmark" }, { "keys": ["ctrl+shift+b"], "command": "prev_bookmark" },
-
-    // Text Convert - Title Case
-    { "keys": ["ctrl+alt+t"], "command": "title_case" },
-
-    // Multi-Line Select 
-    { "keys": ["ctrl+alt+q"], "command": "select_lines", "args": {"forward": false} }, 
-    { "keys": ["ctrl+alt+w"], "command": "select_lines", "args": {"forward": true} },
-
-    // Put Cursor On Selected Lines (Default Binding) 
-    { "keys": ["ctrl+alt+l"], "command": "split_selection_into_lines" },
-
-    // Delete Current Line 
-    { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
-
-    // Remove Duplicates 
-    { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} },
-
-    // Go to File Location in Project Sidebar 
-    { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
-
-    // Keymap for Alignment Plugin - Auto Align 
+    //#####################################################
+    //                                      PLUGIN MAPPINGS
+    //  ALIGNMENT
+    //      Auto Align 
     { "keys": ["ctrl+alt+a"], "command": "alignment" },
 
-    // Beautify SQL Code 
-    { "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },
-
-    // Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.) // https://packagecontrol.io/packages/HTMLBeautify 
-    { "keys": ["ctrl+alt+shift+h"], "command": "html_beautify" },
-
-    // Fold / Unfold All blocks of code in file (Main Use: Removing Random Files(& Contents) from Find Results) 
-    { "keys": ["alt+f"], "command": "fold_by_level", "args": {"level": 1} }, 
-    { "keys": ["alt+u"], "command": "unfold_all" },
-
-    // Reallocating Home & End Shortcuts 
-    { "keys": ["f1"], "command": "move_to", "args": {"to": "bol", "extend": false} }, 
-    { "keys": ["f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-    { "keys": ["shift+f1"], "command": "move_to", "args": {"to": "bol", "extend": false} }, 
-    { "keys": ["shift+f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-
-    // Plugin: Expand Selection to Single or Double Quotes 
+    //  EXPAND SELECTION TO QUOTES
+    //      Extract String From Quotation Marks
     {"keys": ["ctrl+'"], "command": "expand_selection_to_quotes"},
 
-    // Expand Selection to current highlighted section/line of code 
+    //  HTML BEAUTIFY
+    //      Beautify HTML (There was more to it in ReadMe - Add Rest if below fails.) 
+    //          https://packagecontrol.io/packages/HTMLBeautify 
+    { "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" },
+
+    //  SQL BEAUTIFIER
+    //      Beautify SQL Code
+    //      Never Really Use.  Migrating to open Settings instead.
+    // { "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },    
+
+
+
+    //#####################################################
+    //                                     SUBLIME MAPPINGS
+    // SETTINGS
+    //      Open Sublime Settings File
+    { "keys": ["ctrl+alt+k"], "command": "edit_settings", "args": { "base_file": "${packages}/Default/Default ($platform).sublime-keymap", "default": "[\n\t$0\n]\n" } },
+    //      Open Sublime Key Mappings File
+    { "keys": ["ctrl+alt+s"], "command": "edit_settings", "args": { "base_file": "${packages}/Default/Preferences.sublime-settings", "default": "[\n\t$0\n]\n" } },
+
+    // PANEL VIEWS
+    //      Default View
+    { "keys": ["ctrl+alt+d"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]] } },
+    //      2 Column View
+    { "keys": ["ctrl+alt+c"], "command": "set_layout", "args": { "cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]] } },
+    //      2 Row View
+    { "keys": ["ctrl+alt+r"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [0, 1, 1, 2]] } },
+    
+    //  EDITING
+    //      Case Convert - Title Case
+    { "keys": ["ctrl+alt+t"], "command": "title_case" },
+    //      Delete Current Line 
+    { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    //      Remove Duplicate Lines
+    { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} },
+    
+    //  MULTI-CURSORS
+    //      Put Cursor On Selected Lines (Default Binding) 
+    { "keys": ["ctrl+alt+l"], "command": "split_selection_into_lines" },
+    //      Multi-Line Select 
+    { "keys": ["ctrl+alt+q"], "command": "select_lines", "args": {"forward": false} }, 
+    { "keys": ["ctrl+alt+w"], "command": "select_lines", "args": {"forward": true} },
+    
+    //  NAVIGATION
+    //      Bookmark Navigation 
+    { "keys": ["ctrl+alt+b"], "command": "toggle_bookmark" }, { "keys": ["ctrl+shift+b"], "command": "prev_bookmark" },
+    //      Go to File Location in Project Sidebar
+    { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
+    
+    //  CODE VIEWS
+    //      Fold / Unfold All blocks of code in file (Main Use: Removing Random Files(& Contents) from Find Results) 
+    { "keys": ["alt+u"], "command": "unfold_all" },
+    { "keys": ["alt+f"], "command": "fold_by_level", "args": {"level": 1} }, 
+    
+    //  REMAPPING
+    //      Home & End - Move Cursor to BoL/EoL
+    { "keys": ["f1"], "command": "move_to", "args": {"to": "bol", "extend": false} }, 
+    { "keys": ["f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+    //      Home & End - Select from Cursor to BoL/EoL
+    { "keys": ["shift+f1"], "command": "move_to", "args": {"to": "bol", "extend": false} }, 
+    { "keys": ["shift+f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+    //      Expand Selection to Current Scope
     { "keys": ["ctrl+alt+shift+s"], "command": "expand_selection", "args": {"to": "scope"} },
 
-    // Default View
-    { "keys": ["ctrl+alt+d"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]] } },
-
-    // 2 Column View
-    { "keys": ["ctrl+alt+c"], "command": "set_layout", "args": { "cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]] } },
-    
-    // 2 Row View
-    { "keys": ["ctrl+alt+r"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [0, 1, 1, 2]] } },
 ]

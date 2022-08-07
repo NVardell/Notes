@@ -6,7 +6,13 @@ alias ns="nslookup "
 alias nsa="nslookup -type=any "
 alias a="cat ~/.bashrc | grep alias | sort"      # View aliases w/ comments
 alias dora="explorer ."                          # Open Windows File Explorer at current directory
+alias w11t="w11Themes; dora"                     # Open Windows File Explorer for Windows Themes
 
+
+# Static File Paths & Values
+export pathToTree="/i/Repo/Note/Programs/GitBash/bin/tree"
+export pathToExifTool="/i/Repo/Note/Programs/GitBash/bin/exiftool"
+alias w11Themes="cd ~/AppData/Local/Microsoft/Windows/Themes"
 
 
 # Manage Aliases & User Functions
@@ -21,20 +27,40 @@ alias mine="a | grep -n NVardell"                # Display my GIT repo aliases f
 
 
 # Navigation
-alias i='cd I:/; ll'
-alias ar='cd I:/Repo; ll'
-alias io='cd I:/Repo/iOS; ll'
+alias i="cd I:/; ll"
+alias ar="cd I:/Repo; ll"
+alias io="cd I:/Repo/iOS; ll"
 alias n="cd I:/Repo/Note; gs"
 alias p="cd I:/Repo/Pieces; gs"
 alias o="cd I:/Repo/Other; ll"
 alias v="cd I:/Repo/Validate; gs"
 alias r="cd I:/Repo/Royal; gs"
 alias rw="cd I:/Repo/Royal/royal-web"
-alias s='cd I:/Space; ll'
+alias s="cd I:/Space; ll"
 
 
 
-# GIT  -  Basic Commands
+##
+##  Maven ~ Shenanigans
+##
+alias mc="mvn clean"
+alias mci="mvn clean install"
+
+
+
+##
+##  Yarn ~ Shenanigans
+##
+alias ygl="yarn global list"
+alias ygu="yarn global upgrade"
+alias yga="yarn global add"
+alias yui="ncu -i -u --color --packageFile package.json"  # Yarn Upgrade Interactive
+
+
+
+##
+##  GIT  -  Basic Commands
+##
 alias ga="git add "
 alias gd="git diff "
 alias gs="git status"
@@ -77,7 +103,8 @@ alias grt="git rm --cached "                     # Untrack a file & remove it fr
 alias rename="git branch -m "                    # Rename local branch (-m old_branch new_branch OR just new_branch if changing current branch.)   
 alias adios="git push origin :"                  # Delete the old branch (:old_branch)
 alias gut="git update-index --skip-worktree "    # Untrack a local file & leave in repo
-
+alias grau="git remote add upstream "            # Set remote upstream for git to pull changes from (Forking - Original owners repo, not yours.)
+                                                 # Ex. $ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 
 
 # GIT -  Something went VERY wrong
@@ -86,7 +113,7 @@ alias olord="git reset --hard"
 
 
 
-# GIT  -  FAR From Basic Commands (Runs git command on every subdirectory in current directory)
+# GIT  -  FAR From Basic Commands (Runs git command on every sub-directory in current directory)
 alias sah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"          # Status All Here
 alias pah="for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done"        # Pull All Here
 alias sa="c; ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && gs); done"    # Status All Repositories in Repo Directory
@@ -94,13 +121,12 @@ alias pa="c; ar; for dir in ./*; do( echo "\$dir" && cd "\$dir" && pull); done" 
 alias pc="gaa; gc \"Pushing latest changes.\"; push;"                            # Push All Changes in current Directory
 alias pn="n; gaa; gc \"Pushing latest notes.\"; push;"                           # Push All changes Notes Repo
 alias po="o; gaa; gc \"Pushing latest changes.\"; push;"                         # Push All changes in Other Repo
-alias pp="p; gaa; gc \"Pushing latest pieces.\"; push;"                          # Push All changes in Pieces Repo
 alias gpe="pc"                                                                   # Git Push Everything
 
 
 
 # GIT  -  Repositories
-alias ios="git clone https://github.com/NVardell/iOS.git"
+alias ios="clone https://github.com/NVardell/iOS.git"
 alias notes="clone https://github.com/NVardell/Notes.git"
 alias other="clone https://github.com/NVardell/Other.git"
 alias pieces="clone https://github.com/NVardell/Pieces.git"
@@ -110,15 +136,30 @@ alias validate="clone https://github.com/NVardell/Validate.git"
 
 
 # NPM - Shorthand NPM Commands
-alias npms="npm start"                                                                                  # Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
-alias npmi="npm install "                                                                               # Install packages listed on command line
-alias npmu="ncu -u  --packageFile package.json"                                                         # Local Project - Update package.json with new package versions (Requires npm-check-updates.)
-alias npmo="npm outdated"                                                                               # Local Project - Display outdated packages
-alias npmug="npmu -g"                                                                                   # Global - Update all packages
-alias npmog="npmo -g --depth=0"                                                                         # Global - Display outdated packages
-alias unpm="npm install npm@latest -g"                                                                  # Update npm to latest version
-alias npmdc="npx depcheck"                                                                              # Check for unused/missing dependencies in package.json
+alias no="npm "
 
+# Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
+alias nos="no start"
+
+# Install packages listed on command line
+alias noi="no install "
+alias noig="no install -g "
+alias noid="noig npm-check-updates create-react-app"    # Install Default Packages
+
+# LOCAL PROJECT
+#   Display outdated packages
+alias noo="no outdated"
+#   Check for unused/missing dependencies in package.json
+alias nodc="npx depcheck"
+#   Update package.json with new package versions (Requires npm-check-updates.)
+alias nou="ncu -u --packageFile package.json"
+
+# GLOBAL
+#   Update npm to latest version
+alias uno="noi npm@latest -g"
+#   Update all packages
+#   Display outdated packages
+alias noog="noo -g --depth=0"
 
 
 # MISC - Project / Code Cleanup
@@ -126,34 +167,44 @@ alias mcp="mvn clean package"                                                   
 alias cw="cwf -print; cwd -print;"                                                                      # Clean What?!
 alias cwf="find . -type f -name '*.iml' "                                                               # Clean What Files
 alias cwd="find . -maxdepth 5 -type d \( -name "*.idea" -o -name "node_mod*" -o -name "target" \) "     # Clean What Directories
-alias cpfd="cwf -prune -exec rm -rv {} \; cwd -prune -exec rm -rv {} \;"                                # Clean Project Files & Directories
-alias clean="cpfd;"                                                                                     # Clean Project - Call above functions to find files & then delete them
-
-
-
-# MISC - Fancy Shenanigans 😎
-alias fcad="face; fade; face;"      # Find, Count, & Delete Everything
-alias face="cmf; cef; ced;"         # Count ~ Find & Count Everything
-alias fape="pmf; pef; ped;"         # Print ~ Find & Print Everything
-alias fade="dmf; def; ded;"         # Delete ~ Find & Delete Everything
+alias cpf="cwf -delete"                                                                                 # Clean Project Files & Directories
+alias cpd="cwd -prune -exec rm -r {} \;"                                                                # Clean Project Files & Directories
+alias clean="cpf; cpd;"                                                                                 # Clean Project - Call above functions to find files & then delete them
 
 
 
 # MISC - Aliased Aliases
-alias cmf="echo -n 'Mac Files = '; find . -type f -name '._*'  | wc -l"                                 # Count ~ Mac Files
-alias cef="echo -n 'Empty Files = '; find . -empty -type f | wc -l"                                     # Count ~ Empty Files
-alias ced="echo -n 'Empty Directories = '; find . -empty -type d | wc -l"                               # Count ~ Empty Directories
-alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Empty Files
-alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Mac Files
+alias ca="cmf; ctf; czf; cef; ced;" # All Find Counters
+alias ce="cef; ced;"                # Count Empty
+alias fcad="face; fade; face;"      # Find, Count, & Delete Everything
+alias face="cmf; cef; ced;"         # Count ~ Find & Count Everything
+alias fape="pmf; pef; ped;"         # Print ~ Find & Print Everything
+alias fade="dmf; def; ded;"         # Delete ~ Find & Delete Everything
+alias red="ded;"                    # Additional Shorthand
+alias ref="def;"                    # Additional Shorthand
+
+
+
+# MISC - Fancy Shenanigans 😎
+alias cmf="echo -en '\tMac Files = '; find . -type f -name '._*'  | wc -l"                              # Count ~ Mac Files
+alias ctf="echo -en '\tTemp Files = '; find . -type f -name '~\$*'  | wc -l"                            # Count ~ Windows Temp Files
+alias czf="echo -en '\tZip Files = '; find . -type f -name '*.zip'  | wc -l"                            # Count ~ Zip Files
+alias cef="echo -en '\tEmpty Files = '; find . -empty -type f | wc -l"                                  # Count ~ Empty Files
+alias ced="echo -en '\tEmpty Directories = '; find . -empty -type d | wc -l"                            # Count ~ Empty Directories
+alias pmf="echo -e '\nMac Files = '; find . -type f -name '._*' -print"                                 # Print ~ Mac Files
+alias ptf="echo -e '\nTemp Files = '; find . -type f -name '~\$*' -print"                               # Print ~ Windows Temp Files
+alias pzf="echo -e '\nZip Files = '; find . -type f -name '*.zip' -print"                               # Print ~ Zip Files
+alias pef="echo -e '\nEmpty Files = '; find . -empty -type f -print"                                    # Print ~ Empty Files
 alias ped="echo -e '\nEmpty Directories = '; find . -empty -type d -print"                              # Print ~ Empty Directories
 alias dmf="find . -type f -name '._*' -delete"                                                          # Delete ~ Mac Files
+alias dtf="find . -type f -name '~\$*' -delete"                                                         # Delete ~ Windows Temp Files
 alias def="find . -empty -type f -delete"                                                               # Delete ~ Empty Files
 alias ded="find . -empty -type d -delete"                                                               # Delete ~ Empty Directories
 
 
 
 # MISC - Random Shenanigans
-alias t="tree"
+alias t="pathToTree"                                                                                    # GnuWin32 Tree Cmd
 alias wt="cmd //c tree //f"                                                                             # Windows built-in tree function (c: Command to run.  f: Display Files.)
 alias cl="wc -l *"                                                                                      # Count lines for every file in current directory
 alias sl="df -h ."                                                                                      # Space Left? (Show free space on current drive.)

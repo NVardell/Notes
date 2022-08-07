@@ -1,0 +1,14 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+    "variables":
+    {
+    },
+    "globals":
+    {
+        "gutterForeground": "#828ED5",
+        "gutter_Foreground": "#828ED5"
+    },
+    "rules":
+    [
+    ]
+}

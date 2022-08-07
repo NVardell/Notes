@@ -1,72 +1,9 @@
-
-
-
-NODE INSTALL FILE PATHS
-• C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.9
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools
-C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio Installer
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Windows App Certification Kit
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Windows Software Development Kit
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools\VC
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Application Verifier (X64)
-
-
-
-
-####################################################################
-####    VALIDATING CHECKSUM FOR DOWNLOADED FILE
-NV2@NV2 MINGW64 ~/Downloads
-$ certutil -hashfile ideaIU-2021.1.2.exe SHA256 | grep 185c5fed030e875d04c8c3608fba8152827a81a61c5060fac33063108888c10b
-185c5fed030e875d04c8c3608fba8152827a81a61c5060fac33063108888c10b
-
-
-
-
-===========================================================================
-
-InstallLocation: C:\Program Files\WindowsApps\microsoft.windowsstore_12010.1001.3.0_x64__8wekyb3d8bbwe
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
-
-Microsoft.WindowsStore_12011.1001.1.0_neutral_split.scale-100_8wekyb3d8bbwe
-Microsoft.WindowsStore_12011.1001.1.0_x64__8wekyb3d8bbwe
-Microsoft.WindowsStore_12011.1001.113.0_neutral_~_8wekyb3d8bbwe
-
-
-
-takeown /F "%ProgramFiles%\WindowsApps"
-takeown /F "%ProgramFiles%\WindowsApps" /r /d y
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
-icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
-
-
-cmd.exe /c takeown /f "%1" && icacls "%1" /grant *S-1-3-4:F /c /l & pause
-takeown /F "%ProgramFiles%\WindowsApps" && takeown /F "%ProgramFiles%\WindowsApps" /r /d y && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t & pause
-
-
-
-C:\Users\NV\OneDrive\Desktop
-
-L - 1dc5ff
-M - 00ff00
-R - ff0015
-
-
-
-
-commands before and after changing permissions to completely restore the original permissions :
-icacls "%ProgramFiles%\WindowsApps" /save WindowsApps.acl
-icacls "%ProgramFiles%" /restore WindowsApps.acl
-
-
-Like this on all Microsoft OSes since 2000, and still good today:
-dir & echo foo
-If you want the second command to execute only if the first exited successfully:
-dir && echo foo
-
-
+/**********************************************************************************************************************
+***************************************************      TERMS      ***************************************************
+***********************************************************************************************************************/
+• TTF: TrueType Font
+• WOFF: Web Open Font Format
+• 
 
 
 
@@ -74,27 +11,41 @@ dir && echo foo
 ***************************************************      NOTES      ***************************************************
 ***********************************************************************************************************************/
 • Emojis
-      - 😂
-      - 🤷🏼‍♂️
-      - 🥂
+      - ☁
       - ⚡️
+      - ⛅
+      - ⛈
+      - 👑
+      - 💰
+      - 😂
+      - 😭
+      - 🤷🏼
+      - 🥂
+      - 🥳
+      - 🍦
+      - 😎
+      - 🦄
 • Symbols
-      + °
-      + ²
-      + Ω
-      + → ↓ ↯ ⇑⇓ ⇒ 
-      + ∞
-      + ≠ ≈
-      + ≤ ≥
-      + ✓
-      + • ○
-      + ■ □
-      + ▲ △
-      + ▴ ▵
-      + ▶ ▷
-      + ◆ ◇
-      + ★ ☆
-      + ☐ ☑ ☒
+      - ° - Temp
+      - ®
+      - ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
+      - Ω k
+      - ⇑
+      - ↓ ↯ ⇓
+      - → ⇀ ⇢ ⇾ ⇝ ⇥ ↠ ⇸ ⇻ ⇴ ⇰ ⇏ ⇒ ⇛
+      - ∞
+      - ≠ ≈
+      - ≤ ≥
+      - ✓
+      - ♥ ♡
+      - • ○
+      - ★ ☆
+      - ■ □ ◆ ◇
+      - ▴ ▵ ▲ △ ▶ ▷
+      - ☐ ☑ ☒
+      - ⚥ (Undecided)
+      - ♀ (Female (â™€))
+      - ♂ (Male (â™))
 • Extensions
     + .pub = Public Key File (SSH)
 • Environment Variables
@@ -142,7 +93,19 @@ dir && echo foo
     + Force results to be a specific size
         - Append 'imagesize:WIDTHxHEIGHT' to end of search
         - Mainly for when I search for new Desktop Backgrounds
+• Add VBA Macro to Excel (Example: Get URL hyperlink from a cell.)
+    1. Open VB Editor: Alt+F11
+    2. Open Macro Editor: Insert->Module
+    3. Write/Paste VB Code & Save
+        Ex.
+            Function URL(rng As Range) As String
+            On Error Resume Next
+            URL = rng.Hyperlinks(1).Address
+            End Function
 
+    4. Use new Macro like any function
+        Ex.
+            =URL(A2)
 
 
 
@@ -175,6 +138,26 @@ dir && echo foo
                 + Folder: adi
                 + Folder: SC Info
             3. Restart Computer
+        - Backup Common Files
+            + Contacts
+                - AddressBook.sqlitedb Contains Major Contact Info
+                    31bb7ba8914766d4ba40d6dfb6113c8b614be442
+                - AddressBookImages.slitedb Contains Contact Image Data
+                    cd6702cea29fe89cf280a76794405adb17f9a0ee
+            + Messages
+                - iMessages & SMS Messages (SQLite)
+                    3d0d7e5fb2ce288813306e4d4636395e047a3d28
+            + Call History
+                - iPhone call History (SQLite)
+                    5a4935c78a5255723f707230a451d79c540d2741
+            + Photos
+                - Contains Photos Info
+                    12b144c0bd44f2b3dffd9186d3f9c05b917cee25
+            + Home Screen & Lock Screen Wallpaper
+                - Home Screen Wallpaper
+                    b97b0c3bc8a6bb221d0849b450fbd92b5d06a301
+                - Lock Screen Wallpaper
+                    86736007d0166a18c646c567279b75093fc066fe
     + InteliJ
         - Auto Imports Settings - Never use wildcard import
             1. Navigate menus 
@@ -238,8 +221,19 @@ dir && echo foo
         grep -R 'FIND ME' /path/to/dir/and/files/toSearch/*log | mail -s 'Grep Results' email@address.com
 • Find
     + Flags
-        -exec
-            Executes the specified command on the 'found' files
+        -exec command ;
+            Executes the specified command on the 'found' files.
+            Execute command; true if 0 status is returned.  
+            All following arguments to find are taken to be arguments to the command 
+            until an argument consisting of ';' is encountered. 
+        -exec command {} + 
+            AKA Plus ('+') Version of Exec Command
+            This variant of the -exec action runs the specified command on the selected files, 
+            but the command line is built by appending each selected file name at the end; 
+            the total number of invocations of the command will be much less than the number 
+            of matched files. The command line is built in much the same way that xargs builds 
+            its command lines. Only one instance of '{}' is allowed within the command. 
+            The command is executed in the starting directory.
         -iname
             Pattern - Like 'name' but is case insensitive
         -name
@@ -258,6 +252,12 @@ dir && echo foo
         find . -type f -exec grep -H 'SEARCH STRING' {} +
     + Use Find to execute a command in all subdirectories (Exa)
         find . -mindepth 1 -maxdepth 1 -type d -print -exec ls -lrt {} +
+    + Examples
+        1. Find & Move
+            find path_A -name '*AAA*' -exec mv -t path_B {} +
+                -exec = Replaces the {} for every result in turn, running the command you give it.
+                exec+ = So that we run as few 'mv' (move) operations as possible. (Note in flags.)
+                    (In reference to the '+' at the end of the '-exec'.) 
 • Grep
     + Search a *.gz file
         zgrep SearchString /path/to/file.gz
@@ -300,7 +300,7 @@ dir && echo foo
     3. Re-add Everything back to the repo
         git add .
     4. Commit & Push
-        git commit -m ".gitignore fix"
+        git commit -m "Reapplying .gitignore with latest changes"
 • Tell Git who you are
     git config --global user.name "Sam Smith"
     git config --global user.email sam@example.com
@@ -320,16 +320,96 @@ dir && echo foo
 • Add to PATH
     set PATH=%PATH%;c/path/to/exe
 • Create a redirect between two folders (Used for iTunes backup to store on external drive instead of filling C Drive.)
-    MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
+    - General Command
+        MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
+    - Steps
+        1. Create new destination directory where Backups will reside
+        2. Cut the existing Backup directory & paste in newly created directory
+        3a. Force iTunes to look for Backups in the new directory, run:
+            MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "D:\MobileSync\Backup"
+        3b. If iTunes is from Windows Store, run:
+            MkLink /J "%UserProfile%\Apple\MobileSync\Backup" "D:\MobileSync\Backup"
 • Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
-• Windows 10 Registry Startup Programs Location
+• Windows 10 Registry Startup Programs Location`
     - Open Registry = Windows+R & regedit
     - Location in Registry Editor
         HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
     - Above auto navigated to location below
         Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+• DISM: Scan Windows Image for file corruptions
+    - CheckHealth option with the Deployment Image Servicing and Management command tool allows you quickly determine 
+      if there are any corruptions inside the local Windows 10 image.
+        DISM /Online /Cleanup-Image /CheckHealth
+    - ScanHealth option performs a more advanced scan to determine if the OS image has any problems.
+        DISM /Online /Cleanup-Image /ScanHealth
+    - RestoreHealth option to scan and repair common issues automatically.
+        DISM /Online /Cleanup-Image /RestoreHealth
+• SFC (System File Checker) tool for repairing common Windows files and system structures.
+    - SFC will scan the integrity of all protected operating system files, including those that are not on your hard drive. 
+    It should be used before running DISM.
+    - Scan all protected system files, and replace corrupted files with a cached copy that is located in a compressed 
+    folder at %WinDir%\System32\dllcache.
+        sfc /scannow
+    - Copy SFC log to txt doc on Desktop
+        findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\cbs_sfc_scan.log"
+        findstr /c:"[SR]" C:\Windows\Logs\CBS\CBS.log > ~\OneDrive\Desktop\cbs_sfc_scan.log
+• Disk Check
+    - Repair Hard Drive Errors. Repairs will automatically start on hard drive, then asked to restart your device.
+        chkdsk/f C:
+• Network Stats
+    - Find app running on specific port
+        netstat -ano | findstr :3001
+    - Kill Process On that Port
+        taskkill /PID <yourID> /F
+    - V2 ~ Kill Process Listening on Port 53
+        kill $(lsof -t -i:53)
+• Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
+    certutil -hashfile MEUpdateTool.exe MD5
+• Clear Console
+    cls
+• Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
+    shell:AppsFolder
+• Search File Explorer for Specific Type
+    kind:Directory 2021
+    kind:Image
+    kind:Video
+• Script Execution PolicIES
+    - Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+    - Policies
+        EXECUTION POLICY    GROUP POLICY
+        -----------------------------------------------------------------
+        Unrestricted        Allow all scripts
+        RemoteSigned        Allow local scripts and remote signed scripts
+        AllSigned           Allow only signed scripts
+        -----------------------------------------------------------------
+    Managing the execution policy with PowerShell
+    The following command gets the effective execution policy:
+            Get-ExecutionPolicy
+    To get all of the execution policies that affect the current session and display them in precedence order:
+            Get-ExecutionPolicy -List
+    The result looks similar to the following sample output:
+            Scope ExecutionPolicy
+            ----- ---------------
+            MachinePolicy       Undefined
+               UserPolicy       Undefined
+                  Process       Undefined
+              CurrentUser    RemoteSigned
+             LocalMachine       AllSigned
+        - In this case, the effective execution policy is RemoteSigned because the execution policy for the current user takes precedence over the execution policy set for the local computer.
 
+    To get the execution policy set for a particular scope, use the Scope parameter of Get-ExecutionPolicy.
+    For example, the following command gets the execution policy for the CurrentUser scope:
+            Get-ExecutionPolicy -Scope CurrentUser
+
+    - To change your execution policy
+            Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
+    - Update Execution Policy to allow running scripts from Windows PowerShell
+            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    - remove the execution policy for all the users of the local computer
+            Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope LocalMachine
+    - To remove the execution policy for a Scope
+            Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
 
 
 
@@ -346,39 +426,58 @@ dir && echo foo
 /**********************************************************************************************************************
 ***************************************************      COLORS      **************************************************
 ***********************************************************************************************************************/
-• Personal Default Putty Colors
-    + FG = 181, 230, 29
-    + BG = 50, 54, 57
-• Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
-    certutil -hashfile MEUpdateTool.exe MD5
-• Clear Console
-    cls
-• Open File Explorer to 'Applications' (Kinda like Mac OS Apps List View.)
-    shell:AppsFolder
-• Search File Explorer for Specific Type
-    kind:Directory 2021
-    kind:Image
-    kind:Video
-
-
-/**********************************************************************************************************************
-***************************************************      COLORS      **************************************************
-***********************************************************************************************************************/
+• Fun
+    - #BAFFA7
+    - #BAFFAF
+    - #F1FCEF
+    - #DDF8D7
+    
 • Decal
-    - Navy Background - #183C66
+    - Navy Background  - #183C66
     - Orange Triangles - #FAA619
-    - Accent - #C4494F
-• 
+    - Accent           - #C4494F
+• Personal Default Putty Colors
+    - FG = 181, 230, 29
+    - BG = 50, 54, 57
+• Other
+    - Poke Table Header Green - 80, 192, 120
+• IntelliJ
+    - Material Moonlight
+        + Caret/Cursor     - #4FD6BE
+        + Caret/Cursor Row - #2F334D
+        + White-spaces     - #828BB8
+        + Text Highlight   - #444A73
+            - Generated Color Palette Scheme
+                1. #895B8C
+                2. #CD6C8C
+                3. #FD8C7A
+                4. #FFBE67
+                5. #F9F871
+                6. #7D6497
+                7. #BD7DB2
+                8. #DD8ABC
+                9. #767BA7
+                10. #A9AABC
+                11. #757687
+                12. #00BEBB
+                13. #C8CCFD
+                14. #DBEFEE
+                15. #348B88
+                16. #6CFACD
+                17. #21C197
+                18. #008A64
+                19. #708AF4
+                20. #454655
+                21. #C25450
+                22. #2A324B
+
+
 
 
 
 /**********************************************************************************************************************
 ***************************************************      OTHER      ***************************************************
 ***********************************************************************************************************************/
-• COLORS
-    + Personal Default Putty Colors
-        - FG = 181, 230, 29
-        - BG = 50, 54, 57
-    + Other
-        - Poke Table Header Green - 80, 192, 120
+• 
+
 
