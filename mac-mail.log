@@ -425,3 +425,488 @@ nates-imac.attlocal.net:49314->gh-in-f108.1e100.net:imaps
 nates-imac.attlocal.net:49378->sky400-2.mail.vip.bf2.yahoo.com:imaps
 92
 nates-imac.attlocal.net:49467->sky400-2.mail.vip.bf2.yahoo.com:imaps
+cwd
+/Users/nv/Library/Containers/com.apple.mail/Data
+txt
+/System/Applications/Mail.app/Contents/MacOS/Mail
+txt
+/Library/Preferences/Logging/.plist-cache.0OcjoC3V
+txt
+/usr/lib/dyld
+txt
+/usr/share/icu/icudt70l.dat
+txt
+/private/var/db/timezone/tz/2022a.1.0/icutz/icutz44l.dat
+txt
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/0/com.apple.LaunchServices.dv/com.apple.LaunchServices-3027-v2(a565c0eb~).csstore
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/SystemAppearance.car
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Aqua.car
+txt
+/System/Applications/Mail.app/Contents/Resources/Assets.car
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/FauxVibrantLight.car
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/VibrantLight.car
+txt
+/System/Library/CoreServices/CoreGlyphs.bundle/Contents/Resources/Assets.car
+txt
+/System/Library/Fonts/Helvetica.ttc
+txt
+/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/FauxVibrantDark.car
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/MessageWindow.nib
+txt
+/System/Library/Fonts/SFNS.ttf
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/VibrantDark.car
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Assets.car
+txt
+/private/var/db/mds/messages/501/se_SecurityMessages
+txt
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-shm
+txt
+/System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+txt
+/System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+txt
+/usr/lib/libobjc-trampolines.dylib
+txt
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.iconservices/store.index
+txt
+/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/UnknownFSObjectIcon.icns
+txt
+/System/Library/Accounts/UI/CalendarUIPlugin.bundle/Contents/MacOS/CalendarUIPlugin
+txt
+/System/Library/Extensions/AGXMetal13_3.bundle/Contents/Resources/ds.g13g
+txt
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.mail/com.apple.mail/com.apple.metal/16777235_322/functions.data
+txt
+/Library/Caches/com.apple.iconservices.store/9702483A-6E24-3747-9083-D482F21083D6.isdata
+txt
+/Users/nv/Library/Mail/V9/MailData/RemoteContentURLCache/Cache.db-shm
+txt
+/Library/Application Support/CrashReporter/SubmitDiagInfo.domains
+txt
+/System/Library/PrivateFrameworks/AccountsUI.framework/Versions/A/Resources/appleaccount.tiff
+txt
+/System/Library/PrivateFrameworks/AccountsUI.framework/Versions/A/Resources/google.tiff
+txt
+/System/Library/PrivateFrameworks/AccountsUI.framework/Versions/A/Resources/yahoo.tiff
+txt
+/Users/nv/Library/Mail/V9/MailData/ExternalUpdates.storedata-shm
+txt
+/System/Library/Address Book Plug-Ins/LocalSource.sourcebundle/Contents/MacOS/LocalSource
+txt
+/System/Library/Accounts/UI/GoogleAccountSettings.bundle/Contents/MacOS/GoogleAccountSettings
+txt
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-shm
+txt
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.mail/com.apple.mail/com.apple.metal/31001/libraries.data
+txt
+/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/Resources/com.apple.datadetectorscore.cache.urlifier.system
+txt
+/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/Resources/CorePhoneNumbers.ruleset
+txt
+/System/Library/Accounts/UI/ExchangeUIPlugin.bundle/Contents/MacOS/ExchangeUIPlugin
+txt
+/System/Library/Address Book Plug-Ins/DirectoryServices.sourcebundle/Contents/MacOS/DirectoryServices
+txt
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel-shm
+txt
+/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/Resources/tokruleLE.data
+txt
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-shm
+txt
+/System/Library/Address Book Plug-Ins/CardDAVPlugin.sourcebundle/Contents/MacOS/CardDAVPlugin
+txt
+/usr/share/langid/langid.inv
+txt
+/System/Library/Fonts/Menlo.ttc
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/DarkAqua.car
+txt
+/System/Applications/Mail.app/Contents/Resources/ThinProgress.car
+txt
+/System/Applications/Mail.app/Contents/Resources/ViewingPaneView.car
+txt
+/System/Library/Accounts/UI/iCloudUIPlugin.bundle/Contents/MacOS/iCloudUIPlugin
+txt
+/System/Library/Accounts/UI/ContactsAccountsUIPlugin.bundle/Contents/MacOS/ContactsAccountsUIPlugin
+txt
+/System/Library/CoreServices/CoreGlyphsPrivate.bundle/Contents/Resources/Assets.car
+txt
+/System/Library/Accounts/UI/RemoteManagementAccountSettings.bundle/Contents/MacOS/RemoteManagementAccountSettings
+txt
+/System/Library/Accounts/UI/EmailUIPlugin.bundle/Contents/MacOS/EmailUIPlugin
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/FunctionRowAppearance.car
+txt
+/System/Library/Fonts/SFCompact.ttf
+txt
+/System/Library/PrivateFrameworks/AOSUI.framework/Versions/A/Resources/Assets.car
+txt
+/System/Library/Accounts/UI/GameCenterAccountsUIPlugin.bundle/Contents/MacOS/GameCenterAccountsUIPlugin
+txt
+/System/Library/PrivateFrameworks/AccountsUI.framework/Versions/A/Resources/Assets.car
+txt
+/System/Library/CoreServices/Encodings/libCyrillicConverter.dylib
+txt
+/private/var/db/nsurlstoraged/dafsaData.bin
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/NSWindowController-B6m-2u-BSt.nib
+txt
+/System/Library/LinguisticData/Latn/Dict2.dat
+txt
+/System/Library/Fonts/LastResort.otf
+txt
+/System/Library/CoreServices/Encodings/libGreekConverter.dylib
+txt
+/System/Library/CoreServices/Encodings/libHebrewConverter.dylib
+txt
+/System/Library/Frameworks/AppKit.framework/Versions/C/Resources/Assets.car
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/EWSIMAPAccountInformationController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/POPAccountInformationController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/NoEmailChildAccountInformationController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/EWSMailboxBehaviorsController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/IMAPMailboxBehaviorsController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/POPMailboxBehaviorsController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/EWSServerSettingsController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/IMAPPOPServerSettingsController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/ParentAccountServerSettingsController.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/NSTabViewController-0jH-pc-5XU.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/PreferencesWindow.storyboardc/BlockedPreferences.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/RichTableRowView.nib
+txt
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Caches/com.apple.mail/Cache.db-shm
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/RichMessageCellView.nib
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/RichMessageChildCellView.nib
+txt
+/Library/Caches/com.apple.iconservices.store/9761AB08-323A-3D13-B76D-3041E44430FB.isdata
+txt
+/System/Library/LinguisticData/en/US/hyphenation.dat
+txt
+/System/Applications/Mail.app/Contents/Resources/Base.lproj/MessageViewController.nib
+txt
+/Library/Caches/com.apple.iconservices.store/19DDA414-AC92-3387-9235-574D8AB80D4E.isdata
+txt
+/System/Library/PrivateFrameworks/PersonaUI.framework/Versions/A/Resources/Assets.car
+txt
+/System/Applications/Mail.app/Contents/Resources/MessageView.car
+txt
+/System/Library/Extensions/AppleMetalOpenGLRenderer.bundle/Contents/MacOS/AppleMetalOpenGLRenderer
+txt
+/System/Library/Components/AudioCodecs.component/Contents/MacOS/AudioCodecs
+txt
+/Library/Caches/com.apple.iconservices.store/C8EC5DF6-DE8E-3197-836B-1D78C4CB9210.isdata
+txt
+/System/Library/LinguisticData/Latn/Dict1.dat
+txt
+/private/var/db/analyticsd/events.allowlist
+txt
+/System/Library/Frameworks/FileProvider.framework/OverrideBundles/CloudDocsFileProvider.bundle/Contents/MacOS/CloudDocsFileProvider
+txt
+/System/Library/Fonts/Keyboard.ttf
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Graphite.car
+txt
+/System/Library/Frameworks/FileProvider.framework/OverrideBundles/FileProviderOverride.bundle/Contents/MacOS/FileProviderOverride
+txt
+/Users/nv/Library/Mail/V9/3055FF44-AEC5-40F9-B77F-AA73EC10C35D/Myspace.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/9/3/Attachments/39078/2/Kayla.jpg
+txt
+/System/Library/Fonts/Supplemental/STIXGeneral.otf
+txt
+/System/Library/Fonts/LucidaGrande.ttc
+txt
+/System/Library/Fonts/Times.ttc
+txt
+/System/Library/Fonts/ZapfDingbats.ttf
+txt
+/System/Library/Fonts/PingFang.ttc
+txt
+/System/Library/Fonts/HelveticaNeue.ttc
+txt
+/System/Library/Fonts/SFCompactRounded.ttf
+txt
+/Users/nv/Library/Mail/V9/3055FF44-AEC5-40F9-B77F-AA73EC10C35D/Myspace.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/9/3/Attachments/39077/2/Kayla.jpg
+txt
+/System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/PlugIns/AirDrop.appex/Contents/Resources/Assets.car
+txt
+/System/Library/Frameworks/ContactsUI.framework/Versions/A/Resources/Assets.car
+txt
+/usr/share/germantok/german.index
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/5/Attachments/50779/3/Nathaniel Ian-David Vardell- 2345095-Online Joining Kit.pdf
+txt
+/System/Library/Frameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride
+txt
+/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/Resources/com.apple.datadetectorscore.cache.full.default.system
+txt
+/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99\xe3\x82\xb7\xe3\x83\x83\xe3\x82\xaf W3.ttc
+txt
+/Users/nv/Library/Mail/V9/3055FF44-AEC5-40F9-B77F-AA73EC10C35D/Myspace.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/9/3/Attachments/39079/2/100_3149.JPG
+txt
+/System/Library/Frameworks/QuickLookUI.framework/Versions/A/Resources/Assets.car
+txt
+/Users/nv/Library/Mail/V9/3055FF44-AEC5-40F9-B77F-AA73EC10C35D/Sent.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/9/3/Attachments/39200/2/Memo.m4a
+txt
+/Users/nv/Library/Mail/V9/3055FF44-AEC5-40F9-B77F-AA73EC10C35D/Sent.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/9/3/Attachments/39201/2/Memo.m4a
+txt
+/System/Library/Fonts/Supplemental/Khmer Sangam MN.ttf
+txt
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/DarkGraphite.car
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/6/Attachments/60169/6/20160618_173736.jpg
+txt
+/System/Library/Fonts/Apple Color Emoji.ttc
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/5/Attachments/50779/2/Nathaniel Ian-David Vardell-2345095-Agreement.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51093/2/img001.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/6/Attachments/61901/2/IMG_0596.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51099/4/Pre JPMC Assignment Statement.pdf
+txt
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/0/com.apple.LaunchServices.dv/com.apple.LaunchServices-3027-v2.csstore
+txt
+/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/PlugIns/SimulatorShareExtension.appex/Contents/Resources/Assets.car
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/6/Attachments/60169/5/20160618_173743.jpg
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/6/Attachments/61901/4/IMG_0597.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51099/2/Invention Assignment.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51093/4/JPMC NonDisclosure.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/6/Attachments/60169/2/20160618_173747.jpg
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51099/3/JPMC NonDisclosure.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51100/2/img001.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/7/Attachments/71343/2/2012NateTaxDocs.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/6/Attachments/60169/3/20160618_173832.jpg
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51093/5/Pre JPMC Assignment Statement.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/6/6/Attachments/66507/4/IMG_5871.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/5/Attachments/51093/3/Invention Assignment.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/0/6/Attachments/60169/4/20160618_173757.jpg
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/6/Attachments/61901/6/IMG_0595.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/6/6/Attachments/66507/2/IMG_5869.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/6/6/Attachments/66507/5/IMG_5872.JPG
+txt
+/System/Applications/Mail.app/Contents/PlugIns/MailShareExtension.appex/Contents/Resources/Assets.car
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/5/5/Attachments/55439/2/XXX - Joji.m4a
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/6/6/Attachments/66507/3/IMG_5870.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/7/Attachments/71342/2/2012NateTaxDocs.pdf
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/6/Attachments/61901/7/IMG_0522 (Edited).JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/6/Attachments/61901/3/IMG_0594.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/1/6/Attachments/61901/5/IMG_0593.JPG
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/5/5/Attachments/55421/2/Hideaway Pines.m4a
+txt
+/Users/nv/Library/Mail/V9/D52ACEC6-8E7C-4A09-91D0-82AB3B3C599F/[Gmail].mbox/All Mail.mbox/23C52665-69E0-4C2C-8FD2-9037950048F7/Data/8/6/Attachments/68409/2.2/10.mp4
+0
+/dev/null
+1
+/dev/null
+2
+/dev/null
+3
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.mail/com.apple.mail/com.apple.metal/16777235_322/functions.list
+4
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.mail/com.apple.mail/com.apple.metal/16777235_322/functions.data
+5
+/System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_stdlib.metallib
+6
+/System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_filters.metallib
+7
+/System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_stdlib_stitchable.metallib
+8
+/System/Library/Frameworks/CoreImage.framework/Versions/A/Resources/ci_filters_stitchable.metallib
+9
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.mail/com.apple.mail/com.apple.metal/31001/libraries.list
+10
+/private/var/folders/5s/wx10glc144vb00f1v30864bw0000gn/C/com.apple.mail/com.apple.mail/com.apple.metal/31001/libraries.data
+11
+/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+12
+/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+13
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb
+14
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-wal
+15
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-shm
+16
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+17
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-wal
+18
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-shm
+19
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb
+20
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-wal
+21
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+22
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-wal
+23
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel
+24
+25
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel
+26
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel-wal
+27
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel-shm
+28
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel
+29
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel-wal
+30
+/Users/nv/Library/Mail/V9/MailData/Envelope Index
+31
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-wal
+32
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-shm
+33
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Application Support/CloudKitMailConversationsFlags/CloudKitMirroringDataModel-wal
+34
+/Users/nv/Library/Mail/V9/MailData/Envelope Index
+35
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-wal
+36
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb
+37
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-wal
+38
+[ctl com.apple.netsrc id 6 unit 35]
+39
+/Library/Application Support/CrashReporter/SubmitDiagInfo.domains
+42
+->0x8b4cfe9627c83379
+43
+->0x8b4cfe9627c832b1
+44
+/Users/nv/Library/Mail/V9/MailData/Envelope Index
+45
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-wal
+46
+/Users/nv/Library/Mail/V9/MailData/ExternalUpdates.storedata
+47
+/Users/nv/Library/Mail/V9/MailData/ExternalUpdates.storedata-wal
+48
+/Users/nv/Library/Mail/V9/MailData/RemoteContentURLCache/Cache.db
+49
+nates-imac.attlocal.net:50115->17.57.156.28:imaps
+50
+/Users/nv/Library/Mail/V9/MailData/ExternalUpdates.storedata-shm
+51
+/Users/nv/Library/Mail/V9/MailData/Envelope Index
+52
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-wal
+53
+/Users/nv/Library/Mail/V9/MailData/RemoteContentURLCache/Cache.db-wal
+54
+/Users/nv/Library/Mail/V9/MailData/RemoteContentURLCache/Cache.db-shm
+55
+nates-imac.attlocal.net:50115->17.57.156.28:imaps
+56
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb
+57
+/Users/nv/Library/Mail/V9/MailData/RemoteContentURLCache/Cache.db
+58
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Saved Application State/com.apple.mail.savedState/data.data
+59
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Saved Application State/com.apple.mail.savedState/windows.plist
+60
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Saved Application State/com.apple.mail.savedState/window_3.data
+61
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Saved Application State/com.apple.mail.savedState/window_1.data
+62
+->0x8b4cfe96281886e1
+63
+/System/Library/Extensions/AppleMetalOpenGLRenderer.bundle/Contents/Resources/default.metallib
+64
+/System/Library/Extensions/AppleMetalOpenGLRenderer.bundle/Contents/Resources/PixelConverter.metallib
+65
+/Users/nv/Library/Mail/V9/MailData/Envelope Index
+66
+/Users/nv/Library/Mail/V9/MailData/Envelope Index-wal
+67
+/Users/nv/Library/Mail/V9/MailData/RemoteContentURLCache/Cache.db-wal
+68
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-wal
+69
+nates-imac.attlocal.net:50475->sky400-4.mail.vip.bf2.yahoo.com:imaps
+70
+nates-imac.attlocal.net:50353->ga-in-f108.1e100.net:imaps
+71
+nates-imac.attlocal.net:50116->17.57.156.28:imaps
+72
+nates-imac.attlocal.net:50116->17.57.156.28:imaps
+73
+nates-imac.attlocal.net:50353->ga-in-f108.1e100.net:imaps
+75
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb
+76
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-wal
+77
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Caches/com.apple.mail/Cache.db
+78
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+79
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-wal
+80
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+81
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-wal
+82
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb
+83
+/Users/nv/Library/Application Support/AddressBook/Sources/96D78AB9-B966-47CD-8004-B8CC7BB793F2/AddressBook-v22.abcddb-wal
+84
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+85
+/Users/nv/Library/Application Support/AddressBook/AddressBook-v22.abcddb-wal
+86
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Caches/com.apple.mail/Cache.db-wal
+88
+nates-imac.attlocal.net:50475->sky400-4.mail.vip.bf2.yahoo.com:imaps
+90
+/Users/nv/Library/Containers/com.apple.mail/Data/Library/Caches/com.apple.mail/Cache.db-shm
