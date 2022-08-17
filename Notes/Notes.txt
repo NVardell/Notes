@@ -214,6 +214,11 @@
         j - filter the archive through bzip2
 • Unpack/extract/uncompress files (Ex. *.tar.gz → *.tar (Removes '.gz'))
     gunzip <.tar.gz file>
+• ZIP Files
+    + Compress a Directory Full of Files into a ZIP File
+        zip -r FILE.zip DIRECTORY/
+    + Uncompress a ZIP file Into the Current Directory
+        unzip FILE.zip
 • Send email
     + Insert file contents into body of email
         mail -s "EMAIL SUBJECT" email@address.com < myAwesomeFile.txt
