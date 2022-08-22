@@ -89,8 +89,13 @@
         ##   Using exec flag w/ find command 
         ##      & stringifying conditional bash command
         ##
-        We could also use the -exec parameter of the find command, but then, we’d need to execute our conditional statement with the bash or sh command:
-find . -type f -not -name "*.*" -exec bash -c 'if [ $(file --mime-type -b {}) == "image/jpeg" ]; then mv {} {}.jpg; fi;' \;
+                find . -type f -not -name "*.*" -exec bash -c \
+                'if [ $(file --mime-type -b {}) == "image/jpeg" ]; then mv {} {}.jpg; fi;' \;
+        ##
+        ## Notes
+        ##
+        ##   Dry run before 
+        ##
 If we’d like to perform a dry run to make sure our command will do what we intend to, we can simply substitute the mv command with the echo command to print old and new filenames.
 
 
