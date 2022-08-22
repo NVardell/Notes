@@ -75,7 +75,7 @@
 ##
 ##      4b. Solve problems simultaneously
 ##
-        ## 
+        ##
         ## Option #1
         ##
         ##   Conditional while loop to iterate over the files.
@@ -83,7 +83,12 @@
                 find . -type f -not -name "*.*" | while read FILE; 
                 do if [ $(file --mime-type -b "$FILE") == "image/jpeg" ]; 
                 then mv "$FILE" "$FILE".jpg; fi; done;
-
+        ##
+        ## Option #2
+        ##
+        ##   Using exec flag w/ find command 
+        ##      & stringifying conditional bash command
+        ##
         We could also use the -exec parameter of the find command, but then, we’d need to execute our conditional statement with the bash or sh command:
 find . -type f -not -name "*.*" -exec bash -c 'if [ $(file --mime-type -b {}) == "image/jpeg" ]; then mv {} {}.jpg; fi;' \;
 If we’d like to perform a dry run to make sure our command will do what we intend to, we can simply substitute the mv command with the echo command to print old and new filenames.
