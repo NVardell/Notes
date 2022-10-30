@@ -1,3 +1,11 @@
+##
+##  New Found Laziness @ Work
+##
+alias cn="start https://github.com/NVardell/Notes"  # Check Notes Repo
+alias gb="git branch --show-current"                # Get Branch Name
+alias gpnb="git push --set-upstream origin $gb"     # Git Push New Branch
+
+
 # Pure Laziness
 alias c="clear"
 alias x="exit"

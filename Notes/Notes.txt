@@ -351,14 +351,14 @@
     - RestoreHealth option to scan and repair common issues automatically.
         DISM /Online /Cleanup-Image /RestoreHealth
 • SFC (System File Checker) tool for repairing common Windows files and system structures.
+    - It should be used before running DISM.
     - SFC will scan the integrity of all protected operating system files, including those that are not on your hard drive. 
-    It should be used before running DISM.
-    - Scan all protected system files, and replace corrupted files with a cached copy that is located in a compressed 
-    folder at %WinDir%\System32\dllcache.
-        sfc /scannow
+    - Scans all protected system files, and replace corrupted files with a cached copy that is located in a compressed 
+      folder at %WinDir%\System32\dllcache.
+            sfc /scannow
     - Copy SFC log to txt doc on Desktop
-        findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\cbs_sfc_scan.log"
-        findstr /c:"[SR]" C:\Windows\Logs\CBS\CBS.log > ~\OneDrive\Desktop\cbs_sfc_scan.log
+            findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\cbs_sfc_scan.log"
+            findstr /c:"[SR]" C:\Windows\Logs\CBS\CBS.log > ~\OneDrive\Desktop\cbs_sfc_scan.log
 • Disk Check
     - Repair Hard Drive Errors. Repairs will automatically start on hard drive, then asked to restart your device.
         chkdsk/f C:
@@ -379,7 +379,7 @@
     kind:Directory 2021
     kind:Image
     kind:Video
-• Script Execution PolicIES
+• Script Execution Policies
     - Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
     - Policies
         EXECUTION POLICY    GROUP POLICY
