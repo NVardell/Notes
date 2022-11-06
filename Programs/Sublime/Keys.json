@@ -39,7 +39,7 @@
     
     //  EDITING
     //      Case Convert - Title Case
-    { "keys": ["ctrl+alt+t"], "command": "title_case" },
+    { "keys": ["ctrl+k", "ctrl+t"], "command": "title_case" },
     //      Delete Current Line 
     { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
     //      Remove Duplicate Lines
@@ -57,7 +57,9 @@
     { "keys": ["ctrl+alt+b"], "command": "toggle_bookmark" }, { "keys": ["ctrl+shift+b"], "command": "prev_bookmark" },
     //      Go to File Location in Project Sidebar
     { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
-    
+    //      Open Current File Location in Windows Explorer Window
+    { "keys": ["ctrl+alt+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+
     //  CODE VIEWS
     //      Fold / Unfold All blocks of code in file (Main Use: Removing Random Files(& Contents) from Find Results) 
     { "keys": ["alt+u"], "command": "unfold_all" },
@@ -72,5 +74,4 @@
     { "keys": ["shift+f2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
     //      Expand Selection to Current Scope
     { "keys": ["ctrl+alt+shift+s"], "command": "expand_selection", "args": {"to": "scope"} },
-
 ]
