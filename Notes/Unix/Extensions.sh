@@ -99,17 +99,10 @@
         ##      If we’d like to perform a dry run to make sure our command 
         ##      will do what we intend, we can print old/new filenames
         ##      using the `echo` command, in-place of the `mv` command.
-                    1. Option #1
+        ##          1. Option #1
                         find . -type f -not -name "*.*" -exec bash -c \
-                        'if [ $(file --mime-type -b {}) == "image/jpeg" ]; then mv {} {}.jpg; fi;' \;
-
-
-
-##
-##  5. Summary
-##
-In this tutorial, we learned how to use Bash to precisely add extensions to the extensionless files. 
-We considered various possible pitfalls like files already having the extension, 
-files of the wrong type, or nested directories.
-
-
+                        'if [ $(file --mime-type -b {}) == "image/jpeg" ]; then echo {} {}.jpg; fi;' \;
+        ##          2. Option #2
+                        find . -type f -not -name "*.*" | while read FILE; 
+                        do if [ $(file --mime-type -b "$FILE") == "image/jpeg" ]; 
+                        then echo "$FILE" "$FILE".jpg; fi; done;
