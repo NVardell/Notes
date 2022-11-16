@@ -14,10 +14,16 @@
     //          https://packagecontrol.io/packages/HTMLBeautify 
     { "keys": ["ctrl+alt+shift+f"], "command": "html_beautify" },
 
-    //  SQL BEAUTIFIER
-    //      Beautify SQL Code
-    //      Never Really Use.  Migrating to open Settings instead.
-    // { "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },    
+    //  SBS COMPARE
+    //      Side-by-Side Compare
+    //      Default maps, but I always forget.
+    { "keys": ["alt+n"], "command": "sbs_next_diff" },
+    { "keys": ["alt+p"], "command": "sbs_prev_diff" },
+
+    //  TERMINUS TERMINAL
+    //      Overrides default Sublime Terminal; users choice.
+    //        ~ Open Bash tab at current file path
+    { "keys": ["alt+t"], "command": "terminus_open", "args":{"cwd":"${file_path:${folder}}"}},
 
 
 
@@ -57,7 +63,7 @@
     { "keys": ["ctrl+alt+b"], "command": "toggle_bookmark" }, { "keys": ["ctrl+shift+b"], "command": "prev_bookmark" },
     //      Go to File Location in Project Sidebar
     { "keys": ["ctrl+alt+f"], "command": "reveal_in_side_bar"},
-    //      Open Current File Location in Windows Explorer Window
+    //      Open Windows Explorer Window at Editor File's Location
     { "keys": ["ctrl+alt+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
 
     //  CODE VIEWS

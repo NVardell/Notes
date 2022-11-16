@@ -15,14 +15,15 @@
     "wrap_width":160,
 
     // BOOLEAN VALUES
-    "always_show_minimap_viewport": false,
-    "bold_folder_labels":           true,
-    "draw_indent_guides":           false,
-    "line_numbers":                 true,
-    "spell_check":                  true,
-    "translate_tabs_to_spaces":     true,
-    "update_check":                 true,
-    "word_wrap":                    false,
+    "bold_folder_labels":            true,
+    "highlight_whitespaces_enabled": true,
+    "line_numbers":                  true,
+    "spell_check":                   true,
+    "translate_tabs_to_spaces":      true,
+    "update_check":                  true,
+    "always_show_minimap_viewport":  false,
+    "draw_indent_guides":            false,
+    "word_wrap":                     false,
 
     // MATERIAL VALUES
     "material_theme_accent_scrollbars": true, // Enable accent color for scrollbars
@@ -41,6 +42,7 @@
 
     // STRING VALUES
     "overlay_scroll_bars": "enabled",
+    "draw_unicode_white_space": "all",
     "theme": "Material-Theme-Palenight.sublime-theme",
     "color_scheme": "Packages/User/My Schemes/My Material Palenight v2.tmTheme",
     
@@ -48,4 +50,6 @@
     "ignored_packages": [ "Vintage" ],
     "indent_guide_options": [ "draw_normal", "draw_active" ],   // Highlight active indent
     "font_options": [ "gray_antialias", "subpixel_antialias" ], // On retina Mac & Windows
+    "index_exclude_patterns": ["node_modules", ".git", ".idea"],
+    "folder_exclude_patterns": ["node_modules", ".git", ".idea"]
 }

@@ -1,10 +1,12 @@
 ##
 ##  New Found Laziness @ Work
 ##
-alias cn="start https://github.com/NVardell/Notes"  # Check Notes Repo
+##      GIT
 alias gb="git branch --show-current"                # Get Branch Name
 alias gpnb="git push --set-upstream origin $gb"     # Git Push New Branch
-
+##      RANDOM
+alias gap="pwd -W"                                  # Get Absolute Path
+alias cn="start https://github.com/NVardell/Notes"  # Check Notes Repo
 
 # Pure Laziness
 alias c="clear"
