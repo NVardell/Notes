@@ -313,6 +313,11 @@
     git init
 • Push all branches to remote repo
     git push --all origin
+• Rename Local Branch After Updating name on Remote (Ex. master ⇛ main)
+    git branch -m master main
+    git fetch origin
+    git branch -u origin/main main
+    git remote set-head origin -a
 
 
 
@@ -365,7 +370,7 @@
 • Network Stats
     - Find app running on specific port
         netstat -ano | findstr :3001
-    - Kill Process On that Port
+    - asKill Process On that Port
         taskkill /PID <yourID> /F
     - V2 ~ Kill Process Listening on Port 53
         kill $(lsof -t -i:53)
