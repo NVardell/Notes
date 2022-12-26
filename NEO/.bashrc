@@ -17,7 +17,7 @@
 ##
 alias hg="history | grep -in "  # History Grep
 alias gh="hg"
-alias pft="file --mime-type ./*"    # Print File Type
+alias pft="file --mime-type ./*"    # Print File Types
 alias ftf="file --mime-type -b ./* > 'file-types.md'" # File Type File
 alias cn="start https://github.com/nvardell/notes"
 
