@@ -58,15 +58,6 @@ alias mci="mvn clean install"
 
 
 
-##
-##  Yarn ~ Shenanigans
-##
-alias ygl="yarn global list"
-alias ygu="yarn global upgrade"
-alias yga="yarn global add"
-alias yui="ncu -i -u --color --packageFile package.json"  # Yarn Upgrade Interactive
-
-
 
 ##
 ##  GIT  -  Basic Commands
@@ -144,32 +135,6 @@ alias royal="clone https://github.com/NVardell/Royal.git"
 alias validate="clone https://github.com/NVardell/Validate.git"
 
 
-
-# NPM - Shorthand NPM Commands
-alias no="npm "
-
-# Start npm (Runs 'start' prop in 'scripts' object, otherwise 'node server.js')
-alias nos="no start"
-
-# Install packages listed on command line
-alias noi="no install "
-alias noig="no install -g "
-alias noid="noig npm-check-updates create-react-app"    # Install Default Packages
-
-# LOCAL PROJECT
-#   Display outdated packages
-alias noo="no outdated"
-#   Check for unused/missing dependencies in package.json
-alias nodc="npx depcheck"
-#   Update package.json with new package versions (Requires npm-check-updates.)
-alias nou="ncu -u --packageFile package.json"
-
-# GLOBAL
-#   Update npm to latest version
-alias uno="noi npm@latest -g"
-#   Update all packages
-#   Display outdated packages
-alias noog="noo -g --depth=0"
 
 
 # MISC - Project / Code Cleanup
