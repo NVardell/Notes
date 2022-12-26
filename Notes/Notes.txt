@@ -313,11 +313,13 @@
     git init
 • Push all branches to remote repo
     git push --all origin
-• Rename Local Branch After Updating name on Remote (Ex. master ⇛ main)
+• Update Local Clone Default Origin Branch Name. (Ex. master ⇛ main)
     git branch -m master main
     git fetch origin
     git branch -u origin/main main
     git remote set-head origin -a
+
+    
 
 
 
