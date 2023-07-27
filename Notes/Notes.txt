@@ -1,4 +1,14 @@
 /**********************************************************************************************************************
+************************************************      COPY/PASTE      *************************************************
+***********************************************************************************************************************/
+• 
+• 
+• 
+
+
+
+
+/**********************************************************************************************************************
 ***************************************************      TERMS      ***************************************************
 ***********************************************************************************************************************/
 • TTF: TrueType Font
@@ -11,41 +21,35 @@
 ***************************************************      NOTES      ***************************************************
 ***********************************************************************************************************************/
 • Emojis
-      - ☁
-      - ⚡️
-      - ⛅
-      - ⛈
-      - 👑
-      - 💰
-      - 😂
-      - 😭
-      - 🤷🏼
-      - 🥂
-      - 🥳
-      - 🍦
-      - 😎
-      - 🦄
+      - ✔️ ✅ ℹ⚠️❌
+      - 💔 ❤ 🔥 💯
+      - ☁ ⚡️ ⛅ ⛈
+      - 🤦🏽‍ 🙌🏽 🤞🏽 👍🏽 👍 👎🏽 👌🏽
+      - ☠ 👿 😂 🤓👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯
+      - 🚘 ✈ 🎢 🖥️ 🧩 🍿 🎄 👑 💡 💰 🍎 🥂 🍕 & 🍌🍞
 • Symbols
-      - ° - Temp
+      - ∞
+      - ° - Degrees
       - ®
       - ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
-      - Ω k
+      - Ω
       - ⇑
-      - ↓ ↯ ⇓
       - → ⇀ ⇢ ⇾ ⇝ ⇥ ↠ ⇸ ⇻ ⇴ ⇰ ⇏ ⇒ ⇛
-      - ∞
+      - ↓ ↯ ⇓
       - ≠ ≈
       - ≤ ≥
       - ✓
-      - ♥ ♡
+      - ♥ ♡ ❥
       - • ○
       - ★ ☆
+      - ☐ ☑ ☒
       - ■ □ ◆ ◇
       - ▴ ▵ ▲ △ ▶ ▷
-      - ☐ ☑ ☒
       - ⚥ (Undecided)
       - ♀ (Female (â™€))
       - ♂ (Male (â™))
+      - • ‣ ⁃ ⁌ ⁍ ∙ ○ ● ◘ ◦ ⦾ ⦿
+      - ☙ ❧
 • Extensions
     + .pub = Public Key File (SSH)
 • Environment Variables
@@ -67,22 +71,110 @@
 
 
 
+/**********************************************************************************************************************
+***************************************************      COLORS      **************************************************
+***********************************************************************************************************************/
+• BASH
+    + Foreground
+        - 128,255,128
+        - 0,191,191
+• SUBLIME
+    + Background
+        - (Old) #292D3E ~ 
+        - (New) #161821 ~ 22, 24, 33
+    + Bottom Toolbar
+        - (Old BG) #2a2d3e ~ 42,45,62
+• WEBSTORM
+    + Tear Line (FG) ~ #2F334D ⇛ #2F4D4A ⇛ #FFD88C
+    + Teal Line Selection (FG) ~ #444A73 ⇛ #5E4473 ⇛ #BAFF8C
+    + Indent Guide (BG) ~ #444A73 ⇛ #574473 ⇛ #8CB4FF
+    + Indent Guide Selected (BG) ~ #444A73 ⇛ #447371 ⇛ #7EDBD9
+• Fun
+    - #BAFFA7
+    - #BAFFAF
+    - #F1FCEF
+    - #DDF8D7
+    
+• Decal
+    - Navy Background  - #183C66
+    - Orange Triangles - #FAA619
+    - Accent           - #C4494F
+• Personal Default Putty Colors
+    - FG = 181, 230, 29
+    - BG = 50, 54, 57
+• Other
+    - Poke Table Header Green - 80, 192, 120
+• IntelliJ
+    - Material Moonlight
+        + Caret/Cursor     - #4FD6BE
+        + Caret/Cursor Row - #2F334D
+        + White-spaces     - #828BB8
+        + Text Highlight   - #444A73
+            - Generated Color Palette Scheme
+                #895B8C  #757687  #C25450
+                #CD6C8C  #00BEBB  #2A324B
+                #FD8C7A  #C8CCFD
+                #FFBE67  #DBEFEE
+                #F9F871  #348B88
+                #7D6497  #6CFACD
+                #BD7DB2  #21C197
+                #DD8ABC  #008A64
+                #767BA7  #708AF4
+                #A9AABC  #454655
+
+
+
+
+/**********************************************************************************************************************
+***************************************************      LINKS      ***************************************************
+***********************************************************************************************************************/
+• License
+    + 
+• Proxies
+    + 
+
+
+
 
 /**********************************************************************************************************************
 **************************************************      HOW-TO      ***************************************************
 ***********************************************************************************************************************/
 • Generate SSH Key
     1. Run Key Generation Command (Adding Email Makes it easier to identify keys when there are multiple.)
+        ssh-keygen -t ed25519 -C "nvardell@gmail.com"
+
+        // For Legacy Systems that do not support the Ed25519 Algorithm
         ssh-keygen -t rsa -b 4096 -C "nvardell@gmail.com"
     2. Hit 'Enter' Key 3 times to use default file name, location, & no password.
-• Copy Public SSH Key to Clipboard
-    1. Run command below
-        clip < ~/.ssh/id_rsa.pub
+        - This creates a new SSH key, using the provided email as a label.
+        - Default file location: /c/Users/NV/.ssh/id_ed25519
 • Add SSH Private Key to SSH Agent
+    + Notes
+        - The SSH agent manages your SSH keys and remembers your passphrase.
+        - If your key has a passphrase and you don't want to enter the passphrase every time you use 
+          the key, you can add your key to the SSH agent.
     1. Start SSH Agent in the background (Should print ProcessID after execution.)
         eval $(ssh-agent -s)
     2. Run SSH Add Command below. (Requires SSH Agent to be Running. Else error message appears.)
+        ssh-add ~/.ssh/id_ed25519
+
+        // Legacy
         ssh-add ~/.ssh/id_rsa
+• Copy Public SSH Key to Clipboard
+    1. Run command below
+        clip < ~/.ssh/id_ed25519.pub
+
+        // Legacy
+        clip < ~/.ssh/id_rsa.pub
+ Add SSH Key to GitHub
+    1. Copy Public SSH Key
+        clip < ~/.ssh/id_ed25519.pub
+    2. Open browser to Github
+        start https://github.com/settings/ssh/new
+    3. Enter SSH Key Title
+        ex. Work Laptop
+    4. Paste Public Key copied in Step 1
+    5. Click 'Add SSH Key' 
 • Add SSH Key to SourceTree
     1. Open SourceTree ⇒ Tools ⇒ Create or Import SSH Keys
     2. Conversions ⇒ Import Key ⇒ Select 'id_rsa' file
@@ -102,7 +194,6 @@
             On Error Resume Next
             URL = rng.Hyperlinks(1).Address
             End Function
-
     4. Use new Macro like any function
         Ex.
             =URL(A2)
@@ -225,6 +316,9 @@
     + Insert Grep results into the body of an email
         grep -R 'FIND ME' /path/to/dir/and/files/toSearch/*log | mail -s 'Grep Results' email@address.com
 • Find
+    + Past uses
+        - Find & count files with specific name
+            find . -maxdepth 3 -type f -name ESPhar* | wc -l
     + Flags
         -exec command ;
             Executes the specified command on the 'found' files.
@@ -272,14 +366,19 @@
 • Vim
     + Save & Quit
         :wq
+• Tail
+    + Tail multiple log files
+        tail -fn 20 /path/to/log/file.log /path/to/log/file/file.log 
 • Misc.
-    + netstat -a | more    
-
-
-
-
-
-
+    + Reset/clear/empty old log file by setting the size of the file to 0.
+            truncate -s 0 logfile
+    + Display window dimensions in browser console
+            window.innerWidth + ' x ' + window.innerHeight
+    + Move files between remote server & local
+        - Remote ⇰ Local
+                scp c7f7q8@genesys@SERVER@cyberarkpsmp:/opt/path/to/file.json ~/Desktop
+        - Local ⇰ Remote
+                scp /Users/c7f7q8/Documents/Bot/config.json c7f7q8@genesys@SERVER@cyberarkpsmp:/opt/path/to/directory/
 
 
 
@@ -327,14 +426,21 @@
 /**********************************************************************************************************************
 ********************************************      WINDOWS SHENANIGANS      ********************************************
 ***********************************************************************************************************************/
+• Excel
+    + Date Formats
+        - MMM.d ~ h:mm AM/PM       Mar.31 ~ 5:27 PM
+        - MMM.d ~ ddd              Apr.26 ~ Tue
+    + Rename Table / Find Table Name
+        1. Select any Cell Within the Table
+        2. Go to...  Table Tools > Design > Properties > Table Name (Top Left Corner)
 • Check environment variable value
     echo %JAVA_HOME%
 • Add to PATH
     set PATH=%PATH%;c/path/to/exe
 • Create a redirect between two folders (Used for iTunes backup to store on external drive instead of filling C Drive.)
-    - General Command
+    + General Command
         MkLink /J "%AppData%\Apple Computer\MobileSync\Backup" "I:\MobileSync\Backup"
-    - Steps
+    + Steps
         1. Create new destination directory where Backups will reside
         2. Cut the existing Backup directory & paste in newly created directory
         3a. Force iTunes to look for Backups in the new directory, run:
@@ -344,37 +450,37 @@
 • Magically find a missing drive when windows can't (Found my I:\ Drive at work when LVDI failed to find it.)
     subst I: %USERPROFILE%\Scratch
 • Windows 10 Registry Startup Programs Location`
-    - Open Registry = Windows+R & regedit
-    - Location in Registry Editor
+    + Open Registry = Windows+R & regedit
+    + Location in Registry Editor
         HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-    - Above auto navigated to location below
+    + Above auto navigated to location below
         Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 • SFC (System File Checker) tool for repairing common Windows files and system structures.
-    - ⭐⭐⭐ It should be used before running DISM.
-    - SFC will scan the integrity of all protected operating system files, including those that are not on your hard drive. 
-    - Scans all protected system files, and replace corrupted files with a cached copy that is located in a compressed 
+    + ⭐⭐⭐ It should be used before running DISM.
+    + SFC will scan the integrity of all protected operating system files, including those that are not on your hard drive. 
+    + Scans all protected system files, and replace corrupted files with a cached copy that is located in a compressed 
       folder at %WinDir%\System32\dllcache.
             sfc /scannow
-    - Copy SFC log to txt doc on Desktop
+    + Copy SFC log to txt doc on Desktop
             findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\cbs_sfc_scan.log"
             findstr /c:"[SR]" C:\Windows\Logs\CBS\CBS.log > ~\OneDrive\Desktop\cbs_sfc_scan.log
-• DISM: Scan Windows Image for file corruptions
-    - CheckHealth option with the Deployment Image Servicing and Management command tool allows you quickly determine 
+• DISM ~ Scan Windows Image for file corruptions
+    + CheckHealth option with the Deployment Image Servicing and Management command tool allows you quickly determine 
       if there are any corruptions inside the local Windows 10 image.
         DISM /Online /Cleanup-Image /CheckHealth
-    - ScanHealth option performs a more advanced scan to determine if the OS image has any problems.
+    + ScanHealth option performs a more advanced scan to determine if the OS image has any problems.
         DISM /Online /Cleanup-Image /ScanHealth
-    - RestoreHealth option to scan and repair common issues automatically.
+    + RestoreHealth option to scan and repair common issues automatically.
         DISM /Online /Cleanup-Image /RestoreHealth
 • Disk Check
-    - Repair Hard Drive Errors. Repairs will automatically start on hard drive, then asked to restart your device.
+    + Repair Hard Drive Errors. Repairs will automatically start on hard drive, then asked to restart your device.
         chkdsk/f C:
 • Network Stats
-    - Find app running on specific port
+    + Find app running on specific port
         netstat -ano | findstr :3001
-    - asKill Process On that Port
+    + asKill Process On that Port
         taskkill /PID <yourID> /F
-    - V2 ~ Kill Process Listening on Port 53
+    + V2 ~ Kill Process Listening on Port 53
         kill $(lsof -t -i:53)
 • Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
     certutil -hashfile MEUpdateTool.exe MD5
@@ -386,42 +492,44 @@
     kind:Directory 2021
     kind:Image
     kind:Video
+• Disk Defrag Optimization
+    + Defrag C Drive without admin permissions, HA! 😎
+        [POWERSHELL] Optimize-Volume -DriveLetter C -ReTrim -Verbose
 • Script Execution Policies
-    - Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
-    - Policies
-        EXECUTION POLICY    GROUP POLICY
-        -----------------------------------------------------------------
-        Unrestricted        Allow all scripts
-        RemoteSigned        Allow local scripts and remote signed scripts
-        AllSigned           Allow only signed scripts
-        -----------------------------------------------------------------
-    Managing the execution policy with PowerShell
-    The following command gets the effective execution policy:
+    + Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+    + Policies
+            EXECUTION POLICY    GROUP POLICY
+            -----------------------------------------------------------------
+            Unrestricted        Allow all scripts
+            RemoteSigned        Allow local scripts and remote signed scripts
+            AllSigned           Allow only signed scripts
+            -----------------------------------------------------------------
+    + Managing the execution policy with PowerShell
+        - The following command gets the effective execution policy:
             Get-ExecutionPolicy
-    To get all of the execution policies that affect the current session and display them in precedence order:
+        - To get all of the execution policies that affect the current session & display in precedence order:
             Get-ExecutionPolicy -List
-    The result looks similar to the following sample output:
-            Scope ExecutionPolicy
-            ----- ---------------
-            MachinePolicy       Undefined
-               UserPolicy       Undefined
-                  Process       Undefined
-              CurrentUser    RemoteSigned
-             LocalMachine       AllSigned
-        - In this case, the effective execution policy is RemoteSigned because the execution policy for the current user takes precedence over the execution policy set for the local computer.
+                + The result looks similar to the following sample output:
+                        Scope ExecutionPolicy
+                        ----- ---------------
+                        MachinePolicy       Undefined
+                           UserPolicy       Undefined
+                              Process       Undefined
+                          CurrentUser    RemoteSigned
+                         LocalMachine       AllSigned
+                + In this case, the effective execution policy is RemoteSigned because the execution policy
+                  for the current user takes precedence over the execution policy set for the local computer.
+        - Get execution policy for CurrentUser scope
+                Get-ExecutionPolicy -Scope CurrentUser
+        - To change your execution policy
+                Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
+        - Update Execution Policy to allow running scripts from Windows PowerShell
+                Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+        - remove the execution policy for all the users of the local computer
+                Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope LocalMachine
+        - To remove the execution policy for a Scope
+                Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
 
-    To get the execution policy set for a particular scope, use the Scope parameter of Get-ExecutionPolicy.
-    For example, the following command gets the execution policy for the CurrentUser scope:
-            Get-ExecutionPolicy -Scope CurrentUser
-
-    - To change your execution policy
-            Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
-    - Update Execution Policy to allow running scripts from Windows PowerShell
-            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-    - remove the execution policy for all the users of the local computer
-            Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope LocalMachine
-    - To remove the execution policy for a Scope
-            Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
 
 
 
@@ -434,55 +542,14 @@
 
 
 
-
 /**********************************************************************************************************************
-***************************************************      COLORS      **************************************************
+*******************************************      JETBRAINS SHENANIGANS      *******************************************
 ***********************************************************************************************************************/
-• Fun
-    - #BAFFA7
-    - #BAFFAF
-    - #F1FCEF
-    - #DDF8D7
-    
-• Decal
-    - Navy Background  - #183C66
-    - Orange Triangles - #FAA619
-    - Accent           - #C4494F
-• Personal Default Putty Colors
-    - FG = 181, 230, 29
-    - BG = 50, 54, 57
-• Other
-    - Poke Table Header Green - 80, 192, 120
-• IntelliJ
-    - Material Moonlight
-        + Caret/Cursor     - #4FD6BE
-        + Caret/Cursor Row - #2F334D
-        + White-spaces     - #828BB8
-        + Text Highlight   - #444A73
-            - Generated Color Palette Scheme
-                1. #895B8C
-                2. #CD6C8C
-                3. #FD8C7A
-                4. #FFBE67
-                5. #F9F871
-                6. #7D6497
-                7. #BD7DB2
-                8. #DD8ABC
-                9. #767BA7
-                10. #A9AABC
-                11. #757687
-                12. #00BEBB
-                13. #C8CCFD
-                14. #DBEFEE
-                15. #348B88
-                16. #6CFACD
-                17. #21C197
-                18. #008A64
-                19. #708AF4
-                20. #454655
-                21. #C25450
-                22. #2A324B
-
+• WEBSTORM / INTELLIJ
+    - Plugins
+        + Foldable
+            * Ignore List
+                .husky deployments dockercopy .dockerignore codeowners dockerfile package-lock.json jenkinsfile .npmrc .prettier* .env .gitignore yarn.lock
 
 
 
