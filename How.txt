@@ -1,0 +1,45 @@
+/**********************************************************************************************************************
+***************************************************      HOW TO      **************************************************
+***********************************************************************************************************************/
+• Fix User Home for Bash (Why would I want my files on some random U drive & not my local?!?! )
+    1. Open System Environment Variables
+    2. Click New to Create a New User Environment Variable
+    3. User Environment Variable Popup Values...
+        + Variable Name = HOME
+        + Variable Value = C:\Users\USER_ID
+    4. Re-open Bash & Run the following Command...
+        cd $HOME; pwd
+    5. Output should be similar to...
+        NV@NV MINGW64 ~
+        $ cd $HOME; pwd
+        /c/Users/C7F7Q8
+• Generate SSH Key & Add To Agent & Add to GitHub
+    1. Open bash & Run:
+        ssh-keygen -t ed25519 -C <email@email.com>
+    2. Hit Enter a few times, accepting default location & phrase
+    3. Run Command to Add Key to SSH Agent
+        ssh-add ~/.ssh/id_ed25519
+    4. Go to: https://github.com/settings/ssh/new
+    5. Run Below Command to Copy SSH Key
+        clip < ~/.ssh/id_ed25519.pub
+    6. Paste Key on Github & Click 'Add SSH Key'
+• Update GitHub Username (4.6.22 ~ Only Semi-Worked.  Display Name still reverts back to ID.)
+    + The default username when logging into GitHub is your LAN ID. 
+        - LAN ID is a terrible value to use as the commit username.
+    1. Go to https://git.express-scripts.com/settings/admin
+    2. If prompted, login; then Click 'Change Username' Button
+        - The recommended username is first initial and last name. 
+        - Example: John Smith ⇒ jsmith OR john-smith
+            + Depending on what usernames are available.
+    3. You will see scary language about something. Ignore it and just click the I understand button.
+• Install Cloud Foundry (CF) CLI on Windows
+    1. Go to Cloud Foundry Webpage
+        https://docs.cloudfoundry.org/cf-cli/install-go-cli.html
+    2. Ctrl+F 'Binaries' & Follow Link for Latest Version
+        https://github.com/cloudfoundry/cli/wiki/V8-CLI-Installation-Guide#installers-and-compressed-binaries
+    - OR - 
+    1. Install using Choco (https://community.chocolatey.org/packages/cloudfoundry-cli)
+        choco install cloudfoundry-cli
+• 
+• 
+
