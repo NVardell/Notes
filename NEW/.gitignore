@@ -1,0 +1,95 @@
+#######################################    PROPERTIES
+local.properties
+
+
+
+#######################################    JAVA
+*.class
+*.ear
+*.jar
+*.log
+*.nar
+*.rar
+*.tar.gz
+*.war
+# *.zip
+
+
+
+#######################################    MAVEN
+!/.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+dependency-reduced-pom.xml
+pom.xml.*
+target/
+.mvn/
+
+
+
+#######################################    IDE
+#####    Eclipse
+*.bak
+*.nib
+*.swp
+*.tmp
+bin/
+tmp/
+.settings/
+.apt_generated
+.classpath
+.factorypath
+.metadata
+.project
+.springBeans
+.sts4-cache
+
+#####    IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+.idea_modules/
+out/
+
+#####    NetBeans
+/.nb-gradle/
+/build/
+/dist/
+/nbbuild/
+/nbdist/
+/nbproject/private/
+
+#####    VS Code
+!/app/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/*
+*.code-workspace
+
+
+
+#######################################    NODE
+node_modules
+*.tgz
+.npm
+build
+
+
+
+#######################################    MISC.
+._*
+# *.msi
+*.lnk
+*.stackdump
+~$*.xlsx
+.DS_Store
+# BlueJ files
+*.ctxt
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+Shh/

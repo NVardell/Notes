@@ -1,0 +1,12 @@
+---
+applications:
+  - name: xxx-xxx
+    random-route: true
+    path: ../target/xxx-xxx.jar
+    buildpacks: [ java_buildpack_2022-1 ]
+    env:
+      spring:
+        application:
+          name: xxx-xxx
+        profile:
+          active: dev, service

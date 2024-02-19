@@ -1,0 +1,58 @@
+/**********************************************************************************************************************
+***************************************************      LINKS      ***************************************************
+***********************************************************************************************************************/
+• LINKS
+    + MDN Docs
+        - https://developer.mozilla.org/en-US/docs/Web/HTML
+
+
+
+/**********************************************************************************************************************
+***************************************************      NOTES      ***************************************************
+***********************************************************************************************************************/
+• NOTES
+    + 
+• TESTING
+    + DEV TOOLS
+        - CONSOLE
+            * document.head.insertAdjacentHTML("beforeend", "<style>* { outline: 1px solid red; }</style>");
+
+
+
+/**********************************************************************************************************************
+*************************************************      ATTRIBUTES      ************************************************
+***********************************************************************************************************************/
+• GLOBAL ATTRIBUTES
+    + Notes
+        - Common to all HTML elements.
+        - Can be used on all elements.
+    + Attributes
+        - tabindex
+            * 
+        - z-index
+            * Specifies the stack order of an element
+                + Greater value = on top of lower values
+            * IMPORTANT
+                + ONLY WORKS ON ITEMS WITH 'position' || 'flex'
+                    - position: absolute, position: relative, position: fixed, or position: sticky
+                + If no index is provided, whichever element is last in the HTML will show on top.
+    + Tags
+        - Meta
+            * http-equiv
+                + content-security-policy
+                    - <meta http-equiv="Content-Security-Policy" content="default-src 'self' cigna.oktapreview.com; script-src 'unsafe-eval' 'unsafe-inline' 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self'; frame-ancestors 'self';" />
+                        base-uri-XXX 'none';
+                        default-src 'self' cigna.oktapreview.com
+                        font-src 'self' fonts.gstatic.com
+                        frame-ancestors 'self'
+                        img-src 'self'
+                        object-src-XXX 'none';
+                        script-src 'unsafe-eval' 'unsafe-inline' 'self'
+                        script-src-XXX 'nonce-{RANDOM}' 'strict-dynamic';
+                        style-src 'self' 'unsafe-inline'
+                    <meta http-equiv="Content-Security-Policy" content="base-uri 'none'" />
+                    <meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
+                    <meta http-equiv="Content-Security-Policy" content="script-src 'nonce-r4d0m' 'strict-dynamic'" />
+                    <meta http-equiv="Content-Security-Policy" content="" />
+            *
+

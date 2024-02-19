@@ -1,0 +1,73 @@
+/**********************************************************************************************************************
+***************************************************      CNTLM      ***************************************************
+***********************************************************************************************************************/
+• 
+
+
+
+
+/**********************************************************************************************************************
+****************************************************      GIT      ****************************************************
+***********************************************************************************************************************/
+• Cloning Error
+    + Unable to Access
+        - Printed Error
+            C7F7Q8@20S1-PF31GPV1 MINGW64 /c/NATE/Repo
+            $ clone https://git.express-scripts.com/ExpressScripts/esi-certificates-java.git
+            Cloning into 'esi-certificates-java'...
+            fatal: unable to access 'https://git.express-scripts.com/ExpressScripts/esi-certificates-java.git/': SSL certificate problem: self signed certificate in certificate chain
+        - Actual Error
+            + SSL certificate problem: self signed certificate in certificate chain
+        - Workaround
+            + Run Git Clone without SSL Verification
+                git -c http.sslVerify=false clone <repo_url>  
+        - Solution
+            + Add CA Certs path to git config
+                git config --system http.sslCAPath /path/to/cacerts
+
+
+
+/**********************************************************************************************************************
+****************************************************      JAVA      ***************************************************
+***********************************************************************************************************************/
+• Possible Cert Errors (Pulled from Confluence, just in case I run into them when I get there.)
+    + Error Message
+        - Unable to find valid certification path to requested target
+    + StackTrace
+        - ...ValidatorException: PKIX path building failed: 
+        sun.security.provider.certpath.SunCertPathBuilderException: 
+        unable to find valid certification path to requested target
+
+
+
+
+
+/**********************************************************************************************************************
+****************************************************      NODE      ***************************************************
+***********************************************************************************************************************/
+• 404 Error Code - Not Found in Registry
+    + Printed Error
+            C7F7Q8@20S1-PF31GPV1 MINGW64 /c/NATE/Repo
+            $ npm install -g create-react-app
+            npm ERR! code E404
+            npm ERR! 404 Not Found - GET http://artifactory.sys.ch3pcf04.express-scripts.com/artifactory/api/npm/npm-virtual/create-react-app
+            npm ERR! 404
+            npm ERR! 404  'create-react-app@*' is not in this registry.
+            npm ERR! 404 You should bug the author to publish it (or use the name yourself!)
+            npm ERR! 404
+            npm ERR! 404 Note that you can also install from a
+            npm ERR! 404 tarball, folder, http url, or git url.
+
+            npm ERR! A complete log of this run can be found in:
+            npm ERR!     C:\Users\C7F7Q8\AppData\Local\npm-cache\_logs\2022-03-11T16_08_38_739Z-debug-0.log
+
+
+
+
+
+
+
+
+
+
+

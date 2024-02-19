@@ -1,0 +1,65 @@
+CSS units in different ways. 
+
+% – The % unit is used to set the font-size relative to the current font-size. 
+em – It is used to set the relative size. It is relative to the font-size of the element. 
+em – is a CSS unit relative to the font size of the parent element, while rem is a CSS unit relative to the font size of an html element.
+Note: Here 2em meaning 2times the size of current font. 
+rem – Relative to the browser base font-size. 
+px – It defines the font-size in terms of pixels. (96px = 1in)
+vh – Relative to 1% of the height of the viewport. 
+vw – Relative to 1% of the width of the viewport. 
+
+
+https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/
+    So what about %, VW, and VH? What are they all about?
+        While PX, EM, and REM are primarily used for font sizing, %, VW, and VH are mostly used for margins, padding, spacing, and widths/heights.
+        
+        To reiterate, VH stands for “viewport height”, which is the viewable screen’s height. 100VH would represent 100% of the viewport’s height, or the full height of the screen. And of course, VW stands for “viewport width”, which is the viewable screen’s width. 100VW would represent 100% of the viewport’s width, or the full width of the screen. % reflects a percentage of the parent element’s size, regardless of the viewport’s size.
+        Let’s look at some examples of where Elementor gives %, VW, and VH options.
+
+        Column Widths: If you edit the layout of an Elementor Column, you’ll notice that there is only one width sizing unit available – %. Column widths only work well and responsively when using percentages, so no other option is given.
+        Margins: A section’s margins can be specified either in PX or %. Using % is usually preferable to ensure the margins don’t get larger than the content when scaling down for a mobile device for instance. By using a percentage of the width of the device, your margins will remain relative to the size of the content, which is almost always preferable.
+        Padding: A section’s padding can be specified either in PX, EM, or %. As with margins, it is often preferable to use either EM or % so the padding remains relative as the size of the page scales.
+        Font Size: If you edit the typography of an element, such as a Heading, you’ll see four choices: PX, EM, REM, and VH
+
+    When Should You Use One Unit Over Another?
+        Ultimately, there isn’t a perfect answer for this question. In general, it is often best to choose one of the relative units over PX so that your web page has the best chance of rendering a beautifully responsive design. Choose PX however, if you need to ensure that an element never resizes at any breakpoint and remains the same regardless of whether a user has chosen a different default size. PX units ensure consistent results even if that’s not ideal.
+        
+        EM is relative to the parent element’s font size, so if you wish to scale the element’s size based on its parent’s size, use EM.
+        REM is relative to the root (HTML) font size, so if you wish to scale the element’s size based on the root size, no matter what the parent size is, use REM. If you’ve used EM and are finding sizing issues due to lots of nested elements, REM will probably be the better choice.
+        VW is useful for creating full width elements (100%) that fill up the entire viewport’s width. Of course, you can use any percentage of the viewport’s width to achieve other goals, such as 50% for half the width, etc.
+        VH is useful for creating full height elements (100%) that fill up the entire viewport’s height. Of course, you can use any percentage of the viewport’s height to achieve other goals, such as 50% for half the height, etc.
+        % is similar to VW and VH but it is not a length that is relative to viewport’s width or height. Instead, it is a percentage of the parent element’s width or height. Percentage units are often useful to set the width of margins, as an example.
+
+//
+// https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+//
+/* Keyword values */
+background-size: cover;
+background-size: contain;
+
+/* One-value syntax */
+/* the width of the image (height becomes 'auto') */
+background-size: 50%;
+background-size: 3.2em;
+background-size: 12px;
+background-size: auto;
+
+/* Two-value syntax */
+/* first value: width of the image, second value: height */
+background-size: 50% auto;
+background-size: 3em 25%;
+background-size: auto 6px;
+background-size: auto auto;
+
+/* Multiple backgrounds */
+background-size: auto, auto; /* Not to be confused with `auto auto` */
+background-size: 50%, 25%, 25%;
+background-size: 6px, auto, contain;
+
+/* Global values */
+background-size: inherit;
+background-size: initial;
+background-size: revert;
+background-size: revert-layer;
+background-size: unset;

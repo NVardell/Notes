@@ -1,0 +1,22 @@
+{
+  "name": "csv-gen",
+  "version": "1.0.0",
+  "description": "Express App for CSV UUID Generation",
+  "main": "app.js",
+  "license": "ISC",
+  "private": true,
+  "author": "NV",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fast-csv": "^4.3.6",
+    "json2csv": "^5.0.7",
+    "nanoid": "^4.0.0",
+    "tinygen": "^0.2.0",
+    "uid": "^2.0.0",
+    "uuid": "^8.3.2"
+  }
+}

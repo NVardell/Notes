@@ -1,0 +1,408 @@
+keytool -genkeypair -alias tomcat                         -keyalg RSA -keysize 2048                   -keystore keystore.jks -validity 3650
+keytool -genkeypair -alias tomcat                         -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore keystore.p12 -validity 3650
+keytool -genkey     -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
+
+#####################################################################################################################################################
+#####################################################################################################################################################
+#####################################################################################################################################################
+
+"theme": "Gravity One.sublime-theme",
+"theme": "Material Dracula.sublime-theme",
+"theme": "Material Facebook.sublime-theme",
+"theme": "Material Firewatch.sublime-theme",
+"theme": "Material One Dark.sublime-theme",
+"theme": "Material Spacegray.sublime-theme",
+"theme": "Material-Theme.sublime-theme",
+"theme": "OneDarkMaterial.sublime-theme",
+
+
+"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+"color_scheme": "Packages/Materialize/schemes/Material One Dark.tmTheme",
+"color_scheme": "Packages/Theme - Gravity/One Dark Gravity.tmTheme",  // Gravity One Color
+
+#####################################################################################################################################################
+#####################################################################################################################################################
+#####################################################################################################################################################
+
+{
+    "added_words":
+    [
+        "config",
+        "internet",
+        "whiteboard",
+        "lifecycle",
+        "Mphasis",
+        "servlet",
+        "Vardell",
+        "wildcard",
+        "App"
+    ],
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+    "draw_indent_guides": false,
+    "draw_white_space": "none",
+    "font_options":
+    [
+        "gray_antialias"
+    ],
+    "font_size": 8,
+    "gravity_highlight_color_blue": true,
+    "gravity_selected_tab_bold": true,
+    "gravity_sidebar_header": true,
+    "gravity_tab_font_small": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "line_numbers": true,
+    "spell_check": true,
+    "tab_size": 4,
+    "theme": "Gravity One.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "word_wrap": false,
+    "wrap_width": 150,
+
+//     "theme": "Gravity One.sublime-theme",                                 // Gravity One Theme
+//     "theme": "Gravity.sublime-theme",                                    // Gravity Theme
+//     "theme": "Material Augmented Reaction.sublime-theme",
+//     "theme": "Material Behave.sublime-theme",
+//     "theme": "Material Brogrammer.sublime-theme",  // In Guide
+//     "theme": "Material Cobalt.sublime-theme",
+//     "theme": "Material Dracula.sublime-theme",
+//     "theme": "Material Facebook.sublime-theme",
+//     "theme": "Material Firewatch.sublime-theme",
+//     "theme": "Material Flatland.sublime-theme",
+//     "theme": "Material Glacier.sublime-theme",
+//     "theme": "Material Monokai Soda.sublime-theme",
+//     "theme": "Material Monokai.sublime-theme",
+//     "theme": "Material Oceanic Next.sublime-theme",
+//     "theme": "Material One Dark.sublime-theme",
+//     "theme": "Material Primer Light.sublime-theme",
+//     "theme": "Material Seti.sublime-theme",
+//     "theme": "Material Solarized Dark.sublime-theme",
+//     "theme": "Material Solarized Light.sublime-theme",
+//     "theme": "Material Spaceblack.sublime-theme",
+//     "theme": "Material Spacegray Eighties.sublime-theme",
+//     "theme": "Material Spacegray Light.sublime-theme",
+//     "theme": "Material Spacegray Mocha.sublime-theme",
+//     "theme": "Material Spacegray.sublime-theme",
+//     "theme": "Material Stereokai.sublime-theme",
+//     "theme": "Material Toy Chest.sublime-theme",
+//     "theme": "Material Twilight.sublime-theme",
+//     "theme": "Material Vim Blackboard.sublime-theme",
+//     "theme": "Material Zenburn.sublime-theme",
+//     "theme": "Material-Theme.sublime-theme",
+//     "theme": "OneDarkMaterial.sublime-theme",
+//     "theme": "Reverse Gravity.sublime-theme",                                // Reverse Gravity Theme
+
+
+
+//     "color_scheme": "Packages/Material Color Scheme/sublime/material-dark.tmTheme",   // Dark
+//     "color_scheme": "Packages/Material Color Scheme/sublime/material-light.tmTheme",  // Light
+//     "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+//     "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
+//     "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+//     "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Augmented Reaction.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Behave.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Brogrammer.tmTheme",  // In Guide
+//     "color_scheme": "Packages/Materialize/schemes/Material Cobalt.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Dracula.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Facebook.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Firewatch.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Flatland.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Glacier.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Monokai Soda.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Monokai.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Oceanic Next.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material One Dark.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Primer Light.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Seti.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Solarized Dark.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Solarized Light.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Spaceblack Oceanic.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Spaceblack.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Spacegray Eighties.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Spacegray Light.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Spacegray Mocha.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Spacegray.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Stereokai.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Toy Chest.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Twilight.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Vim Blackboard.tmTheme",
+//     "color_scheme": "Packages/Materialize/schemes/Material Zenburn.tmTheme",
+//     "color_scheme": "Packages/One Half Color Schemes/OneHalfLight.tmTheme",  // Reverse Gravity Color
+//     "color_scheme": "Packages/Theme - Gravity/Monokai Gravity.tmTheme",  // Gravity Color
+//     "color_scheme": "Packages/Theme - Gravity/One Dark Gravity.tmTheme",  // Gravity One Color
+
+
+
+
+//     "gravity_highlight_color_blue": true,
+//     "gravity_highlight_color_blue": true,  // Blue highlight color option
+//     "gravity_selected_tab_bold": true,     // Tabs: bold text label for select tab
+//     "gravity_sidebar_header": false,
+//     "gravity_sidebar_header": true,
+//     "gravity_sidebar_header": true,        // Blend title bar with sidebar header
+//     "gravity_tab_font_small": false,
+//     "gravity_tab_font_small": true,        // Tabs: decrease tab font size
+//     "gravity_tab_height_short": false,
+//     "gravity_tab_height_short": true,
+//     "gravity_tab_height_short": true,      // Tabs: decrease tab height
+//     "gravity_tab_height_tall": false,
+//     "gravity_tab_height_tall": true,       // Tabs: increase tab height
+//     "gravity_title_bar": true,
+//     "gravity_title_bar": true,             // Blend macOS title bar with theme
+//     "material_theme_accent_acid-lime": true,         // Set acid-lime accent color
+//     "material_theme_accent_blue": true,              // Set blue accent color
+//     "material_theme_accent_brba": true,              // Set Breaking Bad green accent color
+//     "material_theme_accent_bright-teal": true,       // Set bright-teal accent color
+//     "material_theme_accent_cyan": true,              // Set cyan accent color
+//     "material_theme_accent_graphite": true,          // Set graphite accent color
+//     "material_theme_accent_indigo": true,            // Set indigo accent color
+//     "material_theme_accent_lime": true,              // Set lime green accent color
+//     "material_theme_accent_orange": true,            // Set orange accent color
+//     "material_theme_accent_pink": true,              // Set pink accent color
+//     "material_theme_accent_purple": true,            // Set purple accent color
+//     "material_theme_accent_red": true,               // Set pale red accent color
+//     "material_theme_accent_scrollbars": true,        // Enable accent color for scrollbars
+//     "material_theme_accent_sky": true,               // Set bright-cyan accent color
+//     "material_theme_accent_titlebar": true,          // Enable accent color for titlebar
+//     "material_theme_accent_tomato": true,            // Set tomato red accent color
+//     "material_theme_accent_yellow": true,            // Set yellow accent color
+//     "material_theme_arrow_folders": true,            // Replace folder icons with arrows
+//     "material_theme_big_fileicons": true,            // Show bigger file type icons
+//     "material_theme_bold_tab": true,                 // Make the tab labels bolder
+//     "material_theme_bright_scrollbars": true,        // Bright scrollbars puck color
+//     "material_theme_bullet_tree_indicator": true,    // Set a bullet as active tree indicator
+//     "material_theme_compact_panel": true,            // Set minimal padding for the search panel
+//     "material_theme_compact_sidebar": true,          // Set compact side bar
+//     "material_theme_contrast_mode": true,            // Enable sidebar and panels contrast mode
+//     "material_theme_disable_fileicons": true,        // Hide sidebar file type icons
+//     "material_theme_disable_folder_animation": true, // Disable folder animation
+//     "material_theme_disable_tree_indicator": true,   // Disable sidebar file indicator
+//     "material_theme_panel_separator": true,          // Show bottom panel separator
+//     "material_theme_small_statusbar": true,          // Set small status bar
+//     "material_theme_small_tab": true,                // Set small tabs
+//     "material_theme_tabs_autowidth": true,           // Enable autowidth for tabs
+//     "material_theme_tabs_separator": true,           // Show tabs separator, this disables tab 
+//     "material_theme_titlebar": true,                 // Enable title bar (OS X 10.10+)
+//     "material_theme_tree_headings": true,            // Show sidebar headings
+
+
+//     "font_options": [ "directwrite" ],
+//     "indent_guide_options": ["draw_normal", "draw_active"],               // Highlight active indent
+//     "line_padding_bottom": 3,
+//     "overlay_scroll_bars": "enabled",
+//     "line_padding_top": 3,
+    
+}
+
+
+
+#####################################################################################################################################################
+#####################################################################################################################################################
+#####################################################################################################################################################
+
+
+Drake - God's Plan
+Tech N9ne - Erbody But Me
+Bmike - I Wish I Never Found You
+Ryan Caraveo - Godmode
+Bmike - Damaged
+Bmike - Anxiety
+Quinn XCII - Straightjacket
+AJR - Weak
+Timeflies - Monsters
+Witt Lowry - Piece of Mind 3
+Witt Lowry - Running from Here
+Ivan B - Exhale
+Ryan Caraveo - Just Let Me Breathe
+Post Malone - Over Now
+Witt Lowry - Lately (feat. Dia Frampton)
+Neffex - Life
+blackbear - idfc - Tarro Remix
+Witt Lowry - Kindest Regards
+Witt Lowry - HURT
+Huey Mack - Just Tonight
+Meek Mill - Going Bad (feat. Drake)
+Huey Mack - New Flame
+Huey Mack - Playboy Bunny
+Huey Mack - Blame
+Huey Mack - 11:11, Pt. 2 - Akon Remix
+Huey Mack - Closer (Remix)
+Huey Mack - Adderall Thoughts, Pt. 2
+Huey Mack - Too Much Pride
+Alec Benjamin - Let Me Down Slowly
+Post Malone - Better Now
+KYLE - iSpy (feat. Lil Yachty)
+Halsey - Without Me
+Machine Gun Kelly - The Gunner
+Machine Gun Kelly - At My Best (feat. Hailee Steinfeld)
+Machine Gun Kelly - Kiss the Sky
+Machine Gun Kelly - Golden God
+Machine Gun Kelly - Can’t Walk
+Machine Gun Kelly - Bad Things (with Camila Cabello)
+Machine Gun Kelly - Let You Go
+Machine Gun Kelly - 27
+Machine Gun Kelly - The Break Up
+Machine Gun Kelly - RAP DEVIL
+Futuristic - Talk (feat. Tech N9ne & Devvon Terrell)
+Futuristic - Plan A
+Mike Stud - W.I.N.
+Mike Stud - Honolulu
+Mike Stud - Swish
+Mike Stud - Out Here
+Chris Webby - Raw Thoughts
+Chris Webby - Raw Thoughts II
+Chris Webby - Raw Thoughts III
+Huey Mack - New Flame
+Huey Mack - You're a Star
+Huey Mack - Let's Just Say Goodbye
+Huey Mack - Hero
+NF - WHY
+Futuristic - Epiphany (feat. NF)
+Cheat Codes - Feels Great (feat. Fetty Wap & CVBZ)
+ScHoolboy Q - Hell Of A Night
+Early Adopted - The Florist
+Big Sean - I Know
+Big Sean - Blessings
+Big Sean - Deep
+Big Sean - Blessings
+Bryce Vine - Where the Wild Things Are
+Bryce Vine - Guilty Pleasure
+Cage - You Were The Shit (In High Scchool)
+Chris Webby - Down Right
+Chris Webby - Left Lane
+Chris Webby - Ride On (feat. Rittz)
+Chris Webby - Bar For Bar
+Kid Ink - Hell & Back
+Kid Ink - Neva Gave A Fuck
+Eminem - Stronger Than I Was
+Eminem - River (feat. Ed Sheeran)
+Futuristic - The Greatest
+G-Eazy - I Mean It
+G-Eazy - Almost Famous
+G-Eazy - Been On
+G-Eazy - Sober
+G-Eazy - Random
+G-Eazy - One Of Them
+G-Eazy - Of All Things
+G-Eazy - Him & I (with Halsey)
+Halsey - Bad At Love
+Halsey - New Americana
+Halsey - Gasoline
+Huey Mack - Timezones
+Huey Mack - Too Much (feat. Wynn)
+Huey Mack - Cruisin
+Huey Mack - Mutual (feat. Mike Stud)
+Huey Mack - Funeral (feat. Afrojack, Twista)
+Huey Mack - Believe
+Huey Mack - Take It All Back
+Huey Mack - Night's Like These
+Huey Mack - Celebrity
+Machine Gun Kelly - Alpha Omega
+Machine Gun Kelly - Till I Die
+Machine Gun Kelly - World Series
+Machine Gun Kelly - Wild Boy
+Machine Gun Kelly - RAP DEVIL
+Meek Mill - Polo & Shell Tops
+Mike Stud - These Days
+Ryan Caraveo - We Don't Need 'Em
+Ryan Caraveo - Paradise
+NF - Let You Down
+NF - Lie
+NF - If You Want Love
+NF - Dreams
+NF - 3 A.M.
+NF - Green Lights
+Chris Webby - Until I Die (feat. Zavaro)
+Machine Gun Kelly - Home (with Machine Gun Kelly, X Ambassadors & Bebe Rexha)
+G-Eazy - Vengeance On My Mind
+Juice WRLD - Lucid Dreams
+TobyMac - Til The Day I Die
+Logic - Contra
+Logic - Everyday
+Logic - 1-800-273-8255
+Dillon Francis - Say Less
+Logic - Alright
+DJ Khaled - I'm the One (feat. Justin Bieber, Quavo, Chance the Rapper & Lil Wayne)
+Kehlani - CRZY
+G-Eazy - Forbes
+Kid Ink - Bad Ass (feat. Meek Mill & Wale)
+Kid Ink - Take Over the World (ft. Ty Dolla $ign)
+G-Eazy - No Less
+Kid Ink - Lost In The Sauce
+Kid Ink - Walk In The Club
+Kid Ink - Tuna Roll (Explicit)
+Huey Mack - Pretending Perfection
+Futuristic - Too Easy
+Kid Ink - Bossin' Up (feat. A$AP Ferg & French Montana)
+Devvon Terrell - Feelings and Liquor
+Drake - Back To Back
+Futuristic - Let's Do Somethin
+Witt Lowry - Let Me Know (feat. Tori Solkowski)
+
+#####################################################################################################################################################
+#####################################################################################################################################################
+#####################################################################################################################################################
+
+NODE INSTALL FILE PATHS
+• C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.9
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools
+C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio Installer
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Windows App Certification Kit
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Windows Software Development Kit
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools\VC
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Kits\Application Verifier (X64)
+
+####################################################################
+####    VALIDATING CHECKSUM FOR DOWNLOADED FILE
+NV2@NV2 MINGW64 ~/Downloads
+$ certutil -hashfile ideaIU-2021.1.2.exe SHA256 | grep 185c5fed030e875d04c8c3608fba8152827a81a61c5060fac33063108888c10b
+185c5fed030e875d04c8c3608fba8152827a81a61c5060fac33063108888c10b
+
+
+===========================================================================
+InstallLocation: C:\Program Files\WindowsApps\microsoft.windowsstore_12010.1001.3.0_x64__8wekyb3d8bbwe
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
+
+Microsoft.WindowsStore_12011.1001.1.0_neutral_split.scale-100_8wekyb3d8bbwe
+Microsoft.WindowsStore_12011.1001.1.0_x64__8wekyb3d8bbwe
+Microsoft.WindowsStore_12011.1001.113.0_neutral_~_8wekyb3d8bbwe
+
+
+
+takeown /F "%ProgramFiles%\WindowsApps"
+takeown /F "%ProgramFiles%\WindowsApps" /r /d y
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F
+icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t
+
+
+cmd.exe /c takeown /f "%1" && icacls "%1" /grant *S-1-3-4:F /c /l & pause
+takeown /F "%ProgramFiles%\WindowsApps" && takeown /F "%ProgramFiles%\WindowsApps" /r /d y && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F && icacls "%ProgramFiles%\WindowsApps" /grant Administrators:F /t & pause
+
+
+
+C:\Users\NV\OneDrive\Desktop
+L - 1dc5ff
+M - 00ff00
+R - ff0015
+
+
+
+
+commands before and after changing permissions to completely restore the original permissions :
+icacls "%ProgramFiles%\WindowsApps" /save WindowsApps.acl
+icacls "%ProgramFiles%" /restore WindowsApps.acl
+
+
+Like this on all Microsoft OSes since 2000, and still good today:
+dir & echo foo
+If you want the second command to execute only if the first exited successfully:
+dir && echo foo
+
