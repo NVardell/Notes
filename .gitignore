@@ -12,7 +12,7 @@ local.properties
 *.rar
 *.tar.gz
 *.war
-# *.zip
+*.zip
 
 
 
