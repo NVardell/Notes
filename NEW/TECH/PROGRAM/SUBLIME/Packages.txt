@@ -1,0 +1,14 @@
+/******************************************************************************
+*   Packages I Use
+******************************************************************************/
+* Alignment
+* BracketHighlighter
+* Compare Side-by-Side
+* Highlighter
+* Material Theme
+* Babel
+* HTML/CSS/JS Prettify
+* Theme - Gravity
+* Expand Selection to Quotes
+* A File Icon
+* 

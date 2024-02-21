@@ -1,0 +1,55 @@
+{
+    "added_words": [
+        "backend", "Codable", "codebase", "config",
+        "Debatably", "Decodable", "Encodable", "Galarian",
+        "Hystrix", "internet", "k8s", "kube", "kubernetes",
+        "lifecycle", "Mphasis", "Onboard", "Overclocking",
+        "Powertrain", "Prioritization", "Randstad", "repo",
+        "scrollable", "servlet", "Strategized", "Transaxle",
+        "Vardell", "whiteboard", "Whitespaces",
+    ],
+
+    // NUMBER VALUES
+    "font_size": 14.5,
+    "tab_size":  4,
+    "wrap_width":160,
+
+    // BOOLEAN VALUES
+    "bold_folder_labels":            true,
+    "highlight_whitespaces_enabled": true,
+    "line_numbers":                  true,
+    "spell_check":                   true,
+    "translate_tabs_to_spaces":      true,
+    "update_check":                  true,
+    "always_show_minimap_viewport":  false,
+    "draw_indent_guides":            false,
+    "word_wrap":                     false,
+
+    // MATERIAL VALUES
+    "material_theme_accent_scrollbars": true, // Enable accent color for scrollbars
+    "material_theme_accent_sky":        true, // Set accent color
+    "material_theme_accent_titlebar":   true, // Enable accent color for title bar
+    "material_theme_bold_tab":          true, // Bold Current Tab Title
+    "material_theme_bright_scrollbars": true, // Bright scrollbars puck color
+    "material_theme_compact_panel":     true, // Set minimal padding for the search panel
+    "material_theme_compact_sidebar":   true, // Reduce Space Between Files/Directories in Project Panel
+    "material_theme_contrast_mode":     true, // Enable sidebar and panels contrast mode
+    "material_theme_panel_separator":   true, // Show bottom panel separator
+    "material_theme_small_statusbar":   true, // Set small status bar
+    "material_theme_small_tab":         true, // Reduce Tab Height
+    "material_theme_tabs_autowidth":    true, // Auto Tab Width To Filename Length
+    "material_theme_tabs_separator":    true, // Show tabs separator, this disables tab hover animation
+
+    // STRING VALUES
+    "overlay_scroll_bars": "enabled",
+    "draw_unicode_white_space": "all",
+    "theme": "Material-Theme-Palenight.sublime-theme",
+    "color_scheme": "Packages/User/My Schemes/My Material Palenight v2.tmTheme",
+    
+    // OBJECT VALUES
+    "ignored_packages": [ "Vintage" ],
+    "indent_guide_options": [ "draw_normal", "draw_active" ],   // Highlight active indent
+    "font_options": [ "gray_antialias", "subpixel_antialias" ], // On retina Mac & Windows
+    "index_exclude_patterns": ["node_modules", ".git", ".idea"],
+    "folder_exclude_patterns": ["node_modules", ".git", ".idea"]
+}

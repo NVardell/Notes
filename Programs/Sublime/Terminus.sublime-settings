@@ -1,9 +1,0 @@
-{
-    "default_config":"bash",
-    "shell_configs":[{
-        "name":"bash",
-        "cmd":"C:/Program Files/Git/usr/bin/bash.exe",
-        "enable":true,
-        "default": true,
-    }]
-}
