@@ -1,9 +1,0 @@
-inode/directory
-text/xml
-application/octet-stream
-video/mp4
-video/quicktime
-application/vnd.sqlite3
-video/x-msvideo
-application/x-tar
-video/x-ms-asf
