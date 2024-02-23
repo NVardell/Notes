@@ -1,0 +1,45 @@
+---
+default-properties: &default-properties
+  xxxx: xxx
+  xxxx: xxx
+  xxxx: xxx
+  reportUnusedDisableDirectives: true
+# Converting ESI JS Example into an autogen'd yml config
+#   Not sure what equivalent to this is...
+#     module.exports = {
+#       parser: '@babel/eslint-parser',
+#     }
+# 
+#   Maybe...?
+#     parser: "babel-eslint"
+#   Or...?
+#     parser: "@typescript-eslint/parser"
+#     plugins:
+#         - "@typescript-eslint"
+<<: *default-properties
+env:
+  browser: true
+  node: true
+  es2022: true
+  jest: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:import/recommended
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+  requireConfigFile: false
+plugins:
+  - react
+settings:
+  react:
+    version: detect
+rules:
+  # allow scripts that can be run to ship with console logs
+  noConsole: off
+  react:
+    # this rule can falsely report errors for jsx arrays that are
+    #   passed where they are mapped with a key with this rule off,
+    jsxKey: off

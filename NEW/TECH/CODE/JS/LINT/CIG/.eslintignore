@@ -1,0 +1,15 @@
+#
+#  Web Examples
+# 
+#     + Ignoring Files (https://www.codeac.io/documentation/eslint-configuration.html)
+#       - Storing generated or third party code in 
+#       your repository is in general not a good idea. 
+#       However, sometimes you really need to do this 
+#       and Codeac got you covered. Usually you don't 
+#       want to analyze those files so you can place 
+#       .eslintignore file to the root folder of your 
+#       repository. This file can contain list of files 
+#       that are ignored. Take a look on this simple example 
+#       with jQuery and Bootstrap:
+dist/jquery.min.js
+dist/bootstrap.js

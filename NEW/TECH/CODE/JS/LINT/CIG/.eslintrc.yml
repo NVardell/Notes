@@ -1,0 +1,87 @@
+# Auto Gen ~ npx eslint --init
+env:
+  browser: true
+  es2021: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+plugins:
+  - react
+rules: {}
+# 
+# 
+#  ESLINT DOCS EXAMPLE
+#         ~ https://eslint.org/docs/latest/use/configure/configuration-files
+extends: standard
+rules:
+  comma-dangle:
+    - error
+    - always
+  no-empty: warn
+# 
+#  info we want shared across all rules
+---
+  settings:
+    sharedData: "Hello"
+# 
+# 
+env:
+    browser: true
+rules:
+    # Override default settings
+    eqeqeq: warn
+    strict: off
+# 
+plugins:
+  - a-plugin
+overrides:
+  - files: "*.md"
+    processor: a-plugin/markdown
+# 
+---
+  globals:
+    var1: writable
+    var2: readonly
+# 
+# 
+#   Web Example
+#       ~ https://www.codeac.io/documentation/eslint-configuration.html
+# 
+#     ~ Usage with React
+env:
+  browser: true
+  es6: true
+  mocha: true
+parser: "babel-eslint"
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+parserOptions:
+  ecmaVersion: 2021
+  sourceType: "module"
+  ecmaFeatures:
+    classes: true
+settings:
+  react:
+    pragma: React
+    version: 16.8.0
+# 
+#     ~ Usage w/ TypeScript
+env:
+    browser: true
+    es6: true
+    node: true
+parser: "@typescript-eslint/parser"
+plugins:
+    - "@typescript-eslint"
+extends:
+    - "eslint:recommended"
+    - "plugin:@typescript-eslint/recommended"
+rules:
+    complexity:
+        - error
+        - 10
