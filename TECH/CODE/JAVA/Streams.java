@@ -34,6 +34,9 @@ public class Name {
 
 
 
+/**
+ *  ADDITIONAL EXAMPLES
+ **/
 CardMember currentMember = cardProductsResponse.getMembers()
                                 .stream()
                                 .filter(CardMember::getIsLoggedInUser)
@@ -43,3 +46,13 @@ List<String> products = currentMember.getProducts()
                                 .stream()
                                 .filter(CardProduct::getType)
                                 .toList();
+
+List<String> products = currentMember.getProducts()
+                                .stream()
+                                .map(CardProduct::getType)
+                                .toList();
+
+CardMember currentMember = cardProductsResResponse.getFamilyMembers()
+                                .stream()
+                                .filter(CardMember::getIsLoggedInUser)
+                                .collect(CollectorUtil.toSingleton());
