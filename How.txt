@@ -43,6 +43,21 @@
     - OR - 
     1. Install using Choco (https://community.chocolatey.org/packages/cloudfoundry-cli)
         choco install cloudfoundry-cli
-• 
+• Install NVM (Node Version Manager)
+    1. Open GitBash & run command:
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    2. Exit GitBash & Relaunch it. (Need to refresh path so we can run nvm commands.)
+    3. Run below command to install the latest version of Node
+        nvm install node
+    4. Validate new version by running
+        npm -v
+        node -v
+    5. Install an older version with below command
+        nvm install v18.16.1
+    6a. Run nvm command to List available node versions
+        nvm ls
+    6b. Run nvm to swap node versions to any installed version
+        nvm use v18.16.1
+
 • 
 
