@@ -24,8 +24,8 @@
       - ✔️ ✅ ℹ⚠️❌
       - 💔 ❤ 🔥 💯
       - ☁ ⚡️ ⛅ ⛈
-      - 🤦🏽‍ 🙌🏽 🤞🏽 👍🏽 👍 👎🏽 👌🏽
-      - ☠ 👿 😂 🤓👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯🤣 
+      - 🤦🏽‍ 🤷🏼‍♂️🙌🏽 🤞🏽 👍🏽 👍 👎🏽 👌🏽
+      - ☠ 👿 😂 🤓👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯🤣 🥹
       - 🚘 ✈ 🎢 🖥️ 🧩 🍿 🎄 👑 💡 💰 🍎 🥂 🍕 & 🍌🍞
       - 💤 🧊🏃🏽
 • Symbols
@@ -380,6 +380,16 @@
                 scp c7f7q8@genesys@SERVER@cyberarkpsmp:/opt/path/to/file.json ~/Desktop
         - Local ⇰ Remote
                 scp /Users/c7f7q8/Documents/Bot/config.json c7f7q8@genesys@SERVER@cyberarkpsmp:/opt/path/to/directory/
+• Curl
+    + Flags
+        -X → --request  → specify HTTP method
+        -H → --header   → specify header (ex. -H 'Accept: application/json')
+        -d → --data     → request body
+        -v → --verbose  → 
+        -s → --silent   → 
+        -u → --user     → username:password
+        -k → --insecure → allow insecure server connections (disables cert verification for https connections)
+
 
 
 
