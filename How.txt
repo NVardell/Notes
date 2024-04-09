@@ -43,17 +43,6 @@
     - OR - 
     1. Install using Choco (https://community.chocolatey.org/packages/cloudfoundry-cli)
         choco install cloudfoundry-cli
-• (OLD) Install NVM for Windows
-    1. Go to link below & download latest setup exe
-        https://github.com/coreybutler/nvm-windows/releases
-    2. Run exe & then open GitBash and run below command to list npm versions currently installed
-        nvm list
-    3. If required version does not appear in results, run following command to install new version
-        nvm install v##.##.#
-    4. NVM should automatically set the newly installed version, but you can check by running the following
-        node -v; npm -v
-    5. If version is not what you expected, run below command to tell nvm to use the correct version
-        nvm use v##.##.#
 • (NEW) Setup NVM on Windows
     + Notes
         - I did NOT remove existing node installations like nvm setup docs suggested.  Worked fine, smh.
