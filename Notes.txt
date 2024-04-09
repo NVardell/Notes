@@ -25,7 +25,7 @@
       - 💔 ❤ 🔥 💯
       - ☁ ⚡️ ⛅ ⛈
       - 🤦🏽‍ 🤷🏼‍♂️🙌🏽 🤞🏽 👍🏽 👍 👎🏽 👌🏽
-      - ☠ 👿 😂 🤓👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯🤣 🥹
+      - ☠ 👿 😂 🤓👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯🤣 🥹😁
       - 🚘 ✈ 🎢 🖥️ 🧩 🍿 🎄 👑 💡 💰 🍎 🥂 🍕 & 🍌🍞
       - 💤 🧊🏃🏽
 • Symbols
@@ -61,9 +61,6 @@
     + JAVA = C:\Program Files\Java\jdk-16.0.2
     + MVN = C:\Program Files\Apache\Maven\3.8.1
     + NODE = C:\Program Files\nodejs\
-    + MONGO_PASS = 4gMAFmo0f2L1bxmc
-    + MONGO_USER = dbAdmin
-    + ROYAL_TOKEN = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjUzYjhkNmE2LTZjMGItNDNiOS05OGE3LTk0YTBhNjlhNGExOSIsImlhdCI6MTU5NDYwMDExOSwic3ViIjoiZGV2ZWxvcGVyL2I2NWJjZmE3LTFmM2UtM2Y3OC0zNzU1LTVhNjE5NDY0MDllYSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyI3My4xOC4xNDMuMTUyIiwiNzMuMTYxLjU4LjE4MiIsIjcxLjE3Mi4xNDEuMTA4Il0sInR5cGUiOiJjbGllbnQifV19.s5cXpeIGzM_XFB__t0xuhpjOXpSBJyF1rJTo-m5yTV2YsjVV3J0AnRqnZaxvNT4TQFchN-hXozU3p_aO3R1vTQ
 • Topics
     + SSH Keys
         - Used to establish a secure connection with a server.
@@ -389,7 +386,9 @@
         -s → --silent   → 
         -u → --user     → username:password
         -k → --insecure → allow insecure server connections (disables cert verification for https connections)
-
+• Choco
+    + Install delta for git diff
+        choco install delta
 
 
 
