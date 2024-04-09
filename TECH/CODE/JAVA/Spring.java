@@ -1,27 +1,27 @@
 /**********************************************************************************************************************
 ***************************************************      URLS      ****************************************************
 ***********************************************************************************************************************/
-* https://www.baeldung.com/spring-autowire
-* https://www.baeldung.com/spring-annotations-resource-inject-autowire
+• https://www.baeldung.com/spring-autowire
+• https://www.baeldung.com/spring-annotations-resource-inject-autowire
 
 
 
 /**********************************************************************************************************************
 ************************************************      ANNOTATIONS      ************************************************
 ***********************************************************************************************************************/
-* @SpringBootApplication
+• @SpringBootApplication
     + Convenient annotation that adds all of the following annotations
         - @Configuration
         - @EnableAutoConfiguration
         - @ComponentScan
-* @Configuration
+• @Configuration
     + Indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean 
       definitions and service requests for those beans at runtime
     + is meta-annotated with @Component, therefore @Configuration classes are candidates for component scanning
-* @Component
+• @Component
     + Indicates that an annotated class is a "component". Such classes are considered as candidates for auto-detection when using 
       annotation-based configuration and classpath scanning.
-* @Resource
+• @Resource
     + Belongs to the Java Extension package 'javax.annotation.Resource'
     + Follows execution path of:
         1. Match by Name 
@@ -32,7 +32,7 @@
             @Configuration @Bean public File namedFile() { ... }
         3. Match by Qualifier
     + Applicable to both setter & field injection.
-* @Inject
+• @Inject
     + Belongs to the Java Extension package 'javax.annotation.Inject'
     + Follows execution path of:
         1. Match by Type
@@ -47,7 +47,7 @@
         </dependency>
     + Unlike @Resource, which resolves dependencies by name first, the default behavior of @Inject resolves by type. 
       This means that even if a class reference variable name differs from the bean name, the dependency will still be resolved.
-* @Autowired
+• @Autowired
     + Belongs to the package 'org.springframework.beans.factory.annotation' package
     + Similar to @Inject, only real difference being it is apart of the Spring framework.
     + Has the same execution paths as @inject
@@ -55,13 +55,23 @@
         2. Match by Qualifier
         3. Match by Name
     + Applicable to both setter & field injection.
+• @RequestParam & @PathVariable
+    + Used to extract values from the request URI
+    + Differences
+        - @RequestParam extracts values from the query string
+            + Example
+                @GetMapping("/foo") public String getById(@RequestParam String id){ ... }       // ~/foo/?id=abc
+        - @PathVariable extracts values from the URI path
+            + Example
+                @GetMapping("/foo/{id}") public String getById(@PathVariable String id){ ... }  // ~/foo/abc
+
 
 
 
 /**********************************************************************************************************************
 ***************************************************      NOTES      ***************************************************
 ***********************************************************************************************************************/
-* Annotations related to dependency injection provide classes with a declarative way to resolve dependencies.
+• Annotations related to dependency injection provide classes with a declarative way to resolve dependencies.
     + These annotations provide classes with a declarative way to resolve dependencies.
         - @Resource
         - @Inject
@@ -71,7 +81,7 @@
     + As oppose to instantiating them directly (the imperative way)
         - ArbitraryClass arbObject = new ArbitraryClass();
     + Each of these annotations can resolve dependencies either by field injection or by setter injection.
-* Setter Injection
+• Setter Injection
     + Recommended for optional dependencies.
     + The execution paths taken when injecting dependencies on a field are applicable to setter-based injection.
     + Resolving dependencies by setter injection is done by annotating a reference variable's corresponding setter method. 
@@ -81,11 +91,11 @@
         private File defaultFile;
         @Resource(name="namedFile")
         protected void setDefaultFile(File defaultFile) { this.defaultFile = defaultFile; }
-* Dependency Injection
+• Dependency Injection
     + The dependency injection design pattern separates the creation of class dependencies from the class itself transferring this 
     responsibility to a class injector allowing the program design to be loosely coupled and to follow the Single responsibility 
     and Dependency inversion principles (again SOLID).        
-* Dependency Injection - What Annotation to use?
+• Dependency Injection - What Annotation to use?
     + The answer depends on the design scenario faced by the application in question, and how the developer wishes to leverage polymorphism
       on the default execution paths of each annotation.
     + Application-Wide use of Singletons Through Polymorphism
@@ -100,7 +110,7 @@
         Fine-grained application behavior configuration through polymorphism        ✔          ✗         ✗
         Dependency injection should be handled solely by the Jakarta EE platform    ✔          ✔        ✗
         Dependency injection should be handled solely by the Spring Framework       ✗           ✗         ✔
-* Constructor Injection
+• Constructor Injection
     + Recommended for required dependencies allowing them to be immutable and preventing them from being null.
     + The only way to declare immutable dependencies is by using Constructor-based dependency injection.
     + In Constructor-based dependency injection, the class constructor is annotated with @Autowired & included a variable number of args
@@ -114,7 +124,7 @@
             @Autowired
             public ConstructorBasedInjection(InjectedBean injectedBean) { this.injectedBean = injectedBean; }
         }
-* Field Injection
+• Field Injection
     + Main reason to use field injection is to reduce boilerplate code for getters/setters or creating constructors
     + Has a lot of drawbacks and triggers a warning in IntelliJ - Spring Framework also suggests staying away from it even though it is a clean approach.
     + Drawbacks:
@@ -142,7 +152,7 @@
 /**********************************************************************************************************************
 *************************************************      EXCEPTIONS      ************************************************
 ***********************************************************************************************************************/
-* Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: 
+• Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: 
     + Can be fixed by Autowire Disambiguation
         - By default, Spring resolves @Autowired entries by type. If more than one beans of the same type are available in the container, the 
         framework will throw a fatal exception indicating that more than one bean is available for autowiring.
@@ -170,7 +180,7 @@
                 public class FooService {
                     @Autowired private Formatter fooFormatter;
                 }            
-* org.springframework.beans.factory.NoUniqueBeanDefinitionException:
+• org.springframework.beans.factory.NoUniqueBeanDefinitionException:
     + This exception is thrown because the application context has found two bean definitions of a specified type, 
     and it is confused as to which bean should resolve the dependency.
     + Resolved by adding '@Qualifier("bean")' above '@Resource' annotation.
@@ -190,4 +200,4 @@
 /**********************************************************************************************************************
 **************************************************      EXAMPLES      *************************************************
 ***********************************************************************************************************************/
-* 
+• 
