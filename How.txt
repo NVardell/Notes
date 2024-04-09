@@ -43,21 +43,65 @@
     - OR - 
     1. Install using Choco (https://community.chocolatey.org/packages/cloudfoundry-cli)
         choco install cloudfoundry-cli
-• Install NVM (Node Version Manager)
-    1. Open GitBash & run command:
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    2. Exit GitBash & Relaunch it. (Need to refresh path so we can run nvm commands.)
-    3. Run below command to install the latest version of Node
-        nvm install node
-    4. Validate new version by running
-        npm -v
-        node -v
-    5. Install an older version with below command
-        nvm install v18.16.1
-    6a. Run nvm command to List available node versions
-        nvm ls
-    6b. Run nvm to swap node versions to any installed version
-        nvm use v18.16.1
-
-• 
-
+• (OLD) Install NVM for Windows
+    1. Go to link below & download latest setup exe
+        https://github.com/coreybutler/nvm-windows/releases
+    2. Run exe & then open GitBash and run below command to list npm versions currently installed
+        nvm list
+    3. If required version does not appear in results, run following command to install new version
+        nvm install v##.##.#
+    4. NVM should automatically set the newly installed version, but you can check by running the following
+        node -v; npm -v
+    5. If version is not what you expected, run below command to tell nvm to use the correct version
+        nvm use v##.##.#
+• (NEW) Setup NVM on Windows
+    + Notes
+        - I did NOT remove existing node installations like nvm setup docs suggested.  Worked fine, smh.
+    1. Go to URL below & download 'nvm-setup.exe'
+        https://github.com/coreybutler/nvm-windows/releases/1.1.11
+        + There are newer versions, BUT they do not work in GitBash.  No thanks!
+            - More than welcome to download the latest version & run NVM exclusively in PowerShell.
+    2. Run nvm-setup.exe (Elevated privileges, if possible.)
+        + Accept Terms
+        + Click Next (default path)
+        + Click Next (default path - unless you have node installed elsewhere)
+    3. Click Install
+        + Might see popup if Node is already installed; select yes.  (We want NVM to control it.)
+    4. Open terminal & run below command to verify installation
+        $ nvm -v
+        1.1.11
+    5. Assuming step 4 was successful, next we need to find the required version of node.
+        + If npm/yarn install threw error, the required version should be in the error message.
+            Ex. error @azure/core-lro@2.6.0: The engine "node" is incompatible with this module.  Expected version ">=18.0.0". Got "16.20.2".
+        + If setting up a new project, required version SHOULD be in package.json
+        + For curiosities sake, if you'd like to see a list of possible node versions you can select to install, run command below
+            $ nvm list available
+            |   CURRENT   |     LTS     |  OLD STABLE  | OLD UNSTABLE |
+            |-------------|-------------|--------------|--------------|
+            |    21.7.1   |   20.11.1   |   0.12.18    |   0.11.16    |
+            |    21.7.0   |   20.11.0   |   0.12.17    |   0.11.15    |
+            |    xx.x.x   |   xx.xx.x   |   x.xx.xx    |   x.xx.xx    |
+    6. Next, run install command below w/ the new required node version
+        $ nvm install 18.19.1
+        Downloading node.js version 18.19.1 (64-bit)...
+        Extracting node and npm...
+        Complete
+        npm v10.2.4 installed successfully
+    7. Lastly, we need to tell NVM we want to use the new version of node we just installed.
+        a. Run below command (w/ your node version)
+            $ nvm use 18.19.1
+            Now using node v18.19.1 (64-bit)
+        b. Notes
+            + Might get admin popups - should be able to attest/close and continue w/o issue.
+        c. Validation
+            + To validate the node version NVM is using, run following command
+                $ nvm current
+                v18.19.1
+        d. Help
+            + If you forgot what version you just installed or the version you had before, run command below to list installed versions
+                $ nvm list
+                  * 18.19.1 (Currently using 64-bit executable)
+                    16.20.2
+    8. If/when you want/need to swap node versions, simply re-run nvm command
+        $ nvm use 16.20.2
+        Now using node v16.20.2 (64-bit)
