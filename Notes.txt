@@ -24,9 +24,9 @@
       - ✔️ ✅ ℹ⚠️❌
       - 💔 ❤ 🔥 💯
       - ☁ ⚡️ ⛅ ⛈
-      - 🤦🏽‍ 🤷🏼‍♂️🙌🏽 🤞🏽 👍🏽 👍 👎🏽 👌🏽
-      - ☠ 👿 😂 🤓👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯🤣 🥹😁
-      - 🚘 ✈ 🎢 🖥️ 🧩 🍿 🎄 👑 💡 💰 🍎 🥂 🍕 & 🍌🍞
+      - 🤦🏽‍ 🤷🏼‍♂️🤦🏼‍♂️🙌🏽 🤞🏽 👍🏽 👍 👎🏽 👌🏽
+      - ☠ 👿 😂 🤓 👓 😎 😢 😛 😭 🥳 😉 🙃 🤔 🥰 😱 🤯🤣 🥹😁 😍
+      - 🚘 ✈ 🎢 🖥️ 🧩 🍿 👓🎄 👑 💡 💰 🍎 🥂 🍕 & 🍌🍞
       - 💤 🧊🏃🏽
 • Symbols
       - ∞
@@ -279,40 +279,24 @@
 /**********************************************************************************************************************
 *********************************************      UNIX/BASH COMMANDS      ********************************************
 ***********************************************************************************************************************/
-• See all PATH & Environment Details/Functions
-    env
-• Check environment variable value
-    echo $JAVA_HOME
-• Adding to PATH
-    export PATH=/opt/apache-maven-3.6.0/bin:$PATH
 • Certificates & KetStores & KeyTool Examples
     + Create a keystore
         keytool -genkey -alias selfsigned_localhost -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
     + View certificate info in a keystore file
         keytool -list -v -keystore [keystore name] -storepass [keystore password]
         keytool -list -v -keystore cacerts -storepass changeit
-• Unpack/extract tar (Tape ARchive) file
-    tar xvf  <.tar file>
-    tar xzvf <.tar.gz file>
-    tar xjvf <.tar.bz2 file>
-    + Options
-        x - extract files from an archive
-        v - verbosely list files processed
-        f - use archive file or device ARCHIVE
-        z - filter the archive through gzip
-        j - filter the archive through bzip2
-• Unpack/extract/uncompress files (Ex. *.tar.gz → *.tar (Removes '.gz'))
-    gunzip <.tar.gz file>
-• ZIP Files
-    + Compress a Directory Full of Files into a ZIP File
-        zip -r FILE.zip DIRECTORY/
-    + Uncompress a ZIP file Into the Current Directory
-        unzip FILE.zip
-• Send email
-    + Insert file contents into body of email
-        mail -s "EMAIL SUBJECT" email@address.com < myAwesomeFile.txt
-    + Insert Grep results into the body of an email
-        grep -R 'FIND ME' /path/to/dir/and/files/toSearch/*log | mail -s 'Grep Results' email@address.com
+• Choco
+    + Install delta for git diff
+        choco install delta
+• Curl
+    + Flags
+        -X → --request  → specify HTTP method
+        -H → --header   → specify header (ex. -H 'Accept: application/json')
+        -d → --data     → request body
+        -v → --verbose  → 
+        -s → --silent   → 
+        -u → --user     → username:password
+        -k → --insecure → allow insecure server connections (disables cert verification for https connections)
 • Find
     + Past uses
         - Find & count files with specific name
@@ -358,16 +342,44 @@
 • Grep
     + Search a *.gz file
         zgrep SearchString /path/to/file.gz
+• Gunzip (Unpack/extract/uncompress files (Ex. *.tar.gz → *.tar (Removes '.gz')))
+    gunzip <.tar.gz file>
 • Less
     + View a *.gz file
         gzip -cd /path/to/file.gz | less
-• Vim
-    + Save & Quit
-        :wq
+• LS
+    + Flags
+        -l      → NA                        → Print results in list format
+        -a      → --all                     → Show hidden files/folders
+        -h      → --human-readable          → Prints file sizes in readable format (ex. 5mb)
+        -t      → NA                        → Sort by time, newest first
+        -r      → --reverse                 → Reverse sort order
+        --g     → --group-directories-first → Forces directories to top of list. (Not sure why it needs 2-'s.) 
+        --color → NA                        → Print directories in diff color. (Other things too, I think.)
+• Path / Environment Variables
+    + Adding to PATH
+        export PATH=/opt/apache-maven-3.6.0/bin:$PATH
+    + Check environment variable value
+        echo $JAVA_HOME
+    + Print all PATH & Environment Details/Functions
+        env
 • Tail
     + Tail multiple log files
         tail -fn 20 /path/to/log/file.log /path/to/log/file/file.log 
-• Misc.
+• Unpack/extract tar (Tape ARchive) file
+    tar xvf  <.tar file>
+    tar xzvf <.tar.gz file>
+    tar xjvf <.tar.bz2 file>
+    + Options
+        x - extract files from an archive
+        v - verbosely list files processed
+        f - use archive file or device ARCHIVE
+        z - filter the archive through gzip
+        j - filter the archive through bzip2
+• Vim
+    + Save & Quit
+        :wq
+• OTHER
     + Reset/clear/empty old log file by setting the size of the file to 0.
             truncate -s 0 logfile
     + Display window dimensions in browser console
@@ -377,18 +389,18 @@
                 scp c7f7q8@genesys@SERVER@cyberarkpsmp:/opt/path/to/file.json ~/Desktop
         - Local ⇰ Remote
                 scp /Users/c7f7q8/Documents/Bot/config.json c7f7q8@genesys@SERVER@cyberarkpsmp:/opt/path/to/directory/
-• Curl
-    + Flags
-        -X → --request  → specify HTTP method
-        -H → --header   → specify header (ex. -H 'Accept: application/json')
-        -d → --data     → request body
-        -v → --verbose  → 
-        -s → --silent   → 
-        -u → --user     → username:password
-        -k → --insecure → allow insecure server connections (disables cert verification for https connections)
-• Choco
-    + Install delta for git diff
-        choco install delta
+    + Send email
+        - Insert file contents into body of email
+            mail -s "EMAIL SUBJECT" email@address.com < myAwesomeFile.txt
+        - Insert Grep results into the body of an email
+            grep -R 'FIND ME' /path/to/dir/and/files/toSearch/*log | mail -s 'Grep Results' email@address.com
+    + ZIP Files
+        - Compress a Directory Full of Files into a ZIP File
+            zip -r FILE.zip DIRECTORY/
+        - Uncompress a ZIP file Into the Current Directory
+            unzip FILE.zip
+
+
 
 
 
@@ -492,10 +504,17 @@
 • Network Stats
     + Find app running on specific port
         netstat -ano | findstr :3001
-    + asKill Process On that Port
+    + TasKill Process On that Port
         taskkill /PID <yourID> /F
     + V2 ~ Kill Process Listening on Port 53
         kill $(lsof -t -i:53)
+    + Linux
+        - Find Process on port (lots of options)
+            $ lsof -i :<port>
+            $ sudo ss -lptn 'sport = :<port>'
+            $ fuser <port>/tcp
+        - Kill process
+            $ fuser -k <port>/tcp
 • Validate a files CheckSum (Generally MD5 - Can also be SHA1, SHA256, SHA512, etc.)
     certutil -hashfile MEUpdateTool.exe MD5
 • Clear Console
